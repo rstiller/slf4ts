@@ -20,9 +20,6 @@
         "types": [
             "mocha", "chai", "node"
         ],
-        "lib": [
-            "dom", "es6"
-        ],
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
         "forceConsistentCasingInFileNames": true,

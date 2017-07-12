@@ -21,16 +21,16 @@
   "devDependencies": {
     "@types/chai": "^3.5.2",
     "@types/mocha": "^2.2.41",
-    "@types/node": "^7.0.29",
-    "chai": "^4.0.2",
+    "@types/node": "^7.0.35",
+    "chai": "^4.1.0",
     "mocha": "^3.4.2",
-    "mocha-typescript": "^1.1.4",
+    "mocha-typescript": "^1.1.7",
     "npm-check": "^5.4.4",
-    "nyc": "^10.3.2",
+    "nyc": "^11.0.3",
     "rimraf": "^2.6.1",
-    "ts-node": "^3.0.6",
-    "tslint": "^5.4.3",
-    "typescript": "^2.3.4"
+    "ts-node": "^3.2.0",
+    "tslint": "^5.5.0",
+    "typescript": "^2.4.1"
   },
   "dependencies": {
     "source-map-support": "^0.4.15"

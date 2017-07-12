@@ -1,0 +1,5 @@
+{
+  "name": "example-slf4ts-binding",
+  "version": "1.0.0",
+  "main": "./index.js"
+}

@@ -1,8 +1,9 @@
 pipeline {
     agent {
         docker {
-            image 'node:6.10'
+            image 'node:8'
             args  '-v /tmp:/tmp'
+            reuseNode false
         }
     }
 
@@ -29,23 +30,17 @@ pipeline {
         }
         stage('Validate') {
             steps {
-                sh '''
-                    npm run check:lint
-                '''
+                sh 'npm run check:lint'
             }
         }
         stage('Build') {
             steps {
-                sh '''
-                    npm run compile
-                '''
+                sh 'npm run compile'
             }
         }
         stage('Test') {
             steps {
-                sh '''
-                    npm run check:coverage
-                '''
+                sh 'npm run check:coverage'
                 junit 'reports/*.xml'
                 archiveArtifacts allowEmptyArchive: true, artifacts: 'coverage/**/*', defaultExcludes: false, fingerprint: true, onlyIfSuccessful: true
             }
