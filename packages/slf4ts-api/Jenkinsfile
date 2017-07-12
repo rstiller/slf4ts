@@ -3,7 +3,7 @@ pipeline {
         docker {
             image 'node:8'
             args  '-v /tmp:/tmp'
-            reuseNode false
+            reuseNode true
         }
     }
 
