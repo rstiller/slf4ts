@@ -70,7 +70,7 @@ export default function(bindings: LoggerBindings) {
 
 ```
 
-An exaple implementation can be found in the `example-node-modules` folder of this project.
+An example implementation can be found in the `example-node-modules` folder of this project.
 
 ## Usage
 
