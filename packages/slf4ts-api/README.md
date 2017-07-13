@@ -28,11 +28,11 @@ Bindings exist for a couple of logging-frameworks:
 
 ### Write a binding
 
-A binding for a logging-framework needs to implement the `LoggerBinding` interface.   
-The actual logger interface is `LoggerImplementation`.   
-Also a file named `.slf4ts-binding` needs to be presend in the package folder (can be empty).   
+A binding for a logging-framework needs to implement the `LoggerBinding` interface and   
+the actual logger interface `LoggerImplementation`.   
+Also a file named `.slf4ts-binding` needs to be present in the package folder (can be empty).   
 
-A node package for a binding should export a single function that is used during binding registration.
+A node package for a binding should export a single function that is used during binding discovery.
 
 Interfaces to implement:
 
