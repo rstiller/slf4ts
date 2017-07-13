@@ -108,3 +108,7 @@ LoggerConfiguration.setLogLevel(LogLevel.WARN, "my-lib");
 // sets the log level of the logger with group "my-lib" and name "X"
 LoggerConfiguration.setLogLevel(LogLevel.ERROR, "my-lib", "X");
 ```
+
+## License
+
+[MIT](https://www.opensource.org/licenses/mit-license.php)
