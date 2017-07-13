@@ -4,7 +4,7 @@ import * as path from "path";
 import { LogLevel } from "./LoggerConfiguration";
 
 export interface LoggerImplementation {
-    log(level: LogLevel, message: string, ...metadata: any[]): Promise<any>;
+    log(level: LogLevel, group: string, name: string, message: string, error: Error, metadata: any): Promise<any>;
 }
 
 export interface LoggerBinding {

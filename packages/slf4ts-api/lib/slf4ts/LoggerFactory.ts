@@ -4,7 +4,7 @@ import { LoggerConfiguration, LogLevel } from "./LoggerConfiguration";
 const BINDINGS = new LoggerBindings().getBindings();
 const BINDING = BINDINGS[0];
 
-export type LogMethod = (message: string, ...metadata: any[]) => Promise<any>;
+export type LogMethod = (message: string, metadata?: any, error?: Error) => Promise<any>;
 
 export interface ILoggerInstance {
     trace: LogMethod;
@@ -13,7 +13,7 @@ export interface ILoggerInstance {
     warn: LogMethod;
     error: LogMethod;
     getLogLevel(): LogLevel;
-    setMetadata(...metadata: any[]): void;
+    setMetadata(metadata: any): void;
 }
 
 export class DefaultLoggerInstance implements ILoggerInstance {
@@ -21,7 +21,7 @@ export class DefaultLoggerInstance implements ILoggerInstance {
     private impl: LoggerImplementation;
     private name: string;
     private group: string;
-    private commonMetadata: any[];
+    private commonMetadata: any;
     private logLevel: LogLevel;
 
     public constructor(name: string, group: string, logLevel: LogLevel, impl: LoggerImplementation) {
@@ -32,6 +32,7 @@ export class DefaultLoggerInstance implements ILoggerInstance {
 
         LoggerConfiguration.onLogLevelChanged((event) => this.logLevel = event.logLevel, group, name);
         LoggerConfiguration.onLogLevelChanged((event) => this.logLevel = event.logLevel, group);
+        LoggerConfiguration.onLogLevelChanged((event) => this.logLevel = event.logLevel);
     }
 
     public getLogLevel(): LogLevel {
@@ -50,37 +51,33 @@ export class DefaultLoggerInstance implements ILoggerInstance {
         return this.impl;
     }
 
-    public setMetadata(...commonMetadata: any[]): void {
+    public setMetadata(commonMetadata: any): void {
         this.commonMetadata = commonMetadata;
     }
 
-    public async trace(message: string, ...metadata: any[]): Promise<any> {
-        if (this.logLevel <= LogLevel.TRACE) {
-            return this.impl.log(LogLevel.TRACE, message, ...metadata, ...this.commonMetadata);
-        }
+    public async trace(message: string, metadata?: any, error?: Error): Promise<any> {
+        return this.log(LogLevel.TRACE, message, metadata, error);
     }
 
-    public async debug(message: string, ...metadata: any[]): Promise<any> {
-        if (this.logLevel <= LogLevel.DEBUG) {
-            return this.impl.log(LogLevel.DEBUG, message, ...metadata, ...this.commonMetadata);
-        }
+    public async debug(message: string, metadata?: any, error?: Error): Promise<any> {
+        return this.log(LogLevel.DEBUG, message, metadata, error);
     }
 
-    public async info(message: string, ...metadata: any[]): Promise<any> {
-        if (this.logLevel <= LogLevel.INFO) {
-            return this.impl.log(LogLevel.INFO, message, ...metadata, ...this.commonMetadata);
-        }
+    public async info(message: string, metadata?: any, error?: Error): Promise<any> {
+        return this.log(LogLevel.INFO, message, metadata, error);
     }
 
-    public async warn(message: string, ...metadata: any[]): Promise<any> {
-        if (this.logLevel <= LogLevel.WARN) {
-            return this.impl.log(LogLevel.WARN, message, ...metadata, ...this.commonMetadata);
-        }
+    public async warn(message: string, metadata?: any, error?: Error): Promise<any> {
+        return this.log(LogLevel.WARN, message, metadata, error);
     }
 
-    public async error(message: string, ...metadata: any[]): Promise<any> {
-        if (this.logLevel <= LogLevel.ERROR) {
-            return this.impl.log(LogLevel.ERROR, message, ...metadata, ...this.commonMetadata);
+    public async error(message: string, metadata?: any, error?: Error): Promise<any> {
+        return this.log(LogLevel.ERROR, message, metadata, error);
+    }
+
+    public async log(logLevel: LogLevel, message: string, metadata: any, error: Error): Promise<any> {
+        if (this.logLevel <= logLevel) {
+            return this.impl.log(logLevel, this.group, this.name, message, error, { ...this.commonMetadata, ...metadata });
         }
     }
 
@@ -104,8 +101,11 @@ export class LoggerFactory {
         return instance;
     }
 
-    public static reset() {
+    public static reset(resetLoggerImplementation = false) {
         LoggerFactory.LOGGER_INSTANCE_CACHE.clear();
+        if (resetLoggerImplementation) {
+            LoggerFactory.INITIALIZED = false;
+        }
     }
 
     private static LOGGER: LoggerImplementation;
