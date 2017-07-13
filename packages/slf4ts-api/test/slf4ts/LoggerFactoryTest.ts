@@ -176,6 +176,13 @@ export class LoggerFactoryTest {
         expect(loggerImpl.calls[3]).to.have.length(6);
         expect(loggerImpl.calls[3][4]).to.equal(error);
         expect(loggerImpl.calls[3][5]).to.deep.equal({ mode: "Test", version: "1.0.0" });
+
+        logger.info("Test Message 5", error);
+
+        expect(loggerImpl.calls).to.have.length(5);
+        expect(loggerImpl.calls[4]).to.have.length(6);
+        expect(loggerImpl.calls[4][4]).to.equal(error);
+        expect(loggerImpl.calls[4][5]).to.deep.equal({ mode: "Test", version: "1.0.0" });
     }
 
 }
