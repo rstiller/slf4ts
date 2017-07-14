@@ -17,14 +17,39 @@ Console Logging-Binding for [slf4ts](https://www.npmjs.org/package/slf4ts-api)
     </a>
 </p>
 
-
 **Status: Work in Progress**
 
 It's meant to be used with `typescript` / `nodejs`.
 
-## Usage
+## Example Usage
 
+Example package.json:
+```json
+{
+    ...,
+    "dependencies": {
+        "slf4ts-api": "latest",
+        "slf4ts-console": "latest"
+    },
+    ...
+}
+```
+
+Example code:
 ```typescript
+import { LoggerFactory } from "slf4ts-api";
+
+const ROOT_LOGGER = LoggerFactory.getLogger();
+ROOT_LOGGER.setMetadata({ application: 'my-app' });
+
+ROOT_LOGGER.info("Test Message", { version: '1.0.0' }, new Error());
+```
+
+Example output:
+```text
+2017-01-01T12:00:00.999Z 'ROOT' 'INFO' 'Test Message' { application: 'my-app', version: '1.0.0' } Error
+    at ConsoleLoggerImplementationTest.checkArgumentPassing (.../slf4ts-console/test/slf4ts/ConsoleLoggerImplementationTest.ts:XXX:XXX)
+    at <anonymous>
 ```
 
 ## License

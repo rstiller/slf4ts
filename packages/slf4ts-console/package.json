@@ -1,6 +1,6 @@
 {
   "name": "slf4ts-console",
-  "version": "1.0.0",
+  "version": "1.0.0-beta",
   "main": "./build/lib/slf4ts/index.js",
   "typings": "./build/lib/slf4ts/index.d.ts",
   "license": "MIT",
@@ -28,6 +28,7 @@
     "npm-check": "^5.4.4",
     "nyc": "^11.0.3",
     "rimraf": "^2.6.1",
+    "testdouble": "^3.2.2",
     "ts-node": "^3.2.0",
     "tslint": "^5.5.0",
     "typescript": "^2.4.1"
@@ -37,6 +38,7 @@
     "source-map-support": "^0.4.15"
   },
   "files": [
+    ".slf4ts-binding",
     "build",
     "lib",
     "test",
