@@ -1,0 +1,82 @@
+{
+  "name": "slf4ts-winston",
+  "version": "1.0.0-beta-1",
+  "main": "./build/lib/slf4ts/index.js",
+  "typings": "./build/lib/slf4ts/index.d.ts",
+  "license": "MIT",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://www.opensource.org/licenses/mit-license.php"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rstiller/slf4ts-winston"
+  },
+  "keywords": [
+    "typescript",
+    "logging",
+    "winston"
+  ],
+  "devDependencies": {
+    "@types/chai": "^3.5.2",
+    "@types/mocha": "^2.2.41",
+    "@types/node": "^7.0.35",
+    "chai": "^4.1.0",
+    "mocha": "^3.4.2",
+    "mocha-typescript": "^1.1.7",
+    "npm-check": "^5.4.4",
+    "nyc": "^11.0.3",
+    "rimraf": "^2.6.1",
+    "testdouble": "^3.2.2",
+    "ts-node": "^3.2.0",
+    "tslint": "^5.5.0",
+    "typescript": "^2.4.1"
+  },
+  "dependencies": {
+    "@types/winston": "^2.3.3",
+    "slf4ts-api": "^1.0.0-beta",
+    "source-map-support": "^0.4.15",
+    "winston": "^2.3.1"
+  },
+  "files": [
+    ".slf4ts-binding",
+    "build",
+    "lib",
+    "test",
+    "mocha.opts",
+    "tsconfig.json",
+    "tslint.json"
+  ],
+  "scripts": {
+    "check:lint": "tslint -c tslint.json lib/**/*.ts test/**/*.ts",
+    "check:coverage": "nyc npm run test:jenkins",
+    "check:deps": "npm-check --ignore @types/* --no-spinner --no-emoji --no-color",
+    "clean": "rimraf build coverage",
+    "compile": "tsc -p .",
+    "build": "npm run clean && npm run compile",
+    "prepublish": "npm run build",
+    "test": "mocha --opts mocha.opts",
+    "test:jenkins": "mocha --opts mocha.jenkins.opts"
+  },
+  "nyc": {
+    "include": [
+      "lib/*.ts",
+      "lib/**/*.ts"
+    ],
+    "exclude": [
+      "test/*"
+    ],
+    "extension": [
+      ".ts"
+    ],
+    "require": [],
+    "reporter": [
+      "json",
+      "html",
+      "cobertura"
+    ],
+    "all": true
+  }
+}
