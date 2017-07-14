@@ -22,7 +22,6 @@ export class ConsoleLoggerImplementationTest {
         const consoleMock = td.object(console);
         const logger = new ConsoleLoggerImplementation(consoleMock);
 
-        expect(td.explain(consoleMock.debug).callCount).to.equal(0);
         expect(td.explain(consoleMock.error).callCount).to.equal(0);
         expect(td.explain(consoleMock.info).callCount).to.equal(0);
         expect(td.explain(consoleMock.log).callCount).to.equal(0);
@@ -33,7 +32,7 @@ export class ConsoleLoggerImplementationTest {
         td.verify(consoleMock.info(td.matchers.isA(Date), "ROOT", "INFO", "Test Message 1", null), { ignoreExtraArgs: false, times: 1 });
 
         await logger.log(LogLevel.DEBUG, "group1", "", "Test Message 2", null, null);
-        td.verify(consoleMock.debug(td.matchers.isA(Date), "group1", "DEBUG", "Test Message 2", null), { ignoreExtraArgs: false, times: 1 });
+        td.verify(consoleMock.log(td.matchers.isA(Date), "group1", "DEBUG", "Test Message 2", null), { ignoreExtraArgs: false, times: 1 });
 
         await logger.log(LogLevel.TRACE, "", "name1", "Test Message 3", null, null);
         td.verify(consoleMock.trace(td.matchers.isA(Date), "name1", "TRACE", "Test Message 3", null), { ignoreExtraArgs: false, times: 1 });
@@ -50,7 +49,7 @@ export class ConsoleLoggerImplementationTest {
         td.verify(consoleMock.info(td.matchers.isA(Date), "ROOT", "INFO", "Test Message 6", metadata, error), { ignoreExtraArgs: false, times: 1 });
 
         await logger.log(LogLevel.DEBUG, "", "", "Test Message 7", error, null);
-        td.verify(consoleMock.debug(td.matchers.isA(Date), "ROOT", "DEBUG", "Test Message 7", null, error), { ignoreExtraArgs: false, times: 1 });
+        td.verify(consoleMock.log(td.matchers.isA(Date), "ROOT", "DEBUG", "Test Message 7", null, error), { ignoreExtraArgs: false, times: 1 });
 
         await logger.log(6, "", "", "Test Message 8", null, null);
         td.verify(consoleMock.log(td.matchers.isA(Date), "ROOT", "", "Test Message 8", null), { ignoreExtraArgs: false, times: 1 });

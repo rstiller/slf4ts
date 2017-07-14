@@ -58,7 +58,7 @@ export class ConsoleLoggerImplementation implements LoggerImplementation {
         const logMethodName = logLevelName.toLowerCase();
 
         let logMethod: (...args: any[]) => void = this.console.log;
-        if (logMethodName in this.console && (this.console as any)[logMethodName] instanceof Function) {
+        if (level !== LogLevel.DEBUG && logMethodName in this.console && (this.console as any)[logMethodName] instanceof Function) {
             logMethod = (this.console as any)[logMethodName];
         }
 
