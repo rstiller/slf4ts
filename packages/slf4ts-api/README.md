@@ -1,5 +1,23 @@
 # slf4ts-api
 
+<p align="center">
+    <a href="https://www.npmjs.org/package/slf4ts-api">
+        <img src="https://img.shields.io/npm/v/slf4ts-api.svg" alt="NPM Version">
+    </a>
+    <a href="https://www.npmjs.org/package/slf4ts-api">
+        <img src="https://img.shields.io/npm/l/slf4ts-api.svg" alt="License">
+    </a>
+    <a href="https://travis-ci.org/rstiller/slf4ts-api">
+        <img src="http://img.shields.io/travis/rstiller/slf4ts-api/master.svg" alt="Build Status">
+    </a>
+    <a href="https://david-dm.org/rstiller/slf4ts-api">
+        <img src="https://img.shields.io/david/rstiller/slf4ts-api.svg" alt="Dependencies Status">
+    </a>
+</p>
+
+
+**Status: Work in Progress**
+
 Simple Logging Facade for Typescript
 
 Inspired by the popular Java lib [SLF4J](https://www.slf4j.org)
