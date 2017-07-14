@@ -24,6 +24,7 @@ It's meant to be used with `typescript` / `nodejs`.
 ## Example Usage
 
 Example package.json:
+
 ```json
 {
     ...,
@@ -36,6 +37,7 @@ Example package.json:
 ```
 
 Example code:
+
 ```typescript
 import { LoggerFactory } from "slf4ts-api";
 
@@ -46,6 +48,7 @@ ROOT_LOGGER.info("Test Message", { version: '1.0.0' }, new Error());
 ```
 
 Example output:
+
 ```text
 2017-01-01T12:00:00.999Z 'ROOT' 'INFO' 'Test Message' { application: 'my-app', version: '1.0.0' } Error
     at ConsoleLoggerImplementationTest.checkArgumentPassing (.../slf4ts-console/test/slf4ts/ConsoleLoggerImplementationTest.ts:XXX:XXX)
