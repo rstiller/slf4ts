@@ -1,5 +1,6 @@
 import "source-map-support/register";
 
+import * as fs from "fs";
 import * as path from "path";
 import {
     LoggerBinding,
@@ -21,8 +22,15 @@ export class ConsoleLoggerBinding implements LoggerBinding {
 
     public constructor() {
         const modulePath = path.parse(module.filename);
-        const packageJsonPath = path.resolve(path.join(modulePath.dir, "..", "..", "package.json"));
-        this.packageJson = require(packageJsonPath);
+        let currentDir = path.resolve(modulePath.dir);
+        while (true) {
+            currentDir = path.resolve(path.join(currentDir, ".."));
+            const packageJsonPath = path.resolve(path.join(currentDir, "package.json"));
+            if (fs.existsSync(packageJsonPath)) {
+                this.packageJson = require(packageJsonPath);
+                break;
+            }
+        }
     }
 
     public getLoggerImplementation(): LoggerImplementation {
