@@ -71,7 +71,7 @@ export class ConsoleLoggerImplementation implements LoggerImplementation {
             args.push(error);
         }
 
-        logMethod(new Date(), loggerName, logLevelName, message, ...args);
+        logMethod(util.inspect(new Date()), loggerName, logLevelName, message, ...args);
     }
 
 }
