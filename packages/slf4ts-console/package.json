@@ -34,7 +34,7 @@
     "typescript": "^2.4.1"
   },
   "dependencies": {
-    "slf4ts-api": "^1.0.0-beta",
+    "slf4ts-api": "^1.0.0-beta.1",
     "source-map-support": "^0.4.15"
   },
   "files": [
