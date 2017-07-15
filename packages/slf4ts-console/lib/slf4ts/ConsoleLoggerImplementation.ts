@@ -4,6 +4,7 @@ import {
     LoggerImplementation,
     LogLevel,
 } from "slf4ts-api";
+import * as util from "util";
 
 /**
  * The actual console logger implementation.
@@ -54,7 +55,7 @@ export class ConsoleLoggerImplementation implements LoggerImplementation {
             loggerName = "ROOT";
         }
 
-        const logLevelName = LogLevel[level] ? `${LogLevel[level]}` : "";
+        const logLevelName = LogLevel[level] ? LogLevel[level] : "";
         const logMethodName = logLevelName.toLowerCase();
 
         let logMethod: (...args: any[]) => void = this.console.log;
@@ -62,12 +63,15 @@ export class ConsoleLoggerImplementation implements LoggerImplementation {
             logMethod = (this.console as any)[logMethodName];
         }
 
-        const args: any[] = [new Date(), loggerName, logLevelName, message, metadata];
+        const args: any[] = [];
+        if (metadata) {
+            args.push(util.inspect(metadata));
+        }
         if (error) {
             args.push(error);
         }
 
-        logMethod(...args);
+        logMethod(new Date(), loggerName, logLevelName, message, ...args);
     }
 
 }

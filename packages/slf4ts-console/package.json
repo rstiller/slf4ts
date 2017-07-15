@@ -1,6 +1,6 @@
 {
   "name": "slf4ts-console",
-  "version": "1.0.0-beta.2",
+  "version": "1.0.0-beta.3",
   "main": "./build/lib/slf4ts/index.js",
   "typings": "./build/lib/slf4ts/index.d.ts",
   "license": "MIT",
