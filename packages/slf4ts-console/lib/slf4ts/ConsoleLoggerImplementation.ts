@@ -28,6 +28,17 @@ export class ConsoleLoggerImplementation implements LoggerImplementation {
     }
 
     /**
+     * Gets the console instance passed to the constructor.
+     *
+     * @template T
+     * @returns {T} the console implementation passed to the constructor.
+     * @memberof ConsoleLoggerImplementation
+     */
+    public getImplementation<T>(): T {
+        return this.console as any;
+    }
+
+    /**
      * Log method as described in {@link https://github.com/rstiller/slf4ts-api}.
      *
      * This method forwards the arguments to 'console.[log-level]' or 'console.log' method.

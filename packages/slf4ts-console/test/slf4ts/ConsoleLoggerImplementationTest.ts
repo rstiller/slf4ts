@@ -56,4 +56,12 @@ export class ConsoleLoggerImplementationTest {
         td.verify(consoleMock.log(td.matchers.isA(String), "ROOT", "", "Test Message 8"), { ignoreExtraArgs: false, times: 1 });
     }
 
+    @test
+    public async checkGetImplementation() {
+        const consoleMock = td.object(console);
+        const logger = new ConsoleLoggerImplementation(consoleMock);
+
+        expect(logger.getImplementation()).to.equal(consoleMock);
+    }
+
 }
