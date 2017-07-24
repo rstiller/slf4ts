@@ -75,6 +75,12 @@ export interface ILoggerInstance {
      * @memberof ILoggerInstance
      */
     setMetadata(metadata: any): void;
+    /**
+     * Gets the underlying implementation of the logger.
+     *
+     * @memberof ILoggerInstance
+     */
+    getImplementation<T>(): T;
 }
 
 /**
@@ -156,6 +162,10 @@ export class DefaultLoggerInstance implements ILoggerInstance {
 
     public async error(message: string, metadata?: any, error?: Error): Promise<any> {
         return this.log(LogLevel.ERROR, message, metadata, error);
+    }
+
+    public getImplementation<T>(): T {
+        return this.impl.getImplementation<T>();
     }
 
     private async log(logLevel: LogLevel, message: string, metadata: any, error: Error): Promise<any> {

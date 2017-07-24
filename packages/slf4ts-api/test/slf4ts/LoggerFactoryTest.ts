@@ -61,6 +61,13 @@ export class LoggerFactoryTest {
     }
 
     @test
+    public checkGetImplementation(): void {
+        const logger = LoggerFactory.getLogger();
+
+        expect(logger.getImplementation()).to.equal(console);
+    }
+
+    @test
     public checkGetNamedLogger(): void {
         const group = "group1";
         const name = "name1";

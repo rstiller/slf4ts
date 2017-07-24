@@ -3,7 +3,10 @@ function Logger() {
     this.log = function() {
         this.calls.push(arguments);
         // console.log.apply(console, arguments);
-    }
+    };
+    this.getImplementation = function() {
+        return console;
+    };
 };
 
 module.exports = function register(bindings) {

@@ -25,6 +25,13 @@ export interface LoggerImplementation {
      */
     log(level: LogLevel, group: string, name: string, message: string, error: Error | null | undefined, metadata: any | null | undefined): Promise<any>;
 
+    /**
+     * Gets the underlying implementation of the logger.
+     *
+     * @memberof LoggerImplementation
+     */
+    getImplementation<T>(): T;
+
 }
 
 /**
