@@ -50,7 +50,7 @@ ROOT_LOGGER.info("Test Message", { version: '1.0.0' }, new Error());
 Example output:
 
 ```text
-2017-01-01T12:00:00.999Z 'ROOT' 'INFO' 'Test Message' { application: 'my-app', version: '1.0.0' } Error
+2017-01-01T12:00:00.999Z ROOT INFO Test Message { application: 'my-app', version: '1.0.0' } Error
     at ConsoleLoggerImplementationTest.checkArgumentPassing (.../slf4ts-console/test/slf4ts/ConsoleLoggerImplementationTest.ts:XXX:XXX)
     at <anonymous>
 ```
