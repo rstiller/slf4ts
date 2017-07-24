@@ -30,11 +30,11 @@ It's meant to be used with `typescript` / `nodejs`.
 
 ## LogLevel
 
-* TRACE (numeric value: `0`)
-* DEBUG (numeric value: `1`)
+* TRACE (numeric value: `4`)
+* DEBUG (numeric value: `3`)
 * INFO (numeric value: `2`)
-* WARN (numeric value: `3`)
-* ERROR (numeric value: `4`)
+* WARN (numeric value: `1`)
+* ERROR (numeric value: `0`)
 
 ## Logger Implementations
 

@@ -7,11 +7,11 @@ import { EventEmitter } from "events";
  * @enum {number}
  */
 export enum LogLevel {
-    TRACE = 0,
-    DEBUG,
-    INFO,
+    ERROR = 0,
     WARN,
-    ERROR,
+    INFO,
+    DEBUG,
+    TRACE,
 }
 
 export class LoggerConfigurationImpl {
