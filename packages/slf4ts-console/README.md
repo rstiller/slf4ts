@@ -29,7 +29,6 @@ Example package.json:
 {
     ...,
     "dependencies": {
-        "slf4ts-api": "latest",
         "slf4ts-console": "latest"
     },
     ...

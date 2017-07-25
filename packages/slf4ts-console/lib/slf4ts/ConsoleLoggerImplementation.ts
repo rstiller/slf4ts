@@ -38,6 +38,10 @@ export class ConsoleLoggerImplementation implements LoggerImplementation {
         return this.console as any;
     }
 
+    public setConfig<T>(config: T, group: string, name: string): void {
+        // no config for console ...
+    }
+
     /**
      * Log method as described in {@link https://github.com/rstiller/slf4ts-api}.
      *
