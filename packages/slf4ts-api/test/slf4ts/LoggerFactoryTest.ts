@@ -192,4 +192,64 @@ export class LoggerFactoryTest {
         expect(loggerImpl.calls[4][5]).to.deep.equal({ mode: "Test", version: "1.0.0" });
     }
 
+    @test
+    public checkSetConfig(): void {
+        const group = "group1";
+        const name1 = "name1";
+        const name2 = "name2";
+        const rootLogger = LoggerFactory.getLogger();
+        const loggerImpl = (rootLogger as DefaultLoggerInstance).getImpl() as any;
+
+        LoggerFactory.getLogger(group);
+        LoggerFactory.getLogger(group, name1);
+        LoggerFactory.getLogger(group, name2);
+
+        expect(LoggerConfiguration.getConfig()).to.not.exist;
+        expect(LoggerConfiguration.getConfig(group)).to.not.exist;
+        expect(LoggerConfiguration.getConfig(group, name1)).to.not.exist;
+        expect(LoggerConfiguration.getConfig(group, name2)).to.not.exist;
+
+        expect(loggerImpl.setConfigCalls).to.have.length(0);
+
+        const config = {
+            key: "value",
+        };
+
+        LoggerConfiguration.setConfig(config);
+
+        expect(LoggerConfiguration.getConfig()).to.equal(config);
+        expect(LoggerConfiguration.getConfig(group)).to.not.exist;
+        expect(LoggerConfiguration.getConfig(group, name1)).to.not.exist;
+        expect(LoggerConfiguration.getConfig(group, name2)).to.not.exist;
+
+        expect(loggerImpl.setConfigCalls).to.have.length(1);
+        expect(loggerImpl.setConfigCalls[0][0]).to.deep.equal(config);
+        expect(loggerImpl.setConfigCalls[0][1]).to.equal("");
+        expect(loggerImpl.setConfigCalls[0][2]).to.equal("");
+
+        LoggerConfiguration.setConfig(config, group);
+
+        expect(LoggerConfiguration.getConfig()).to.equal(config);
+        expect(LoggerConfiguration.getConfig(group)).to.equal(config);
+        expect(LoggerConfiguration.getConfig(group, name1)).to.not.exist;
+        expect(LoggerConfiguration.getConfig(group, name2)).to.not.exist;
+
+        expect(loggerImpl.setConfigCalls).to.have.length(2);
+        expect(loggerImpl.setConfigCalls[1][0]).to.deep.equal(config);
+        expect(loggerImpl.setConfigCalls[1][1]).to.equal(group);
+        expect(loggerImpl.setConfigCalls[1][2]).to.equal("");
+
+        LoggerConfiguration.setConfig(config, group, name1);
+
+        expect(LoggerConfiguration.getConfig()).to.equal(config);
+        expect(LoggerConfiguration.getConfig(group)).to.equal(config);
+        expect(LoggerConfiguration.getConfig(group, name1)).to.equal(config);
+        expect(LoggerConfiguration.getConfig(group, name2)).to.not.exist;
+
+        expect(loggerImpl.setConfigCalls).to.have.length(3);
+        expect(loggerImpl.setConfigCalls[2][0]).to.deep.equal(config);
+        expect(loggerImpl.setConfigCalls[2][1]).to.equal(group);
+        expect(loggerImpl.setConfigCalls[2][2]).to.equal(name1);
+    }
+
 }

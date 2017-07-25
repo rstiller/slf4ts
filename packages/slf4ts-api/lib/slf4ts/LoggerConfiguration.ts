@@ -1,3 +1,5 @@
+import "source-map-support/register";
+
 import { EventEmitter } from "events";
 
 /**
@@ -18,6 +20,7 @@ export class LoggerConfigurationImpl {
 
     private events: EventEmitter = new EventEmitter();
     private logLevelMapping: Map<string, LogLevel> = new Map();
+    private configMapping: Map<string, any> = new Map();
     private defaultLogLevel: LogLevel = LogLevel.INFO;
 
     /**
@@ -108,7 +111,51 @@ export class LoggerConfigurationImpl {
     public reset() {
         this.events.removeAllListeners();
         this.logLevelMapping.clear();
+        this.configMapping.clear();
         this.defaultLogLevel = LogLevel.INFO;
+    }
+
+    /**
+     * Set the implementation-specific config for the given group and name.
+     *
+     * @template T Type of config.
+     * @param {T} config The implementation-specific config for the specified logger.
+     * @param {string} [group=""] The group of the logger instance.
+     * @param {string} [name=""] The name of the logger instance.
+     * @memberof LoggerConfigurationImpl
+     */
+    public setConfig<T>(config: T, group = "", name = "") {
+        const event = { group, config, name };
+        const compoundKey = `${group}:${name}`;
+
+        this.configMapping.set(compoundKey, config);
+        this.events.emit(`changed:config:${group}:${name}`, event);
+    }
+
+    /**
+     * Set the implementation-specific config for the given group and name.
+     *
+     * @template T Type of config.
+     * @param {T} config The implementation-specific config for the specified logger.
+     * @param {string} [group=""] The group of the logger instance.
+     * @param {string} [name=""] The name of the logger instance.
+     * @memberof LoggerConfigurationImpl
+     */
+    public getConfig<T>(group = "", name = ""): T {
+        const compoundKey = `${group}:${name}`;
+        return this.configMapping.get(compoundKey);
+    }
+
+    /**
+     * Registers a new listener for configuration changes.
+     *
+     * @param {(...args: any[]) => void} callback The listener callback.
+     * @param {string} [group=""] The group of the logger instance.
+     * @param {string} [name=""] The name of the logger instance.
+     * @memberof LoggerConfigurationImpl
+     */
+    public onConfigChanged(callback: (...args: any[]) => void, group = "", name = "") {
+        this.events.on(`changed:config:${group}:${name}`, callback);
     }
 
 }

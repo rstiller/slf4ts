@@ -64,6 +64,8 @@ interface LoggerImplementation {
         message: string,
         error: Error,
         metadata: any): Promise<any>;
+    getImplementation<T>(): T;
+    setConfig<T>(config: T, group: string, name: string): void;
 }
 
 interface LoggerBinding {
@@ -125,6 +127,21 @@ LoggerConfiguration.setLogLevel(LogLevel.WARN, "my-lib");
 
 // sets the log level of the logger with group "my-lib" and name "X"
 LoggerConfiguration.setLogLevel(LogLevel.ERROR, "my-lib", "X");
+
+const config = {
+    transports: [...],
+    events: [...],
+    postProcessor: () => { ... }
+};
+
+// sets the config of all loggers
+LoggerConfiguration.setConfig(config);
+
+// sets the config of all loggers within group "my-lib"
+LoggerConfiguration.setConfig(config, "my-lib");
+
+// sets the config of the logger with group "my-lib" and name "X"
+LoggerConfiguration.setConfig(config, "my-lib", "X");
 ```
 
 ## License

@@ -1,3 +1,5 @@
+import "source-map-support/register";
+
 import * as fs from "fs";
 import * as path from "path";
 
@@ -31,6 +33,17 @@ export interface LoggerImplementation {
      * @memberof LoggerImplementation
      */
     getImplementation<T>(): T;
+
+    /**
+     * Sets the configuration for the specified logger instance.
+     *
+     * @template T Type of config object
+     * @param {T} config The implementation-specific configuration.
+     * @param {string} group The group of the logger.
+     * @param {string} name The name of the logger.
+     * @memberof LoggerImplementation
+     */
+    setConfig<T>(config: T, group: string, name: string): void;
 
 }
 

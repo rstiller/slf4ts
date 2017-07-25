@@ -1,11 +1,14 @@
 function Logger() {
     this.calls = [];
+    this.setConfigCalls = [];
     this.log = function() {
         this.calls.push(arguments);
-        // console.log.apply(console, arguments);
     };
     this.getImplementation = function() {
         return console;
+    };
+    this.setConfig = function() {
+        this.setConfigCalls.push(arguments);
     };
 };
 

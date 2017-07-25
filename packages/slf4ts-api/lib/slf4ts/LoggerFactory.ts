@@ -1,3 +1,5 @@
+import "source-map-support/register";
+
 import { LoggerBindings, LoggerImplementation } from "./LoggerBindings";
 import { LoggerConfiguration, LogLevel } from "./LoggerConfiguration";
 
@@ -116,6 +118,8 @@ export class DefaultLoggerInstance implements ILoggerInstance {
         LoggerConfiguration.onLogLevelChanged((event) => this.logLevel = event.logLevel, group, name);
         LoggerConfiguration.onLogLevelChanged((event) => this.logLevel = event.logLevel, group);
         LoggerConfiguration.onLogLevelChanged((event) => this.logLevel = event.logLevel);
+
+        LoggerConfiguration.onConfigChanged((event) => this.impl.setConfig(event.config, event.group, event.name), group, name);
     }
 
     public getLogLevel(): LogLevel {
