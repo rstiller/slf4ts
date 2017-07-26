@@ -61,7 +61,7 @@ export class ConsoleLoggerImplementationTest {
         const consoleMock = td.object(console);
         const logger = new ConsoleLoggerImplementation(consoleMock);
 
-        expect(logger.getImplementation()).to.equal(consoleMock);
+        expect(logger.getImplementation("", "")).to.equal(consoleMock);
     }
 
 }
