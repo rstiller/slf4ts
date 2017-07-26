@@ -34,7 +34,7 @@ export class ConsoleLoggerImplementation implements LoggerImplementation {
      * @returns {T} the console implementation passed to the constructor.
      * @memberof ConsoleLoggerImplementation
      */
-    public getImplementation<T>(): T {
+    public getImplementation<T>(group: string, name: string): T {
         return this.console as any;
     }
 
