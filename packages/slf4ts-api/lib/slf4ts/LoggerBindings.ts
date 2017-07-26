@@ -30,9 +30,12 @@ export interface LoggerImplementation {
     /**
      * Gets the underlying implementation of the logger.
      *
+     * @template T Type of logger instance.
+     * @param {string} group The group of the logger.
+     * @param {string} name The name of the logger.
      * @memberof LoggerImplementation
      */
-    getImplementation<T>(): T;
+    getImplementation<T>(group: string, name: string): T;
 
     /**
      * Sets the configuration for the specified logger instance.

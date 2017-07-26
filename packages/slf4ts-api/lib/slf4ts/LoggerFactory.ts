@@ -169,7 +169,7 @@ export class DefaultLoggerInstance implements ILoggerInstance {
     }
 
     public getImplementation<T>(): T {
-        return this.impl.getImplementation<T>();
+        return this.impl.getImplementation<T>(this.group, this.name);
     }
 
     private async log(logLevel: LogLevel, message: string, metadata: any, error: Error): Promise<any> {
