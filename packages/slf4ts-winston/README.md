@@ -21,6 +21,10 @@
 
 It's meant to be used with `typescript` / `nodejs`.
 
+Currently not supported:
+
+* using custom log-levels
+
 ## Example Usage
 
 Example package.json:
@@ -29,7 +33,6 @@ Example package.json:
 {
     ...,
     "dependencies": {
-        "slf4ts-api": "latest",
         "slf4ts-winston": "latest"
     },
     ...
