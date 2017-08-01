@@ -209,7 +209,10 @@ export class LoggerFactoryTest {
         expect(LoggerConfiguration.getConfig(group, name1)).to.not.exist;
         expect(LoggerConfiguration.getConfig(group, name2)).to.not.exist;
 
-        expect(loggerImpl.setConfigCalls).to.have.length(0);
+        // each logger asks or it's config on construction
+        expect(loggerImpl.setConfigCalls).to.have.length(4);
+        // clear calls ...
+        loggerImpl.setConfigCalls.splice(0, 4);
 
         const config = {
             key: "value",
