@@ -10,7 +10,7 @@ import { WinstonLoggerImplementation } from "../../lib/slf4ts/WinstonLoggerImple
 const expect = chai.expect;
 
 @suite
-export class ConsoleLoggerImplementationTest {
+export class WinstonLoggerImplementationTest {
 
     @test
     public async checkLogLevel() {

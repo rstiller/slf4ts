@@ -42,17 +42,35 @@ Example package.json:
 Example code:
 
 ```typescript
-import { LoggerFactory } from "slf4ts-api";
+import { LoggerFactory, LoggerConfiguration } from "slf4ts-api";
+// register winston third-party-lib
+import "winston-daily-rotate-file";
 
 const ROOT_LOGGER = LoggerFactory.getLogger();
 ROOT_LOGGER.setMetadata({ application: 'my-app' });
 
 ROOT_LOGGER.info("Test Message", { version: '1.0.0' }, new Error());
-```
 
-Example output:
+// configuration for winston loggers
+const config = {
+    transports: [
+        new (winston.transports.Console)(),
+        new (winston.transports.File)({ filename: 'somefile.log' }),
+        new (winston.transports.DailyRotateFile)({
+            "filename": "logfilename.log",
+            "datePattern": "yyyy-MM-dd-",
+            "prepend": true,
+            "logstash": true,
+            "level": "debug"
+        })
+    ]
+};
 
-```text
+// configure the root logger ...
+LoggerConfiguration.setConfig(config);
+
+// configure a certain logger
+LoggerConfiguration.setConfig(config, "my-lib", "X");
 ```
 
 ## License
