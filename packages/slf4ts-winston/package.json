@@ -1,6 +1,6 @@
 {
   "name": "slf4ts-winston",
-  "version": "1.0.0-beta.2",
+  "version": "1.0.0-beta.3",
   "main": "./build/lib/slf4ts/index.js",
   "typings": "./build/lib/slf4ts/index.d.ts",
   "license": "MIT",
@@ -29,14 +29,14 @@
     "npm-check": "^5.4.5",
     "nyc": "^11.1.0",
     "rimraf": "^2.6.1",
-    "testdouble": "^3.2.2",
+    "testdouble": "^3.2.3",
     "ts-node": "^3.3.0",
     "tslint": "^5.5.0",
     "typescript": "^2.4.2"
   },
   "dependencies": {
     "@types/winston": "^2.3.4",
-    "slf4ts-api": "^1.0.0-beta.7",
+    "slf4ts-api": "^1.0.0-beta.8",
     "source-map-support": "^0.4.15",
     "winston": "^2.3.1"
   },
