@@ -120,7 +120,10 @@ export class DefaultLoggerInstance implements ILoggerInstance {
         LoggerConfiguration.onLogLevelChanged((event) => this.logLevel = event.logLevel);
 
         LoggerConfiguration.onConfigChanged((event) => this.impl.setConfig(event.config, event.group, event.name), group, name);
-        this.impl.setConfig(LoggerConfiguration.getConfig(group, name), group, name);
+        const initialConfig = LoggerConfiguration.getConfig(group, name) ||
+                              LoggerConfiguration.getConfig(group) ||
+                              LoggerConfiguration.getConfig();
+        this.impl.setConfig(initialConfig, group, name);
     }
 
     public getLogLevel(): LogLevel {
