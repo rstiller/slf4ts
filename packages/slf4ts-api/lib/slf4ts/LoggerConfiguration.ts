@@ -66,32 +66,61 @@ export class LoggerConfigurationImpl {
         const compoundKey = `${group}:${name}`;
 
         this.logLevelMapping.set(compoundKey, logLevel);
+        this.events.emit("changed:log-level", event);
+    }
 
-        if (name && group) {
-            this.events.emit(`changed:log-level:${group}:${name}`, event);
-        } else if (group) {
-            this.events.emit(`changed:log-level:${group}`, event);
-        } else {
-            this.events.emit("changed:log-level", event);
-        }
+    /**
+     * Set the implementation-specific config for the given group and name.
+     *
+     * @template T Type of config.
+     * @param {T} config The implementation-specific config for the specified logger.
+     * @param {string} [group=""] The group of the logger instance.
+     * @param {string} [name=""] The name of the logger instance.
+     * @memberof LoggerConfigurationImpl
+     */
+    public setConfig<T>(config: T, group = "", name = "") {
+        const event = { group, config, name };
+        const compoundKey = `${group}:${name}`;
+
+        this.configMapping.set(compoundKey, config);
+        this.events.emit(`changed:config`, event);
+    }
+
+    /**
+     * Set the implementation-specific config for the given group and name.
+     *
+     * @template T Type of config.
+     * @param {T} config The implementation-specific config for the specified logger.
+     * @param {string} [group=""] The group of the logger instance.
+     * @param {string} [name=""] The name of the logger instance.
+     * @memberof LoggerConfigurationImpl
+     */
+    public getConfig<T>(group = "", name = ""): T {
+        return this.configMapping.get(`${group}:${name}`) || this.configMapping.get(`${group}:`) || this.configMapping.get(":");
+    }
+
+    /**
+     * Registers a new listener for log-level changes.
+     *
+     * @param {(...args: any[]) => void} callback The listener callback.
+     * @param {string} [group=""] (Deprecated - Ignored and will be removed) The group of the logger instance.
+     * @param {string} [name=""] (Deprecated - Ignored and will be removed) The name of the logger instance.
+     * @memberof LoggerConfigurationImpl
+     */
+    public onLogLevelChanged(callback: (...args: any[]) => void, group = "", name = "") {
+        this.events.on(`changed:log-level`, callback);
     }
 
     /**
      * Registers a new listener for configuration changes.
      *
      * @param {(...args: any[]) => void} callback The listener callback.
-     * @param {string} [group=""] The group of the logger instance.
-     * @param {string} [name=""] The name of the logger instance.
+     * @param {string} [group=""] (Deprecated - Ignored and will be removed) The group of the logger instance.
+     * @param {string} [name=""] (Deprecated - Ignored and will be removed) The name of the logger instance.
      * @memberof LoggerConfigurationImpl
      */
-    public onLogLevelChanged(callback: (...args: any[]) => void, group = "", name = "") {
-        if (name && group) {
-            this.events.on(`changed:log-level:${group}:${name}`, callback);
-        } else if (group) {
-            this.events.on(`changed:log-level:${group}`, callback);
-        } else {
-            this.events.on(`changed:log-level`, callback);
-        }
+    public onConfigChanged(callback: (...args: any[]) => void, group = "", name = "") {
+        this.events.on(`changed:config`, callback);
     }
 
     /**
@@ -116,46 +145,15 @@ export class LoggerConfigurationImpl {
     }
 
     /**
-     * Set the implementation-specific config for the given group and name.
+     * Checks if the config for a certain logger is present.
      *
-     * @template T Type of config.
-     * @param {T} config The implementation-specific config for the specified logger.
      * @param {string} [group=""] The group of the logger instance.
      * @param {string} [name=""] The name of the logger instance.
      * @memberof LoggerConfigurationImpl
      */
-    public setConfig<T>(config: T, group = "", name = "") {
-        const event = { group, config, name };
+    public hasConfig(group = "", name = ""): boolean {
         const compoundKey = `${group}:${name}`;
-
-        this.configMapping.set(compoundKey, config);
-        this.events.emit(`changed:config:${group}:${name}`, event);
-    }
-
-    /**
-     * Set the implementation-specific config for the given group and name.
-     *
-     * @template T Type of config.
-     * @param {T} config The implementation-specific config for the specified logger.
-     * @param {string} [group=""] The group of the logger instance.
-     * @param {string} [name=""] The name of the logger instance.
-     * @memberof LoggerConfigurationImpl
-     */
-    public getConfig<T>(group = "", name = ""): T {
-        const compoundKey = `${group}:${name}`;
-        return this.configMapping.get(compoundKey);
-    }
-
-    /**
-     * Registers a new listener for configuration changes.
-     *
-     * @param {(...args: any[]) => void} callback The listener callback.
-     * @param {string} [group=""] The group of the logger instance.
-     * @param {string} [name=""] The name of the logger instance.
-     * @memberof LoggerConfigurationImpl
-     */
-    public onConfigChanged(callback: (...args: any[]) => void, group = "", name = "") {
-        this.events.on(`changed:config:${group}:${name}`, callback);
+        return this.configMapping.has(compoundKey);
     }
 
 }

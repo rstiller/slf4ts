@@ -115,19 +115,16 @@ export class DefaultLoggerInstance implements ILoggerInstance {
         this.group = group;
         this.logLevel = logLevel;
 
-        LoggerConfiguration.onLogLevelChanged((event) => this.logLevel = event.logLevel, group, name);
-        LoggerConfiguration.onLogLevelChanged((event) => this.logLevel = event.logLevel, group);
-        LoggerConfiguration.onLogLevelChanged((event) => this.logLevel = event.logLevel);
-
-        LoggerConfiguration.onConfigChanged((event) => this.impl.setConfig(event.config, event.group, event.name), group, name);
-        const initialConfig = LoggerConfiguration.getConfig(group, name) ||
-                              LoggerConfiguration.getConfig(group) ||
-                              LoggerConfiguration.getConfig();
+        const initialConfig = LoggerConfiguration.getConfig(group, name);
         this.impl.setConfig(initialConfig, group, name);
     }
 
     public getLogLevel(): LogLevel {
         return this.logLevel;
+    }
+
+    public setLogLevel(logLevel: LogLevel): void {
+        this.logLevel = logLevel;
     }
 
     public getName(): string {
@@ -236,16 +233,16 @@ export class LoggerFactory {
     }
 
     private static LOGGER: LoggerImplementation;
-    private static ROOT_LOGGER: ILoggerInstance;
+    private static ROOT_LOGGER: DefaultLoggerInstance;
     private static INITIALIZED: boolean = false;
-    private static LOGGER_INSTANCE_CACHE: Map<string, ILoggerInstance> = new Map();
+    private static LOGGER_INSTANCE_CACHE: Map<string, DefaultLoggerInstance> = new Map();
 
     private static initialize() {
         if (!BINDING) {
             throw new Error("No Logger Binding found");
         }
         LoggerFactory.LOGGER = BINDING.getLoggerImplementation();
-        LoggerFactory.ROOT_LOGGER = LoggerFactory.getLogger();
+        LoggerFactory.ROOT_LOGGER = LoggerFactory.getLogger() as DefaultLoggerInstance;
 
         if (BINDINGS.length > 1) {
             let message = "multiple bindings found:";
@@ -253,6 +250,39 @@ export class LoggerFactory {
             message += `\n  using ${BINDING.getVendor()} - ${BINDING.getVersion()}`;
             LoggerFactory.ROOT_LOGGER.info(message);
         }
+
+        LoggerConfiguration.onLogLevelChanged(LoggerFactory.logLevelChanged);
+        LoggerConfiguration.onConfigChanged(LoggerFactory.configChanged);
+    }
+
+    private static logLevelChanged(event: any) {
+        const groupEmpty = "" === event.group;
+        const nameEmpty = "" === event.name;
+        LoggerFactory.LOGGER_INSTANCE_CACHE.forEach((logger, compoundKey) => {
+            const groupMatches = logger.getGroup() === event.group;
+            const nameMatches = logger.getName() === event.name;
+            if ((groupEmpty && nameEmpty) || (groupMatches && nameEmpty) || (groupMatches && nameMatches)) {
+                logger.setLogLevel(event.logLevel);
+            }
+        });
+    }
+
+    private static configChanged(event: any) {
+        const groupEmpty = "" === event.group;
+        const nameEmpty = "" === event.name;
+
+        LoggerFactory.LOGGER_INSTANCE_CACHE.forEach((logger, compoundKey) => {
+            const hasNameConfig = LoggerConfiguration.hasConfig(logger.getGroup(), logger.getName());
+            const hasGroupConfig = LoggerConfiguration.hasConfig(logger.getGroup());
+            const groupMatches = logger.getGroup() === event.group;
+            const nameMatches = logger.getName() === event.name;
+
+            if ((groupEmpty && nameEmpty && !hasGroupConfig && !hasNameConfig) ||
+                (nameEmpty && groupMatches && !hasNameConfig) ||
+                (groupMatches && nameMatches)) {
+                logger.getImpl().setConfig(event.config, logger.getGroup(), logger.getName());
+            }
+        });
     }
 
 }
