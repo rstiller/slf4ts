@@ -22,26 +22,30 @@ export class WinstonLoggerImplementation implements LoggerImplementation {
 
     private loggers: Map<string, winston.LoggerInstance> = new Map();
 
-    public async log(level: LogLevel, group: string, name: string, message: string, error: Error, metadata: any): Promise<any> {
+    public async log(...args: any[]): Promise<any> {
+        const level: number = arguments[0];
+        const group: string = arguments[1];
+        const name: string = arguments[2];
         const instance = this.getLoggerInstance(group, name);
 
         return new Promise((resolve, reject) => {
+            const additionalArguments = [...arguments];
+            additionalArguments.splice(0, 3);
+
+            let callArguments: any[] = [LogLevelMapping[level]];
+            callArguments = callArguments.concat(...additionalArguments);
+            callArguments = callArguments.concat((err?: any, lvl?: string, msg?: string, meta?: any) => {
+                if (err) {
+                    reject(err);
+                } else {
+                    resolve();
+                }
+            });
+
             if (instance) {
-                instance.log(LogLevelMapping[level], message, metadata, error, (err?: any, lvl?: string, msg?: string, meta?: any) => {
-                    if (err) {
-                        reject(err);
-                    } else {
-                        resolve();
-                    }
-                });
+                instance.log.apply(instance, callArguments);
             } else {
-                winston.log(LogLevelMapping[level], message, metadata, error, (err?: any, lvl?: string, msg?: string, meta?: any) => {
-                    if (err) {
-                        reject(err);
-                    } else {
-                        resolve();
-                    }
-                });
+                winston.log.apply(winston, callArguments);
             }
         });
     }

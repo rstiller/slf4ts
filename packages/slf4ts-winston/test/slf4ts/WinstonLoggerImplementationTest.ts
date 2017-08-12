@@ -2,11 +2,13 @@
 import "source-map-support/register";
 
 import * as chai from "chai";
+import "chai-string";
 import { suite, test } from "mocha-typescript";
 import { LogLevel } from "slf4ts-api";
 
 import { WinstonLoggerImplementation } from "../../lib/slf4ts/WinstonLoggerImplementation";
 
+chai.use(require("chai-string"));
 const expect = chai.expect;
 
 @suite
@@ -28,40 +30,35 @@ export class WinstonLoggerImplementationTest {
 
         expect(calls).to.have.length(0);
 
-        await logger.log(LogLevel.TRACE, "", "", "Test Message", null, null);
+        await logger.log(LogLevel.TRACE, "", "", "Test Message");
 
         expect(calls).to.have.length(1);
         expect(calls[0][0]).to.equal("silly");
-        expect(calls[0][1]).to.equal("Test Message null");
-        expect(calls[0][2]).to.not.exist;
+        expect(calls[0][1]).to.equal("Test Message");
 
-        await logger.log(LogLevel.DEBUG, "", "", "Test Message", null, null);
+        await logger.log(LogLevel.DEBUG, "", "", "Test Message");
 
         expect(calls).to.have.length(2);
         expect(calls[1][0]).to.equal("debug");
-        expect(calls[1][1]).to.equal("Test Message null");
-        expect(calls[1][2]).to.not.exist;
+        expect(calls[1][1]).to.equal("Test Message");
 
-        await logger.log(LogLevel.INFO, "", "", "Test Message", null, null);
+        await logger.log(LogLevel.INFO, "", "", "Test Message");
 
         expect(calls).to.have.length(3);
         expect(calls[2][0]).to.equal("info");
-        expect(calls[2][1]).to.equal("Test Message null");
-        expect(calls[2][2]).to.not.exist;
+        expect(calls[2][1]).to.equal("Test Message");
 
-        await logger.log(LogLevel.WARN, "", "", "Test Message", null, null);
+        await logger.log(LogLevel.WARN, "", "", "Test Message");
 
         expect(calls).to.have.length(4);
         expect(calls[3][0]).to.equal("warn");
-        expect(calls[3][1]).to.equal("Test Message null");
-        expect(calls[3][2]).to.not.exist;
+        expect(calls[3][1]).to.equal("Test Message");
 
-        await logger.log(LogLevel.ERROR, "", "", "Test Message", null, null);
+        await logger.log(LogLevel.ERROR, "", "", "Test Message");
 
         expect(calls).to.have.length(5);
         expect(calls[4][0]).to.equal("error");
-        expect(calls[4][1]).to.equal("Test Message null");
-        expect(calls[4][2]).to.not.exist;
+        expect(calls[4][1]).to.equal("Test Message");
     }
 
     @test
@@ -80,33 +77,32 @@ export class WinstonLoggerImplementationTest {
 
         expect(calls).to.have.length(0);
 
-        await logger.log(LogLevel.INFO, "", "", "Test Message", null, null);
+        await logger.log(LogLevel.INFO, "", "", "Test Message");
 
         expect(calls).to.have.length(1);
         expect(calls[0][0]).to.equal("info");
-        expect(calls[0][1]).to.equal("Test Message null");
-        expect(calls[0][2]).to.not.exist;
+        expect(calls[0][1]).to.equal("Test Message");
 
-        await logger.log(LogLevel.INFO, "", "", "Test Message", null, { key: "value" });
+        await logger.log(LogLevel.INFO, "", "", "Test Message", { key: "value" });
 
         expect(calls).to.have.length(2);
         expect(calls[1][0]).to.equal("info");
-        expect(calls[1][1]).to.equal("Test Message { key: 'value' }");
-        expect(calls[1][2]).to.not.exist;
+        expect(calls[1][1]).to.equal("Test Message");
+        expect(calls[1][2]).to.deep.equal({ key: "value" });
 
-        await logger.log(LogLevel.INFO, "", "", "Test Message", new Error(), null);
+        const error = new Error();
+        await logger.log(LogLevel.INFO, "", "", "Test Message", error);
 
         expect(calls).to.have.length(3);
         expect(calls[2][0]).to.equal("info");
-        expect(calls[2][1]).to.equal("Test Message null");
-        expect(calls[2][2]).to.exist;
+        expect(calls[2][1]).to.startsWith("Test Message");
 
-        await logger.log(LogLevel.INFO, "", "", "Test Message", new Error(), { key: "value" });
+        await logger.log(LogLevel.INFO, "", "", "Test Message", error, { key: "value" });
 
         expect(calls).to.have.length(4);
         expect(calls[3][0]).to.equal("info");
-        expect(calls[3][1]).to.equal("Test Message { key: 'value' }");
-        expect(calls[3][2]).to.exist;
+        expect(calls[3][1]).to.startsWith("Test Message Error\n");
+        expect(calls[3][2]).to.deep.equal({ key: "value" });
     }
 
 }
