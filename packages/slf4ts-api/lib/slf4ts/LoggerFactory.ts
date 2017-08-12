@@ -176,9 +176,14 @@ export class DefaultLoggerInstance implements ILoggerInstance {
     private async log(logLevel: LogLevel, message: string, metadata: any, error: Error): Promise<any> {
         if (logLevel <= this.logLevel) {
             if (metadata instanceof Error) {
-                return this.impl.log(logLevel, this.group, this.name, message, metadata, { ...this.commonMetadata });
+                return this.impl.log(logLevel, this.group, this.name, message, metadata, this.commonMetadata);
             } else {
-                return this.impl.log(logLevel, this.group, this.name, message, error, { ...this.commonMetadata, ...metadata });
+                let metadataObject;
+                if ((metadata && Object.keys(metadata).length > 0) ||
+                    (this.commonMetadata && Object.keys(this.commonMetadata).length > 0)) {
+                    metadataObject = { ...this.commonMetadata, ...metadata };
+                }
+                return this.impl.log(logLevel, this.group, this.name, message, error, metadataObject);
             }
         }
     }
