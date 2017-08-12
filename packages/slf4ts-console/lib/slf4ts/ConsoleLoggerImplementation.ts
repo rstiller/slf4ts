@@ -46,19 +46,16 @@ export class ConsoleLoggerImplementation implements LoggerImplementation {
      * Log method as described in {@link https://github.com/rstiller/slf4ts-api}.
      *
      * This method forwards the arguments to 'console.[log-level]' or 'console.log' method.
-     * The Error argument is only forwarded if it exists.
      *
-     * @param {LogLevel} level
-     * @param {string} group
-     * @param {string} name
-     * @param {string} message
-     * @param {Error} error
-     * @param {*} metadata
+     * @param {...any[]} args
      * @returns {Promise<any>}
      * @memberof ConsoleLoggerImplementation
      */
-    public async log(level: LogLevel, group: string, name: string, message: string, error: Error, metadata: any): Promise<any> {
+    public async log(...args: any[]): Promise<any> {
         let loggerName = "";
+        const level: number = arguments[0];
+        const group: string = arguments[1];
+        const name: string = arguments[2];
 
         if (group && name) {
             loggerName = `${group}.${name}`;
@@ -78,15 +75,9 @@ export class ConsoleLoggerImplementation implements LoggerImplementation {
             logMethod = (this.console as any)[logMethodName];
         }
 
-        const args: any[] = [];
-        if (metadata) {
-            args.push(util.inspect(metadata));
-        }
-        if (error) {
-            args.push(error);
-        }
-
-        logMethod(util.inspect(new Date()), loggerName, logLevelName, message, ...args);
+        const additionalArguments: any[] = [...arguments];
+        additionalArguments.splice(0, 3);
+        logMethod.apply(this.console, [util.inspect(new Date()), loggerName, logLevelName].concat(additionalArguments));
     }
 
 }
