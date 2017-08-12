@@ -16,53 +16,43 @@ export interface ILoggerInstance {
     /**
      * Logs the given message using TRACE log-level.
      *
-     * @param {string} message The message to be logged.
-     * @param {(any | Error)} [metadata] Either an Error instance or a metadata object - can be undefined or null.
-     * @param {Error} [error] Optional Error instance to log.
+     * @param {...args: any[]} [args] messages, metadata and errors to log.
      * @returns {Promise<any>} A promise completing when the logging-implementation processed the log statement.
      * @memberof ILoggerInstance
      */
-    trace(message: string, metadata?: any | Error, error?: Error): Promise<any>;
+    trace(...args: any[]): Promise<any>;
     /**
      * Logs the given message using DEBUG log-level.
      *
-     * @param {string} message The message to be logged.
-     * @param {(any | Error)} [metadata] Either an Error instance or a metadata object - can be undefined or null.
-     * @param {Error} [error] Optional Error instance to log.
+     * @param {...args: any[]} [args] messages, metadata and errors to log.
      * @returns {Promise<any>} A promise completing when the logging-implementation processed the log statement.
      * @memberof ILoggerInstance
      */
-    debug(message: string, metadata?: any | Error, error?: Error): Promise<any>;
+    debug(...args: any[]): Promise<any>;
     /**
      * Logs the given message using INFO log-level.
      *
-     * @param {string} message The message to be logged.
-     * @param {(any | Error)} [metadata] Either an Error instance or a metadata object - can be undefined or null.
-     * @param {Error} [error] Optional Error instance to log.
+     * @param {...args: any[]} [args] messages, metadata and errors to log.
      * @returns {Promise<any>} A promise completing when the logging-implementation processed the log statement.
      * @memberof ILoggerInstance
      */
-    info(message: string, metadata?: any | Error, error?: Error): Promise<any>;
+    info(...args: any[]): Promise<any>;
     /**
      * Logs the given message using WARN log-level.
      *
-     * @param {string} message The message to be logged.
-     * @param {(any | Error)} [metadata] Either an Error instance or a metadata object - can be undefined or null.
-     * @param {Error} [error] Optional Error instance to log.
+     * @param {...args: any[]} [args] messages, metadata and errors to log.
      * @returns {Promise<any>} A promise completing when the logging-implementation processed the log statement.
      * @memberof ILoggerInstance
      */
-    warn(message: string, metadata?: any | Error, error?: Error): Promise<any>;
+    warn(...args: any[]): Promise<any>;
     /**
      * Logs the given message using ERROR log-level.
      *
-     * @param {string} message The message to be logged.
-     * @param {(any | Error)} [metadata] Either an Error instance or a metadata object - can be undefined or null.
-     * @param {Error} [error] Optional Error instance to log.
+     * @param {...args: any[]} [args] messages, metadata and errors to log.
      * @returns {Promise<any>} A promise completing when the logging-implementation processed the log statement.
      * @memberof ILoggerInstance
      */
-    error(message: string, metadata?: any | Error, error?: Error): Promise<any>;
+    error(...args: any[]): Promise<any>;
     /**
      * Gets the current log-level.
      *
@@ -149,42 +139,33 @@ export class DefaultLoggerInstance implements ILoggerInstance {
         this.commonMetadata = commonMetadata;
     }
 
-    public async trace(message: string, metadata?: any, error?: Error): Promise<any> {
-        return this.log(LogLevel.TRACE, message, metadata, error);
+    public async trace(...args: any[]): Promise<any> {
+        return this.log.apply(this, [LogLevel.TRACE, this.group, this.name].concat(...arguments).concat(this.commonMetadata));
     }
 
-    public async debug(message: string, metadata?: any, error?: Error): Promise<any> {
-        return this.log(LogLevel.DEBUG, message, metadata, error);
+    public async debug(...args: any[]): Promise<any> {
+        return this.log.apply(this, [LogLevel.DEBUG, this.group, this.name].concat(...arguments).concat(this.commonMetadata));
     }
 
-    public async info(message: string, metadata?: any, error?: Error): Promise<any> {
-        return this.log(LogLevel.INFO, message, metadata, error);
+    public async info(...args: any[]): Promise<any> {
+        return this.log.apply(this, [LogLevel.INFO, this.group, this.name].concat(...arguments).concat(this.commonMetadata));
     }
 
-    public async warn(message: string, metadata?: any, error?: Error): Promise<any> {
-        return this.log(LogLevel.WARN, message, metadata, error);
+    public async warn(...args: any[]): Promise<any> {
+        return this.log.apply(this, [LogLevel.WARN, this.group, this.name].concat(...arguments).concat(this.commonMetadata));
     }
 
-    public async error(message: string, metadata?: any, error?: Error): Promise<any> {
-        return this.log(LogLevel.ERROR, message, metadata, error);
+    public async error(...args: any[]): Promise<any> {
+        return this.log.apply(this, [LogLevel.ERROR, this.group, this.name].concat(...arguments).concat(this.commonMetadata));
     }
 
     public getImplementation<T>(): T {
         return this.impl.getImplementation<T>(this.group, this.name);
     }
 
-    private async log(logLevel: LogLevel, message: string, metadata: any, error: Error): Promise<any> {
+    private async log(logLevel: LogLevel, ...args: any[]): Promise<any> {
         if (logLevel <= this.logLevel) {
-            if (metadata instanceof Error) {
-                return this.impl.log(logLevel, this.group, this.name, message, metadata, this.commonMetadata);
-            } else {
-                let metadataObject;
-                if ((metadata && Object.keys(metadata).length > 0) ||
-                    (this.commonMetadata && Object.keys(this.commonMetadata).length > 0)) {
-                    metadataObject = { ...this.commonMetadata, ...metadata };
-                }
-                return this.impl.log(logLevel, this.group, this.name, message, error, metadataObject);
-            }
+            return this.impl.log.apply(this.impl, arguments);
         }
     }
 

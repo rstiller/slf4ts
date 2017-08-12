@@ -38,8 +38,7 @@ export class LoggerFactoryTest {
         expect(loggerImpl.calls[0][1]).to.equal("");
         expect(loggerImpl.calls[0][2]).to.equal("");
         expect(loggerImpl.calls[0][3]).to.equal("Test Message");
-        expect(loggerImpl.calls[0][4]).to.not.exist;
-        expect(loggerImpl.calls[0][5]).to.deep.equal({ mode: "Test" });
+        expect(loggerImpl.calls[0][4]).to.deep.equal({ mode: "Test" });
     }
 
     @test
@@ -127,8 +126,7 @@ export class LoggerFactoryTest {
         expect(loggerImpl.calls[0][1]).to.equal("group1");
         expect(loggerImpl.calls[0][2]).to.equal("name1");
         expect(loggerImpl.calls[0][3]).to.equal("Test Message 1");
-        expect(loggerImpl.calls[0][4]).to.not.exist;
-        expect(loggerImpl.calls[0][5]).to.deep.equal({ mode: "Test" });
+        expect(loggerImpl.calls[0][4]).to.deep.equal({ mode: "Test" });
 
         LoggerConfiguration.setLogLevel(LogLevel.WARN);
         expect(logger.getLogLevel()).to.equal(LogLevel.WARN);
@@ -145,8 +143,7 @@ export class LoggerFactoryTest {
         expect(loggerImpl.calls[1][1]).to.equal("group1");
         expect(loggerImpl.calls[1][2]).to.equal("name1");
         expect(loggerImpl.calls[1][3]).to.equal("Test Message 3");
-        expect(loggerImpl.calls[1][4]).to.not.exist;
-        expect(loggerImpl.calls[1][5]).to.deep.equal({ mode: "Test" });
+        expect(loggerImpl.calls[1][4]).to.deep.equal({ mode: "Test" });
     }
 
     @test
@@ -156,45 +153,45 @@ export class LoggerFactoryTest {
 
         logger.info("Test Message 1");
         expect(loggerImpl.calls).to.have.length(1);
-        expect(loggerImpl.calls[0]).to.have.length(6);
+        expect(loggerImpl.calls[0]).to.have.length(5);
         expect(loggerImpl.calls[0][4]).to.not.exist;
-        expect(loggerImpl.calls[0][5]).to.not.exist;
 
         logger.info("Test Message 2", { arg1: "value1" });
         expect(loggerImpl.calls).to.have.length(2);
         expect(loggerImpl.calls[1]).to.have.length(6);
-        expect(loggerImpl.calls[1][4]).to.not.exist;
-        expect(loggerImpl.calls[1][5]).to.deep.equal({ arg1: "value1" });
+        expect(loggerImpl.calls[1][4]).to.deep.equal({ arg1: "value1" });
+        expect(loggerImpl.calls[1][5]).to.not.exist;
 
         logger.setMetadata({ mode: "Test", version: "1.0.0" });
         logger.info("Test Message 3");
 
         expect(loggerImpl.calls).to.have.length(3);
-        expect(loggerImpl.calls[2]).to.have.length(6);
-        expect(loggerImpl.calls[2][4]).to.not.exist;
-        expect(loggerImpl.calls[2][5]).to.deep.equal({ mode: "Test", version: "1.0.0" });
+        expect(loggerImpl.calls[2]).to.have.length(5);
+        expect(loggerImpl.calls[2][4]).to.deep.equal({ mode: "Test", version: "1.0.0" });
 
         logger.info("Test Message 4", { arg1: "value1" });
 
         expect(loggerImpl.calls).to.have.length(4);
         expect(loggerImpl.calls[3]).to.have.length(6);
-        expect(loggerImpl.calls[3][4]).to.not.exist;
-        expect(loggerImpl.calls[3][5]).to.deep.equal({ mode: "Test", version: "1.0.0", arg1: "value1" });
+        expect(loggerImpl.calls[3][4]).to.deep.equal({ arg1: "value1" });
+        expect(loggerImpl.calls[3][5]).to.deep.equal({ mode: "Test", version: "1.0.0" });
 
         const error = new Error("Test");
         logger.info("Test Message 5", { arg1: "value1" }, error);
 
         expect(loggerImpl.calls).to.have.length(5);
-        expect(loggerImpl.calls[4]).to.have.length(6);
-        expect(loggerImpl.calls[4][4]).to.equal(error);
-        expect(loggerImpl.calls[4][5]).to.deep.equal({ mode: "Test", version: "1.0.0", arg1: "value1" });
+        expect(loggerImpl.calls[4]).to.have.length(7);
+        expect(loggerImpl.calls[4][4]).to.deep.equal({ arg1: "value1" });
+        expect(loggerImpl.calls[4][5]).to.equal(error);
+        expect(loggerImpl.calls[4][6]).to.deep.equal({ mode: "Test", version: "1.0.0" });
 
         logger.info("Test Message 6", null, error);
 
         expect(loggerImpl.calls).to.have.length(6);
-        expect(loggerImpl.calls[5]).to.have.length(6);
-        expect(loggerImpl.calls[5][4]).to.equal(error);
-        expect(loggerImpl.calls[5][5]).to.deep.equal({ mode: "Test", version: "1.0.0" });
+        expect(loggerImpl.calls[5]).to.have.length(7);
+        expect(loggerImpl.calls[5][4]).to.be.null;
+        expect(loggerImpl.calls[5][5]).to.equal(error);
+        expect(loggerImpl.calls[5][6]).to.deep.equal({ mode: "Test", version: "1.0.0" });
 
         logger.info("Test Message 7", error);
 

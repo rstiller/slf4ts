@@ -3,8 +3,6 @@ import "source-map-support/register";
 import * as fs from "fs";
 import * as path from "path";
 
-import { LogLevel } from "./LoggerConfiguration";
-
 /**
  * The bidge to the underlying logging-framework.
  *
@@ -16,16 +14,11 @@ export interface LoggerImplementation {
     /**
      * Invoked for each call to a logging method of a logger instance.
      *
-     * @param {LogLevel} level The log level of the logging method.
-     * @param {string} group The group of the logger instance.
-     * @param {string} name The name of the logger instance.
-     * @param {string} message The message the logging method was called with.
-     * @param {(Error | null | undefined)} error A possible Error to log.
-     * @param {(any | null | undefined)} metadata A metadata object to give the log statment a context.
+     * @param {...any[]} args array with log-level, group, name and all arguments passed to the logging function.
      * @returns {Promise<any>} A Promise completed when the log statement was processed by the underlying logging-framework.
      * @memberof LoggerImplementation
      */
-    log(level: LogLevel, group: string, name: string, message: string, error: Error | null | undefined, metadata: any | null | undefined): Promise<any>;
+    log(...args: any[]): Promise<any>;
 
     /**
      * Gets the underlying implementation of the logger.

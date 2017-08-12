@@ -58,12 +58,7 @@ Interfaces to implement:
 import { LogLevel } from "slf4ts-api";
 
 interface LoggerImplementation {
-    log(level: LogLevel,
-        group: string,
-        name: string,
-        message: string,
-        error: Error,
-        metadata: any): Promise<any>;
+    log(...args: any[]): Promise<any>;
     getImplementation<T>(): T;
     setConfig<T>(config: T, group: string, name: string): void;
 }
