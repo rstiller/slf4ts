@@ -1,6 +1,6 @@
 {
   "name": "slf4ts-winston",
-  "version": "1.0.0-beta.6",
+  "version": "1.0.0-beta.7",
   "main": "./build/lib/slf4ts/index.js",
   "typings": "./build/lib/slf4ts/index.d.ts",
   "license": "MIT",

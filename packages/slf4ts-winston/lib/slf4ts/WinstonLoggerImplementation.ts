@@ -1,6 +1,7 @@
 import "source-map-support/register";
 
 import { LoggerImplementation, LogLevel } from "slf4ts-api";
+import * as util from "util";
 import * as winston from "winston";
 
 const LogLevelMapping: string[] = [];
@@ -34,6 +35,23 @@ export class WinstonLoggerImplementation implements LoggerImplementation {
 
             let callArguments: any[] = [LogLevelMapping[level]];
             callArguments = callArguments.concat(...additionalArguments);
+            const metaArgs = callArguments.splice(2, callArguments.length - 2);
+            let metaArg: any;
+            if (metaArgs && metaArgs.length > 0) {
+                metaArg = {};
+                metaArgs.forEach((meta) => {
+                    if (meta) {
+                        if (meta instanceof Error) {
+                            metaArg = { ...metaArg, stack: util.inspect(meta) };
+                        } else {
+                            metaArg = { ...metaArg, ...meta };
+                        }
+                    }
+                });
+            }
+            if (metaArg) {
+                callArguments = callArguments.concat(metaArg);
+            }
             callArguments = callArguments.concat((err?: any, lvl?: string, msg?: string, meta?: any) => {
                 if (err) {
                     reject(err);

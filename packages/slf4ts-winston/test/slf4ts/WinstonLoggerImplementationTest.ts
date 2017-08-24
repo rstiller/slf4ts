@@ -101,8 +101,9 @@ export class WinstonLoggerImplementationTest {
 
         expect(calls).to.have.length(4);
         expect(calls[3][0]).to.equal("info");
-        expect(calls[3][1]).to.startsWith("Test Message Error\n");
-        expect(calls[3][2]).to.deep.equal({ key: "value" });
+        expect(calls[3][1]).to.startsWith("Test Message");
+        expect(calls[3][2]).to.contain({ key: "value" });
+        expect(calls[3][2].stack).to.startsWith("Error\n");
     }
 
 }
