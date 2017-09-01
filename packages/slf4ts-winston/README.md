@@ -17,8 +17,6 @@
     </a>
 </p>
 
-**Status: Work in Progress**
-
 It's meant to be used with `typescript` / `nodejs`.
 
 Currently not supported:
