@@ -17,9 +17,6 @@ Simple Logging Facade for Typescript
     </a>
 </p>
 
-
-**Status: Work in Progress**
-
 Inspired by the popular Java lib [SLF4J](https://www.slf4j.org)
 
 This project is used to abstract logging   
