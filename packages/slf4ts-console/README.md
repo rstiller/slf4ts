@@ -17,8 +17,6 @@ Console Logging-Binding for [slf4ts](https://www.npmjs.org/package/slf4ts-api)
     </a>
 </p>
 
-**Status: Work in Progress**
-
 It's meant to be used with `typescript` / `nodejs`.
 
 ## Example Usage
