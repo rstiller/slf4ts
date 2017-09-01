@@ -172,6 +172,27 @@ export class DefaultLoggerInstance implements ILoggerInstance {
 }
 
 /**
+ * Default/ Dummy logger implementation - does nothing.
+ *
+ * @class NullLoggerImplementation
+ * @implements {LoggerImplementation}
+ */
+class NullLoggerImplementation implements LoggerImplementation {
+
+    public log(...args: any[]): Promise<any> {
+        return null;
+    }
+
+    public getImplementation<T>(group: string, name: string): T {
+        return null;
+    }
+
+    public setConfig<T>(config: T, group: string, name: string): void {
+    }
+
+}
+
+/**
  * Used to instance an cache logger instances.
  *
  * @export
@@ -218,14 +239,16 @@ export class LoggerFactory {
         }
     }
 
-    private static LOGGER: LoggerImplementation;
+    private static LOGGER: LoggerImplementation = new NullLoggerImplementation();
     private static ROOT_LOGGER: DefaultLoggerInstance;
     private static INITIALIZED: boolean = false;
     private static LOGGER_INSTANCE_CACHE: Map<string, DefaultLoggerInstance> = new Map();
 
     private static initialize() {
         if (!BINDING) {
-            throw new Error("No Logger Binding found");
+            // tslint:disable-next-line:no-console
+            console.log("SLF4TS: No Logger Binding found");
+            return;
         }
         LoggerFactory.LOGGER = BINDING.getLoggerImplementation();
         LoggerFactory.ROOT_LOGGER = LoggerFactory.getLogger() as DefaultLoggerInstance;
