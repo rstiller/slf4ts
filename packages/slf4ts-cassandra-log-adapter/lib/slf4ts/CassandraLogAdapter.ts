@@ -24,9 +24,8 @@ export class CassandraLogAdapter {
     protected async handleLog(level: string, className: string, message: string, furtherInfo: any) {
         const args: any[] = [];
         if (className) {
-            args.push(className);
-        }
-        if (message) {
+            args.push(`${className} - ${message}`);
+        } else {
             args.push(message);
         }
         if (furtherInfo) {
