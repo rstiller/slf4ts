@@ -17,8 +17,6 @@
     </a>
 </p>
 
-**Status: Work in Progress**
-
 This project forwards log events from datastax cassandra driver to slf4ts logger implementation.  
 It's s meant to be used with `typescript` / `nodejs`.
 
@@ -30,9 +28,13 @@ import { ILoggerInstance, LoggerFactory } from "slf4ts-api";
 // create an instance of Client
 const client = new Client({ contactPoints: ["127.0.0.1:9042"] });
 
-// Create an instance of the logging Adapter for each client
+// Create an instance of the logging adapter for each client
 // creates/uses a logger with group "cassandra" and the keyspace of the client as name (empty string if not configured) 
 new CassandraLogAdapter(client);
+
+// Create an instance of the logging adapter with a precreated logger instance
+const logger: ILoggerInstance = LoggerFactory.getLogger("my-cassandra");
+new CassandraLogAdapter(client, logger);
 
 // use the client as usual
 client.connect(() => {

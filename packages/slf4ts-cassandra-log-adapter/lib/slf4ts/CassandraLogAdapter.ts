@@ -8,11 +8,15 @@ export class CassandraLogAdapter {
 
     private log: ILoggerInstance;
 
-    public constructor(emitter: Client | EventEmitter) {
-        if (emitter instanceof Client) {
-            this.log = LoggerFactory.getLogger("cassandra", emitter.keyspace);
+    public constructor(emitter: Client | EventEmitter, log: ILoggerInstance = null) {
+        if (!log) {
+            if (emitter instanceof Client) {
+                this.log = LoggerFactory.getLogger("cassandra", emitter.keyspace);
+            } else {
+                this.log = LoggerFactory.getLogger("cassandra");
+            }
         } else {
-            this.log = LoggerFactory.getLogger("cassandra");
+            this.log = log;
         }
 
         const slf = this;
