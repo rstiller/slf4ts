@@ -43,6 +43,8 @@ export class WinstonLoggerImplementation implements LoggerImplementation {
                     if (meta) {
                         if (meta instanceof Error) {
                             metaArg = { ...metaArg, stack: util.inspect(meta) };
+                        } else if (typeof meta === "string") {
+                            callArguments = callArguments.concat(meta);
                         } else {
                             metaArg = { ...metaArg, ...meta };
                         }
