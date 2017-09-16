@@ -1,6 +1,6 @@
 {
   "name": "slf4ts-winston",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "./build/lib/slf4ts/index.js",
   "typings": "./build/lib/slf4ts/index.d.ts",
   "license": "MIT",
