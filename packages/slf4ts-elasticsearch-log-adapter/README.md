@@ -18,7 +18,7 @@
 </p>
 
 This project is a [log adapter](https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/logging.html) using slf4ts logger implementation.  
-It's s meant to be used with `typescript` / `nodejs`.
+It's meant to be used with `typescript` / `nodejs`.
 
 ## Usage
 
