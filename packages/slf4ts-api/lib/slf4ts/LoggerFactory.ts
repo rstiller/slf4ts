@@ -96,14 +96,16 @@ export class DefaultLoggerInstance implements ILoggerInstance {
      * @param {string} name The name of the logger instance.
      * @param {string} group The group of the logger instance.
      * @param {LogLevel} logLevel The initial log-level of the logger instance.
+     * @param {commonMetadata} commonMetadata The metadata added automatically to every log operation.
      * @param {LoggerImplementation} impl The underlying logger implementation.
      * @memberof DefaultLoggerInstance
      */
-    public constructor(name: string, group: string, logLevel: LogLevel, impl: LoggerImplementation) {
+    public constructor(name: string, group: string, logLevel: LogLevel, commonMetadata: any, impl: LoggerImplementation) {
         this.impl = impl;
         this.name = name;
         this.group = group;
         this.logLevel = logLevel;
+        this.commonMetadata = commonMetadata;
 
         const initialConfig = LoggerConfiguration.getConfig(group, name);
         this.impl.setConfig(initialConfig, group, name);
@@ -127,6 +129,10 @@ export class DefaultLoggerInstance implements ILoggerInstance {
 
     public getImpl(): LoggerImplementation {
         return this.impl;
+    }
+
+    public getMetadata(): any {
+        return this.commonMetadata;
     }
 
     /**
@@ -220,7 +226,7 @@ export class LoggerFactory {
             return LoggerFactory.LOGGER_INSTANCE_CACHE.get(compoundKey);
         }
 
-        const instance = new DefaultLoggerInstance(name, group, LoggerConfiguration.getLogLevel(group, name), LoggerFactory.LOGGER);
+        const instance = new DefaultLoggerInstance(name, group, LoggerConfiguration.getLogLevel(group, name), LoggerFactory.COMMON_METADATA, LoggerFactory.LOGGER);
         LoggerFactory.LOGGER_INSTANCE_CACHE.set(compoundKey, instance);
         return instance;
     }
@@ -239,6 +245,42 @@ export class LoggerFactory {
         }
     }
 
+    /**
+     * Gets the application-wide metadata object.
+     *
+     * @static
+     * @memberof LoggerFactory
+     */
+    public static getMetadata(): any {
+        return LoggerFactory.COMMON_METADATA;
+    }
+
+    /**
+     * Sets the application-wide metadata object for logger instances.
+     *
+     * Every new logger will get the application-wide metadata object set.
+     *
+     * Every logger instance that sets it's own metadata object will be excluded from
+     * future updates of the application-wide metadata object.
+     *
+     * Note that this object is shared. Any changes to it will affect all logger instances
+     * using it.
+     *
+     * @static
+     * @param {*} metadata a metadata object - can be undefined or null.
+     * @memberof LoggerFactory
+     */
+    public static setMetadata(metadata: any): void {
+        const formerData = LoggerFactory.COMMON_METADATA;
+        LoggerFactory.COMMON_METADATA = metadata;
+        LoggerFactory.LOGGER_INSTANCE_CACHE.forEach((logger, compoundKey) => {
+            if (logger.getMetadata() === formerData) {
+                logger.setMetadata(LoggerFactory.COMMON_METADATA);
+            }
+        });
+    }
+
+    private static COMMON_METADATA: any = undefined;
     private static LOGGER: LoggerImplementation = new NullLoggerImplementation();
     private static ROOT_LOGGER: DefaultLoggerInstance;
     private static INITIALIZED: boolean = false;

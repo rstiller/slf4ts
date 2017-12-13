@@ -345,4 +345,44 @@ export class LoggerFactoryTest {
         expect(loggerImpl.setConfigCalls[3][2]).to.equal("");
     }
 
+    @test
+    public checkSetMetadataOnLoggerFactory(): void {
+        const logger = LoggerFactory.getLogger();
+        const loggerImpl = (logger as DefaultLoggerInstance).getImpl() as any;
+
+        logger.info("Test Message 1");
+        expect(loggerImpl.calls).to.have.length(1);
+        expect(loggerImpl.calls[0]).to.have.length(5);
+        expect(loggerImpl.calls[0][4]).to.not.exist;
+
+        LoggerFactory.setMetadata({ arg1: "value1" });
+
+        logger.info("Test Message 2");
+        expect(loggerImpl.calls).to.have.length(2);
+        expect(loggerImpl.calls[1]).to.have.length(5);
+        expect(loggerImpl.calls[1][4]).to.deep.equal({ arg1: "value1" });
+
+        LoggerFactory.setMetadata({ arg1: "value2", arg2: "value3" });
+
+        logger.info("Test Message 3");
+        expect(loggerImpl.calls).to.have.length(3);
+        expect(loggerImpl.calls[2]).to.have.length(5);
+        expect(loggerImpl.calls[2][4]).to.deep.equal({ arg1: "value2", arg2: "value3" });
+
+        logger.setMetadata({ arg1: "value4" });
+        logger.info("Test Message 4");
+        expect(loggerImpl.calls).to.have.length(4);
+        expect(loggerImpl.calls[3]).to.have.length(5);
+        expect(loggerImpl.calls[3][4]).to.deep.equal({ arg1: "value4" });
+
+        // since the metadata of the specific logger has changed
+        // the application-wide metadata are not set to it
+        LoggerFactory.setMetadata({ arg1: "value5", arg2: "value6" });
+
+        logger.info("Test Message 5");
+        expect(loggerImpl.calls).to.have.length(5);
+        expect(loggerImpl.calls[4]).to.have.length(5);
+        expect(loggerImpl.calls[4][4]).to.deep.equal({ arg1: "value4" });
+    }
+
 }
