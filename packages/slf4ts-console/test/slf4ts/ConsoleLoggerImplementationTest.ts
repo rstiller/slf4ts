@@ -10,6 +10,109 @@ import { ConsoleLoggerImplementation } from "../../lib/slf4ts/ConsoleLoggerImple
 
 const expect = chai.expect;
 
+class TestConsole implements Console {
+    public Console: NodeJS.ConsoleConstructor;
+
+    public assert(value?: any, message?: any, ...optionalParams: any[]) {
+        throw new Error("Method not implemented.");
+    }
+    public clear(): void {
+        throw new Error("Method not implemented.");
+    }
+    public count(countTitle?: string): void {
+        throw new Error("Method not implemented.");
+    }
+    public debug(message?: any, ...optionalParams: any[]): void {
+        throw new Error("Method not implemented.");
+    }
+    public dir(value?: any, ...optionalParams: any[]): void;
+    // tslint:disable:no-unused-expression
+    public dir(obj: any, options?: NodeJS.InspectOptions): void;
+    // tslint:disable:no-unused-expression
+    public dir(obj?: any, options?: any, ...rest: any[]) {
+        throw new Error("Method not implemented.");
+    }
+    public dirxml(value: any): void {
+        throw new Error("Method not implemented.");
+    }
+    public error(message?: any, ...optionalParams: any[]): void;
+    // tslint:disable:no-unused-expression
+    public error(message?: any, ...optionalParams: any[]): void;
+    // tslint:disable:no-unused-expression
+    public error(message?: any, ...optionalParams: any[]) {
+        throw new Error("Method not implemented.");
+    }
+    public exception(message?: string, ...optionalParams: any[]): void {
+        throw new Error("Method not implemented.");
+    }
+    public group(groupTitle?: string, ...optionalParams: any[]): void {
+        throw new Error("Method not implemented.");
+    }
+    public groupCollapsed(groupTitle?: string, ...optionalParams: any[]): void {
+        throw new Error("Method not implemented.");
+    }
+    public groupEnd(): void {
+        throw new Error("Method not implemented.");
+    }
+    public info(message?: any, ...optionalParams: any[]): void;
+    // tslint:disable:no-unused-expression
+    public info(message?: any, ...optionalParams: any[]): void;
+    // tslint:disable:no-unused-expression
+    public info(message?: any, ...optionalParams: any[]) {
+        throw new Error("Method not implemented.");
+    }
+    public log(message?: any, ...optionalParams: any[]): void;
+    // tslint:disable:no-unused-expression
+    public log(message?: any, ...optionalParams: any[]): void;
+    // tslint:disable:no-unused-expression
+    public log(message?: any, ...optionalParams: any[]) {
+        throw new Error("Method not implemented.");
+    }
+    public msIsIndependentlyComposed(element: Element): boolean {
+        throw new Error("Method not implemented.");
+    }
+    public profile(reportName?: string): void {
+        throw new Error("Method not implemented.");
+    }
+    public profileEnd(): void {
+        throw new Error("Method not implemented.");
+    }
+    public select(element: Element): void {
+        throw new Error("Method not implemented.");
+    }
+    public table(...data: any[]): void {
+        throw new Error("Method not implemented.");
+    }
+    public time(timerName?: string): void;
+    // tslint:disable:no-unused-expression
+    public time(label: string): void;
+    // tslint:disable:no-unused-expression
+    public time(label?: any) {
+        throw new Error("Method not implemented.");
+    }
+    public timeEnd(timerName?: string): void;
+    // tslint:disable:no-unused-expression
+    public timeEnd(label: string): void;
+    // tslint:disable:no-unused-expression
+    public timeEnd(label?: any) {
+        throw new Error("Method not implemented.");
+    }
+    public trace(message?: any, ...optionalParams: any[]): void;
+    // tslint:disable:no-unused-expression
+    public trace(message?: any, ...optionalParams: any[]): void;
+    // tslint:disable:no-unused-expression
+    public trace(message?: any, ...optionalParams: any[]) {
+        throw new Error("Method not implemented.");
+    }
+    public warn(message?: any, ...optionalParams: any[]): void;
+    // tslint:disable:no-unused-expression
+    public warn(message?: any, ...optionalParams: any[]): void;
+    // tslint:disable:no-unused-expression
+    public warn(message?: any, ...optionalParams: any[]) {
+        throw new Error("Method not implemented.");
+    }
+}
+
 @suite
 export class ConsoleLoggerImplementationTest {
 
@@ -19,7 +122,8 @@ export class ConsoleLoggerImplementationTest {
 
     @test
     public async checkArgumentPassing() {
-        const consoleMock = td.object(console);
+        const c: Console = new TestConsole();
+        const consoleMock = td.object(c);
         const logger = new ConsoleLoggerImplementation(consoleMock);
 
         expect(td.explain(consoleMock.error).callCount).to.equal(0);
@@ -57,7 +161,8 @@ export class ConsoleLoggerImplementationTest {
 
     @test
     public async checkGetImplementation() {
-        const consoleMock = td.object(console);
+        const c: Console = new TestConsole();
+        const consoleMock = td.object(c);
         const logger = new ConsoleLoggerImplementation(consoleMock);
 
         expect(logger.getImplementation("", "")).to.equal(consoleMock);
