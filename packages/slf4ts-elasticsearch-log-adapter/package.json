@@ -1,6 +1,6 @@
 {
   "name": "slf4ts-elasticsearch-log-adapter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "./build/lib/slf4ts/index.js",
   "typings": "./build/lib/slf4ts/index.d.ts",
   "license": "MIT",
@@ -20,25 +20,25 @@
     "elasticsearch"
   ],
   "devDependencies": {
-    "@types/chai": "^3.5.2",
+    "@types/chai": "^4.0.10",
     "@types/mocha": "^2.2.42",
-    "@types/node": "^7.0.43",
+    "@types/node": "^8.5.1",
     "chai": "^4.1.2",
-    "mocha": "^3.5.0",
+    "mocha": "^4.0.1",
     "mocha-typescript": "^1.1.7",
     "npm-check": "^5.4.5",
     "nyc": "^11.1.0",
     "rimraf": "^2.6.1",
     "testdouble": "^3.2.4",
-    "ts-node": "^3.3.0",
+    "ts-node": "^4.0.1",
     "tslint": "^5.7.0",
     "typescript": "^2.5.2"
   },
   "dependencies": {
-    "@types/elasticsearch": ">=5.0.16",
-    "elasticsearch": ">=13.3.1",
-    "slf4ts-api": ">=1.0.0",
-    "source-map-support": "^0.4.16"
+    "@types/elasticsearch": "^5.0.19",
+    "elasticsearch": "^14.0.0",
+    "slf4ts-api": "^1.1.0",
+    "source-map-support": "^0.5.0"
   },
   "engines": {
     "node": ">= 8",
