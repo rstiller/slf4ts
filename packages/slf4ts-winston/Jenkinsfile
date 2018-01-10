@@ -23,6 +23,7 @@ pipeline {
                 sh '''
                     node -v
                     npm -v
+                    rm -fr node_modules
                     npm install
                     npm run clean
                 '''
