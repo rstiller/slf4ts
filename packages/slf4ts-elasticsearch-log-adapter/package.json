@@ -20,19 +20,19 @@
     "elasticsearch"
   ],
   "devDependencies": {
-    "@types/chai": "^4.0.10",
-    "@types/mocha": "^2.2.42",
-    "@types/node": "^8.5.1",
+    "@types/chai": "^4.1.0",
+    "@types/mocha": "^2.2.46",
+    "@types/node": "^8.5.8",
     "chai": "^4.1.2",
-    "mocha": "^4.0.1",
-    "mocha-typescript": "^1.1.7",
-    "npm-check": "^5.4.5",
-    "nyc": "^11.1.0",
+    "mocha": "^4.1.0",
+    "mocha-typescript": "^1.1.12",
+    "npm-check": "^5.5.2",
+    "nyc": "^11.4.1",
     "rimraf": "^2.6.1",
-    "testdouble": "^3.2.4",
-    "ts-node": "^4.0.1",
-    "tslint": "^5.7.0",
-    "typescript": "^2.5.2"
+    "testdouble": "^3.3.1",
+    "ts-node": "^4.1.0",
+    "tslint": "^5.9.0",
+    "typescript": "^2.6.2"
   },
   "dependencies": {
     "@types/elasticsearch": "^5.0.19",
