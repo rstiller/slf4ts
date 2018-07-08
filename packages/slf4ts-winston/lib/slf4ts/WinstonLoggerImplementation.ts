@@ -21,7 +21,7 @@ LogLevelMapping[LogLevel.ERROR] = "error";
  */
 export class WinstonLoggerImplementation implements LoggerImplementation {
 
-    private loggers: Map<string, winston.LoggerInstance> = new Map();
+    private loggers: Map<string, winston.Logger> = new Map();
 
     public async log(...args: any[]): Promise<any> {
         const level: number = arguments[0];
@@ -54,19 +54,21 @@ export class WinstonLoggerImplementation implements LoggerImplementation {
             if (metaArg) {
                 callArguments = callArguments.concat(metaArg);
             }
-            callArguments = callArguments.concat((err?: any, lvl?: string, msg?: string, meta?: any) => {
+            /*callArguments = callArguments.concat((err?: any, lvl?: string, msg?: string, meta?: any) => {
                 if (err) {
                     reject(err);
                 } else {
                     resolve();
                 }
-            });
+            });*/
 
             if (instance) {
                 instance.log.apply(instance, callArguments);
             } else {
                 winston.log.apply(winston, callArguments);
             }
+
+            resolve();
         });
     }
 
@@ -82,12 +84,12 @@ export class WinstonLoggerImplementation implements LoggerImplementation {
         }
     }
 
-    private getLoggerInstance(group: string, name: string): winston.LoggerInstance {
+    private getLoggerInstance(group: string, name: string): winston.Logger {
         const compoundKey = `${group}:${name}`;
-        let instance: winston.LoggerInstance = this.loggers.get(compoundKey);
+        let instance: winston.Logger = this.loggers.get(compoundKey);
 
         if (!instance) {
-            instance = new winston.Logger();
+            instance = winston.createLogger();
             this.loggers.set(compoundKey, instance);
         }
 

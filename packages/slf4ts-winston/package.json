@@ -1,6 +1,6 @@
 {
   "name": "slf4ts-winston",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "./build/lib/slf4ts/index.js",
   "typings": "./build/lib/slf4ts/index.d.ts",
   "license": "MIT",
@@ -20,27 +20,27 @@
     "winston"
   ],
   "devDependencies": {
-    "@types/chai": "^4.1.0",
-    "@types/chai-string": "^1.1.31",
-    "@types/mocha": "^2.2.46",
-    "@types/node": "^8.5.8",
+    "@types/chai": "^4.1.4",
+    "@types/chai-string": "^1.4.1",
+    "@types/mocha": "^5.2.4",
+    "@types/node": "^10.5.2",
     "chai": "^4.1.2",
     "chai-string": "^1.4.0",
-    "mocha": "^4.1.0",
-    "mocha-typescript": "^1.1.12",
-    "npm-check": "^5.5.2",
-    "nyc": "^11.4.1",
+    "mocha": "^5.2.0",
+    "mocha-typescript": "^1.1.16",
+    "npm-check": "^5.7.1",
+    "nyc": "^13.0.0",
     "rimraf": "^2.6.2",
-    "testdouble": "^3.3.1",
-    "ts-node": "^4.1.0",
-    "tslint": "^5.8.0",
-    "typescript": "^2.6.2"
+    "testdouble": "^3.8.1",
+    "ts-node": "^7.0.0",
+    "tslint": "^5.10.0",
+    "typescript": "^2.9.2"
   },
   "dependencies": {
-    "@types/winston": "^2.3.7",
-    "slf4ts-api": "^1.1.0",
-    "source-map-support": "^0.5.0",
-    "winston": "^2.4.0"
+    "@types/winston": "^2.3.9",
+    "slf4ts-api": "^1.1.1",
+    "source-map-support": "^0.5.6",
+    "winston": "^3.0.0"
   },
   "engines": {
     "node": ">= 8",
