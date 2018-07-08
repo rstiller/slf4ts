@@ -11,6 +11,33 @@ import { ConsoleLoggerImplementation } from "../../lib/slf4ts/ConsoleLoggerImple
 const expect = chai.expect;
 
 class TestConsole implements Console {
+
+    memory: any;
+    
+    public markTimeline(label?: string): void {
+        throw new Error("Method not implemented.");
+    }
+    
+    public timeStamp(label?: string): void;
+    
+    public timeStamp(label?: string): void;
+    
+    public timeStamp(label?: any) {
+        throw new Error("Method not implemented.");
+    }
+
+    public timeline(label?: string): void {
+        throw new Error("Method not implemented.");
+    }
+    
+    public timelineEnd(label?: string): void {
+        throw new Error("Method not implemented.");
+    }
+
+    public countReset(label?: string): void {
+        throw new Error("Method not implemented.");
+    }
+
     public Console: NodeJS.ConsoleConstructor;
 
     public assert(value?: any, message?: any, ...optionalParams: any[]) {
