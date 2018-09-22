@@ -17,7 +17,7 @@ class TestTransport extends TransportStream {
     public constructor(options: TransportStreamOptions) {
         super(options);
     }
-};
+}
 
 @suite
 export class WinstonLoggerImplementationTest {
@@ -31,15 +31,15 @@ export class WinstonLoggerImplementationTest {
             level: "silly",
             // tslint:disable-next-line:object-literal-shorthand
             transports: [new TestTransport({
-                log: function (message: any, callback: (...args: any[]) => void) {
+                log(message: any, callback: (...args: any[]) => void) {
                     calls.push(arguments);
                     callback(null, true);
-                }
+                },
             })],
         });
-        
+
         expect(calls).to.have.length(0);
-        
+
         await logger.log(LogLevel.TRACE, "", "", "Test Message");
 
         expect(calls).to.have.length(1);
@@ -80,10 +80,10 @@ export class WinstonLoggerImplementationTest {
             level: "silly",
             // tslint:disable-next-line:object-literal-shorthand
             transports: [new TestTransport({
-                log: function (message: any, callback: (...args: any[]) => void) {
+                log(message: any, callback: (...args: any[]) => void) {
                     calls.push(arguments);
                     callback(null, true);
-                }
+                },
             })],
         });
 
