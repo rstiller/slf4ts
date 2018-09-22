@@ -12,16 +12,17 @@ const expect = chai.expect;
 
 class TestConsole implements Console {
 
-    memory: any;
-    
+    public memory: any;
+    public Console: NodeJS.ConsoleConstructor;
+
     public markTimeline(label?: string): void {
         throw new Error("Method not implemented.");
     }
-    
+
     public timeStamp(label?: string): void;
-    
+
     public timeStamp(label?: string): void;
-    
+
     public timeStamp(label?: any) {
         throw new Error("Method not implemented.");
     }
@@ -29,7 +30,7 @@ class TestConsole implements Console {
     public timeline(label?: string): void {
         throw new Error("Method not implemented.");
     }
-    
+
     public timelineEnd(label?: string): void {
         throw new Error("Method not implemented.");
     }
@@ -37,8 +38,6 @@ class TestConsole implements Console {
     public countReset(label?: string): void {
         throw new Error("Method not implemented.");
     }
-
-    public Console: NodeJS.ConsoleConstructor;
 
     public assert(value?: any, message?: any, ...optionalParams: any[]) {
         throw new Error("Method not implemented.");
@@ -160,30 +159,38 @@ export class ConsoleLoggerImplementationTest {
         expect(td.explain(consoleMock.warn).callCount).to.equal(0);
 
         await logger.log(LogLevel.INFO, "", "", "Test Message 1");
-        td.verify(consoleMock.info(td.matchers.isA(String), "ROOT", "INFO", "Test Message 1"), { ignoreExtraArgs: false, times: 1 });
+        td.verify(consoleMock.info(td.matchers.isA(String), "ROOT", "INFO", "Test Message 1"),
+                { ignoreExtraArgs: false, times: 1 });
 
         await logger.log(LogLevel.DEBUG, "group1", "", "Test Message 2");
-        td.verify(consoleMock.log(td.matchers.isA(String), "group1", "DEBUG", "Test Message 2"), { ignoreExtraArgs: false, times: 1 });
+        td.verify(consoleMock.log(td.matchers.isA(String), "group1", "DEBUG", "Test Message 2"),
+                { ignoreExtraArgs: false, times: 1 });
 
         await logger.log(LogLevel.TRACE, "", "name1", "Test Message 3");
-        td.verify(consoleMock.trace(td.matchers.isA(String), "name1", "TRACE", "Test Message 3"), { ignoreExtraArgs: false, times: 1 });
+        td.verify(consoleMock.trace(td.matchers.isA(String), "name1", "TRACE", "Test Message 3"),
+                { ignoreExtraArgs: false, times: 1 });
 
         await logger.log(LogLevel.WARN, "group2", "name2", "Test Message 4");
-        td.verify(consoleMock.warn(td.matchers.isA(String), "group2.name2", "WARN", "Test Message 4"), { ignoreExtraArgs: false, times: 1 });
+        td.verify(consoleMock.warn(td.matchers.isA(String), "group2.name2", "WARN", "Test Message 4"),
+            { ignoreExtraArgs: false, times: 1 });
 
         const metadata = { application: "my-app", version: "1.0.0" };
         await logger.log(LogLevel.ERROR, "", "", "Test Message 5", metadata);
-        td.verify(consoleMock.error(td.matchers.isA(String), "ROOT", "ERROR", "Test Message 5", metadata), { ignoreExtraArgs: false, times: 1 });
+        td.verify(consoleMock.error(td.matchers.isA(String), "ROOT", "ERROR", "Test Message 5", metadata),
+            { ignoreExtraArgs: false, times: 1 });
 
         const error = new Error();
         await logger.log(LogLevel.INFO, "", "", "Test Message 6", error, metadata);
-        td.verify(consoleMock.info(td.matchers.isA(String), "ROOT", "INFO", "Test Message 6", error, metadata), { ignoreExtraArgs: false, times: 1 });
+        td.verify(consoleMock.info(td.matchers.isA(String), "ROOT", "INFO", "Test Message 6", error, metadata),
+            { ignoreExtraArgs: false, times: 1 });
 
         await logger.log(LogLevel.DEBUG, "", "", "Test Message 7", error);
-        td.verify(consoleMock.log(td.matchers.isA(String), "ROOT", "DEBUG", "Test Message 7", error), { ignoreExtraArgs: false, times: 1 });
+        td.verify(consoleMock.log(td.matchers.isA(String), "ROOT", "DEBUG", "Test Message 7", error),
+            { ignoreExtraArgs: false, times: 1 });
 
         await logger.log(6, "", "", "Test Message 8");
-        td.verify(consoleMock.log(td.matchers.isA(String), "ROOT", "", "Test Message 8"), { ignoreExtraArgs: false, times: 1 });
+        td.verify(consoleMock.log(td.matchers.isA(String), "ROOT", "", "Test Message 8"),
+            { ignoreExtraArgs: false, times: 1 });
     }
 
     @test
