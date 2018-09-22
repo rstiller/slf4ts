@@ -15,7 +15,7 @@ export interface LoggerImplementation {
      * Invoked for each call to a logging method of a logger instance.
      *
      * @param {...any[]} args array with log-level, group, name and all arguments passed to the logging function.
-     * @returns {Promise<any>} A Promise completed when the log statement was processed by the underlying logging-framework.
+     * @returns A Promise completed when the log statement was processed by the underlying logging-framework.
      * @memberof LoggerImplementation
      */
     log(...args: any[]): Promise<any>;

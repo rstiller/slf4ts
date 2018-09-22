@@ -100,7 +100,13 @@ export class DefaultLoggerInstance implements ILoggerInstance {
      * @param {LoggerImplementation} impl The underlying logger implementation.
      * @memberof DefaultLoggerInstance
      */
-    public constructor(name: string, group: string, logLevel: LogLevel, commonMetadata: any, impl: LoggerImplementation) {
+    public constructor(
+        name: string,
+        group: string,
+        logLevel: LogLevel,
+        commonMetadata: any,
+        impl: LoggerImplementation) {
+
         this.impl = impl;
         this.name = name;
         this.group = group;
@@ -146,23 +152,28 @@ export class DefaultLoggerInstance implements ILoggerInstance {
     }
 
     public async trace(...args: any[]): Promise<any> {
-        return this.log.apply(this, [LogLevel.TRACE, this.group, this.name].concat(...arguments).concat(this.commonMetadata));
+        const metadata = [LogLevel.TRACE, this.group, this.name].concat(...arguments).concat(this.commonMetadata);
+        return this.log.apply(this, metadata);
     }
 
     public async debug(...args: any[]): Promise<any> {
-        return this.log.apply(this, [LogLevel.DEBUG, this.group, this.name].concat(...arguments).concat(this.commonMetadata));
+        const metadata = [LogLevel.DEBUG, this.group, this.name].concat(...arguments).concat(this.commonMetadata);
+        return this.log.apply(this, metadata);
     }
 
     public async info(...args: any[]): Promise<any> {
-        return this.log.apply(this, [LogLevel.INFO, this.group, this.name].concat(...arguments).concat(this.commonMetadata));
+        const metadata = [LogLevel.INFO, this.group, this.name].concat(...arguments).concat(this.commonMetadata);
+        return this.log.apply(this, metadata);
     }
 
     public async warn(...args: any[]): Promise<any> {
-        return this.log.apply(this, [LogLevel.WARN, this.group, this.name].concat(...arguments).concat(this.commonMetadata));
+        const metadata = [LogLevel.WARN, this.group, this.name].concat(...arguments).concat(this.commonMetadata);
+        return this.log.apply(this, metadata);
     }
 
     public async error(...args: any[]): Promise<any> {
-        return this.log.apply(this, [LogLevel.ERROR, this.group, this.name].concat(...arguments).concat(this.commonMetadata));
+        const metadata = [LogLevel.ERROR, this.group, this.name].concat(...arguments).concat(this.commonMetadata);
+        return this.log.apply(this, metadata);
     }
 
     public getImplementation<T>(): T {
@@ -226,7 +237,12 @@ export class LoggerFactory {
             return LoggerFactory.LOGGER_INSTANCE_CACHE.get(compoundKey);
         }
 
-        const instance = new DefaultLoggerInstance(name, group, LoggerConfiguration.getLogLevel(group, name), LoggerFactory.COMMON_METADATA, LoggerFactory.LOGGER);
+        const instance = new DefaultLoggerInstance(
+            name,
+            group,
+            LoggerConfiguration.getLogLevel(group, name),
+            LoggerFactory.COMMON_METADATA,
+            LoggerFactory.LOGGER);
         LoggerFactory.LOGGER_INSTANCE_CACHE.set(compoundKey, instance);
         return instance;
     }
@@ -235,12 +251,12 @@ export class LoggerFactory {
      * Clears the logger cache and conditionally resets the logger implementation.
      *
      * @static
-     * @param {boolean} [resetLoggerImplementation=false] Causes the logger implementation to reinstanciate the logger binding if set to true.
+     * @param [reinit] Causes the logger implementation to reinstanciate the logger binding if set to true.
      * @memberof LoggerFactory
      */
-    public static reset(resetLoggerImplementation = false) {
+    public static reset(reinit = false) {
         LoggerFactory.LOGGER_INSTANCE_CACHE.clear();
-        if (resetLoggerImplementation) {
+        if (reinit) {
             LoggerFactory.INITIALIZED = false;
         }
     }

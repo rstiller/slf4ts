@@ -96,7 +96,8 @@ export class LoggerConfigurationImpl {
      * @memberof LoggerConfigurationImpl
      */
     public getConfig<T>(group = "", name = ""): T {
-        return this.configMapping.get(`${group}:${name}`) || this.configMapping.get(`${group}:`) || this.configMapping.get(":");
+        return  this.configMapping.get(`${group}:${name}`) ||
+                this.configMapping.get(`${group}:`) || this.configMapping.get(":");
     }
 
     /**
