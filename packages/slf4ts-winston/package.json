@@ -2,7 +2,7 @@
   "name": "slf4ts-winston",
   "description": "Winston logging-binding for slf4ts-api",
   "homepage": "https://rstiller.github.io/slf4ts-winston/",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "./build/lib/slf4ts/index.js",
   "typings": "./build/lib/slf4ts/index.d.ts",
   "license": "MIT",
