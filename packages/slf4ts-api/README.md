@@ -1,6 +1,6 @@
 # slf4ts-api
 
-Simple Logging Facade for Typescript
+Simple Logging Facade for NodeJS
 
 <p align="center">
     <a href="https://www.npmjs.org/package/slf4ts-api">
@@ -23,7 +23,7 @@ This project is used to abstract logging
 to develop reusable libraies and not force the usage   
 of a certain logging framework.
 
-It's meant to be used with `typescript` / `nodejs`.
+It's meant to be used with `nodejs`.
 
 ## LogLevel
 
