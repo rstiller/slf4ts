@@ -2,7 +2,7 @@
   "name": "slf4ts-elasticsearch-log-adapter",
   "description": "Elasticsearch client logging-adapter for slf4ts-api",
   "homepage": "https://rstiller.github.io/slf4ts-elasticsearch-log-adapter/",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "./build/lib/slf4ts/index.js",
   "typings": "./build/lib/slf4ts/index.d.ts",
   "license": "MIT",
