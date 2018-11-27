@@ -19,6 +19,10 @@ class TestConsole implements Console {
         throw new Error("Method not implemented.");
     }
 
+    public timeLog(label: string, ...data: any[]): void {
+        throw new Error("Method not implemented.");
+    }
+
     public timeStamp(label?: string): void;
 
     public timeStamp(label?: string): void;
