@@ -13,6 +13,8 @@
     }
   },
   "npmClient": "npm",
+  "stream": true,
+  "parallel": false,
   "packages": [
     "packages/*"
   ],

@@ -1,7 +1,12 @@
 {
-  "name": "root",
-  "private": true,
-  "devDependencies": {
-    "lerna": "^3.6.0"
-  }
+    "name": "slf4ts",
+    "private": true,
+    "devDependencies": {
+        "lerna": "^3.6.0"
+    },
+    "scripts": {
+        "bootstrap": "lerna exec npm ci && lerna link",
+        "pretest": "lerna run compile --scope slf4ts-api",
+        "test": "lerna run test"
+    }
 }
