@@ -5,7 +5,7 @@
         "lerna": "^3.6.0"
     },
     "scripts": {
-        "bootstrap": "lerna exec npm ci && lerna link",
+        "bootstrap": "lerna exec npm install && lerna link",
         "pretest": "lerna run compile --scope slf4ts-api",
         "test": "lerna run test"
     }
