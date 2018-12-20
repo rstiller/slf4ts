@@ -16,6 +16,12 @@ export enum LogLevel {
     TRACE,
 }
 
+/**
+ *
+ *
+ * @export
+ * @class LoggerConfigurationImpl
+ */
 export class LoggerConfigurationImpl {
 
     private events: EventEmitter = new EventEmitter();
