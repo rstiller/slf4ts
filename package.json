@@ -3,28 +3,38 @@
     "private": true,
     "devDependencies": {
         "@compodoc/compodoc": "^1.1.7",
+        "@types/cassandra-driver": "^3.5.0",
         "@types/chai": "^4.1.7",
+        "@types/chai-string": "^1.4.1",
+        "@types/elasticsearch": "^5.0.30",
         "@types/mocha": "^5.2.5",
-        "@types/node": "^10.12.10",
-        "lerna": "^3.6.0",
+        "@types/node": "^10.12.18",
+        "chai": "^4.2.0",
+        "chai-string": "^1.5.0",
+        "event-stream": "3.3.4",
+        "lerna": "^3.7.1",
+        "mocha": "^5.2.0",
+        "mocha-typescript": "^1.1.17",
+        "npm-check": "^5.9.0",
+        "nyc": "^13.1.0",
         "rimraf": "^2.6.2",
+        "testdouble": "^3.9.1",
         "ts-node": "^7.0.1",
-        "typescript": "^3.1.6"
+        "tslint": "^5.12.0",
+        "typescript": "^3.2.2"
     },
     "scripts": {
-        "bootstrap": "lerna exec npm install && lerna link",
-        "clean": "rimraf docs build",
-        "compile": "tsc -p .",
-        "compodoc": "compodoc -p packages/slf4ts-api/tsconfig.json -p packages/slf4ts-console/tsconfig.json",
+        "bootstrap": "lerna bootstrap",
+        "build": "lerna run build",
+        "clean": "lerna run clean",
+        "compile": "lerna run compile",
+        "compodoc": "lerna run compodoc",
+        "coverage": "lerna run coverage",
+        "deps": "lerna run deps",
+        "lint": "lerna run lint",
         "pretest": "lerna run compile --scope slf4ts-api",
         "publishDocs": "cd docs && git add --all . && git commit -m 'Deploy to gh-pages' && git push origin gh-pages && cd ..",
-        "precompodoc": "lerna run compodoc",
         "prepublishDocs": "npm run compodoc",
         "test": "lerna run test"
-    },
-    "compodoc": {
-        "output": "docs",
-        "disableGraph": true,
-        "exportFormat": "json"
     }
 }

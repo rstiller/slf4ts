@@ -2,9 +2,7 @@ import "source-map-support/register";
 
 import { ILoggerInstance, LoggerFactory } from "slf4ts-api";
 
-export interface ElasticsearchLogConstructor {
-    new (config: any): ElasticsearchLogger;
-}
+export type ElasticsearchLogConstructor = new (config: any) => ElasticsearchLogger;
 
 export class ElasticsearchLogAdapter {
 
