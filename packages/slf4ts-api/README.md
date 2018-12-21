@@ -9,9 +9,6 @@ Simple Logging Facade for NodeJS
     <a href="https://www.npmjs.org/package/slf4ts-api">
         <img src="https://img.shields.io/npm/l/slf4ts-api.svg" alt="License">
     </a>
-    <a href="https://travis-ci.org/rstiller/slf4ts-api">
-        <img src="http://img.shields.io/travis/rstiller/slf4ts-api/master.svg" alt="Build Status">
-    </a>
     <a href="https://david-dm.org/rstiller/slf4ts-api">
         <img src="https://img.shields.io/david/rstiller/slf4ts-api.svg" alt="Dependencies Status">
     </a>
@@ -38,8 +35,8 @@ It's meant to be used with `nodejs`.
 slf4ts doesn't work without a logging-framework binding.   
 Bindings exist for a couple of logging-frameworks:
 
-* [console](https://github.com/rstiller/slf4ts-console)
-* [winston](https://github.com/rstiller/slf4ts-winston)
+* [console](../slf4ts-console)
+* [winston](../slf4ts-winston)
 
 ### Write a binding
 

@@ -9,15 +9,12 @@
     <a href="https://www.npmjs.org/package/slf4ts-winston">
         <img src="https://img.shields.io/npm/l/slf4ts-winston.svg" alt="License">
     </a>
-    <a href="https://travis-ci.org/rstiller/slf4ts-winston">
-        <img src="http://img.shields.io/travis/rstiller/slf4ts-winston/master.svg" alt="Build Status">
-    </a>
     <a href="https://david-dm.org/rstiller/slf4ts-winston">
         <img src="https://img.shields.io/david/rstiller/slf4ts-winston.svg" alt="Dependencies Status">
     </a>
 </p>
 
-It's meant to be used with `typescript` / `nodejs`.
+It's meant to be used with `nodejs`.
 
 Currently not supported:
 
@@ -55,9 +52,8 @@ const config = {
         new (winston.transports.Console)(),
         new (winston.transports.File)({ filename: 'somefile.log' }),
         new (winston.transports.DailyRotateFile)({
-            "filename": "logfilename.log",
-            "datePattern": "yyyy-MM-dd-",
-            "prepend": true,
+            "filename": "logfilename-%DATE%.log",
+            "datePattern": "YYYY-MM-DD",
             "logstash": true,
             "level": "debug"
         })
