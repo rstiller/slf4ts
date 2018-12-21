@@ -2,7 +2,7 @@
   "name": "slf4ts-cassandra-log-adapter",
   "description": "Cassandra logging-adapter for slf4ts-api",
   "homepage": "https://github.com/rstiller/slf4ts",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "main": "./build/packages/slf4ts-cassandra-log-adapter/lib/slf4ts/index.js",
   "typings": "./build/packages/slf4ts-cassandra-log-adapter/lib/slf4ts/index.d.ts",
   "license": "MIT",
@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "cassandra-driver": "^3.5.0",
-    "slf4ts-api": "^1.1.3",
+    "slf4ts-api": "^1.1.4",
     "source-map-support": "^0.5.9"
   },
   "engines": {
