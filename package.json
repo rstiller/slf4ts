@@ -32,6 +32,7 @@
         "coverage": "lerna run coverage",
         "deps": "lerna run deps",
         "lint": "lerna run lint",
+        "publish": "lerna publish --skip-npm --skip-git",
         "pretest": "lerna run compile --scope slf4ts-api",
         "publishDocs": "cd docs && git add --all . && git commit -m 'Deploy to gh-pages' && git push origin gh-pages && cd ..",
         "prepublishDocs": "npm run compodoc",
