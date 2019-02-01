@@ -35,8 +35,7 @@
     "npm": ">= 5"
   },
   "files": [
-    "build",
-    "signature.json"
+    "build"
   ],
   "scripts": {
     "build": "npm run clean && npm run lint && npm run compile",
