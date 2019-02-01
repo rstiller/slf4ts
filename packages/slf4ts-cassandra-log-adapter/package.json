@@ -2,7 +2,7 @@
   "name": "slf4ts-cassandra-log-adapter",
   "description": "Cassandra logging-adapter for slf4ts-api",
   "homepage": "https://github.com/rstiller/slf4ts",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "main": "./build/packages/slf4ts-cassandra-log-adapter/lib/slf4ts/index.js",
   "typings": "./build/packages/slf4ts-cassandra-log-adapter/lib/slf4ts/index.d.ts",
   "license": "MIT",
@@ -40,7 +40,7 @@
   ],
   "scripts": {
     "build": "npm run clean && npm run lint && npm run compile",
-    "postbuild": "pkgsign sign .",
+    "sign": "pkgsign sign .",
     "clean": "rimraf build coverage",
     "compile": "tsc -p .",
     "compodoc": "compodoc lib",
@@ -51,6 +51,7 @@
     "prepublishOnly": "npm run build",
     "test": "mocha --opts mocha.opts"
   },
+  "precommit": "sign",
   "compodoc": {
     "tsconfig": "./tsconfig.json",
     "output": "./docs",

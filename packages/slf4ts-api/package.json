@@ -33,7 +33,7 @@
   ],
   "scripts": {
     "build": "npm run clean && npm run lint && npm run compile",
-    "postbuild": "pkgsign sign .",
+    "sign": "pkgsign sign .",
     "clean": "rimraf build coverage",
     "compile": "tsc -p .",
     "compodoc": "compodoc lib",
@@ -44,6 +44,7 @@
     "prepublishOnly": "npm run build",
     "test": "mocha --opts mocha.opts"
   },
+  "precommit": "sign",
   "compodoc": {
     "tsconfig": "./tsconfig.json",
     "output": "./docs",
