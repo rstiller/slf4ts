@@ -3,6 +3,7 @@ import "source-map-support/register";
 
 import { Client } from "cassandra-driver";
 import * as chai from "chai";
+import * as chaiString from "chai-string";
 import { EventEmitter } from "events";
 import { suite, test } from "mocha-typescript";
 import { DefaultLoggerInstance, LoggerFactory, LogLevel } from "slf4ts-api";
@@ -10,6 +11,7 @@ import * as td from "testdouble";
 
 import { CassandraLogAdapter } from "../../lib/slf4ts/CassandraLogAdapter";
 
+chai.use(chaiString);
 const expect = chai.expect;
 
 @suite
@@ -104,8 +106,8 @@ export class CassandraLogAdapterTest {
 
             // level, group, name, className, message, furtherInformation, logger-metadata
             expect(calls[0].args[0]).to.equal(LogLevel.INFO);
-            expect(calls[0].args[3]).to.equal("Client - Connecting to cluster using " +
-                                                "'DataStax Node.js Driver for Apache Cassandra' version 3.6.0");
+            expect(calls[0].args[3]).to.startWith("Client - Connecting to cluster using " +
+                                                "'DataStax Node.js Driver for Apache Cassandra' version");
             expect(calls[0].args[4]).to.not.exist;
 
             expect(calls[1].args[0]).to.equal(LogLevel.INFO);
