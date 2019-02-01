@@ -1,0 +1,57 @@
+{
+  "version": "v1alpha",
+  "files": [
+    {
+      "path": "package.json",
+      "sha512": "1001783947859cede0283c804fa3c2802d530e8fdda29570e59b1897f2254b5cd5bf83e31fc5386fa57b16eefca943ac688cde701fe4af0d6155664b1bf0ac93"
+    },
+    {
+      "path": "LICENSE",
+      "sha512": "1489ff64267bcf357ff9734a52f0637b09486161c6b43d32d3c439372648e04e3281f2d9ef0449a54d8a68ffb0d046232ecee9a9818baa96a0087acac663f708"
+    },
+    {
+      "path": "README.md",
+      "sha512": "c20578a30ba8ca2eb7698ac6138cc8c9f9099a345959d7954f7388da7df843983d4b702788f8457b5ba845ac87ef7dcbe355c70c9675d6b3c2c6b1385a7372c4"
+    },
+    {
+      "path": "build/packages/slf4ts-cassandra-log-adapter/lib/slf4ts/CassandraLogAdapter.d.ts",
+      "sha512": "14f2dc1f14c19e1b49d5ec77134d16164f258cd17cc404f7b51a11b4b217fc05fa3ff960248d5ec64e5fde944b8e6867c353927f22bf3231a012757ce7192a27"
+    },
+    {
+      "path": "build/packages/slf4ts-cassandra-log-adapter/lib/slf4ts/CassandraLogAdapter.js",
+      "sha512": "b7b7b2de1b98d3f1ccbe88bcd6beef7850dafa446a09b0bb2971786d609b1f38ed329dfe25f6a2c160f30b40ae6b34901bc13c959522dd0bfc4e4aa024a07e4c"
+    },
+    {
+      "path": "build/packages/slf4ts-cassandra-log-adapter/lib/slf4ts/CassandraLogAdapter.js.map",
+      "sha512": "30627dd103fa10046ce30953428a463334dff01b306cb2518695c204e526c9979f0140ff7b7dc14d72118b64bdc3c3443eed8a9295add2f503d68b7b95f8106a"
+    },
+    {
+      "path": "build/packages/slf4ts-cassandra-log-adapter/lib/slf4ts/index.d.ts",
+      "sha512": "3c2ea63b9d2e47724e6ffe23ca463d1d2a2f85f4f9187fe3d404d68d6c8b134f699f968264359fbe908b3c78faa946ecbf1ec51441e38a31ed84db398d8ad675"
+    },
+    {
+      "path": "build/packages/slf4ts-cassandra-log-adapter/lib/slf4ts/index.js",
+      "sha512": "1b5d43158b198933c993bd885b258d7e1c6fe00de6d5b28c18e18296bd133369cb66edf1ec9987fc6163440c1b3e52d404600a233a593014b5b90277963b5cd6"
+    },
+    {
+      "path": "build/packages/slf4ts-cassandra-log-adapter/lib/slf4ts/index.js.map",
+      "sha512": "774e280694cad157e9eac6bec3e2c8e99cd144f4f7c039117981e53711a2c74b1bd6d3118ea7160535fd26afcaee5b90c9444f6e2401159cc35bdac3b9cdd17c"
+    },
+    {
+      "path": "build/packages/slf4ts-cassandra-log-adapter/test/slf4ts/CassandraLogAdapterTest.d.ts",
+      "sha512": "8efdcd9a31968e59bc0347a746648529b1a66fa31ed3efb9b1c7e76ca6fe1d2e99a3aa3b06aa40dc387099414b810c2584fb2616fc6d73a283da2eb674af9303"
+    },
+    {
+      "path": "build/packages/slf4ts-cassandra-log-adapter/test/slf4ts/CassandraLogAdapterTest.js",
+      "sha512": "4403b51256a4ed03a44eedbd4c7982db5296b60374243ae0980286da5c921e28dfd5ee4d99fb6e3c3d81cbc5a15ce5d29242f3b1a82782a6a6c477d69d3bdacc"
+    },
+    {
+      "path": "build/packages/slf4ts-cassandra-log-adapter/test/slf4ts/CassandraLogAdapterTest.js.map",
+      "sha512": "b70b381f020aa65e66e30a566f8fd4aa1a2cced868552b844cc7117f8c9b0b2f5c11795297598aadfa7b4feb0b65eaa6289882a07fcd38a13252d7ea55958b95"
+    }
+  ],
+  "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJcVJO4CRDCMfXrQKYV5wAAIYgQAJbEVZNaGyVhDHf8pdwUYtES\n3au7Pg4axY63OMYRMNtIT5HBihq+Ffqf6mZtdcMtnWbk/eehC9l13u+nvx4MG6cR\nKFspk6cxqTAEauObXkj4uWxNzC0+cxNCiiw2O2orR865S1TDV/P7SiUlYPmXzC0q\nKk+087rDP35FxwQ4OGoH3QvBcrB/khE+KavbVb/F0lvtWpEgS80Dy7FJwuNsbmGJ\nfu3Zkyfz1NpRK3duU+eT9LAACPujSA3ODemEZngDxvFExuZRdh7HRmh/FZYPufIc\nBqwt7EsS9zypBB4rZeA+dNBgSsq2V3sA/4nc48P4Wlyzk4L1pqCEv1j3gY1DYFok\nMHn8z8CoIUbWPF6tyqshbiJv6aTzF+vDl4/DBJPiqav+sr8vUWASbtp7TXUvv/1z\nb2eq3RQIK2+Ahnf+P/Qp+SCgoxW/dgOT7F6uS9X5V+OiV1o3N266aYfxelL6YoEH\nxTKvwSiHXzsxSz52LW5tMkw01zC32if3hspZuQbIis+9evmqUM86wrztepoq4oHL\nVtecWGQH+As3rP3AfHNXkXoVK4vMR2CP4YCE8GDOIPDnGjH7s6IVrT1GhHw/dDrt\n3WWPndVPhaGmQ9eSApfJUTq86DpdTePVm+82NiXIJPBUteV9T6fUR0kgfssiPtdO\nDCEakdZZ0vNPv7k6zazj\n=cPzo\n-----END PGP SIGNATURE-----\n",
+  "identity": {
+    "keybaseUser": "rstiller"
+  }
+}

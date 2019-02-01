@@ -1,0 +1,57 @@
+{
+  "version": "v1alpha",
+  "files": [
+    {
+      "path": "package.json",
+      "sha512": "0e383d6649132148964e611307ca5630bde86167e8a882848a44703fa89372877f69ffbba660b8b18ce7b08c26852d73f9cf97bbbdf685703cf96ab3c022f482"
+    },
+    {
+      "path": "LICENSE",
+      "sha512": "1489ff64267bcf357ff9734a52f0637b09486161c6b43d32d3c439372648e04e3281f2d9ef0449a54d8a68ffb0d046232ecee9a9818baa96a0087acac663f708"
+    },
+    {
+      "path": "README.md",
+      "sha512": "2734dabc6e05d020d66203dfbb4682c6705e8dd514e456fb6d379f5f3f91081a0c4ac40a8296c8b943d3592311f0080931b3b8a1940ffab6a994955110b2484c"
+    },
+    {
+      "path": "build/packages/slf4ts-elasticsearch-log-adapter/lib/slf4ts/ElasticsearchLogAdapter.d.ts",
+      "sha512": "6d87fd7433c144e110041d496b61a20be1fc2806dbeb726b82f8e491d4764d01f3d62c5b4a34976246eab6cfe035d47bbbbdbb760bf8bbfd732a098010049d1e"
+    },
+    {
+      "path": "build/packages/slf4ts-elasticsearch-log-adapter/lib/slf4ts/ElasticsearchLogAdapter.js",
+      "sha512": "4dc650a7ecdffb235f28485ab44ba2d850f454a63619a7f3f5807c5de54b85d6169b11dc4ebd4fc5bdd94e92bcab82dbaa314cb181bc155b0791efbf47f7df32"
+    },
+    {
+      "path": "build/packages/slf4ts-elasticsearch-log-adapter/lib/slf4ts/ElasticsearchLogAdapter.js.map",
+      "sha512": "f5ec38702e282b0ea608f639db23723fd6532f1e05e1d9adbd84040d3d7a8f1882705976624f8121580ccfb6baa23f1a74e7a9453ad181acc56a0b755679b101"
+    },
+    {
+      "path": "build/packages/slf4ts-elasticsearch-log-adapter/lib/slf4ts/index.d.ts",
+      "sha512": "06040d9dc89de374cc77fc5063e4dd6d7daa6a8d6a3cb513c3db289264e51306c45229dd6e3d6c55836362d662b272a3661f64898b382d614341b1ad2e5d2ba0"
+    },
+    {
+      "path": "build/packages/slf4ts-elasticsearch-log-adapter/lib/slf4ts/index.js",
+      "sha512": "5636766eeaa6a9652500e6b7b1c755744353ddfbfe8d0971febaac660876a7715b686fd89816b8195ea6c97462f09e86419e0d9930c7e48c25baeda11a3b20f0"
+    },
+    {
+      "path": "build/packages/slf4ts-elasticsearch-log-adapter/lib/slf4ts/index.js.map",
+      "sha512": "814e9f4359138b310db49b7d34b0289c717dc761792f654e2c287b1f2ac7110909c4b045be9a3c0bc1ca83728a0fda4eaf548a3eb8d0b5a7dba8c5ecfb3164d0"
+    },
+    {
+      "path": "build/packages/slf4ts-elasticsearch-log-adapter/test/slf4ts/ElasticsearchLogAdapterTest.d.ts",
+      "sha512": "5c1a31b48dd7b23a772423129485a3811b46b87b926370551cc86c73d3fc3a2f525f051ccce83f0c902e45b7ef9f1150d263a27edd87197314b41e873feacbe6"
+    },
+    {
+      "path": "build/packages/slf4ts-elasticsearch-log-adapter/test/slf4ts/ElasticsearchLogAdapterTest.js",
+      "sha512": "b8095ac7158846a149985f4b6d3e3ee2ad1d3e62fcd049838780c5bdef4f23f59164e5eb1e8caedc71b3a9bc16774498a6b63794befe5506544b580c1f958b09"
+    },
+    {
+      "path": "build/packages/slf4ts-elasticsearch-log-adapter/test/slf4ts/ElasticsearchLogAdapterTest.js.map",
+      "sha512": "f80302beb8c8c3cc9b51575fb4661681059eefc8158a5ce765b55b1e26d55f4ce41b758162209b3799750f2b9d7a512113d2694f2367257b823b090af5a85bc1"
+    }
+  ],
+  "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJcVJO3CRDCMfXrQKYV5wAA2F8QAE2MkoqbUdnR4CvQwdudtePi\nps7PIflLE8PMV6KZQl49tD1zP7wPEPoFulEwS/6V8yHfxd9vqQ5I+JaRJK8vno6Z\nZ3IgjrI6b6hElvZiY4GSB7Rr7ZzSnIv7XNiryqLAdzP1ogK2/aeUkS6LoL9zc4wP\n7YHkbNoUJAq5PRFO/6y+yIMjsnHl8XtCytOdhIwJkyFjtIkDPMTI86EpV5Fd225X\nMYeflBc4KUpNQWNDANe/DTH4NvhqmnYTBIgsOmQlJNLjdRRjwrT+xceVtvlq3ceE\nREpWjeDey9q7+kWB4oyxBQuxhD9BwXkwv2G5qN/thOqYbDjYWzWzaJP16kbyQXCs\n2ZcvlMlG9X3i5VqExZPDmSBnwmOwqpzR03vMjIMK8c8KYXe3StaxRnv1V52IYG+O\nipu4BXGUHpgHBzJn75slBacwaa6aeFWkhVyiDgtOW+rCJ9phjZkPddgovLon1yBP\nPtimxIwrtSP6tbjBLOLA3rPWKS6t0Ywb0N0wHopIncUZRyuIpSibSxcarF+kVvMS\nJG/jNkSnVnjpWTECniu5lJ5LdtxLxoH9fNNSPces26hawlzBl3e9/7CRKyW+t6wr\nRmlzEX0Tq+fLYwYw9dPUhFgt+KMgOIRVcCYoMWOZZyT0CXrAtqdlzIBXBMxUXlOr\n/dsj6Na9Sb4BFohC7Ec+\n=nhrS\n-----END PGP SIGNATURE-----\n",
+  "identity": {
+    "keybaseUser": "rstiller"
+  }
+}
