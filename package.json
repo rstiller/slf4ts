@@ -28,6 +28,7 @@
     "scripts": {
         "bootstrap": "lerna bootstrap",
         "build": "lerna run build",
+        "sign": "lerna run sign",
         "clean": "lerna run clean",
         "compile": "lerna run compile",
         "compodoc": "lerna run compodoc",
@@ -40,5 +41,6 @@
         "publishDocs": "cd docs && git add --all . && git commit -m 'Deploy to gh-pages' && git push origin gh-pages && cd ..",
         "prepublishDocs": "npm run compodoc",
         "test": "lerna run test"
-    }
+    },
+    "precommit": "sign"
 }
