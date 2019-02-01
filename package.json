@@ -28,7 +28,7 @@
     "scripts": {
         "bootstrap": "lerna bootstrap",
         "build": "lerna run build",
-        "sign": "lerna run sign",
+        "sign": "lerna run sign && git add packages/*/signature.json",
         "clean": "lerna run clean",
         "compile": "lerna run compile",
         "compodoc": "lerna run compodoc",
