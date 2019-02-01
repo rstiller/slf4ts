@@ -3,7 +3,7 @@
   "files": [
     {
       "path": "package.json",
-      "sha512": "1001783947859cede0283c804fa3c2802d530e8fdda29570e59b1897f2254b5cd5bf83e31fc5386fa57b16eefca943ac688cde701fe4af0d6155664b1bf0ac93"
+      "sha512": "10284e3ffe0bf5938c75afcfa7c9aee21835bf0b0234a5354790da0611cc7a82bde6c8119503a567ec569c261f43e7e0ae78a580a88a6d32746dc4ca6486933f"
     },
     {
       "path": "LICENSE",
@@ -15,7 +15,7 @@
     },
     {
       "path": "build/packages/slf4ts-cassandra-log-adapter/lib/slf4ts/CassandraLogAdapter.d.ts",
-      "sha512": "14f2dc1f14c19e1b49d5ec77134d16164f258cd17cc404f7b51a11b4b217fc05fa3ff960248d5ec64e5fde944b8e6867c353927f22bf3231a012757ce7192a27"
+      "sha512": "c96be1aadb7f51b6fab7254c1975821ee2456204dff5ce961183aa6d312a203086eb57f736be1cdc28c87d52cf37d20fa0dc5d3129e6937aa186827e98c05539"
     },
     {
       "path": "build/packages/slf4ts-cassandra-log-adapter/lib/slf4ts/CassandraLogAdapter.js",
@@ -50,7 +50,7 @@
       "sha512": "b70b381f020aa65e66e30a566f8fd4aa1a2cced868552b844cc7117f8c9b0b2f5c11795297598aadfa7b4feb0b65eaa6289882a07fcd38a13252d7ea55958b95"
     }
   ],
-  "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJcVJO4CRDCMfXrQKYV5wAAIYgQAJbEVZNaGyVhDHf8pdwUYtES\n3au7Pg4axY63OMYRMNtIT5HBihq+Ffqf6mZtdcMtnWbk/eehC9l13u+nvx4MG6cR\nKFspk6cxqTAEauObXkj4uWxNzC0+cxNCiiw2O2orR865S1TDV/P7SiUlYPmXzC0q\nKk+087rDP35FxwQ4OGoH3QvBcrB/khE+KavbVb/F0lvtWpEgS80Dy7FJwuNsbmGJ\nfu3Zkyfz1NpRK3duU+eT9LAACPujSA3ODemEZngDxvFExuZRdh7HRmh/FZYPufIc\nBqwt7EsS9zypBB4rZeA+dNBgSsq2V3sA/4nc48P4Wlyzk4L1pqCEv1j3gY1DYFok\nMHn8z8CoIUbWPF6tyqshbiJv6aTzF+vDl4/DBJPiqav+sr8vUWASbtp7TXUvv/1z\nb2eq3RQIK2+Ahnf+P/Qp+SCgoxW/dgOT7F6uS9X5V+OiV1o3N266aYfxelL6YoEH\nxTKvwSiHXzsxSz52LW5tMkw01zC32if3hspZuQbIis+9evmqUM86wrztepoq4oHL\nVtecWGQH+As3rP3AfHNXkXoVK4vMR2CP4YCE8GDOIPDnGjH7s6IVrT1GhHw/dDrt\n3WWPndVPhaGmQ9eSApfJUTq86DpdTePVm+82NiXIJPBUteV9T6fUR0kgfssiPtdO\nDCEakdZZ0vNPv7k6zazj\n=cPzo\n-----END PGP SIGNATURE-----\n",
+  "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJcVJXbCRDCMfXrQKYV5wAAVAoQAEeHlgU0/ZJSEf9vUFkAUe/J\n6VEimXug0pZmdwfIJvnvK8mQq4nQBzDw4YYcsciS3sM/RIVBqsm9f3Die1L8jvHa\n+1FYnJJIW/l7WeZzBOGcT5iGpJHKrwOs8xszyHcJaRf1hksiMUJ3sox4j0KWFMhQ\nDPLaAHBYraIMExmBG/36LH3e/Zl3/8qaxrb03agvrL2T11/kYpt8qcGnuFCHQ5F6\nuYDnc91zPGYy2TccROPhCAnFBnDSKOArfgQir6Uh2kMUnE1fDeC2iKa0u/kilupU\n0xK0u00MhGZNwP7fa2gjShOaHGc/QCMOsKxeUzUPZR43ToCYH6sxuh7IjkhAMJbC\nV2AfPr7N51hCVEbumSPSfeWIE13jV9XEO1ClNBosH8SgipMh4hZBa83odrxwuS43\nZVuNjGYSf3ybjLiqZkYmShv6MyLmofR8YZjIYmYhCh5PKhSmfpyULdFnwOfBNVvc\n7SAS9tK2v+q2LPfjd0AgqC4KuhMUMmOGDv9nKNrd+RzGNl9D4rhxEZk4nGJiXpnS\n0r293Q2cO9c7NhzxRl8YRzlxjRvkv3h6YvN49MFStrx8zlUmo0WV4dY67Yi9XPnu\nSyV6oBNM/Yl7WDfax1rVKhBy6NoRNsfG5lyPOUnxQhg/O+D1JIoY6TyuGsb0tYH4\nDigaSyRoWkNd+5+zSRC8\n=R9wt\n-----END PGP SIGNATURE-----\n",
   "identity": {
     "keybaseUser": "rstiller"
   }
