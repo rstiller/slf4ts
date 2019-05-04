@@ -2,7 +2,7 @@
   "name": "slf4ts-api",
   "description": "Simple logging facade for nodejs",
   "homepage": "https://github.com/rstiller/slf4ts",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "main": "./build/packages/slf4ts-api/lib/slf4ts/index.js",
   "typings": "./build/packages/slf4ts-api/lib/slf4ts/index.d.ts",
   "license": "MIT",
