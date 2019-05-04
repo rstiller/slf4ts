@@ -1,9 +1,14 @@
 language: node_js
 node_js:
+  - 12
   - 11
   - 10
   - 9
   - 8
+os:
+  #- windows
+  - linux
+  - osx
 cache:
   directories:
     - "node_modules"
