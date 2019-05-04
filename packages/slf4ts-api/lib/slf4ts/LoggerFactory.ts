@@ -251,7 +251,7 @@ export class LoggerFactory {
      * Clears the logger cache and conditionally resets the logger implementation.
      *
      * @static
-     * @param [reinit] Causes the logger implementation to reinstanciate the logger binding if set to true.
+     * @param [reinit] Causes the logger implementation to re-instantiate the logger binding if set to true.
      * @memberof LoggerFactory
      */
     public static reset(reinit = false) {

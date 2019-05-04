@@ -29,7 +29,7 @@ const client = new Client({ contactPoints: ["127.0.0.1:9042"] });
 // creates/uses a logger with group "cassandra" and the keyspace of the client as name (empty string if not configured) 
 new CassandraLogAdapter(client);
 
-// Create an instance of the logging adapter with a precreated logger instance
+// Create an instance of the logging adapter with a pre-created logger instance
 const logger: ILoggerInstance = LoggerFactory.getLogger("my-cassandra");
 new CassandraLogAdapter(client, logger);
 

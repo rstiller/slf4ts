@@ -24,8 +24,8 @@ export class ElasticsearchLogAdapterTest {
 
         new Client({ log: new ElasticsearchLogAdapter().newLogger() });
 
-        const explaination = td.explain(impl.log);
-        const calls = explaination.calls;
+        const explanation = td.explain(impl.log);
+        const calls = explanation.calls;
 
         // level, group, name, message, metadata, logger-metadata
         expect(calls[0].args[0]).to.equal(LogLevel.INFO);

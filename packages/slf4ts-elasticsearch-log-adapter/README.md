@@ -27,7 +27,7 @@ import { ILoggerInstance, LoggerFactory } from "slf4ts-api";
 const client = new Client({ log: new ElasticsearchLogAdapter().newLogger() });
 
 const logger: ILoggerInstance = LoggerFactory.getLogger("my-elasticsearch");
-// create an instance of elasticsearch client and an instance of the logging adapter with a precreated logger instance
+// create an instance of elasticsearch client and an instance of the logging adapter with a pre-created logger instance
 const client = new Client({ log: new ElasticsearchLogAdapter().newLogger(logger) });
 
 // access the underlying logger instance

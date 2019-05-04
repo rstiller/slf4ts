@@ -110,7 +110,7 @@ export class LoggerFactoryTest {
     }
 
     @test
-    public checkCorrectLogLevelIvocations(): void {
+    public checkCorrectLogLevelInvocations(): void {
         const logger = LoggerFactory.getLogger("group1", "name1");
         const loggerImpl = (logger as DefaultLoggerInstance).getImpl() as any;
         logger.setMetadata({ mode: "Test" });

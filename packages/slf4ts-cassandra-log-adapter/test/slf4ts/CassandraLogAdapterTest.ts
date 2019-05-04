@@ -101,8 +101,9 @@ export class CassandraLogAdapterTest {
         logger.setLogLevel(LogLevel.DEBUG);
 
         client.connect(() => {
-            const explaination = td.explain(impl.log);
-            const calls = explaination.calls;
+            const explanation = td.explain(impl.log);
+            const calls = explanation.calls;
+            expect(calls.length).to.equal(5);
 
             // level, group, name, className, message, furtherInformation, logger-metadata
             expect(calls[0].args[0]).to.equal(LogLevel.INFO);
@@ -111,53 +112,27 @@ export class CassandraLogAdapterTest {
             expect(calls[0].args[4]).to.not.exist;
 
             expect(calls[1].args[0]).to.equal(LogLevel.INFO);
-            expect(calls[1].args[3]).to.equal("ControlConnection - Adding host 127.0.0.1:65535");
+            expect(calls[1].args[3]).to.equal("ControlConnection - Getting first connection");
             expect(calls[1].args[4]).to.not.exist;
 
             expect(calls[2].args[0]).to.equal(LogLevel.INFO);
-            expect(calls[2].args[3]).to.equal("ControlConnection - Getting first connection");
+            expect(calls[2].args[3]).to.equal("Connection - Connecting to 127.0.0.1:65535");
             expect(calls[2].args[4]).to.not.exist;
 
-            expect(calls[3].args[0]).to.equal(LogLevel.INFO);
-            expect(calls[3].args[3]).to.equal("Connection - Connecting to 127.0.0.1:65535");
-            expect(calls[3].args[4]).to.not.exist;
+            expect(calls[3].args[0]).to.equal(LogLevel.WARN);
+            expect(calls[3].args[3]).to.equal("Connection - There was an error when trying" +
+                                                " to connect to the host 127.0.0.1:65535");
+            expect(calls[3].args[4]).to.contain({
+                address: "127.0.0.1",
+                code: "ECONNREFUSED",
+                errno: "ECONNREFUSED",
+                port: 65535,
+                syscall: "connect",
+            });
 
-            expect(calls[4].args[0]).to.equal(LogLevel.WARN);
-            expect(calls[4].args[3]).to.equal("Connection - There was an error when trying" +
-                                                " to connect to the host 127.0.0.1");
+            expect(calls[4].args[0]).to.equal(LogLevel.ERROR);
+            expect(calls[4].args[3]).to.equal("ControlConnection - ControlConnection failed to acquire a connection");
             expect(calls[4].args[4]).to.contain({
-                address: "127.0.0.1",
-                code: "ECONNREFUSED",
-                errno: "ECONNREFUSED",
-                port: 65535,
-                syscall: "connect",
-            });
-
-            expect(calls[5].args[0]).to.equal(LogLevel.WARN);
-            expect(calls[5].args[3]).to.equal("HostConnectionPool - Connection to 127.0.0.1:65535 " +
-                                                "could not be created: Error: connect ECONNREFUSED 127.0.0.1:65535");
-            expect(calls[5].args[4]).to.contain({
-                address: "127.0.0.1",
-                code: "ECONNREFUSED",
-                errno: "ECONNREFUSED",
-                port: 65535,
-                syscall: "connect",
-            });
-
-            expect(calls[6].args[0]).to.equal(LogLevel.WARN);
-            expect(calls[6].args[3]).to.equal("HostConnectionPool - Connection pool to host 127.0.0.1:65535 " +
-                                                "could not be created");
-            expect(calls[6].args[4]).to.contain({
-                address: "127.0.0.1",
-                code: "ECONNREFUSED",
-                errno: "ECONNREFUSED",
-                port: 65535,
-                syscall: "connect",
-            });
-
-            expect(calls[7].args[0]).to.equal(LogLevel.ERROR);
-            expect(calls[7].args[3]).to.equal("ControlConnection - ControlConnection failed to acquire a connection");
-            expect(calls[7].args[4]).to.contain({
                 info: "Represents an error when a query cannot be performed " +
                         "because no host is available or could be reached by the driver.",
                 message: "All host(s) tried for query failed. First host tried, 127.0.0.1:65535" +

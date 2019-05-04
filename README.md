@@ -8,7 +8,7 @@ Simple Logging Facade for NodeJS
     </a>
 </p>
 
-This is the monorepository for the `slf4ts` modules.  
+This is the mono-repository for the `slf4ts` modules.  
 `slf4ts` modules are a collection of modules abstracting logging for nodejs libraries.  
 
 ## Modules

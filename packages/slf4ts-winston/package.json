@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "slf4ts-api": "^1.2.3",
-    "source-map-support": "^0.5.10",
+    "source-map-support": "^0.5.12",
     "winston": "^3.2.1"
   },
   "engines": {

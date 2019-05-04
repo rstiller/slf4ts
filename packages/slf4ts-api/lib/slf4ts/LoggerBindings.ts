@@ -4,7 +4,7 @@ import * as fs from "fs";
 import * as path from "path";
 
 /**
- * The bidge to the underlying logging-framework.
+ * The bridge to the underlying logging-framework.
  *
  * @export
  * @interface LoggerImplementation
@@ -76,8 +76,8 @@ export interface LoggerBinding {
 /**
  * Encapsulates the loading of logger bindings from NODE_PATH.
  *
- * Additionally the location of other logging-framwork bindings can
- * be configured using the environemnt variable 'LOGGER_BINDING_ADDITIONAL_PATH'.
+ * Additionally the location of other logging-framework bindings can
+ * be configured using the environment variable 'LOGGER_BINDING_ADDITIONAL_PATH'.
  *
  * For each folder - containing a file named '.slf4ts-binding' in 'NODE_PATH',
  * 'LOGGER_BINDING_ADDITIONAL_PATH' or the additional search paths given to

@@ -17,7 +17,7 @@ Simple Logging Facade for NodeJS
 Inspired by the popular Java lib [SLF4J](https://www.slf4j.org)
 
 This project is used to abstract logging   
-to develop reusable libraies and not force the usage   
+to develop reusable libraries and not force the usage   
 of a certain logging framework.
 
 It's meant to be used with `nodejs`.

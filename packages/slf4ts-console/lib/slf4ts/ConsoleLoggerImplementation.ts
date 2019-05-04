@@ -20,7 +20,7 @@ export class ConsoleLoggerImplementation implements LoggerImplementation {
     /**
      * Creates an instance of ConsoleLoggerImplementation.
      *
-     * @param {Console} [c=global.console] The Node.Console imeplementation.
+     * @param {Console} [c=global.console] The Node.Console implementation.
      * @memberof ConsoleLoggerImplementation
      */
     public constructor(c: Console = global.console) {
@@ -43,7 +43,7 @@ export class ConsoleLoggerImplementation implements LoggerImplementation {
     }
 
     /**
-     * Log method as described in {@link https://github.com/rstiller/slf4ts-api}.
+     * Log method as described in {@link https://github.com/rstiller/slf4ts}.
      *
      * This method forwards the arguments to 'console.[log-level]' or 'console.log' method.
      *

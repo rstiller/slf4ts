@@ -26,9 +26,9 @@
     "slf4ts-api": ">=1.1.3"
   },
   "dependencies": {
-    "cassandra-driver": "^4.0.0",
+    "cassandra-driver": "^4.1.0",
     "slf4ts-api": "^1.2.3",
-    "source-map-support": "^0.5.10"
+    "source-map-support": "^0.5.12"
   },
   "engines": {
     "node": ">= 8",
