@@ -3,7 +3,7 @@
   "files": [
     {
       "path": "package.json",
-      "sha512": "7680aa0a472fe26a0e087d63d233a50c13ef566990ba8e2606e2e90ab29f9454bd1ad552a6c1c508b508df2802f4340914f9d193e1abb094c82b1ff8d335c477"
+      "sha512": "8b73eca191debe5d165cf1ae1f2012d628534e76e450666ba9f125790a74fbce5dc13a737f3b140fdb6e115e60d58e17631488c7b9f82b24039ec6f56430d302"
     },
     {
       "path": "LICENSE",
@@ -50,7 +50,7 @@
       "sha512": "df6fda2bdbf4b91de5cc891eb1253899efb49b14bd8f635992f2338611c5a003eb6ae5ab6d46aeaa48bca8942abbf2af120a94f37ffb2bd3398a938b1a6dc73a"
     }
   ],
-  "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJczUSyCRDCMfXrQKYV5wAATaAQAFQqADLUPLCBl4jBW84a1re5\nD31oPSY/2E5WEZZCySHkZkOrYhTx9m5Kn1+0nRSuBTqkokD3e5u2gSw7cc28wNcR\n6FeyDRRG5VvkkyZ76MiNdEZF0fzamDUfEzpDxycyYqa/SFyrjc6iP2JxN3SEHrgA\nZSivooaRHOszH0ESVQAALhewank8MQ57T/BxMoWw1lXbOk30gVAM9JcZuPtvofrl\nkGPNW/OjpQDTxlKbMRP5X0PVu0XSwZuK/PoHKhCY2I9b8hyOa/pZOThLPZ/jPdtq\nlVMFwX/s5g3F3zjP+7Mhy7wb+tyzjg9jy6+n4WxlBxpIkVa0tNaxDTR0r/dNsEmP\nOcrHoQOxhRLMqAo5Yv2NCOk2jnvw572x0j3httErQOweDRlyOJ866cyKmxOVb9pu\nkBm2SuohewHeR65E4ytkf9fa5xXtmuMzbmstCuesFo9uXGW0ak4ts827C2dZeR3o\nTwvjXMvKcnuq3jlHtVKnG60LW17Uq2mJNdPQYq9gZDr8S5MGnllFZs6hOD/ky84I\n3WqIHORXzMEBO42pJvbtgzEtTidFiKgwyyGt+9LGjd+NrcHy4b54U2QlnPwOg3uC\nXDjvnVN/RYEJT5uu/LAkG4zWi4ik5Dx9dpPD26htBSQJiq+1NRR+wAA/9mtgX79F\nxrfbnvjcc50kFV0nWDCr\n=XlSh\n-----END PGP SIGNATURE-----\n",
+  "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJc9QLCCRDCMfXrQKYV5wAA5NkQAAIrlD3IxUNLiuZuelH4OdYa\n+EebFQTaboPtDAI5Mw4UxNzfTx5Z0dXiYnDxcnrgqHfhgi91hassfJ/+BIZv1qvo\n+k79dzbykXdUO44lSgWymyBRZ10worGkp62G5f/wqxHy/aZOGlJLudgfjeBXv8/q\n2pPw8MsBg7hiJPIfO79VsqPow1WBSiB5/s9Rl5tHQmvA6IXSE3AHfZakKrWj+aQ0\nIlQ6lXNM6LtaqC1KfEVc2dq1AQ1DWEICbrS+2soXqpVHJ2NwenRzTicQonSsh3dw\nFjchjvZyhw2kt2maKT992emnjb6nAsEA5AMv25RTMwiv6ulbsPStvdGDNvvqzsQr\nMmMMHv/YVniCh189lOb/jNdAzvF25mMP7CRiBcRqXIC+qQzgTiFOeq87Kpvft0lN\n40yffHb+Jy798Wo3L9IrRK8fySQC4ZcQemQLq9bfJPt8QgcEKAmhhljF3QQYOUqC\nPmWbRU6CpXbMLq82cCfExbpxwKbiSW7r3t5afJZYsIv07eZoVnUlinEty9Gx0uGn\nDDFJ4L2qzmangNGymjA65l3CUJy3E2mRAy6MF2AyL/h7CU0j4Ke1SO6QCamPeR8X\nEDupifkObrDEyBWoCVac1O3Fc1FgaTHV0hUnp1K+yLk1YmY+1xdLJmGl73Kj/8xX\ngOdDMNWff1u7xFOEPO2l\n=wRI2\n-----END PGP SIGNATURE-----\n",
   "identity": {
     "keybaseUser": "rstiller"
   }
