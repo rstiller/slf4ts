@@ -2,7 +2,6 @@
     "name": "slf4ts",
     "private": true,
     "devDependencies": {
-        "@compodoc/compodoc": "^1.1.9",
         "@types/cassandra-driver": "^4.0.3",
         "@types/chai": "^4.1.7",
         "@types/chai-string": "^1.4.1",
@@ -30,7 +29,6 @@
         "sign": "lerna run sign && git add packages/*/signature.json",
         "clean": "lerna run clean",
         "compile": "lerna run compile",
-        "compodoc": "lerna run compodoc --scope slf4ts-api && cp -r packages/slf4ts-api/docs .",
         "coverage": "lerna run coverage",
         "deps": "lerna run deps",
         "lint": "lerna run lint",
@@ -38,7 +36,7 @@
         "publish-dry-run": "lerna publish --skip-npm --no-git-tag-version --no-push",
         "pretest": "lerna run compile --scope slf4ts-api",
         "publishDocs": "cd docs && git add --all . && git commit -nm 'Deploy to gh-pages' && git push origin gh-pages && cd ..",
-        "prepublishDocs": "npm run compodoc",
+        "prepublishDocs": "docker-compose run --rm docs",
         "test": "lerna run test"
     },
     "precommit": "sign"

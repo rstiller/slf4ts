@@ -1,0 +1,32 @@
+version: "3"
+
+services:
+  docs:
+    build:
+      context: ./test-env/node-dev
+      args:
+        TZ: Europe/Berlin
+    user: "node"
+    entrypoint: bash
+    command:
+      - "-c"
+      - "npm rebuild && lerna run compodoc --scope slf4ts-api && cp -r packages/slf4ts-api/docs ."
+    restart: "no"
+    volumes:
+      - .:/opt/slf4ts/
+    working_dir: "/opt/slf4ts"
+
+  deps:
+    build:
+      context: ./test-env/node-dev
+      args:
+        TZ: Europe/Berlin
+    user: "node"
+    entrypoint: bash
+    command:
+      - "-c"
+      - "lerna run deps"
+    restart: "no"
+    volumes:
+      - .:/opt/slf4ts/
+    working_dir: "/opt/slf4ts"
