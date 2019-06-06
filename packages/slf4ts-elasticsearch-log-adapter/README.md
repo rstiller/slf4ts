@@ -21,6 +21,7 @@ It's meant to be used with `nodejs`.
 
 ```typescript
 import { ILoggerInstance, LoggerFactory } from "slf4ts-api";
+import { ElasticsearchLogAdapter } from "slf4ts-elasticsearch-log-adapter";
 
 // create an instance of elasticsearch client and an instance of the logging adapter for that client
 // creates/uses a logger with group "elasticsearch"
