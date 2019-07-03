@@ -28,7 +28,8 @@
   "dependencies": {
     "slf4ts-api": "^1.2.4",
     "source-map-support": "^0.5.12",
-    "winston": "^3.2.1"
+    "winston": "^3.2.1",
+    "snyk": "^1.189.0"
   },
   "engines": {
     "node": ">= 8",
@@ -49,7 +50,9 @@
     "lint": "tslint -c ../../tslint.json lib/**/*.ts test/**/*.ts",
     "precompodoc": "npm run coverage",
     "prepublishOnly": "npm run build",
-    "test": "mocha --opts mocha.opts"
+    "test": "mocha --opts mocha.opts",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "precommit": "sign",
   "compodoc": {
@@ -74,5 +77,6 @@
       "json-summary"
     ],
     "all": true
-  }
+  },
+  "snyk": true
 }
