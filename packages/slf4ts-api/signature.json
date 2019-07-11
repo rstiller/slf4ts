@@ -75,18 +75,18 @@
     },
     {
       "path": "build/packages/slf4ts-api/test/slf4ts/LoggerFactoryTest.d.ts",
-      "sha512": "3d62e9331d7075b33159afe45428a175be4fcbc0ffbf0fe038785c6e0d88d51f16a4148e19a503d3eb97c6957d36bc96b0699f56fa894d488f63d2e0162a37c8"
+      "sha512": "a8a25c8d269eada99433cb6652b9f01a3c06e2cb8f6f258dd293881dd7dcd01bd3310f23f09e34f8831652bc3e2dc6bc99000e6476621ae55d22726509fbdc72"
     },
     {
       "path": "build/packages/slf4ts-api/test/slf4ts/LoggerFactoryTest.js",
-      "sha512": "24408cb3416c7505a88ce2a7b09dea725913e73b064ea7283c14ed0577f057e8e098c3fe2849fc75efe6856da55edf21e7753b65fdfdea6cc1dd783719cce60b"
+      "sha512": "769ad4bc8db86ebf45cadc83fa2d26ea84ac354c850a8741b1308dd9c42f9da5489c25c83906bebc67d99c2badcc0e8c84e6672d99de31bac288ee2ba6dbf1be"
     },
     {
       "path": "build/packages/slf4ts-api/test/slf4ts/LoggerFactoryTest.js.map",
-      "sha512": "ce01166e509ad8e21a176929c09b6d6d793dc91d7d2fd1e9f8575f9c7e2358c05f17d9a04c333a50181cc9c6210b9597c63f29ac1548372f2e3423c1b4bba02f"
+      "sha512": "9d60a7c3e471801a19183f25d7a351950ffb20919e18bab461ed5825dec52cb006f17d0cdbb506381587d1d9460097b1ced9a12bb74ae14365a955023243be80"
     }
   ],
-  "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJc+UedCRDCMfXrQKYV5wAAJJoQADuR7KslPSNrEbHmCZDy8e9s\nJrAV0/XD8flzaV2x1VqfezOxsB41w6ZIB+NOpeLQFyyOiClll6Aji1R4/bhUk3yI\ne8MqtRUB3hf7nIPfFPf4Vew9PJTiFQaQjOCUX4+V8RVjrKciMcu53knFJVELYQAC\n8augQXzmNRp/p4IsmhRqqwZ7bOppifX579Cx+R7u2/6K3umPDiWBveT+GFN8tywI\n3oSBQBWCHwE40zdI7Ue/31neLg9ZtZ/yRkN8Zm9BUX3wM/qvJh2D7WFW3/wf0Y6B\nyG0gqk2NWg7NzwwhQDss9ZHVZlWUwSfRIKKZ9rwmLKmtvr602vJIauY5xMLW3nQf\nXzUIA+vRaeQUqKFIYu+M1q9kSuk6mvKeVP2er//XsoRrVuV/9f0n0pwhjhj38l7M\nQRK7trYknHsVl0z2q494NhNj20/VBXGvssWU9kWJMq6C3Vx2vUUbnnKZ4CDrRIxT\nuPwtIegZR7Ieegv6vxbVFjjs3DQVokFNRWa9DpCATcPyhOtK1ozoVvWaC+y8nFuH\nGIT8CfqoJG16yG6iZO0PD7/jUiAZ2e7n1axEtvlRDEFkOJ09LfVUgvp4GCKc/fZO\nBs5vSvoDyJjTOzzMM6ovtHkmjb6OCHzv22mHNEfg0e0Lw5+vjTBg7zgLfkFR8H+a\nnicniNCMoc81wWi1TMwI\n=4b79\n-----END PGP SIGNATURE-----\n",
+  "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJdJ11tCRDCMfXrQKYV5wAAyNEQACw2sWncxuZyKWdZs6BQvGlF\nOXwDkD0eZxygOem3VFGPFEu4VWDMBRslnYBEjqFVF3LJGefiFakvxj011IVYIXwP\n0iLDBJ+qahEKOdsi5ITryBZGuleSK6WDklJkqf1I05K2fRyp97/5D7TJxOM3gwl8\nJsahP5VrxK21t0JRWRUTwdhSAdOK3KzP3l+UWp6v13hRof711+tu9TixfIBIteGP\nOLDlY9T5uTja02ntI6Dm4lko118YUXgm1Fao38suJDPl5UdJgc1SCSDU3Kxg3hF7\nNgQqEH5ZwEapk4FXKdNdpge5dCFCebDbr/G6kvXuRcQvdbwt6rT7cZlry7jeWMHa\nB0B83BKHKoKyTXJxWpieBc37Xx3+eNS9fhyz2fgexn8/ork7FiIDT0oq1pFDHe/O\nzeWRUe7vAmYpYinl45FDuBFlIkYg14N6UotWbMEJYuDaWMVYeFGr5SMPtidNHj7e\n2WDfetJQyJ04hRDb+B5pTB2Y3D3ipfEuppNUqhgS5viYjKnGTVeooRKbwwrRwm6v\nd6kMRXTMC4rhNNleXUsV4yqIgLfZiyYR5d9Gi7B9diRsrfj+OqOJkXV2kVcQnJXO\nfFSbBUpNVxtRojw6ZPEIRtUorLKg8BDLT/GrMWoyzA1xbSh0cdCxmlkXW31Aqxpa\ntLiCjXTguJkRxrCYQGMT\n=tNHV\n-----END PGP SIGNATURE-----\n",
   "identity": {
     "keybaseUser": "rstiller"
   }
