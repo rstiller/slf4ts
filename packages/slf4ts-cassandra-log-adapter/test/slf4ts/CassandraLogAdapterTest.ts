@@ -135,8 +135,6 @@ export class CassandraLogAdapterTest {
             expect(calls[4].args[4]).to.contain({
                 info: "Represents an error when a query cannot be performed " +
                         "because no host is available or could be reached by the driver.",
-                message: "All host(s) tried for query failed. First host tried, 127.0.0.1:65535" +
-                            ": Error: connect ECONNREFUSED 127.0.0.1:65535. See innerErrors.",
             });
 
             done();

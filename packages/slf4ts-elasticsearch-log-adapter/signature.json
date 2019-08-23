@@ -1,57 +1,172 @@
 {
-  "version": "v1alpha",
-  "files": [
+  "entries": [
     {
-      "path": "package.json",
-      "sha512": "9e3d6a7b9f18477ff7bb07a0478fbf89936cd15c6a17771bfa28e2b8853e745eea3a198807796337d0519923f982772141bc09cf278f55f33aa6b6885692b8ab"
+      "entry": "files/v1alpha2",
+      "value": {
+        "files": [
+          {
+            "path": "LICENSE",
+            "sha512": "1489ff64267bcf357ff9734a52f0637b09486161c6b43d32d3c439372648e04e3281f2d9ef0449a54d8a68ffb0d046232ecee9a9818baa96a0087acac663f708"
+          },
+          {
+            "path": "build/packages/slf4ts-elasticsearch-log-adapter/lib/slf4ts/ElasticsearchLogAdapter.js",
+            "sha512": "4dc650a7ecdffb235f28485ab44ba2d850f454a63619a7f3f5807c5de54b85d6169b11dc4ebd4fc5bdd94e92bcab82dbaa314cb181bc155b0791efbf47f7df32"
+          },
+          {
+            "path": "build/packages/slf4ts-elasticsearch-log-adapter/test/slf4ts/ElasticsearchLogAdapterTest.js",
+            "sha512": "8690e579c2ceed3277d6b6b83fa685910aa380d484bd22b47a713ee09cc0a20d971eed40d4ffabd78c90fc197f7b3474852dc93a3f0d23fbb0fccaf7827373f3"
+          },
+          {
+            "path": "build/packages/slf4ts-elasticsearch-log-adapter/lib/slf4ts/index.js",
+            "sha512": "5636766eeaa6a9652500e6b7b1c755744353ddfbfe8d0971febaac660876a7715b686fd89816b8195ea6c97462f09e86419e0d9930c7e48c25baeda11a3b20f0"
+          },
+          {
+            "path": "build/packages/slf4ts-elasticsearch-log-adapter/lib/slf4ts/ElasticsearchLogAdapter.js.map",
+            "sha512": "f5ec38702e282b0ea608f639db23723fd6532f1e05e1d9adbd84040d3d7a8f1882705976624f8121580ccfb6baa23f1a74e7a9453ad181acc56a0b755679b101"
+          },
+          {
+            "path": "build/packages/slf4ts-elasticsearch-log-adapter/test/slf4ts/ElasticsearchLogAdapterTest.js.map",
+            "sha512": "df6fda2bdbf4b91de5cc891eb1253899efb49b14bd8f635992f2338611c5a003eb6ae5ab6d46aeaa48bca8942abbf2af120a94f37ffb2bd3398a938b1a6dc73a"
+          },
+          {
+            "path": "build/packages/slf4ts-elasticsearch-log-adapter/lib/slf4ts/index.js.map",
+            "sha512": "814e9f4359138b310db49b7d34b0289c717dc761792f654e2c287b1f2ac7110909c4b045be9a3c0bc1ca83728a0fda4eaf548a3eb8d0b5a7dba8c5ecfb3164d0"
+          },
+          {
+            "path": "README.md",
+            "sha512": "1a1750aa144645bb3c35258e3fe412970b8e621a92fa653147b32f91991599c20e523714bd7f7499042d930315faa0971efdb936dc9fc4590770dba73bf2261a"
+          },
+          {
+            "path": "build/packages/slf4ts-elasticsearch-log-adapter/lib/slf4ts/ElasticsearchLogAdapter.d.ts",
+            "sha512": "6d87fd7433c144e110041d496b61a20be1fc2806dbeb726b82f8e491d4764d01f3d62c5b4a34976246eab6cfe035d47bbbbdbb760bf8bbfd732a098010049d1e"
+          },
+          {
+            "path": "build/packages/slf4ts-elasticsearch-log-adapter/test/slf4ts/ElasticsearchLogAdapterTest.d.ts",
+            "sha512": "5c1a31b48dd7b23a772423129485a3811b46b87b926370551cc86c73d3fc3a2f525f051ccce83f0c902e45b7ef9f1150d263a27edd87197314b41e873feacbe6"
+          },
+          {
+            "path": "build/packages/slf4ts-elasticsearch-log-adapter/lib/slf4ts/index.d.ts",
+            "sha512": "06040d9dc89de374cc77fc5063e4dd6d7daa6a8d6a3cb513c3db289264e51306c45229dd6e3d6c55836362d662b272a3661f64898b382d614341b1ad2e5d2ba0"
+          }
+        ]
+      }
     },
     {
-      "path": "LICENSE",
-      "sha512": "1489ff64267bcf357ff9734a52f0637b09486161c6b43d32d3c439372648e04e3281f2d9ef0449a54d8a68ffb0d046232ecee9a9818baa96a0087acac663f708"
+      "entry": "identity/v1alpha2",
+      "value": {
+        "identity": {
+          "keybaseUser": "rstiller"
+        }
+      }
     },
     {
-      "path": "README.md",
-      "sha512": "1a1750aa144645bb3c35258e3fe412970b8e621a92fa653147b32f91991599c20e523714bd7f7499042d930315faa0971efdb936dc9fc4590770dba73bf2261a"
+      "entry": "npmCompatiblePackageJson/v1alpha2",
+      "value": {
+        "packageJsonProperties": [
+          "compodoc",
+          "dependencies",
+          "description",
+          "engines",
+          "files",
+          "homepage",
+          "keywords",
+          "license",
+          "licenses",
+          "main",
+          "name",
+          "nyc",
+          "peerDependencies",
+          "precommit",
+          "repository",
+          "scripts",
+          "typings",
+          "version"
+        ],
+        "sha512": "663ba4629f868eb82a693c83396cc2f3cbf098ce71b8a55bda1d7e54278304ee580261ac669b61488b4620e6d2eccabada664f0abc45e0beffb680ea65528a1f"
+      }
     },
     {
-      "path": "build/packages/slf4ts-elasticsearch-log-adapter/lib/slf4ts/ElasticsearchLogAdapter.d.ts",
-      "sha512": "6d87fd7433c144e110041d496b61a20be1fc2806dbeb726b82f8e491d4764d01f3d62c5b4a34976246eab6cfe035d47bbbbdbb760bf8bbfd732a098010049d1e"
-    },
-    {
-      "path": "build/packages/slf4ts-elasticsearch-log-adapter/lib/slf4ts/ElasticsearchLogAdapter.js",
-      "sha512": "4dc650a7ecdffb235f28485ab44ba2d850f454a63619a7f3f5807c5de54b85d6169b11dc4ebd4fc5bdd94e92bcab82dbaa314cb181bc155b0791efbf47f7df32"
-    },
-    {
-      "path": "build/packages/slf4ts-elasticsearch-log-adapter/lib/slf4ts/ElasticsearchLogAdapter.js.map",
-      "sha512": "f5ec38702e282b0ea608f639db23723fd6532f1e05e1d9adbd84040d3d7a8f1882705976624f8121580ccfb6baa23f1a74e7a9453ad181acc56a0b755679b101"
-    },
-    {
-      "path": "build/packages/slf4ts-elasticsearch-log-adapter/lib/slf4ts/index.d.ts",
-      "sha512": "06040d9dc89de374cc77fc5063e4dd6d7daa6a8d6a3cb513c3db289264e51306c45229dd6e3d6c55836362d662b272a3661f64898b382d614341b1ad2e5d2ba0"
-    },
-    {
-      "path": "build/packages/slf4ts-elasticsearch-log-adapter/lib/slf4ts/index.js",
-      "sha512": "5636766eeaa6a9652500e6b7b1c755744353ddfbfe8d0971febaac660876a7715b686fd89816b8195ea6c97462f09e86419e0d9930c7e48c25baeda11a3b20f0"
-    },
-    {
-      "path": "build/packages/slf4ts-elasticsearch-log-adapter/lib/slf4ts/index.js.map",
-      "sha512": "814e9f4359138b310db49b7d34b0289c717dc761792f654e2c287b1f2ac7110909c4b045be9a3c0bc1ca83728a0fda4eaf548a3eb8d0b5a7dba8c5ecfb3164d0"
-    },
-    {
-      "path": "build/packages/slf4ts-elasticsearch-log-adapter/test/slf4ts/ElasticsearchLogAdapterTest.d.ts",
-      "sha512": "5c1a31b48dd7b23a772423129485a3811b46b87b926370551cc86c73d3fc3a2f525f051ccce83f0c902e45b7ef9f1150d263a27edd87197314b41e873feacbe6"
-    },
-    {
-      "path": "build/packages/slf4ts-elasticsearch-log-adapter/test/slf4ts/ElasticsearchLogAdapterTest.js",
-      "sha512": "8690e579c2ceed3277d6b6b83fa685910aa380d484bd22b47a713ee09cc0a20d971eed40d4ffabd78c90fc197f7b3474852dc93a3f0d23fbb0fccaf7827373f3"
-    },
-    {
-      "path": "build/packages/slf4ts-elasticsearch-log-adapter/test/slf4ts/ElasticsearchLogAdapterTest.js.map",
-      "sha512": "df6fda2bdbf4b91de5cc891eb1253899efb49b14bd8f635992f2338611c5a003eb6ae5ab6d46aeaa48bca8942abbf2af120a94f37ffb2bd3398a938b1a6dc73a"
+      "entry": "packageJson/v1alpha2",
+      "value": {
+        "packageJson": {
+          "name": "slf4ts-elasticsearch-log-adapter",
+          "description": "Elasticsearch client logging-adapter for slf4ts-api",
+          "homepage": "https://github.com/rstiller/slf4ts",
+          "version": "1.1.5",
+          "main": "./build/packages/slf4ts-elasticsearch-log-adapter/lib/slf4ts/index.js",
+          "typings": "./build/packages/slf4ts-elasticsearch-log-adapter/lib/slf4ts/index.d.ts",
+          "license": "MIT",
+          "licenses": [
+            {
+              "type": "MIT",
+              "url": "https://www.opensource.org/licenses/mit-license.php"
+            }
+          ],
+          "repository": {
+            "type": "git",
+            "url": "https://github.com/rstiller/slf4ts"
+          },
+          "keywords": [
+            "typescript",
+            "logging",
+            "elasticsearch"
+          ],
+          "peerDependencies": {
+            "elasticsearch": ">=15.0.0",
+            "slf4ts-api": ">=1.1.3"
+          },
+          "dependencies": {
+            "elasticsearch": "^16.3.0",
+            "slf4ts-api": "^1.2.4",
+            "source-map-support": "^0.5.13"
+          },
+          "engines": {
+            "node": ">= 8",
+            "npm": ">= 5"
+          },
+          "files": [
+            "build"
+          ],
+          "scripts": {
+            "build": "npm run clean && npm run lint && npm run compile",
+            "sign": "pkgsign sign .",
+            "clean": "rimraf build coverage",
+            "compile": "tsc -p .",
+            "compodoc": "compodoc lib",
+            "coverage": "nyc npm run test",
+            "deps": "npm-check --ignore @types/* --no-spinner --no-emoji --no-color",
+            "lint": "tslint -c ../../tslint.json lib/**/*.ts test/**/*.ts",
+            "precompodoc": "npm run coverage",
+            "prepublishOnly": "npm run build",
+            "test": "mocha --opts mocha.opts"
+          },
+          "precommit": "sign",
+          "compodoc": {
+            "tsconfig": "./tsconfig.json",
+            "output": "./docs",
+            "disableGraph": true,
+            "unitTestCoverage": "./coverage/coverage-summary.json"
+          },
+          "nyc": {
+            "include": [
+              "lib/*.ts",
+              "lib/**/*.ts"
+            ],
+            "exclude": [
+              "test/*"
+            ],
+            "extension": [
+              ".ts"
+            ],
+            "require": [],
+            "reporter": [
+              "json-summary"
+            ],
+            "all": true
+          }
+        }
+      }
     }
   ],
-  "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJdKQjSCRDCMfXrQKYV5wAACSsQABEEczdryzVqiFfXBPpp5wU3\nPtcQR7hBq5O71/25tIF8k396Baw8BhAMgmm56PIwRGpM9O7ztYqk/4x2l9qJbwkv\nMmrXFSPaLEZwGL82j9bS6nX0mPd/5tIioS5ifZztVHDQ9kUGWZJp6TdxkdWqnm52\n+pBnyF4e+BUZ9akGxvDW/UNTUnB0F5T90scKTPP2pwRwp6GxS7s6T/O6/hLe3PHp\nH5gVNZ7ywCfIXjLq0AGfMEol7HNqKb8HmccXUJ+awdvTbCzlYpnBM7g7+dXxR6VD\nd+A2/BwgxSBbXsRQUZvu5scY3AzwTG9Rdi9dEDmMgUQHFjQVneV6OFj+itcunpxw\nJjp9XAEx2+BdcMtDyJhx/OxU3KCYv6iEoTI1rj+RY2BN+XqLtJS1Xiuq4fA5XOmv\nr9t9HEvmiS01Q2Hts0L/V2SzcDApABhvDrnR/0Bww3t2X3Ls16BPo4m5awdCSHlT\nehwCKctfowa5EbtWV06a+rNNcwrJp6cLznCKGTc7jX9y5ez2YDkLDselDVbX8a48\nCjGbMHq8JKa/H6ivdkwogDHMI/r6+FQFZ56PEmAze/aEwgg9mU6G3cqSTRiXcRpu\ncsNDxEFx9rq1nUzcmr+FIlUisP/QtMzH1Xh4Mo9APumrQ3UenjHvcUejUSyEFOhy\n6yeVI419Zp7d7wL2goiT\n=wvm8\n-----END PGP SIGNATURE-----\n",
-  "identity": {
-    "keybaseUser": "rstiller"
-  }
+  "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJdYGQYCRDCMfXrQKYV5wAApEMQAAuV50AFJGBylt8oqxiIDNLz\nI82+JnCafUlT4+Fs85sJgq8YxmCEkFR1wCw1R3zWMxj6PBL+7zysOtG/s+HHbU1Y\ne5RwsG3B7mM0o8GiD0FFlSHxi8S+zijDjAiUr7Nv6rgpGI1PrYzp62+os0l81GL8\nc9TG/RtEjVR5j9Lgf8EFpFjUhnG3l2B29aoFSi6AowE2WOFdQzojbJqUFqZAyoWZ\nHY+dIH4nCuKiraWs3/ZM1peTBOUb4cAjH3FIxADGfVKVMSB3v7H+3OAftnsOIoEk\nwOiIqALCLs1Rlss2YaTKr7+vE6WZcXYbycsvxM3AQ/V/A/UyoiALmvmsXmbXU6uF\naLUcrQbqVBwAY9d1eXoDJIzNlfM/gayh54A1EfIKjym4iO3QnzMoyYzKFRFwuIlK\nNte8IidLOj+eq/qAs/Zky+KUFp9PTXECq1Xa/h21hX7JiVEMcsldVC0VfHoTu9mW\ntxRbo8YJXSbPd1xsZyVA9P5f3nYVOQnSVYpDoYOw6KTq7dgp78yG7xafsld2gmOs\nlTcJFM/WGk419ItNdTbl1y9LG3MAlHtUR87ytRwf3hoEpjwiR3mrT2DPQU+Sk7o8\nVRB1T6B8KRpqeY6z1b8f9nGGtWZv1Z3TJtLc6ZCYNmqUbPOeQuCvPiB5VjzpbcqX\n9G8WiUKVEtrvcHNUiDaB\n=0lUc\n-----END PGP SIGNATURE-----\n"
 }

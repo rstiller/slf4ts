@@ -1,85 +1,201 @@
 {
-  "version": "v1alpha",
-  "files": [
+  "entries": [
     {
-      "path": "package.json",
-      "sha512": "466a987bab9f7a5bc6258621c30e03898ed79cd7dce171a9bda40a835237c114ff842bf425525c1088da6f12b2481e08c1ab30b4522356cc1006f8a28e6829aa"
+      "entry": "files/v1alpha2",
+      "value": {
+        "files": [
+          {
+            "path": ".slf4ts-binding",
+            "sha512": "cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e"
+          },
+          {
+            "path": "LICENSE",
+            "sha512": "1489ff64267bcf357ff9734a52f0637b09486161c6b43d32d3c439372648e04e3281f2d9ef0449a54d8a68ffb0d046232ecee9a9818baa96a0087acac663f708"
+          },
+          {
+            "path": "build/packages/slf4ts-winston/lib/slf4ts/index.js",
+            "sha512": "2ff751d07b290b9c843b8d8cf7fee1d401d2819f2d58066b5449be1f54303dcc5df91db4b23fb92a7b4172b34a5c960ab3d8c7f1328092aa35c05c436f26eda6"
+          },
+          {
+            "path": "build/packages/slf4ts-winston/lib/slf4ts/WinstonLoggerBinding.js",
+            "sha512": "e3fb02728269cb297f21d4e7402aaa561ba60a707cfb59de3dda7efa985ad2b36d122245c9e63b205ae96eb2cb308acf042a23d4810a16fe927e4dbe5c99a0ce"
+          },
+          {
+            "path": "build/packages/slf4ts-winston/test/slf4ts/WinstonLoggerBindingTest.js",
+            "sha512": "278f1a5f1c9640ba3134548d1918506766783804ee5eca0a87c8ed539e70348ef99b4e1f491ea703a1d22ef949e50c71fdd19ee0edd00bdff73e2272387ad026"
+          },
+          {
+            "path": "build/packages/slf4ts-winston/lib/slf4ts/WinstonLoggerImplementation.js",
+            "sha512": "f08dfcaeaf21c08eb1c58086ff91a32e119fef91664c426a27f496395b99f2fa6a6f26033d406e6d16a46ae73aba0f62b223d60366c166f0685e08302fc2e42c"
+          },
+          {
+            "path": "build/packages/slf4ts-winston/test/slf4ts/WinstonLoggerImplementationTest.js",
+            "sha512": "0d6cb29bdc273b2e5c6a3518cd18fb344699841ef791628a2574a4fa7bf2183c0e43b3f18d25f898f56d19378517da9f9480b760bd4548d19d3c57696746f463"
+          },
+          {
+            "path": "build/packages/slf4ts-winston/lib/slf4ts/index.js.map",
+            "sha512": "84f18481cb779588d2a0b9ea5965ca3a25da7bc2d40d671b9bf1a17856a59f44b1a6dabdcc302b4be1e3b107edaa866048d87ba44a2c3410cfdee18ee2f364c8"
+          },
+          {
+            "path": "build/packages/slf4ts-winston/lib/slf4ts/WinstonLoggerBinding.js.map",
+            "sha512": "8f9395c6c48ecaeaa3d032557e5537a71a2e1dc54216ff1ac0f258bd806b5354f009980e3359538a5d01f78966132f5d5a85e5ef91787f39be1debe0e0eb6f13"
+          },
+          {
+            "path": "build/packages/slf4ts-winston/test/slf4ts/WinstonLoggerBindingTest.js.map",
+            "sha512": "af63faad4e5484b76c3d378eb83081ce35330b9413d6ca932acb7a21844709a0e469a2189a2cee75d622a1101585263955c1e609b8cd1240e6ec2067d244873c"
+          },
+          {
+            "path": "build/packages/slf4ts-winston/lib/slf4ts/WinstonLoggerImplementation.js.map",
+            "sha512": "5904902268ff4556b52ceb4c2fbc9962c9c085d4b666294cd712fe41c53910af409bf138d955e4ef0d43bc80b6f32eacf885beb896b72764714b5ca0e37a8b19"
+          },
+          {
+            "path": "build/packages/slf4ts-winston/test/slf4ts/WinstonLoggerImplementationTest.js.map",
+            "sha512": "65f833ed63af7e8f9530d3ba3dd33129807561438c2aa6b762d69c959be3947818292001ff5916de0edc05ce6c4f149d39e8404c7a54a6522113b084995716d9"
+          },
+          {
+            "path": "README.md",
+            "sha512": "af92b7c5aa13456d2436aced3270062274dd975493b00ccc65951b5b1f98bdaddaee91f60cbefd2d600e916e0a6cd90d4a1578f215e9050a1a83b2bbf97e9bfd"
+          },
+          {
+            "path": "build/packages/slf4ts-winston/lib/slf4ts/index.d.ts",
+            "sha512": "da305c8310c0d1a7e64695b5029711512e802d5559368120dc240a882baec3f809b0b29bc4091c7b2c5f9b1ff806048a93b01a98bc1812806a8dec34f23214d4"
+          },
+          {
+            "path": "build/packages/slf4ts-winston/lib/slf4ts/WinstonLoggerBinding.d.ts",
+            "sha512": "edf7741c3b546143100d68b1d599d6b243af0e1cea7c2096b145ef3b64b150d0e621da1d117ace908477f772fda7a79942453e9ef61c48235a34a2c94a6c4ad1"
+          },
+          {
+            "path": "build/packages/slf4ts-winston/test/slf4ts/WinstonLoggerBindingTest.d.ts",
+            "sha512": "257ba05c1700d400bf799fe2b9c6e32acc568684fe4ca2de93a4f7712493361fad44426f2781dedf88beb67ef4c1f0638afc4a4ec03813253d065fa25e053bde"
+          },
+          {
+            "path": "build/packages/slf4ts-winston/lib/slf4ts/WinstonLoggerImplementation.d.ts",
+            "sha512": "4c31887eb100db34799a26386e6878adef0daca54478a936472f6a0f58ce9245d9493976d83ca985c486ae8bd0ffa2023964d4c5a1b6524edbd04be523660782"
+          },
+          {
+            "path": "build/packages/slf4ts-winston/test/slf4ts/WinstonLoggerImplementationTest.d.ts",
+            "sha512": "2ea7aa6e8120531a376e9c757e37eb41e747d7b3d5a7c0b0acb1fe4a3987eb8d7cd67829718525b327a3cb3093f6b255fe7da636d8c6824bbd52046adb197636"
+          }
+        ]
+      }
     },
     {
-      "path": ".slf4ts-binding",
-      "sha512": "cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e"
+      "entry": "identity/v1alpha2",
+      "value": {
+        "identity": {
+          "keybaseUser": "rstiller"
+        }
+      }
     },
     {
-      "path": "LICENSE",
-      "sha512": "1489ff64267bcf357ff9734a52f0637b09486161c6b43d32d3c439372648e04e3281f2d9ef0449a54d8a68ffb0d046232ecee9a9818baa96a0087acac663f708"
+      "entry": "npmCompatiblePackageJson/v1alpha2",
+      "value": {
+        "packageJsonProperties": [
+          "compodoc",
+          "dependencies",
+          "description",
+          "engines",
+          "files",
+          "homepage",
+          "keywords",
+          "license",
+          "licenses",
+          "main",
+          "name",
+          "nyc",
+          "peerDependencies",
+          "precommit",
+          "repository",
+          "scripts",
+          "typings",
+          "version"
+        ],
+        "sha512": "6491b6179a0880a00560cceb0470947610b8f45ee515686dd164d9131427b3263b7c47646f1ef0cec9f4b11c417ea89f34a2459b179c0d7f0b4cbc3984fbd778"
+      }
     },
     {
-      "path": "README.md",
-      "sha512": "af92b7c5aa13456d2436aced3270062274dd975493b00ccc65951b5b1f98bdaddaee91f60cbefd2d600e916e0a6cd90d4a1578f215e9050a1a83b2bbf97e9bfd"
-    },
-    {
-      "path": "build/packages/slf4ts-winston/lib/slf4ts/index.d.ts",
-      "sha512": "da305c8310c0d1a7e64695b5029711512e802d5559368120dc240a882baec3f809b0b29bc4091c7b2c5f9b1ff806048a93b01a98bc1812806a8dec34f23214d4"
-    },
-    {
-      "path": "build/packages/slf4ts-winston/lib/slf4ts/index.js",
-      "sha512": "2ff751d07b290b9c843b8d8cf7fee1d401d2819f2d58066b5449be1f54303dcc5df91db4b23fb92a7b4172b34a5c960ab3d8c7f1328092aa35c05c436f26eda6"
-    },
-    {
-      "path": "build/packages/slf4ts-winston/lib/slf4ts/index.js.map",
-      "sha512": "84f18481cb779588d2a0b9ea5965ca3a25da7bc2d40d671b9bf1a17856a59f44b1a6dabdcc302b4be1e3b107edaa866048d87ba44a2c3410cfdee18ee2f364c8"
-    },
-    {
-      "path": "build/packages/slf4ts-winston/lib/slf4ts/WinstonLoggerBinding.d.ts",
-      "sha512": "edf7741c3b546143100d68b1d599d6b243af0e1cea7c2096b145ef3b64b150d0e621da1d117ace908477f772fda7a79942453e9ef61c48235a34a2c94a6c4ad1"
-    },
-    {
-      "path": "build/packages/slf4ts-winston/lib/slf4ts/WinstonLoggerBinding.js",
-      "sha512": "e3fb02728269cb297f21d4e7402aaa561ba60a707cfb59de3dda7efa985ad2b36d122245c9e63b205ae96eb2cb308acf042a23d4810a16fe927e4dbe5c99a0ce"
-    },
-    {
-      "path": "build/packages/slf4ts-winston/lib/slf4ts/WinstonLoggerBinding.js.map",
-      "sha512": "8f9395c6c48ecaeaa3d032557e5537a71a2e1dc54216ff1ac0f258bd806b5354f009980e3359538a5d01f78966132f5d5a85e5ef91787f39be1debe0e0eb6f13"
-    },
-    {
-      "path": "build/packages/slf4ts-winston/lib/slf4ts/WinstonLoggerImplementation.d.ts",
-      "sha512": "4c31887eb100db34799a26386e6878adef0daca54478a936472f6a0f58ce9245d9493976d83ca985c486ae8bd0ffa2023964d4c5a1b6524edbd04be523660782"
-    },
-    {
-      "path": "build/packages/slf4ts-winston/lib/slf4ts/WinstonLoggerImplementation.js",
-      "sha512": "f08dfcaeaf21c08eb1c58086ff91a32e119fef91664c426a27f496395b99f2fa6a6f26033d406e6d16a46ae73aba0f62b223d60366c166f0685e08302fc2e42c"
-    },
-    {
-      "path": "build/packages/slf4ts-winston/lib/slf4ts/WinstonLoggerImplementation.js.map",
-      "sha512": "5904902268ff4556b52ceb4c2fbc9962c9c085d4b666294cd712fe41c53910af409bf138d955e4ef0d43bc80b6f32eacf885beb896b72764714b5ca0e37a8b19"
-    },
-    {
-      "path": "build/packages/slf4ts-winston/test/slf4ts/WinstonLoggerBindingTest.d.ts",
-      "sha512": "257ba05c1700d400bf799fe2b9c6e32acc568684fe4ca2de93a4f7712493361fad44426f2781dedf88beb67ef4c1f0638afc4a4ec03813253d065fa25e053bde"
-    },
-    {
-      "path": "build/packages/slf4ts-winston/test/slf4ts/WinstonLoggerBindingTest.js",
-      "sha512": "278f1a5f1c9640ba3134548d1918506766783804ee5eca0a87c8ed539e70348ef99b4e1f491ea703a1d22ef949e50c71fdd19ee0edd00bdff73e2272387ad026"
-    },
-    {
-      "path": "build/packages/slf4ts-winston/test/slf4ts/WinstonLoggerBindingTest.js.map",
-      "sha512": "af63faad4e5484b76c3d378eb83081ce35330b9413d6ca932acb7a21844709a0e469a2189a2cee75d622a1101585263955c1e609b8cd1240e6ec2067d244873c"
-    },
-    {
-      "path": "build/packages/slf4ts-winston/test/slf4ts/WinstonLoggerImplementationTest.d.ts",
-      "sha512": "2ea7aa6e8120531a376e9c757e37eb41e747d7b3d5a7c0b0acb1fe4a3987eb8d7cd67829718525b327a3cb3093f6b255fe7da636d8c6824bbd52046adb197636"
-    },
-    {
-      "path": "build/packages/slf4ts-winston/test/slf4ts/WinstonLoggerImplementationTest.js",
-      "sha512": "0d6cb29bdc273b2e5c6a3518cd18fb344699841ef791628a2574a4fa7bf2183c0e43b3f18d25f898f56d19378517da9f9480b760bd4548d19d3c57696746f463"
-    },
-    {
-      "path": "build/packages/slf4ts-winston/test/slf4ts/WinstonLoggerImplementationTest.js.map",
-      "sha512": "65f833ed63af7e8f9530d3ba3dd33129807561438c2aa6b762d69c959be3947818292001ff5916de0edc05ce6c4f149d39e8404c7a54a6522113b084995716d9"
+      "entry": "packageJson/v1alpha2",
+      "value": {
+        "packageJson": {
+          "name": "slf4ts-winston",
+          "description": "Winston logging-binding for slf4ts-api",
+          "homepage": "https://github.com/rstiller/slf4ts",
+          "version": "1.1.5",
+          "main": "./build/packages/slf4ts-winston/lib/slf4ts/index.js",
+          "typings": "./build/packages/slf4ts-winston/lib/slf4ts/index.d.ts",
+          "license": "MIT",
+          "licenses": [
+            {
+              "type": "MIT",
+              "url": "https://www.opensource.org/licenses/mit-license.php"
+            }
+          ],
+          "repository": {
+            "type": "git",
+            "url": "https://github.com/rstiller/slf4ts"
+          },
+          "keywords": [
+            "typescript",
+            "logging",
+            "winston"
+          ],
+          "peerDependencies": {
+            "slf4ts-api": ">=1.1.3",
+            "winston": ">=3.0.0"
+          },
+          "dependencies": {
+            "slf4ts-api": "^1.2.4",
+            "source-map-support": "^0.5.13",
+            "winston": "^3.2.1"
+          },
+          "engines": {
+            "node": ">= 8",
+            "npm": ">= 5"
+          },
+          "files": [
+            ".slf4ts-binding",
+            "build"
+          ],
+          "scripts": {
+            "build": "npm run clean && npm run lint && npm run compile",
+            "sign": "pkgsign sign .",
+            "clean": "rimraf build coverage",
+            "compile": "tsc -p .",
+            "compodoc": "compodoc lib",
+            "coverage": "nyc npm run test",
+            "deps": "npm-check --ignore @types/* --no-spinner --no-emoji --no-color",
+            "lint": "tslint -c ../../tslint.json lib/**/*.ts test/**/*.ts",
+            "precompodoc": "npm run coverage",
+            "prepublishOnly": "npm run build",
+            "test": "mocha --opts mocha.opts"
+          },
+          "precommit": "sign",
+          "compodoc": {
+            "tsconfig": "./tsconfig.json",
+            "output": "./docs",
+            "disableGraph": true,
+            "unitTestCoverage": "./coverage/coverage-summary.json"
+          },
+          "nyc": {
+            "include": [
+              "lib/*.ts",
+              "lib/**/*.ts"
+            ],
+            "exclude": [
+              "test/*"
+            ],
+            "extension": [
+              ".ts"
+            ],
+            "require": [],
+            "reporter": [
+              "json-summary"
+            ],
+            "all": true
+          }
+        }
+      }
     }
   ],
-  "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJdKQjTCRDCMfXrQKYV5wAAekAQAGt9XHkq3/0fy+G3eOKw7U8i\nTR/1FvhcBbGaxmjmELOj3Ek61vLkA3xloBf7eeFjvNbGg1S0FUup4K9Sdaf4uf9S\n3p5wUhYOD3J/MoNmHSWLKqzsld+U2Rwd9cT1+wbn6ks1zSghvlPHgM8sy+MxuRFR\nhJ+iXGjZFt9idCbNTsfVnNvHjWpdHUUECK2libRSvpLk2POJlkLv5grI9v+pGPfk\nrXERs0cyULMdlyBit3lOZjBQ9a1V6moXJ87BEmh5TUZI3NCClyhOzKdyVdh25RwQ\nYiL26zdVW9r2DYglX343+QGNaKAqbjxV185Z+tmvnQrojGsT3j4Tr8wScCyowhC7\nqrgk0arKH0o5VZr40BwXxokLwkjAw8BicpghqpslwLkMlljQwCAnHe+66uSdcEdS\n3vAZWPBGs3GqodEYNbEcDLJ0EXl7cCGBzwukagLiuS8mBjJYswan6+1DDvN8Bf8Q\nDoAJH9yBYnwIDIo1X4uKfuVb3iEKIJJ81ytcfVxxos9VD54vgMkB2Umevi/tgLfq\n2TCpQ01UQT5QIaNyxBR+fXf12N7wJDfU2uNp5wzMxQpHA5cJ2qHjQQk0S/DNgKYW\nxeQqTZ6rwGgUY5nOVCclXpa61FEKbTS/7XI7kEJbLwMnGkfB9sXcCbU+sZwZhMQ9\nik4VJbaFpbzidPqYPWEQ\n=jdCH\n-----END PGP SIGNATURE-----\n",
-  "identity": {
-    "keybaseUser": "rstiller"
-  }
+  "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJdYGQYCRDCMfXrQKYV5wAABNoQAALT+iq4VM3M1V4jgBHAjHzl\nL1FK1YCxu3ug6LbP1rEQcKrEIeYJ7zzyAZjQdneeti4PHVWWoDcqWsIzXna03pyr\no6OXZxdpHBqj7TO8NKiyMGqe0Z0srLh0Hy3pXF+r+XAojk2bal1OO7hTpVvUrEft\nnvAkj3gW5Q/mQAeXZYR8+w5Nl1vyrg36T7x7x0OzUYtTxlcxZAX8dxvZXVAtN80L\nCCy8dTgS2wqt+kEX+ZKWZaT0n6Wba5h0eic+Rm0S9/1B7FSOGxcIgtxxXqxhtsnD\nH1ORZAYB3sOW4XC81FMJ6b/lQ8TXwgShAocdHgWSYj6po7kt/7mRdcfTlClRp58y\nexXMa/qbLDyHym4GkW5kDM4YwyHqf11oaekbyh8QIMsot+es3lTLZSixeWl4qXm/\n0WgQyrM76d/KP/4VqpC4oaIaT++DPhJpgYv/fViFdiQVs9A62Nz6WegvGq/Z07H9\nyybVXADTCHmsT6blPxmk+HUkR8f04fAW6sSHP4Mdvs7pQbbnOAHZSX7wJSgP3A8R\nnzfXrBLVnYFD7xbIkTWLdgDPSv/+IapWh/3xBOn/ujwD/pdKwecEvSylG36s5uN6\nbzL012MHxiBEwnWxAt5OlWa6pFtuVNon0yh8JaYiDgIGjEf7PPhlfLNqCq4ySS8m\njAoo+A/udvTfAelNfH9R\n=O7VO\n-----END PGP SIGNATURE-----\n"
 }
