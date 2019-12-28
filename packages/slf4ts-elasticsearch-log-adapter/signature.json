@@ -14,7 +14,7 @@
           },
           {
             "path": "build/packages/slf4ts-elasticsearch-log-adapter/test/slf4ts/ElasticsearchLogAdapterTest.js",
-            "sha512": "8690e579c2ceed3277d6b6b83fa685910aa380d484bd22b47a713ee09cc0a20d971eed40d4ffabd78c90fc197f7b3474852dc93a3f0d23fbb0fccaf7827373f3"
+            "sha512": "b8095ac7158846a149985f4b6d3e3ee2ad1d3e62fcd049838780c5bdef4f23f59164e5eb1e8caedc71b3a9bc16774498a6b63794befe5506544b580c1f958b09"
           },
           {
             "path": "build/packages/slf4ts-elasticsearch-log-adapter/lib/slf4ts/index.js",
@@ -26,7 +26,7 @@
           },
           {
             "path": "build/packages/slf4ts-elasticsearch-log-adapter/test/slf4ts/ElasticsearchLogAdapterTest.js.map",
-            "sha512": "df6fda2bdbf4b91de5cc891eb1253899efb49b14bd8f635992f2338611c5a003eb6ae5ab6d46aeaa48bca8942abbf2af120a94f37ffb2bd3398a938b1a6dc73a"
+            "sha512": "f80302beb8c8c3cc9b51575fb4661681059eefc8158a5ce765b55b1e26d55f4ce41b758162209b3799750f2b9d7a512113d2694f2367257b823b090af5a85bc1"
           },
           {
             "path": "build/packages/slf4ts-elasticsearch-log-adapter/lib/slf4ts/index.js.map",
@@ -82,7 +82,7 @@
           "typings",
           "version"
         ],
-        "sha512": "663ba4629f868eb82a693c83396cc2f3cbf098ce71b8a55bda1d7e54278304ee580261ac669b61488b4620e6d2eccabada664f0abc45e0beffb680ea65528a1f"
+        "sha512": "82e1151df96f293002473fb015146295768d5fc5e03ad85f95404982bc8843219802ce2f94df501c7bc1d022742ffe5f44923c0035fb28148fd6b23b7eba979f"
       }
     },
     {
@@ -112,13 +112,13 @@
             "elasticsearch"
           ],
           "peerDependencies": {
-            "elasticsearch": ">=15.0.0",
+            "@elastic/elasticsearch": ">=5.6.16",
             "slf4ts-api": ">=1.1.3"
           },
           "dependencies": {
-            "elasticsearch": "^16.3.0",
+            "@elastic/elasticsearch": ">=5.6.16",
             "slf4ts-api": "^1.2.4",
-            "source-map-support": "^0.5.13"
+            "source-map-support": "^0.5.16"
           },
           "engines": {
             "node": ">= 8",
@@ -168,5 +168,5 @@
       }
     }
   ],
-  "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJdYGQYCRDCMfXrQKYV5wAApEMQAAuV50AFJGBylt8oqxiIDNLz\nI82+JnCafUlT4+Fs85sJgq8YxmCEkFR1wCw1R3zWMxj6PBL+7zysOtG/s+HHbU1Y\ne5RwsG3B7mM0o8GiD0FFlSHxi8S+zijDjAiUr7Nv6rgpGI1PrYzp62+os0l81GL8\nc9TG/RtEjVR5j9Lgf8EFpFjUhnG3l2B29aoFSi6AowE2WOFdQzojbJqUFqZAyoWZ\nHY+dIH4nCuKiraWs3/ZM1peTBOUb4cAjH3FIxADGfVKVMSB3v7H+3OAftnsOIoEk\nwOiIqALCLs1Rlss2YaTKr7+vE6WZcXYbycsvxM3AQ/V/A/UyoiALmvmsXmbXU6uF\naLUcrQbqVBwAY9d1eXoDJIzNlfM/gayh54A1EfIKjym4iO3QnzMoyYzKFRFwuIlK\nNte8IidLOj+eq/qAs/Zky+KUFp9PTXECq1Xa/h21hX7JiVEMcsldVC0VfHoTu9mW\ntxRbo8YJXSbPd1xsZyVA9P5f3nYVOQnSVYpDoYOw6KTq7dgp78yG7xafsld2gmOs\nlTcJFM/WGk419ItNdTbl1y9LG3MAlHtUR87ytRwf3hoEpjwiR3mrT2DPQU+Sk7o8\nVRB1T6B8KRpqeY6z1b8f9nGGtWZv1Z3TJtLc6ZCYNmqUbPOeQuCvPiB5VjzpbcqX\n9G8WiUKVEtrvcHNUiDaB\n=0lUc\n-----END PGP SIGNATURE-----\n"
+  "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJeB348CRDCMfXrQKYV5wAA7gcQAFst9+5WLvowhVFV10s0wKeZ\nGNC2VP7jJMZT3hcYqXYhq4dIYCw8p0RQsSVt3pBI9JvT5HhRKypxqUnbaMCAWdcd\nunGRKRA/FgBo9bm2vz5PdLevqhWXPBGJ4zznGwAnnEuUGVz0qcHwTvPWAiBKvRI2\n2PTvhMpD8zrg9wPuFRS7XhY8LNutGRJCDWu7IcyjbqPsvttqJ/NUmjByCs3WfUR2\n0CXyhB4pI+6fRDwbXSOIIUgx5Pc7/Gx/hTzO61ZCgb2pcYNgsn4Z28YHlQP945oE\nKoe8vxEXNGhEU1r99usFRZ68ijUKFmgy9fK+imc1NDnxtiYDUM2lkA5ltywFi69K\nhv6JyWGoUKW9Tl1vvG2NpvS/VjCPXBz/JRRDIdyUaBsXpa4jBCCbTWkrv7JlIKDA\nS+EV5qNNzclw5k7FRDABau5iq3vH9iUgRkpZcUIi+iIaaUIrDKZz+uYqO9TTHgLq\nsU0ici0LzrFWV4ijSv/OTTfPygDdJwvK1lZQvs88XEo1+rVt1LpoP8PWsglyR5A0\newsSueJwnYp7tnmu7lcOmR5kL7fmdQB4Yv5ccGvJRCyPuOd9plMFioTwyauqNEMV\ne/3PJJ8HUI66u7926Q3eEcqSxQy4OtBbXBXSMYhXBKLhvpPd9SbkzSbFczPr3Xai\nLpQfFL/jbYQFd9Z7A6xG\n=o68I\n-----END PGP SIGNATURE-----\n"
 }
