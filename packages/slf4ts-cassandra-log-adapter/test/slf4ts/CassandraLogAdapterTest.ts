@@ -125,7 +125,8 @@ export class CassandraLogAdapterTest {
             expect(calls[3].args[4]).to.contain({
                 address: "127.0.0.1",
                 code: "ECONNREFUSED",
-                errno: "ECONNREFUSED",
+                // errno: -111, // nodejs >= 13
+                // errno: "ECONNREFUSED" // nodejs < 13
                 port: 65535,
                 syscall: "connect",
             });
