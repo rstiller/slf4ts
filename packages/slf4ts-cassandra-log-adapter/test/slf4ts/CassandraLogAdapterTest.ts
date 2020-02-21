@@ -103,7 +103,7 @@ export class CassandraLogAdapterTest {
         client.connect(() => {
             const explanation = td.explain(impl.log);
             const calls = explanation.calls;
-            expect(calls.length).to.equal(5);
+            expect(calls.length).to.equal(4);
 
             // level, group, name, className, message, furtherInformation, logger-metadata
             expect(calls[0].args[0]).to.equal(LogLevel.INFO);
@@ -129,13 +129,6 @@ export class CassandraLogAdapterTest {
                 // errno: "ECONNREFUSED" // nodejs < 13
                 port: 65535,
                 syscall: "connect",
-            });
-
-            expect(calls[4].args[0]).to.equal(LogLevel.ERROR);
-            expect(calls[4].args[3]).to.equal("ControlConnection - ControlConnection failed to acquire a connection");
-            expect(calls[4].args[4]).to.contain({
-                info: "Represents an error when a query cannot be performed " +
-                        "because no host is available or could be reached by the driver.",
             });
 
             done();
