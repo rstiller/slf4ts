@@ -41,7 +41,7 @@
     "lint": "tslint -c ../../tslint.json lib/**/*.ts test/**/*.ts",
     "precompodoc": "npm run coverage",
     "prepublishOnly": "npm run build",
-    "test": "mocha --opts mocha.opts"
+    "test": "mocha test/**/*Test.ts"
   },
   "precommit": "sign",
   "compodoc": {
@@ -66,5 +66,15 @@
       "json-summary"
     ],
     "all": true
+  },
+  "mocha": {
+    "require": [
+      "source-map-support/register",
+      "ts-node/register"
+    ],
+    "reporter": "dot",
+    "extension": "ts",
+    "bail": true,
+    "full-trace": true
   }
 }
