@@ -1,0 +1,212 @@
+{
+  "entries": [
+    {
+      "entry": "files/v1alpha2",
+      "value": {
+        "files": [
+          {
+            "path": ".slf4ts-binding",
+            "sha512": "cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e"
+          },
+          {
+            "path": "LICENSE",
+            "sha512": "1489ff64267bcf357ff9734a52f0637b09486161c6b43d32d3c439372648e04e3281f2d9ef0449a54d8a68ffb0d046232ecee9a9818baa96a0087acac663f708"
+          },
+          {
+            "path": "build/packages/slf4ts-log4js/lib/slf4ts/index.js",
+            "sha512": "ec66164c16cbbeb82b51869691808898eec28cb269b67b0e1199a34bc31f90082cf8b6b00269c62ff1bfac7f6c07b4bd1b8d64e19be2a9a8a4e2ac69483cd8a8"
+          },
+          {
+            "path": "build/packages/slf4ts-log4js/lib/slf4ts/Log4JSLoggerBinding.js",
+            "sha512": "fb34c2d24aa11f395c89f4362dd15e64b474faf34f59f944fbd22c8871b539d74755a872af6e39f4716db28827468c21085263cbfe72d44a0e2a412d50369bb3"
+          },
+          {
+            "path": "build/packages/slf4ts-log4js/test/slf4ts/Log4JSLoggerBindingTest.js",
+            "sha512": "323791c191863f9ca230a72e0e453dff20260c5002f0454955436af627036d436758abe541c4d6bc8c90008640c3a38196760234a2db14dd9c9c81a9fd839682"
+          },
+          {
+            "path": "build/packages/slf4ts-log4js/lib/slf4ts/Log4JSLoggerImplementation.js",
+            "sha512": "614af5a0fb5996514f6aa5df894d926e0e0e01d02d2d9979b5e08e36857b72dcc374325823716d22ae7ce8f7ef6eb81974bc34f4b3a81a15e1fcc5d1e929096c"
+          },
+          {
+            "path": "build/packages/slf4ts-log4js/test/slf4ts/Log4JSLoggerImplementationTest.js",
+            "sha512": "7a5eb1deb7680830cbc322f1e31f57de44673d532b2681316745205067ad374d2754cd26384c9e379f9555e804687144fb7d1215c5791151299fb3517be335c7"
+          },
+          {
+            "path": "build/packages/slf4ts-log4js/lib/slf4ts/index.js.map",
+            "sha512": "69a08cf55def5b1aea97fa4fa13e1c4b94b871006c9c8e6782a9bbf385ccf2acb00abfac3eb4f2e89e8c982e0bd43e0673f5f553406633fa55c58c1f368e9f9e"
+          },
+          {
+            "path": "build/packages/slf4ts-log4js/lib/slf4ts/Log4JSLoggerBinding.js.map",
+            "sha512": "4dcb8156da965b6a5873314e4d61bea0ff6fb94d47ae2e913ce527388661a38d04a7ecaac66ec498325e01d316d56f8109aca41896968ddb92e4cf2bc49560a3"
+          },
+          {
+            "path": "build/packages/slf4ts-log4js/test/slf4ts/Log4JSLoggerBindingTest.js.map",
+            "sha512": "fb03b99c1839a52dee276efa728fd0fa652045d4726c88d860acbf86847e0fbf7e9c21726eacb79b9fb77e2d1f781fd851b460b0dbfe4ced96df51f9327905fb"
+          },
+          {
+            "path": "build/packages/slf4ts-log4js/lib/slf4ts/Log4JSLoggerImplementation.js.map",
+            "sha512": "1ed52ed7bcbe7067d87ca0a18247294034b24066b39145c4db62f27f331da9c83231bbe6263fbed60966a59e5925fa7d830aecc54bc1c94f7d0d9a937b3a02ee"
+          },
+          {
+            "path": "build/packages/slf4ts-log4js/test/slf4ts/Log4JSLoggerImplementationTest.js.map",
+            "sha512": "b99d5f0544f6d4d3499cde804f55f45718cfa3e122b59d839a870b79399645743c16fc1e92871cc0497d023dd4ca9e0c23d810d65d282771b1fb97e3d1378a19"
+          },
+          {
+            "path": "README.md",
+            "sha512": "45350015c50746b52422cfd807c86afc287de6c71c34b30851547819c26d0660320fc3b048d90018f3b5e169c55a5f73502ebd23aec63d7bae39851ec9de9211"
+          },
+          {
+            "path": "build/packages/slf4ts-log4js/lib/slf4ts/index.d.ts",
+            "sha512": "da305c8310c0d1a7e64695b5029711512e802d5559368120dc240a882baec3f809b0b29bc4091c7b2c5f9b1ff806048a93b01a98bc1812806a8dec34f23214d4"
+          },
+          {
+            "path": "build/packages/slf4ts-log4js/lib/slf4ts/Log4JSLoggerBinding.d.ts",
+            "sha512": "78518e7e3f1546d6ec7283787a9980f3c7f351d76f9723a72c724f6d33bf61f0d94f0becd1ea71e6fd946a0b6eb466fff19bdf6b44d2a61188327321bed9d3ae"
+          },
+          {
+            "path": "build/packages/slf4ts-log4js/test/slf4ts/Log4JSLoggerBindingTest.d.ts",
+            "sha512": "cb6a8ff03506b8e022ea3b96dcec88c8f255a3278309aa450ffdc0d91f84ab6e19e0952351e0c1a854ae0260d2ea8e3cec1929d1a39b29ba3e91f931b9fd87d7"
+          },
+          {
+            "path": "build/packages/slf4ts-log4js/lib/slf4ts/Log4JSLoggerImplementation.d.ts",
+            "sha512": "026534ca064844c29e5399f516b96cad73690a1f86cc1d8be5739faf711b5485a877227c574f9b2388aa1afaa14ff0745cd831a69ce28636ac455128917f6fe7"
+          },
+          {
+            "path": "build/packages/slf4ts-log4js/test/slf4ts/Log4JSLoggerImplementationTest.d.ts",
+            "sha512": "caa16486fd6fba27e65a4afd48db652885fbfd3548965a6c5e0d24e11beb8765ca44a7fd1fcc5e4de7794677b5f85cafb564185b432ac923fab0c0f4f72b31a9"
+          }
+        ]
+      }
+    },
+    {
+      "entry": "identity/v1alpha2",
+      "value": {
+        "identity": {
+          "keybaseUser": "rstiller"
+        }
+      }
+    },
+    {
+      "entry": "npmCompatiblePackageJson/v1alpha2",
+      "value": {
+        "packageJsonProperties": [
+          "compodoc",
+          "dependencies",
+          "description",
+          "engines",
+          "files",
+          "homepage",
+          "keywords",
+          "license",
+          "licenses",
+          "main",
+          "mocha",
+          "name",
+          "nyc",
+          "peerDependencies",
+          "precommit",
+          "repository",
+          "scripts",
+          "typings",
+          "version"
+        ],
+        "sha512": "e4d4adbc251f5024007943acd646039268eed886713ba31933434eba5f841cb8d66108e4ddc1f8ca1944111df8bfedfe2d2e800a09d70da703d979637005c174"
+      }
+    },
+    {
+      "entry": "packageJson/v1alpha2",
+      "value": {
+        "packageJson": {
+          "name": "slf4ts-log4js",
+          "description": "Log4js logging-binding for slf4ts-api",
+          "homepage": "https://github.com/rstiller/slf4ts",
+          "version": "1.0.0",
+          "main": "./build/packages/slf4ts-log4js/lib/slf4ts/index.js",
+          "typings": "./build/packages/slf4ts-log4js/lib/slf4ts/index.d.ts",
+          "license": "MIT",
+          "licenses": [
+            {
+              "type": "MIT",
+              "url": "https://www.opensource.org/licenses/mit-license.php"
+            }
+          ],
+          "repository": {
+            "type": "git",
+            "url": "https://github.com/rstiller/slf4ts"
+          },
+          "keywords": [
+            "typescript",
+            "logging",
+            "log4js"
+          ],
+          "peerDependencies": {
+            "slf4ts-api": ">=1.1.3",
+            "log4js": ">=6.0.0"
+          },
+          "dependencies": {
+            "slf4ts-api": "^1.2.4",
+            "source-map-support": "^0.5.16",
+            "log4js": "^6.1.2"
+          },
+          "engines": {
+            "node": ">= 8",
+            "npm": ">= 5"
+          },
+          "files": [
+            ".slf4ts-binding",
+            "build"
+          ],
+          "scripts": {
+            "build": "npm run clean && npm run lint && npm run compile",
+            "sign": "pkgsign sign .",
+            "clean": "rimraf build coverage",
+            "compile": "tsc -p .",
+            "compodoc": "compodoc lib",
+            "coverage": "nyc npm run test",
+            "deps": "npm-check --ignore @types/* --no-spinner --no-emoji --no-color",
+            "lint": "tslint -c ../../tslint.json lib/**/*.ts test/**/*.ts",
+            "precompodoc": "npm run coverage",
+            "prepublishOnly": "npm run build",
+            "test": "mocha test/**/*Test.ts"
+          },
+          "precommit": "sign",
+          "compodoc": {
+            "tsconfig": "./tsconfig.json",
+            "output": "./docs",
+            "disableGraph": true,
+            "unitTestCoverage": "./coverage/coverage-summary.json"
+          },
+          "nyc": {
+            "include": [
+              "lib/*.ts",
+              "lib/**/*.ts"
+            ],
+            "exclude": [
+              "test/*"
+            ],
+            "extension": [
+              ".ts"
+            ],
+            "require": [],
+            "reporter": [
+              "json-summary"
+            ],
+            "all": true
+          },
+          "mocha": {
+            "require": [
+              "source-map-support/register",
+              "ts-node/register"
+            ],
+            "reporter": "dot",
+            "extension": "ts",
+            "bail": true,
+            "full-trace": true
+          }
+        }
+      }
+    }
+  ],
+  "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJeYBocCRDCMfXrQKYV5wAAWDAQAAWfiQmK/+uGF7V0awa59Wg5\n+OZS1vjIH9mMjhX35siUQxHS+lAr7RGiX/scackNlBP2ENNl4CpvBBNHcbDTF97D\n2PHq5GU1rRQfUvi8y08LEs2OMUBZEw1F8idh3OBVoHYq7SSmHM1Z/HcvwnLC8YUF\n7mBc+V7lRwMJFzpOHzlb1KQ+yRyUJLsaG/nWGvFA/tJDOHYkBVE3WRDNWZZEGsLx\ngIm6Us3m3k5eK+FcCDEq0WB0Orp+EZsA6cYps6//e+9GWGWlrAMfVpcRF60VEGnQ\nLxJYGTMBbsWQ8zVpAVgO6NxOuxhI2kNveWDl/kR1q7rfsmPSQsrKCONa1uoX82lG\nl9WXbPigMoSBRnddy/q+vRXB7wGb2kYD+gwJNEdJNMAGuVHNIfJWE2n+56EBVY4W\nC2ApgTswjTdSyNuYbwisl4vlteQ3uFKrSlGFb/W/nghc5UsN9bdwmvJ8tPGRK5S5\ndkcdOr1mcYsyoSd+eqSCKjR14x+wDbqj/884532uI8H/d1doF8n539lqsViKx52g\nGLopUm8VRmGnXwYbYqCHV8wnCv3j+8qV6mcbuDYgs86RDr6l9+vOPdwKwVLM4zHW\nZjjcdtedjBxQcg4u3GgNO+wWrKpsF1T9FWGcpwApkdmFRPsxbQXNPe3kBXsVw3nl\n0ZwLOx9UGHY55aUH60Br\n=bF/Q\n-----END PGP SIGNATURE-----\n"
+}
