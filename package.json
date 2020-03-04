@@ -24,6 +24,7 @@
     },
     "scripts": {
         "bootstrap": "lerna bootstrap",
+        "bootstrap-run": "lerna run --loglevel=silent --no-prefix --scope",
         "build": "lerna run build",
         "sign": "lerna run sign && git add packages/*/signature.json",
         "clean": "lerna run clean",

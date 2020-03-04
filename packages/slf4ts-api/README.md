@@ -36,6 +36,7 @@ slf4ts doesn't work without a logging-framework binding.
 Bindings exist for a couple of logging-frameworks:
 
 * [console](../slf4ts-console)
+* [log4js](../slf4ts-log4js)
 * [winston](../slf4ts-winston)
 
 ### Write a binding
@@ -55,6 +56,8 @@ interface LoggerImplementation {
     log(...args: any[]): Promise<any>;
     getImplementation<T>(): T;
     setConfig<T>(config: T, group: string, name: string): void;
+    setLogLevel(logLevel: LogLevel, group: string, name: string): void;
+    setMetadata(metadata: any, group: string, name: string): void;
 }
 
 interface LoggerBinding {

@@ -3,6 +3,8 @@ import "source-map-support/register";
 import * as fs from "fs";
 import * as path from "path";
 
+import { LogLevel } from "./LoggerConfiguration";
+
 /**
  * The bridge to the underlying logging-framework.
  *
@@ -40,6 +42,26 @@ export interface LoggerImplementation {
      * @memberof LoggerImplementation
      */
     setConfig<T>(config: T, group: string, name: string): void;
+
+    /**
+     * Informs the logger implementation of the log-level change.
+     *
+     * @param {LogLevel} logLevel The new log level.
+     * @param {string} group The group of the logger.
+     * @param {string} name The name of the logger.
+     * @memberof LoggerImplementation
+     */
+    setLogLevel(logLevel: LogLevel, group: string, name: string): void;
+
+    /**
+     * Informs the logger implementation of the metadata change.
+     *
+     * @param {any} metadata The new metadata.
+     * @param {string} group The group of the logger.
+     * @param {string} name The name of the logger.
+     * @memberof LoggerImplementation
+     */
+    setMetadata(metadata: any, group: string, name: string): void;
 
 }
 
@@ -108,12 +130,16 @@ export class LoggerBindings {
         if (process.env.LOGGER_BINDING_ADDITIONAL_PATH) {
             additionalPaths.push(process.env.LOGGER_BINDING_ADDITIONAL_PATH);
         }
+        if (process.mainModule && process.mainModule.paths) {
+            process.mainModule.paths
+                .forEach((mainPath) => additionalPaths.push(mainPath))
+        }
 
         const moduleFolders: string[] = this.getAllModuleFolders(additionalPaths);
         const loggerBindings: string[] = this.getAllLoggerBindings(moduleFolders);
 
         loggerBindings.forEach((binding) => {
-            const registerFunc = require(binding);
+            const registerFunc = require.main.require(binding);
             registerFunc(this);
         });
     }

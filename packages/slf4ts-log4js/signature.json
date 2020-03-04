@@ -26,11 +26,11 @@
           },
           {
             "path": "build/packages/slf4ts-log4js/lib/slf4ts/Log4JSLoggerImplementation.js",
-            "sha512": "614af5a0fb5996514f6aa5df894d926e0e0e01d02d2d9979b5e08e36857b72dcc374325823716d22ae7ce8f7ef6eb81974bc34f4b3a81a15e1fcc5d1e929096c"
+            "sha512": "73a1cd37b83bf53e86481d49b3e3441f67f84e1484957e8ae2ca1b42637d96883bfe616c94174c242d3c606c9d7c9fe7ca37d230b1234edf31560945303440e2"
           },
           {
             "path": "build/packages/slf4ts-log4js/test/slf4ts/Log4JSLoggerImplementationTest.js",
-            "sha512": "7a5eb1deb7680830cbc322f1e31f57de44673d532b2681316745205067ad374d2754cd26384c9e379f9555e804687144fb7d1215c5791151299fb3517be335c7"
+            "sha512": "9a7fd2cf59232c51fa1d6d9d03d3545874e442ff0e6046240e99c287d4d9ffa283631dd1276f3fd0caabeacd3a35c0f25b774d659626b0603c73f1fc47f3fbb7"
           },
           {
             "path": "build/packages/slf4ts-log4js/lib/slf4ts/index.js.map",
@@ -46,15 +46,15 @@
           },
           {
             "path": "build/packages/slf4ts-log4js/lib/slf4ts/Log4JSLoggerImplementation.js.map",
-            "sha512": "1ed52ed7bcbe7067d87ca0a18247294034b24066b39145c4db62f27f331da9c83231bbe6263fbed60966a59e5925fa7d830aecc54bc1c94f7d0d9a937b3a02ee"
+            "sha512": "0247703d1d456d916464f6515d10868a731a5af077e45011773ef78075492024625be85c9cf8e6930d829835ee9f9061ff64b84cef80b225fb1e84ecf1b86952"
           },
           {
             "path": "build/packages/slf4ts-log4js/test/slf4ts/Log4JSLoggerImplementationTest.js.map",
-            "sha512": "b99d5f0544f6d4d3499cde804f55f45718cfa3e122b59d839a870b79399645743c16fc1e92871cc0497d023dd4ca9e0c23d810d65d282771b1fb97e3d1378a19"
+            "sha512": "1cda4b3f84e49223c291a9628010481310500b023005f88059bd57dd31a081f2cba5d13dcfb3d16a914363a0b0aedc83047475479487578d91d1f1bf62705bff"
           },
           {
             "path": "README.md",
-            "sha512": "45350015c50746b52422cfd807c86afc287de6c71c34b30851547819c26d0660320fc3b048d90018f3b5e169c55a5f73502ebd23aec63d7bae39851ec9de9211"
+            "sha512": "1198547e580fb111ccbf12394fd9d3147c48598360703fdc6b758f9a0a800f2fef2f749cd058244ad5b4570b62cd81d3fb754aa9ce6659233161f66cbc4e5ca7"
           },
           {
             "path": "build/packages/slf4ts-log4js/lib/slf4ts/index.d.ts",
@@ -70,11 +70,11 @@
           },
           {
             "path": "build/packages/slf4ts-log4js/lib/slf4ts/Log4JSLoggerImplementation.d.ts",
-            "sha512": "026534ca064844c29e5399f516b96cad73690a1f86cc1d8be5739faf711b5485a877227c574f9b2388aa1afaa14ff0745cd831a69ce28636ac455128917f6fe7"
+            "sha512": "aba047250cbe8c085dca071fde489d9817c00d81a94b188a75c89d213bdf742559bb62f6a0da2680b6567af42204874fa11fd8868b8e35e410d4b6eb42d51c4b"
           },
           {
             "path": "build/packages/slf4ts-log4js/test/slf4ts/Log4JSLoggerImplementationTest.d.ts",
-            "sha512": "caa16486fd6fba27e65a4afd48db652885fbfd3548965a6c5e0d24e11beb8765ca44a7fd1fcc5e4de7794677b5f85cafb564185b432ac923fab0c0f4f72b31a9"
+            "sha512": "c880debe70e93b4eba2f73fcd6ec6c8df2484bde41c2f9bb5a2fed2e6799b15b8373df407bb5fa8e0ae24df8432eec9fe14a7fb0832898f4e49020b3217a053a"
           }
         ]
       }
@@ -208,5 +208,5 @@
       }
     }
   ],
-  "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJeYBocCRDCMfXrQKYV5wAAWDAQAAWfiQmK/+uGF7V0awa59Wg5\n+OZS1vjIH9mMjhX35siUQxHS+lAr7RGiX/scackNlBP2ENNl4CpvBBNHcbDTF97D\n2PHq5GU1rRQfUvi8y08LEs2OMUBZEw1F8idh3OBVoHYq7SSmHM1Z/HcvwnLC8YUF\n7mBc+V7lRwMJFzpOHzlb1KQ+yRyUJLsaG/nWGvFA/tJDOHYkBVE3WRDNWZZEGsLx\ngIm6Us3m3k5eK+FcCDEq0WB0Orp+EZsA6cYps6//e+9GWGWlrAMfVpcRF60VEGnQ\nLxJYGTMBbsWQ8zVpAVgO6NxOuxhI2kNveWDl/kR1q7rfsmPSQsrKCONa1uoX82lG\nl9WXbPigMoSBRnddy/q+vRXB7wGb2kYD+gwJNEdJNMAGuVHNIfJWE2n+56EBVY4W\nC2ApgTswjTdSyNuYbwisl4vlteQ3uFKrSlGFb/W/nghc5UsN9bdwmvJ8tPGRK5S5\ndkcdOr1mcYsyoSd+eqSCKjR14x+wDbqj/884532uI8H/d1doF8n539lqsViKx52g\nGLopUm8VRmGnXwYbYqCHV8wnCv3j+8qV6mcbuDYgs86RDr6l9+vOPdwKwVLM4zHW\nZjjcdtedjBxQcg4u3GgNO+wWrKpsF1T9FWGcpwApkdmFRPsxbQXNPe3kBXsVw3nl\n0ZwLOx9UGHY55aUH60Br\n=bF/Q\n-----END PGP SIGNATURE-----\n"
+  "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJeapvCCRDCMfXrQKYV5wAARREQAKgvQZLUzL3swzud/cv4ZbwL\nF/nNIU+OFrWz8q7dhLzHSAloq+e1p5XdOyWyq2dTA6wlb5PTNphmB6uTR6Q9fDRN\nKE8KzAz7aZs2jKpRxnULEJHfzlDBmRmsmHEfM8u0JvnJfwXaL6lvBDadhwp9uJM5\n+CS5bhrpkcrTMvJZydGxqAodbFHrBYestiJ9wTuG5uOKd8y01m/vXezLtgmvZ0KG\n02gfNpWBLcoT1iyXhAql7GZguUO2YkhwX0gd76/9fvz9C0TKqVMK/vKv0A64WhSl\nAgAVA/C3VwWaGr0iXh//FINWm+mt85CseubUJMIoRc2JDa3eK9vrN2UweFYqrdA6\nzKbEPFg1CC9ffZkn8RetsjUiMf8OCGWJcdMmDg15yKFvXCKYpxD5SdGlK9k9qlDf\nkkGH347nMXscnPF9wEbR93UyCv4DTMDakhmycSshSLsLazwLiWBV/CVUmrwuswtt\ngmGy/zj4/vHeS81vbznGw8OBdPMhrIsxzzVvWDf3ElNYJOE710f/r0p6q9uIYI+n\nHHcIqurqzp2UWrwkxQCfoC+kpM84fcmkDcs2XnxAiaQ66y6P7kWiDd/37P4kZX83\nGdKC8tfMY4qix7IHoqfLU6LnucE6ti1Kbhj++OQ0k89x2jxc8m/eX4BWuVKx+rp/\n3qGUe5IkV/16lzKwwZ1y\n=xurc\n-----END PGP SIGNATURE-----\n"
 }

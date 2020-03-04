@@ -1,0 +1,25 @@
+{
+  "name": "examples-typescript-log4js",
+  "description": "Example project illustrating the usage of the Log4js logging-binding for slf4ts-api",
+  "homepage": "https://github.com/rstiller/slf4ts",
+  "version": "1.0.0",
+  "main": "./build/examples/typescript-log4js/index.js",
+  "private": true,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rstiller/slf4ts"
+  },
+  "dependencies": {
+    "slf4ts-api": "^1.2.4",
+    "slf4ts-log4js": "^1.0.0",
+    "log4js": "^6.1.2"
+  },
+  "scripts": {
+    "build": "npm run clean && npm run lint && npm run compile",
+    "clean": "rimraf build coverage",
+    "compile": "tsc -p .",
+    "lint": "tslint -c ../../tslint.json lib/**/*.ts test/**/*.ts",
+    "start": "node ."
+  }
+}

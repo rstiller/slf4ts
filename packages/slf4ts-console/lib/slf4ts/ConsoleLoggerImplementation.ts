@@ -42,6 +42,14 @@ export class ConsoleLoggerImplementation implements LoggerImplementation {
         // no config for console ...
     }
 
+    public setLogLevel(logLevel: LogLevel, group: string, name: string): void {
+        // nothing to set here ...
+    }
+
+    public setMetadata(metadata: any, group: string, name: string): void {
+        // nothing to set here ...
+    }
+
     /**
      * Log method as described in {@link https://github.com/rstiller/slf4ts}.
      *

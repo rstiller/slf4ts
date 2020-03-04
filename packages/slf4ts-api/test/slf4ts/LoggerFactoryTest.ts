@@ -85,6 +85,7 @@ export class LoggerFactoryTest {
         const name1 = "name1";
         const name2 = "name2";
         const rootLogger = LoggerFactory.getLogger();
+        const loggerImpl = (rootLogger as DefaultLoggerInstance).getImpl() as any;
         const groupLogger = LoggerFactory.getLogger(group);
         const namedLogger1 = LoggerFactory.getLogger(group, name1);
         const namedLogger2 = LoggerFactory.getLogger(group, name2);
@@ -96,12 +97,28 @@ export class LoggerFactoryTest {
 
         LoggerConfiguration.setLogLevel(LogLevel.DEBUG, group, name1);
 
+        expect(loggerImpl.setLogLevelCalls).to.have.length(1);
+        expect(loggerImpl.setLogLevelCalls[0][0]).to.deep.equal(LogLevel.DEBUG);
+        expect(loggerImpl.setLogLevelCalls[0][1]).to.equal(group);
+        expect(loggerImpl.setLogLevelCalls[0][2]).to.equal(name1);
+
         expect(rootLogger.getLogLevel()).to.equal(LogLevel.INFO);
         expect(groupLogger.getLogLevel()).to.equal(LogLevel.INFO);
         expect(namedLogger1.getLogLevel()).to.equal(LogLevel.DEBUG);
         expect(namedLogger2.getLogLevel()).to.equal(LogLevel.INFO);
 
         LoggerConfiguration.setLogLevel(LogLevel.TRACE, group);
+
+        expect(loggerImpl.setLogLevelCalls).to.have.length(4);
+        expect(loggerImpl.setLogLevelCalls[1][0]).to.deep.equal(LogLevel.TRACE);
+        expect(loggerImpl.setLogLevelCalls[1][1]).to.equal(group);
+        expect(loggerImpl.setLogLevelCalls[1][2]).to.equal("");
+        expect(loggerImpl.setLogLevelCalls[2][0]).to.deep.equal(LogLevel.TRACE);
+        expect(loggerImpl.setLogLevelCalls[2][1]).to.equal(group);
+        expect(loggerImpl.setLogLevelCalls[2][2]).to.equal(name1);
+        expect(loggerImpl.setLogLevelCalls[3][0]).to.deep.equal(LogLevel.TRACE);
+        expect(loggerImpl.setLogLevelCalls[3][1]).to.equal(group);
+        expect(loggerImpl.setLogLevelCalls[3][2]).to.equal(name2);
 
         expect(rootLogger.getLogLevel()).to.equal(LogLevel.INFO);
         expect(groupLogger.getLogLevel()).to.equal(LogLevel.TRACE);
@@ -383,6 +400,71 @@ export class LoggerFactoryTest {
         expect(loggerImpl.calls).to.have.length(5);
         expect(loggerImpl.calls[4]).to.have.length(5);
         expect(loggerImpl.calls[4][4]).to.deep.equal({ arg1: "value4" });
+    }
+
+    @test
+    public checkSetMetadata(): void {
+        LoggerFactory.setMetadata({})
+
+        const group = "group1";
+        const name1 = "name1";
+        const name2 = "name2";
+        const rootLogger = LoggerFactory.getLogger();
+        const groupLogger = LoggerFactory.getLogger(group);
+        const namedLogger1 = LoggerFactory.getLogger(group, name1);
+        const namedLogger2 = LoggerFactory.getLogger(group, name2);
+        const loggerImpl = (rootLogger as DefaultLoggerInstance).getImpl() as any;
+        const defaultLogger = rootLogger as DefaultLoggerInstance
+        const defaultGroupLogger = groupLogger as DefaultLoggerInstance
+        const defaultNamedLogger1 = namedLogger1 as DefaultLoggerInstance
+        const defaultNamedLogger2 = namedLogger2 as DefaultLoggerInstance
+        const rootMetadata = {
+            key1: "value1"
+        }
+        const namedLogger1Metadata = {
+            key2: "value2"
+        }
+        const groupLoggerMetadata = {
+            key3: "value3"
+        }
+
+        expect(defaultLogger.getMetadata()).to.deep.equal({});
+        expect(defaultGroupLogger.getMetadata()).to.deep.equal({});
+        expect(defaultNamedLogger1.getMetadata()).to.deep.equal({});
+        expect(defaultNamedLogger2.getMetadata()).to.deep.equal({});
+
+        rootLogger.setMetadata(rootMetadata)
+
+        expect(loggerImpl.setMetadataCalls).to.have.length(1);
+        expect(loggerImpl.setMetadataCalls[0][0]).to.deep.equal(rootMetadata);
+        expect(loggerImpl.setMetadataCalls[0][1]).to.equal("");
+        expect(loggerImpl.setMetadataCalls[0][2]).to.equal("");
+        expect(defaultLogger.getMetadata()).to.deep.equal(rootMetadata);
+        expect(defaultGroupLogger.getMetadata()).to.deep.equal({});
+        expect(defaultNamedLogger1.getMetadata()).to.deep.equal({});
+        expect(defaultNamedLogger2.getMetadata()).to.deep.equal({});
+
+        defaultNamedLogger1.setMetadata(namedLogger1Metadata)
+
+        expect(loggerImpl.setMetadataCalls).to.have.length(2);
+        expect(loggerImpl.setMetadataCalls[1][0]).to.deep.equal(namedLogger1Metadata);
+        expect(loggerImpl.setMetadataCalls[1][1]).to.equal(group);
+        expect(loggerImpl.setMetadataCalls[1][2]).to.equal(name1);
+        expect(defaultLogger.getMetadata()).to.deep.equal(rootMetadata);
+        expect(defaultGroupLogger.getMetadata()).to.deep.equal({});
+        expect(defaultNamedLogger1.getMetadata()).to.deep.equal(namedLogger1Metadata);
+        expect(defaultNamedLogger2.getMetadata()).to.deep.equal({});
+
+        defaultGroupLogger.setMetadata(groupLoggerMetadata)
+
+        expect(loggerImpl.setMetadataCalls).to.have.length(3);
+        expect(loggerImpl.setMetadataCalls[2][0]).to.deep.equal(groupLoggerMetadata);
+        expect(loggerImpl.setMetadataCalls[2][1]).to.equal(group);
+        expect(loggerImpl.setMetadataCalls[2][2]).to.equal("");
+        expect(defaultLogger.getMetadata()).to.deep.equal(rootMetadata);
+        expect(defaultGroupLogger.getMetadata()).to.deep.equal(groupLoggerMetadata);
+        expect(defaultNamedLogger1.getMetadata()).to.deep.equal(namedLogger1Metadata);
+        expect(defaultNamedLogger2.getMetadata()).to.deep.equal({});
     }
 
 }
