@@ -1,6 +1,8 @@
 function Logger() {
     this.calls = [];
     this.setConfigCalls = [];
+    this.setLogLevelCalls = [];
+    this.setMetadataCalls = [];
     this.log = function() {
         this.calls.push(arguments);
     };
@@ -9,6 +11,12 @@ function Logger() {
     };
     this.setConfig = function() {
         this.setConfigCalls.push(arguments);
+    };
+    this.setLogLevel = function() {
+        this.setLogLevelCalls.push(arguments);
+    };
+    this.setMetadata = function() {
+        this.setMetadataCalls.push(arguments);
     };
 };
 

@@ -3,9 +3,6 @@ import "source-map-support/register";
 import { LoggerBindings, LoggerImplementation } from "./LoggerBindings";
 import { LoggerConfiguration, LogLevel } from "./LoggerConfiguration";
 
-const BINDINGS = new LoggerBindings().getBindings();
-const BINDING = BINDINGS[0];
-
 /**
  * Interface representing a logger instance.
  *
@@ -123,6 +120,7 @@ export class DefaultLoggerInstance implements ILoggerInstance {
 
     public setLogLevel(logLevel: LogLevel): void {
         this.logLevel = logLevel;
+        this.impl.setLogLevel(logLevel, this.group, this.name);
     }
 
     public getName(): string {
@@ -149,6 +147,7 @@ export class DefaultLoggerInstance implements ILoggerInstance {
      */
     public setMetadata(commonMetadata: any): void {
         this.commonMetadata = commonMetadata;
+        this.impl.setMetadata(commonMetadata, this.group, this.name);
     }
 
     public async trace(...args: any[]): Promise<any> {
@@ -205,6 +204,12 @@ class NullLoggerImplementation implements LoggerImplementation {
     }
 
     public setConfig<T>(config: T, group: string, name: string): void {
+    }
+
+    public setLogLevel(logLevel: LogLevel, group: string, name: string): void {
+    }
+
+    public setMetadata(metadata: any, group: string, name: string): void {
     }
 
 }
@@ -303,6 +308,8 @@ export class LoggerFactory {
     private static LOGGER_INSTANCE_CACHE: Map<string, DefaultLoggerInstance> = new Map();
 
     private static initialize() {
+        const BINDINGS = new LoggerBindings().getBindings();
+        const BINDING = BINDINGS[0];
         if (!BINDING) {
             // tslint:disable-next-line:no-console
             console.log("SLF4TS: No Logger Binding found");

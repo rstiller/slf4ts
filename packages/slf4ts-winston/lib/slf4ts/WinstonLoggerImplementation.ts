@@ -84,6 +84,14 @@ export class WinstonLoggerImplementation implements LoggerImplementation {
         }
     }
 
+    public setLogLevel(logLevel: LogLevel, group: string, name: string): void {
+        // nothing to set here ...
+    }
+
+    public setMetadata(metadata: any, group: string, name: string): void {
+        // nothing to set here ...
+    }
+
     private getLoggerInstance(group: string, name: string): winston.Logger {
         const compoundKey = `${group}:${name}`;
         let instance: winston.Logger = this.loggers.get(compoundKey);

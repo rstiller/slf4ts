@@ -26,7 +26,7 @@
           },
           {
             "path": "build/packages/slf4ts-winston/lib/slf4ts/WinstonLoggerImplementation.js",
-            "sha512": "b3d9728d6bd31d0ccd330eef49e3a05850651995f8bec56ed386159293a8868a4a94b8b7def908a715b8d5e17b1cc1958a5c74463f77db7840a276b2eb3ab850"
+            "sha512": "1604b52c10838e9b93c6f3733de52e56e4dff90d971d4d6eb52a32d23f088ad212b44e85d7e16a9f9571c21e0a0f57f775768eb7f6c850cbe4ede033aaea8ce2"
           },
           {
             "path": "build/packages/slf4ts-winston/test/slf4ts/WinstonLoggerImplementationTest.js",
@@ -46,7 +46,7 @@
           },
           {
             "path": "build/packages/slf4ts-winston/lib/slf4ts/WinstonLoggerImplementation.js.map",
-            "sha512": "68a32d27c22e1a9d3fc9e21c02656aa0abdae7166cd53e7f0d5006ac46562c890418a70e5443f861e7f2e68d04176c8b82f164d5be583f168eb36e476179e765"
+            "sha512": "9460955974d9b1c5f3d6f23451f82fcc3f597629c787492509232d3d3e496f0fb630535e3f911f6ba584a53554986974be8d8c658cf6907a6077abc2cc713a75"
           },
           {
             "path": "build/packages/slf4ts-winston/test/slf4ts/WinstonLoggerImplementationTest.js.map",
@@ -70,7 +70,7 @@
           },
           {
             "path": "build/packages/slf4ts-winston/lib/slf4ts/WinstonLoggerImplementation.d.ts",
-            "sha512": "4c31887eb100db34799a26386e6878adef0daca54478a936472f6a0f58ce9245d9493976d83ca985c486ae8bd0ffa2023964d4c5a1b6524edbd04be523660782"
+            "sha512": "fe3a977a2cef725c86a58be84ad417d8b153ef2440c24ed706cf57e53bc3cadefae4650572579b90e57079a089b8dff14a22ecb5f5b4035321be816f32311ebe"
           },
           {
             "path": "build/packages/slf4ts-winston/test/slf4ts/WinstonLoggerImplementationTest.d.ts",
@@ -208,5 +208,5 @@
       }
     }
   ],
-  "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJeYBocCRDCMfXrQKYV5wAAwCYQAFxSF5yCaxqV/Wvf9OdkUwIN\nwcUfOFceUHtBUZbSzqJVRMjfiiqf/3yUVNfDT/zwPOM5ANo1ynBhEXIBqjziCxGw\nhJgSg79JiIQCPxTb7nhevIKG/IElL9XotXY9p1LwJj5Mfq5SaWwnr4RyEVq80fdF\n851cXD2KYT01aO7tZi3Iblfxx+pPGoaJ2oaMZE0JMGT/g4pQRDYRgvztzKu8PoO2\nlcqRx0ayGz+GOusDapk5jG42FmBTVZPy+ALSGoi8XyP4m21AuLE02nhy/nr5zMrS\nLx5WvyGQvA9Ng0wJuHs5059ZuFzfNyvf7skktAv89+U9vIrPUXAMyIZcWGFLed75\nH4C6vYL7Ln77nwdX8DvkXuGfrWkcu1A8psQFoYbw8L/Uu0F8Pq1C0RoJtrQSbnDn\nnILXWMfz+hvl80KANKCQjwaQI25vnf31Mj9EjiE/e+JV/wY3uU7nmjU5EMq6s1re\nrm57zNfHrKhlpPtR0wqMSCOhmXjmZAqL0/TaG+cWkMhPIoEi5yhmD+bHz9n7n8Sd\nQFKnYkEvj6wkq1CYaXgMAQ11fuLHPt6jNDnHIWc1hUjUKRvfNKjE5zj8ERACF0gP\n83qFHECCkGROLiKB17fvl44AmFeZQDnemKrf2L4x78W2mmxoNmRxz2SS/iFXsiEH\n63UXRbGsLMIAQoNueBA7\n=UX8k\n-----END PGP SIGNATURE-----\n"
+  "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJeapvDCRDCMfXrQKYV5wAAis4QACgiN8RWwImpyrxHSvWgnucP\n9/7eSCH77LcTWYawjPuiyrnvYHPkntNsiOwLWNr9t5LVyJ2AMrzU6uiIOEZzrwap\n7vqlF75Dh2oFTcNXMXzlkcFLmfLnOsprgWdrf0EF8oEHSVZB6WBr1p4iefdQXP7s\nmvKky9rxB8Y5j/7rCwcC07p+D/CETMkduTJP8UaI7qRdbFRQVAbKTyHnp9zUYYHt\nzrK14ICkJyVSKpP4XZ7uHJYQwHnHHf2q0+eMqCKd5qwrVUbVZb3wSPVCw0y7aDwt\nsmLqMgx0e8ilnfX3vqF127Eg5m27nU/bn31MUA+/h2HBlQNR+wvmXggVJWlCm0Br\nCgIJNMOaL3pnyFPGIEI7Bcht2sGKiVKQ2ippdL5EQudD9tLr0OEjJNpP4OMkRvXB\n9E9+BdcJqLXJOuTC3991E56+TIDwxjgTdYJXgF0RJZexTwqinAAT891kCBT4+Cf7\nDmB/vCE+3ILH7zl16yCpGKkW72oKSCDdh+qiAihT0riUaBjpMKc0RJ8GCZ6J1wgZ\nxtD5qBjfQC3FM+5B6cpn/NX5+5zU/6Rkbgjp3Qkt8JuHf7JL/LE1IuwaNmlXrQrD\nE1tRimsHuDOhpPtSfpLncQGxpLiL5C1EYqevDJCoLl9HeLs0zOJVrrTob9VU2+O6\nHEPqjbxsOYoR/bIqsZNY\n=0dVM\n-----END PGP SIGNATURE-----\n"
 }

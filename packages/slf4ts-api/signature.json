@@ -14,7 +14,7 @@
           },
           {
             "path": "build/packages/slf4ts-api/lib/slf4ts/LoggerBindings.js",
-            "sha512": "d27c16718eeeabb21649ad34f44432f99d1271e00a49acda95365e5807cba80808ca1b98d20b80c4f8464bc479e1324d70855787d17028442ef99d16926022dc"
+            "sha512": "95be9792d82926c85ec3627206f45154c9ca08802b18c72a8f0f84ac2107ecd749b3f4b35858f6be6de180e4e2bd2b88b1a8b1f65954b7f717dea032bad93cf0"
           },
           {
             "path": "build/packages/slf4ts-api/test/slf4ts/LoggerBindingTest.js",
@@ -26,7 +26,7 @@
           },
           {
             "path": "build/packages/slf4ts-api/lib/slf4ts/LoggerFactory.js",
-            "sha512": "6f7e3da0601a94d90f2c98b9754ebcea53a53c895b096c037c5fd60494c2f52b2b4f425fbbf5614a0fc92c9214aac1b854d6c4d5421751c0e1f55b4fbc2357f2"
+            "sha512": "03a7c745de7fc9d41df7910c7a2e2840149803d6d0fa5f8983e98d71b9ff290191d16fbcac9122bf86f12fe764a53e20767afe238b5fe68674eacef3e44b7656"
           },
           {
             "path": "build/packages/slf4ts-api/test/slf4ts/LoggerFactoryTest.js",
@@ -38,7 +38,7 @@
           },
           {
             "path": "build/packages/slf4ts-api/lib/slf4ts/LoggerBindings.js.map",
-            "sha512": "4a9d66e56043161fa282ad2eaee346f21cf8dadba386860d14d86a3c89014cf81753fd6fca8878fac6a4fb971d3f437a169469cfd871ed1b7ffcee059a3f2eab"
+            "sha512": "1aa0c644238a8e98ff169027a419022af1834c39cbe99fff851d71d624af03dbaa3cb480b121699cdfd05f539f4753c2cd5a7fb8acfafb549b06b19583fddcb8"
           },
           {
             "path": "build/packages/slf4ts-api/test/slf4ts/LoggerBindingTest.js.map",
@@ -50,7 +50,7 @@
           },
           {
             "path": "build/packages/slf4ts-api/lib/slf4ts/LoggerFactory.js.map",
-            "sha512": "c3cea882ee1369b1c6030d22069f8264ae9ea821fa7ca5d1442f3f6f66e56b669674305ffc196814d9390ba699994ce97dd03d97516c23a47a3fa4fcb2aea981"
+            "sha512": "7b7b2c200ea1882d5f61642ba4105763768f9249f80b0249357e4593159eb78142e3b0f49e16fd8ad59389e38868f3b7d4063e44d3242bdf8b4330df23532e9c"
           },
           {
             "path": "build/packages/slf4ts-api/test/slf4ts/LoggerFactoryTest.js.map",
@@ -58,7 +58,7 @@
           },
           {
             "path": "README.md",
-            "sha512": "aa032ac8dd328cb93fd4a61cb7a070bf9b93071d7954d15ee072e67f0d7f2ff9984792a600f386bc7610eeee943603bec5bb736ec74766140e6c1e4fef4922cc"
+            "sha512": "153754fb1e35d3a16e0bab185ff248c602861d7f7080a31c8554c24681fdcdf7d70a398d83fce4e254d5d81a184a9bcebb3948824b4d53e87c92c8385fad014f"
           },
           {
             "path": "build/packages/slf4ts-api/lib/slf4ts/index.d.ts",
@@ -66,7 +66,7 @@
           },
           {
             "path": "build/packages/slf4ts-api/lib/slf4ts/LoggerBindings.d.ts",
-            "sha512": "f071b51d8c5440ebb842d4036c27ba7e584b6aba62f073c26c77923f32ae2f249b4d0e647d78a2e78dab3c0777597557263cb7768114917b459f7d779e9a0cbf"
+            "sha512": "acb69439990d2dfed32231f983a59c8be870e9f33045a0998002c3016df99a459ca35ccfcf357d29bad043f6eb6954e83e283259887ac771aba034d29822efb7"
           },
           {
             "path": "build/packages/slf4ts-api/test/slf4ts/LoggerBindingTest.d.ts",
@@ -112,13 +112,14 @@
           "mocha",
           "name",
           "nyc",
+          "peerDependencies",
           "precommit",
           "repository",
           "scripts",
           "typings",
           "version"
         ],
-        "sha512": "92c007a2e4070bc4b94ef4405c4ec84fbc21ba02f87323789aa153c5dc74f4d8b673edba8eb561abddff795f69489a00939426b56f2101222094629db2d54c20"
+        "sha512": "35838d9d0a3594b81d6c6caf604bd810640b0d4ff7b41a7649e008e41d02cfa86b54f5083bd1119e4dce269cedb59b367db9ecef334077dead490eb86b4b82fa"
       }
     },
     {
@@ -146,6 +147,9 @@
             "typescript",
             "logging"
           ],
+          "peerDependencies": {
+            "source-map-support": ">=0.5.0"
+          },
           "dependencies": {
             "source-map-support": "^0.5.16"
           },
@@ -207,5 +211,5 @@
       }
     }
   ],
-  "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJeYBoaCRDCMfXrQKYV5wAAmH8QAAqoIUZOntnrkH1ASqwOHy6y\ntTlHgsacKPY2WFmPnYyJiRZC//yAYBX8dtvROsscdqOPmmDcjH0o/KU+KsVqvESJ\nem+2mKT+/NHhcG9/fFpTd2O9lnc379oO732U7LB1lY5Ry4wgmIF8DEXZ6JynjaPv\n9WD7UlpVYJAXTtsBLy/SlFSB+BmerUrBm15LQDCa8sQgt6wEQtQs6SWs9BRoaTbu\n/FO4rKNJht5qrSKZKc7UYzWLWDEcJD16mIiysItUSPRPXGja05Ubvo80S5lzakS6\n0fnx4nY3qyJVDUhqvVsApCPtd+MnDUdaJijDGyY5cul9orXlvi18OgZkFpF0GFdd\n+2WcYXB8vOjuuf8Xe13rXN9DThduBvYBfSejEaZEwHIGMHDrekA2jlhMAF0RR1Ap\nFapsYT7mG1iK/NiBlTA7Dxew77ctAKotT2r9ha3ScQ7oDa6C4UoWcBoj7e1FRXlW\nnAEMd65CC9XDuKgwrF4lr5M2PXfg+JBBWiZNWghBwHGCuLeP1BR57MscxybVi2Qu\nVTphrQXqGEzLFRGdBYKj0f20mFNi0EL6MvnXxOS2JyB9euLxHtiUYkIeBj8ptwFr\nfzR8zllK/Oqxz7cc5pOYmKE/fz/o5NMxu/70wFu8hojA/eE3A8kAhX956mkaKFwz\nm+Kk7rjnu6SZk/OoMah4\n=VtDN\n-----END PGP SIGNATURE-----\n"
+  "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJeapvBCRDCMfXrQKYV5wAAkk0QAB2+GKWTlQ0B4nc0+mm7fJ5i\n1VEnerEM12ox0A4BRDSvZvFT8QqoSTFQty4mmArP0N7y1QIs3J5hj1eemc6RAV3t\nYJ6DBvR3/wQa+uJntIfJNyf3rWauVOY1B1vTEtKFo3lsxXcufBeLfyY4hDT/k9Lv\nfRe7f2oT9tVzF4s0Ds5L+8q+mFXknH3qVUAQI63Qp3GEeNBirQlIex2tZto1Vx4q\nDQ826ah2Y9Mr1ssOHPHHtx4iDNhQxTr7StWvWjEJcR79Ui6YZU8/M7N5eITPD4pY\nrRxqVOQWAFwexXBRp4DySurF1oX5t2Ru7rAMFYUp3KYiHBxcrnH8XR+vASdErGbO\npHYIEwFHgZ/MaYaFL9AGoB6KOIf2sywgVMhXzdQkG9vsryGYidp2I7GbKSri0uGI\n8ngghfVNsZa6kifKexDcly829QYYRaYiqkngeKasJQJTGM2PPk2p7tUSuBu7AX49\nm6bGSMukqLWgn8xcGGODJXkNIxKkgE5qLwnOU81kkmUjYI1PP0c4Vk1fz8Jbe1BI\njKor16rD5HmGMw+9KlBmZys/HWVvuKZmTfzzpxSOse6INt9Ra2rCJcu4N9gMzZbX\nMXEwBfYuvX4FMVC3+y990ojFFZwI0a6VZ/lbPNhrSskyIrn0fh3kyONu2iuGpS37\nffsZYW0mwSkh+TEU/dQa\n=6ib5\n-----END PGP SIGNATURE-----\n"
 }
