@@ -1,3 +1,3 @@
-import "source-map-support/register";
+import 'source-map-support/register'
 
-export * from "./CassandraLogAdapter";
+export * from './CassandraLogAdapter'

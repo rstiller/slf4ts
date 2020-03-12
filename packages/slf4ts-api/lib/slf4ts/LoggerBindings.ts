@@ -1,9 +1,9 @@
-import "source-map-support/register";
+import 'source-map-support/register'
 
-import * as fs from "fs";
-import * as path from "path";
+import * as fs from 'fs'
+import * as path from 'path'
 
-import { LogLevel } from "./LoggerConfiguration";
+import { LogLevel } from './LoggerConfiguration'
 
 /**
  * The bridge to the underlying logging-framework.
@@ -13,16 +13,16 @@ import { LogLevel } from "./LoggerConfiguration";
  */
 export interface LoggerImplementation {
 
-    /**
+  /**
      * Invoked for each call to a logging method of a logger instance.
      *
      * @param {...any[]} args array with log-level, group, name and all arguments passed to the logging function.
      * @returns A Promise completed when the log statement was processed by the underlying logging-framework.
      * @memberof LoggerImplementation
      */
-    log(...args: any[]): Promise<any>;
+  log(...args: any[]): Promise<any>
 
-    /**
+  /**
      * Gets the underlying implementation of the logger.
      *
      * @template T Type of logger instance.
@@ -30,9 +30,9 @@ export interface LoggerImplementation {
      * @param {string} name The name of the logger.
      * @memberof LoggerImplementation
      */
-    getImplementation<T>(group: string, name: string): T;
+  getImplementation<T>(group: string, name: string): T
 
-    /**
+  /**
      * Sets the configuration for the specified logger instance.
      *
      * @template T Type of config object
@@ -41,9 +41,9 @@ export interface LoggerImplementation {
      * @param {string} name The name of the logger.
      * @memberof LoggerImplementation
      */
-    setConfig<T>(config: T, group: string, name: string): void;
+  setConfig<T>(config: T, group: string, name: string): void
 
-    /**
+  /**
      * Informs the logger implementation of the log-level change.
      *
      * @param {LogLevel} logLevel The new log level.
@@ -51,9 +51,9 @@ export interface LoggerImplementation {
      * @param {string} name The name of the logger.
      * @memberof LoggerImplementation
      */
-    setLogLevel(logLevel: LogLevel, group: string, name: string): void;
+  setLogLevel(logLevel: LogLevel, group: string, name: string): void
 
-    /**
+  /**
      * Informs the logger implementation of the metadata change.
      *
      * @param {any} metadata The new metadata.
@@ -61,7 +61,7 @@ export interface LoggerImplementation {
      * @param {string} name The name of the logger.
      * @memberof LoggerImplementation
      */
-    setMetadata(metadata: any, group: string, name: string): void;
+  setMetadata(metadata: any, group: string, name: string): void
 
 }
 
@@ -72,27 +72,27 @@ export interface LoggerImplementation {
  * @interface LoggerBinding
  */
 export interface LoggerBinding {
-    /**
+  /**
      * Gets the logger implementation.
      *
      * @returns {LoggerImplementation} The logger implementation.
      * @memberof LoggerBinding
      */
-    getLoggerImplementation(): LoggerImplementation;
-    /**
+  getLoggerImplementation(): LoggerImplementation
+  /**
      * Gets the vendor string.
      *
      * @returns {string} The vendor name.
      * @memberof LoggerBinding
      */
-    getVendor(): string;
-    /**
+  getVendor(): string
+  /**
      * Gets the version string.
      *
      * @returns {string} The version number.
      * @memberof LoggerBinding
      */
-    getVersion(): string;
+  getVersion(): string
 }
 
 /**
@@ -110,107 +110,105 @@ export interface LoggerBinding {
  * @class LoggerBindings
  */
 export class LoggerBindings {
-
-    /**
+  /**
      * Array of loaded bindings.
      *
      * @private
      * @type {LoggerBinding[]}
      * @memberof LoggerBindings
      */
-    private bindings: LoggerBinding[] = [];
+  private readonly bindings: LoggerBinding[] = [];
 
-    /**
+  /**
      * Creates an instance of LoggerBindings.
      *
      * @param {string[]} [additionalPaths=[]] A string array with additional paths to search bindings.
      * @memberof LoggerBindings
      */
-    public constructor(additionalPaths: string[] = []) {
-        if (process.env.LOGGER_BINDING_ADDITIONAL_PATH) {
-            additionalPaths.push(process.env.LOGGER_BINDING_ADDITIONAL_PATH);
-        }
-        if (process.mainModule && process.mainModule.paths) {
-            process.mainModule.paths
-                .forEach((mainPath) => additionalPaths.push(mainPath))
-        }
-
-        const moduleFolders: string[] = this.getAllModuleFolders(additionalPaths);
-        const loggerBindings: string[] = this.getAllLoggerBindings(moduleFolders);
-
-        loggerBindings.forEach((binding) => {
-            const registerFunc = require.main.require(binding);
-            registerFunc(this);
-        });
+  public constructor (additionalPaths: string[] = []) {
+    if ('LOGGER_BINDING_ADDITIONAL_PATH' in process.env) {
+      additionalPaths.push(process.env.LOGGER_BINDING_ADDITIONAL_PATH)
+    }
+    if ('mainModule' in process && 'paths' in process.mainModule) {
+      process.mainModule.paths
+        .forEach((mainPath) => additionalPaths.push(mainPath))
     }
 
-    /**
+    const moduleFolders: string[] = this.getAllModuleFolders(additionalPaths)
+    const loggerBindings: string[] = this.getAllLoggerBindings(moduleFolders)
+
+    loggerBindings.forEach((binding) => {
+      const registerFunc = require.main.require(binding)
+      registerFunc(this)
+    })
+  }
+
+  /**
      * Used to register a logging-framework binding.
      *
      * @param {LoggerBinding} binding The LoggerBinding to register.
      * @returns
      * @memberof LoggerBindings
      */
-    public registerBinding(binding: LoggerBinding) {
-        const exists = this.bindings.filter((b) => {
-            const vendorEquals = b.getVendor() === binding.getVendor();
-            const versionEquals = b.getVersion() === binding.getVersion();
-            return vendorEquals && versionEquals;
-        }).length > 0;
+  public registerBinding (binding: LoggerBinding): void {
+    const exists = this.bindings.filter((b) => {
+      const vendorEquals = b.getVendor() === binding.getVendor()
+      const versionEquals = b.getVersion() === binding.getVersion()
+      return vendorEquals && versionEquals
+    }).length > 0
 
-        if (exists) {
-            return;
-        }
-
-        this.bindings.push(binding);
+    if (exists) {
+      return
     }
 
-    /**
+    this.bindings.push(binding)
+  }
+
+  /**
      * Gets a copy of all {@link LoggerBinding}
      *
      * @returns {LoggerBinding[]}
      * @memberof LoggerBindings
      */
-    public getBindings(): LoggerBinding[] {
-        return [].concat(this.bindings);
+  public getBindings (): LoggerBinding[] {
+    return [].concat(this.bindings)
+  }
+
+  private getAllModuleFolders (additionalPaths: string[]): string[] {
+    const rootPaths: string[] = (module as any).paths
+    const moduleFolders: string[] = []
+
+    rootPaths.concat(additionalPaths).forEach((rootPath) =>
+      this.visitNodeModules(rootPath).forEach((folder) => moduleFolders.push(folder)))
+
+    return moduleFolders
+  }
+
+  private visitNodeModules (rootPath: string): string[] {
+    const moduleFolders: string[] = []
+
+    if (fs.existsSync(rootPath)) {
+      const files = fs.readdirSync(rootPath)
+      files.forEach((folder) => {
+        const absolutePath = path.join(rootPath, folder)
+        moduleFolders.push(absolutePath)
+        this.visitNodeModules(path.join(absolutePath, 'node_modules'))
+          .forEach((subfolder) => moduleFolders.push(subfolder))
+      })
     }
 
-    private getAllModuleFolders(additionalPaths: string[]): string[] {
-        const rootPaths: string[] = (module as any).paths;
-        const moduleFolders: string[] = [];
+    return moduleFolders
+  }
 
-        rootPaths.concat(additionalPaths).forEach((rootPath) =>
-            this.visitNodeModules(rootPath).forEach((folder) => moduleFolders.push(folder)));
+  private getAllLoggerBindings (moduleFolders: string[]): string[] {
+    const bindings: string[] = []
 
-        return moduleFolders;
-    }
+    moduleFolders.forEach((moduleFolder) => {
+      if (fs.existsSync(path.join(moduleFolder, '.slf4ts-binding'))) {
+        bindings.push(path.basename(moduleFolder))
+      }
+    })
 
-    private visitNodeModules(rootPath: string) {
-        const moduleFolders: string[] = [];
-
-        if (fs.existsSync(rootPath)) {
-            const files = fs.readdirSync(rootPath);
-            files.forEach((folder) => {
-                const absolutePath = path.join(rootPath, folder);
-                moduleFolders.push(absolutePath);
-                this.visitNodeModules(path.join(absolutePath, "node_modules"))
-                    .forEach((subfolder) => moduleFolders.push(subfolder));
-            });
-        }
-
-        return moduleFolders;
-    }
-
-    private getAllLoggerBindings(moduleFolders: string[]): string[] {
-        const bindings: string[] = [];
-
-        moduleFolders.forEach((moduleFolder) => {
-            if (fs.existsSync(path.join(moduleFolder, ".slf4ts-binding"))) {
-                bindings.push(path.basename(moduleFolder));
-            }
-        });
-
-        return bindings;
-    }
-
+    return bindings
+  }
 }
