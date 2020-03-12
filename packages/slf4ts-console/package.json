@@ -43,7 +43,7 @@
     "compodoc": "compodoc lib",
     "coverage": "nyc npm run test",
     "deps": "npm-check --ignore @types/* --no-spinner --no-emoji --no-color",
-    "lint": "tslint -c ../../tslint.json lib/**/*.ts test/**/*.ts",
+    "lint": "eslint ./lib/**/*.ts ./test/**/*.ts",
     "precompodoc": "npm run coverage",
     "prepublishOnly": "npm run build",
     "test": "mocha test/**/*Test.ts"

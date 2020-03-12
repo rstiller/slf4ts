@@ -1,5 +1,5 @@
-import "source-map-support/register";
+import 'source-map-support/register'
 
-export * from "./LoggerBindings";
-export * from "./LoggerConfiguration";
-export * from "./LoggerFactory";
+export * from './LoggerBindings'
+export * from './LoggerConfiguration'
+export * from './LoggerFactory'
