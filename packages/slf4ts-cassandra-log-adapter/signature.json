@@ -9,8 +9,44 @@
             "sha512": "1489ff64267bcf357ff9734a52f0637b09486161c6b43d32d3c439372648e04e3281f2d9ef0449a54d8a68ffb0d046232ecee9a9818baa96a0087acac663f708"
           },
           {
+            "path": "build/packages/slf4ts-cassandra-log-adapter/lib/slf4ts/CassandraLogAdapter.js",
+            "sha512": "f06e89d64112c2f3aa7cfd7ceff2a36f2e83e674f5c554e96bc8231ce0f5381e6aa4c5b003d78ca13dbec6232e1b7383aeed67dddc0b11477bd85e3ec8c6b6eb"
+          },
+          {
+            "path": "build/packages/slf4ts-cassandra-log-adapter/test/slf4ts/CassandraLogAdapterTest.js",
+            "sha512": "3bfa705cd1448323ae02fc307e7f7c17666724e70463e47c44f5f1faf8bd5f48ead33fb44ed9a2af566de333db87eae0a0a4fde17f2683e341fa7164f6cdcd5e"
+          },
+          {
+            "path": "build/packages/slf4ts-cassandra-log-adapter/lib/slf4ts/index.js",
+            "sha512": "1b5d43158b198933c993bd885b258d7e1c6fe00de6d5b28c18e18296bd133369cb66edf1ec9987fc6163440c1b3e52d404600a233a593014b5b90277963b5cd6"
+          },
+          {
+            "path": "build/packages/slf4ts-cassandra-log-adapter/lib/slf4ts/CassandraLogAdapter.js.map",
+            "sha512": "7bfd44ccdd86002598c436c96ef61bbfebd8dfabd1dfbd3465b6af8b6dddb45addd6d56de76e5bf282a7d3e78ff052590f52ddaf1f06c946a2814bb107ce6472"
+          },
+          {
+            "path": "build/packages/slf4ts-cassandra-log-adapter/test/slf4ts/CassandraLogAdapterTest.js.map",
+            "sha512": "f74c708998c4d32a28209d9509650471abff9317d124c9147b260ddea416738c9a7331ac8fe305a153a9f91be83515f13cd4448ddd32924cc9b43263403f3841"
+          },
+          {
+            "path": "build/packages/slf4ts-cassandra-log-adapter/lib/slf4ts/index.js.map",
+            "sha512": "04030a2e134bf2eae5ddf52009710982c67d45cfb6b60b0bbc8603cbac92bca2c59724003ba08aeb1b498a202e2116af86c57631e2b9f356777eb1822af8a879"
+          },
+          {
             "path": "README.md",
             "sha512": "d24c7867c833b9965dd7b1c22fd66dcfdb9f6fe0983c352178d846393a8db3506ae9f2f040903fd64ba274185b5714f1f7edaddc64086c84f47c49bdbbf60de4"
+          },
+          {
+            "path": "build/packages/slf4ts-cassandra-log-adapter/lib/slf4ts/CassandraLogAdapter.d.ts",
+            "sha512": "1adfbc241384b9121b480dcb4b7ac64a91116f7b27797bf422c53df372be392ce56e37bc936719b2f6d71274c1b55d30c354981f98340ef3d0369e2734c91122"
+          },
+          {
+            "path": "build/packages/slf4ts-cassandra-log-adapter/test/slf4ts/CassandraLogAdapterTest.d.ts",
+            "sha512": "469d86b9fda5b77b408162a646ae0cc5a28f2f87bb0d3b8ed5cdf58c2923ac0a64224588fb6776f056fe19bc294b6ff9f0bb4feea949bbad2e0023542e224287"
+          },
+          {
+            "path": "build/packages/slf4ts-cassandra-log-adapter/lib/slf4ts/index.d.ts",
+            "sha512": "b3c093430433206c44448a1a00de7dc1380e7ed92d90e9661df79d7e3d3a73ae357733f4a74e7fd0de706df3b913a1804aa29edb57f421b642eed3e272366a03"
           }
         ]
       }
@@ -113,5 +149,5 @@
       }
     }
   ],
-  "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJebUHqCRDCMfXrQKYV5wAAMXkQADfRiiLSYN1IIlN5H3mWNmat\nEeHi1SaQkYXQ6kNdpnGor3jkallGwVICxlaiHvuJlodo6Lkck5+npNxUobTJE3aZ\nN6XEAXO7ax2/8hEiX8Q+tk1Tn4gTiWuy1XYW0780WhDzXqC68xXD2DyT3mEOlaaV\nNLxlPcZp+MHpvI7Qnyq9p5qUf5yPBYmER+F9Z140RNQTvJBDm1IeSXEcHG5H+U0/\nZeFY1Dtmcfsun65FS3f1UFEMk+XkoCmxibbNrFbq1wuDAAegOCB7mZA5ivYlKKgB\nzPGuYIQPBhrRJ60wD6OOVs6PomUcCgfVg44eAjY4QW6w55f/Jl31EMl9RfSHaDw3\nXiefqvGv12oi5Rs+LvdMeG9QmiAyAvaDyAztzZ2siBagUulm1oc0OIdU/RzeCU7/\n3EIhXktjTIc7TeQGyfJR5wMG49zG0vr9+7/RLWvyCbwU64Ostc3BidZzksN/dyf0\nw9CSusS+dgVhZbieLPTbwp/CFQnMdhiOSnKl42Y2Y9pdNCt4fkUEZ4Z6JhTK1iPi\nG36RIFEtUofDmH07qVI6ZBrMUlTH/lMf1bSQ1QQfJHZcxbl2bMea5iMXd54PS3pu\nOKzgPNaRCcYDKfBbqfsx8I4KzkEeQYZJswfIT8tBzOhiDhVzWuQbadJX9qxltowq\nGBJBjLzW7IJpTZs9kybT\n=iqDl\n-----END PGP SIGNATURE-----\n"
+  "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJebUqQCRDCMfXrQKYV5wAASoUQAJlo8nek2PGUQUT3LIQCgKMO\nB37VJOIDuVCGpBYVKiXW6oT9xU3dUEHUzsLNa8dX0lcw1YO5SBxwanyKe5M6/DTd\n96LTtxDYalbZ49CdKoSKZSk/3EbhLQb0nJmiarztL+tVfe7V4ZeiZjTvdxFl+xBA\nmAYcPd+E4gBQQY9DuOEf8Im/3an7uROg0Y17aCJETUwahZ/wy+W+fik7+C8TbSim\nUSidEPp1Zq7De517D/efSZk+Gu17JRiRjKtp0Lccs/OUJ3gHRAZfvPIJpL9HvW9f\nB8woKtc/Du9sQfXckPXHTR6O59BtOughqfLxcfdEZJ7fE582o6ri3Hy+3RvN76As\n6wbcQRszlJRtK4l8NwigI+3oDQYW5RMqi0E827DPA6y7gNlcQicAvsC7Bngf8PAs\nT+uxRsTk60lMO/J8LBMfNOqwcWKJEIs2ShtYaEWsILolLq1gO4h51gxPTIHxXGcO\n7r9HRDZVFXfUC9yubgabesalZlnkdsf8BhFgc4L7Q7UQ8KXeExRxR5r27oC+AS7x\nhEQMCwT0fWKLYC8E2Ly+laC8C28K/VoxHnDBZOXbPxz6HLsFbTbn7WghKedMFBK/\nt/PMHDViKgnMa9x0PERkHj2pKASa7h2LbUE2dnHWG0Y+CT5Zm9XkAgecaxLNfpmr\n4JqaoOLMYWYM43E4zI4i\n=adyE\n-----END PGP SIGNATURE-----\n"
 }

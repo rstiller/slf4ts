@@ -50,7 +50,7 @@ release packages / publish docs:
     npm run publishDocs
 
     # publish package (using lerna)
-    npm publish
+    npm run publish
 
 ## License
 
