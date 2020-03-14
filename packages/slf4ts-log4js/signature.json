@@ -13,68 +13,8 @@
             "sha512": "1489ff64267bcf357ff9734a52f0637b09486161c6b43d32d3c439372648e04e3281f2d9ef0449a54d8a68ffb0d046232ecee9a9818baa96a0087acac663f708"
           },
           {
-            "path": "build/packages/slf4ts-log4js/lib/slf4ts/index.js",
-            "sha512": "ec66164c16cbbeb82b51869691808898eec28cb269b67b0e1199a34bc31f90082cf8b6b00269c62ff1bfac7f6c07b4bd1b8d64e19be2a9a8a4e2ac69483cd8a8"
-          },
-          {
-            "path": "build/packages/slf4ts-log4js/lib/slf4ts/Log4JSLoggerBinding.js",
-            "sha512": "fb34c2d24aa11f395c89f4362dd15e64b474faf34f59f944fbd22c8871b539d74755a872af6e39f4716db28827468c21085263cbfe72d44a0e2a412d50369bb3"
-          },
-          {
-            "path": "build/packages/slf4ts-log4js/test/slf4ts/Log4JSLoggerBindingTest.js",
-            "sha512": "323791c191863f9ca230a72e0e453dff20260c5002f0454955436af627036d436758abe541c4d6bc8c90008640c3a38196760234a2db14dd9c9c81a9fd839682"
-          },
-          {
-            "path": "build/packages/slf4ts-log4js/lib/slf4ts/Log4JSLoggerImplementation.js",
-            "sha512": "73a1cd37b83bf53e86481d49b3e3441f67f84e1484957e8ae2ca1b42637d96883bfe616c94174c242d3c606c9d7c9fe7ca37d230b1234edf31560945303440e2"
-          },
-          {
-            "path": "build/packages/slf4ts-log4js/test/slf4ts/Log4JSLoggerImplementationTest.js",
-            "sha512": "9a7fd2cf59232c51fa1d6d9d03d3545874e442ff0e6046240e99c287d4d9ffa283631dd1276f3fd0caabeacd3a35c0f25b774d659626b0603c73f1fc47f3fbb7"
-          },
-          {
-            "path": "build/packages/slf4ts-log4js/lib/slf4ts/index.js.map",
-            "sha512": "69a08cf55def5b1aea97fa4fa13e1c4b94b871006c9c8e6782a9bbf385ccf2acb00abfac3eb4f2e89e8c982e0bd43e0673f5f553406633fa55c58c1f368e9f9e"
-          },
-          {
-            "path": "build/packages/slf4ts-log4js/lib/slf4ts/Log4JSLoggerBinding.js.map",
-            "sha512": "4dcb8156da965b6a5873314e4d61bea0ff6fb94d47ae2e913ce527388661a38d04a7ecaac66ec498325e01d316d56f8109aca41896968ddb92e4cf2bc49560a3"
-          },
-          {
-            "path": "build/packages/slf4ts-log4js/test/slf4ts/Log4JSLoggerBindingTest.js.map",
-            "sha512": "fb03b99c1839a52dee276efa728fd0fa652045d4726c88d860acbf86847e0fbf7e9c21726eacb79b9fb77e2d1f781fd851b460b0dbfe4ced96df51f9327905fb"
-          },
-          {
-            "path": "build/packages/slf4ts-log4js/lib/slf4ts/Log4JSLoggerImplementation.js.map",
-            "sha512": "0247703d1d456d916464f6515d10868a731a5af077e45011773ef78075492024625be85c9cf8e6930d829835ee9f9061ff64b84cef80b225fb1e84ecf1b86952"
-          },
-          {
-            "path": "build/packages/slf4ts-log4js/test/slf4ts/Log4JSLoggerImplementationTest.js.map",
-            "sha512": "1cda4b3f84e49223c291a9628010481310500b023005f88059bd57dd31a081f2cba5d13dcfb3d16a914363a0b0aedc83047475479487578d91d1f1bf62705bff"
-          },
-          {
             "path": "README.md",
             "sha512": "1198547e580fb111ccbf12394fd9d3147c48598360703fdc6b758f9a0a800f2fef2f749cd058244ad5b4570b62cd81d3fb754aa9ce6659233161f66cbc4e5ca7"
-          },
-          {
-            "path": "build/packages/slf4ts-log4js/lib/slf4ts/index.d.ts",
-            "sha512": "da305c8310c0d1a7e64695b5029711512e802d5559368120dc240a882baec3f809b0b29bc4091c7b2c5f9b1ff806048a93b01a98bc1812806a8dec34f23214d4"
-          },
-          {
-            "path": "build/packages/slf4ts-log4js/lib/slf4ts/Log4JSLoggerBinding.d.ts",
-            "sha512": "78518e7e3f1546d6ec7283787a9980f3c7f351d76f9723a72c724f6d33bf61f0d94f0becd1ea71e6fd946a0b6eb466fff19bdf6b44d2a61188327321bed9d3ae"
-          },
-          {
-            "path": "build/packages/slf4ts-log4js/test/slf4ts/Log4JSLoggerBindingTest.d.ts",
-            "sha512": "cb6a8ff03506b8e022ea3b96dcec88c8f255a3278309aa450ffdc0d91f84ab6e19e0952351e0c1a854ae0260d2ea8e3cec1929d1a39b29ba3e91f931b9fd87d7"
-          },
-          {
-            "path": "build/packages/slf4ts-log4js/lib/slf4ts/Log4JSLoggerImplementation.d.ts",
-            "sha512": "aba047250cbe8c085dca071fde489d9817c00d81a94b188a75c89d213bdf742559bb62f6a0da2680b6567af42204874fa11fd8868b8e35e410d4b6eb42d51c4b"
-          },
-          {
-            "path": "build/packages/slf4ts-log4js/test/slf4ts/Log4JSLoggerImplementationTest.d.ts",
-            "sha512": "c880debe70e93b4eba2f73fcd6ec6c8df2484bde41c2f9bb5a2fed2e6799b15b8373df407bb5fa8e0ae24df8432eec9fe14a7fb0832898f4e49020b3217a053a"
           }
         ]
       }
@@ -91,7 +31,6 @@
       "entry": "npmCompatiblePackageJson/v1alpha2",
       "value": {
         "packageJsonProperties": [
-          "compodoc",
           "dependencies",
           "description",
           "engines",
@@ -103,15 +42,13 @@
           "main",
           "mocha",
           "name",
-          "nyc",
           "peerDependencies",
-          "precommit",
           "repository",
           "scripts",
           "typings",
           "version"
         ],
-        "sha512": "feac63c161969c0c2db34a6c6155f3767f0b8b03734873b37f3b26c74c023226d09b48496b77f661e6a6733bff103920c633c9a2a10814c435e7775787c9c344"
+        "sha512": "e109d24764ff4e6a773e7138af241f885b22db6fb958ebf5338c048456a0dc90a42ea6ba6e0ec375048948b4123a9e90a87d0de2585cfe57eeb7c4869bfed3d8"
       }
     },
     {
@@ -160,39 +97,12 @@
           "scripts": {
             "build": "npm run clean && npm run lint && npm run compile",
             "sign": "pkgsign sign .",
-            "clean": "rimraf build coverage",
+            "clean": "rimraf build",
             "compile": "tsc -p .",
-            "compodoc": "compodoc lib",
-            "coverage": "nyc npm run test",
             "deps": "npm-check --ignore @types/* --no-spinner --no-emoji --no-color",
             "lint": "eslint ./lib/**/*.ts ./test/**/*.ts",
-            "precompodoc": "npm run coverage",
             "prepublishOnly": "npm run build",
             "test": "mocha test/**/*Test.ts"
-          },
-          "precommit": "sign",
-          "compodoc": {
-            "tsconfig": "./tsconfig.json",
-            "output": "./docs",
-            "disableGraph": true,
-            "unitTestCoverage": "./coverage/coverage-summary.json"
-          },
-          "nyc": {
-            "include": [
-              "lib/*.ts",
-              "lib/**/*.ts"
-            ],
-            "exclude": [
-              "test/*"
-            ],
-            "extension": [
-              ".ts"
-            ],
-            "require": [],
-            "reporter": [
-              "json-summary"
-            ],
-            "all": true
           },
           "mocha": {
             "require": [
@@ -208,5 +118,5 @@
       }
     }
   ],
-  "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJea/VgCRDCMfXrQKYV5wAADTMQADOftgG0BmmQ2JgrHdOknq0W\nYftCq587vKoRlU6Cnxqb1cfUZzZZX0QWHTPkKYDMJd+OO1i4niZhbwQ9hBjiIMMz\nMkns65ChmONsCyb8LSoaattZO4CHnfQuOfwtTsLNgORV9ZA0XhgxE60A6va9IzG+\nPAx7hH9JNyIDAYJEvMLV9k3ba/rbypgHgxvud9Zx5r9tukAKX7i9FqSMUcu9iCT7\nbAlyw69J3wxIHPwczDvNd5GSMHbhxEc+ERh44Wz5xG2VNciDlDvjxxbQdiR9Rqpe\njCCpoocR2TbDUDTPVnv/6J5Q5nVpDI7AzquJxoDQuJpsH/EsCyCRrAlgrW26gvOc\n5KQv1s8Y2EXqSiHhdTzf5bvt+wAWg3DzyBNPsEWaWBzWB1aU94R5E9W36UBjEsEP\nXyIOgibtG8g68xVgFmHNkzTXWErI6yCNj/JVPwnmzqR6lkIoN2+3wGZZRaRQRyex\n1TSaYeLJ+cXzlX78N/jn8UUo7nngqzWzOzfr0SxLIuNEfccU3U31MGOzpprYajM2\neE43rxBMe2NbmBXbm1URoFMbV1i58YDihBhngZKy6C55h9OKztr/VatxBJJA26zA\nx49k6hNkoCHmxjlmeSY5mU85JQNObzwxaHAGDjvqY2XD3xiABwjshCBNBfcPIOVg\nmC9hrlROgRd+8Q130HiZ\n=yYrZ\n-----END PGP SIGNATURE-----\n"
+  "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJebUHqCRDCMfXrQKYV5wAAKjcQADphOtp2tM9mxtL3NcDJElup\nqQWFLO+0Gn0J12WYxUZbSLjnGioCVDZT6Kq6fmW/r5P1XWELxsRJPSiKcrMdKaOK\nUo9bZYRg1qv5rB40BGroNhqLvzmKmFcCH9U+ewtiBipjwVtE0SCYYkPg8W/fCO53\nbXYs8p14gC0j6pmjQw3qJrA7foM5vYppkz8WuWBjiKaLDd4WizSeTAi2UB+hL0Bv\nTOhyNtgchGWfz9aNfoQsIco00J17WAdLfDHk6O3719BGwgt2QrcYV2yjUCxV8Jmz\n0bcrXQBrXIB3o2BziU59syeNRJv/Lxr8QKzG6lFF7Yx2oz0bCzwNToYkSFbNs4Ve\nM+fjo0L/B+SCqPKN8QomY8GdnDDjkKc/SQ8fpFDHNdlFBur559YyzLJE3Z8uip5Y\n4T/36gcWVpKUx0p4X6E0obIRAMKRT+8nf0tRV2GoWsTKWW6RBD/QGP/HthTZwWdd\npNuOQZecstWVeKj01ayXA+tAVXzYy2XKCvIzPjaUGZwjoTwXXIRenQJwmGtDJvSM\ncVCp2W0TAsVU2xa1h0La3WwE7AhuqvaaUZa3k8N24aJ0P6AWENk9/1QtKmaineyH\nwbpjSfEMahvfuhomnZdmKBm295kEzMuUYHd4LBPWhH3O1ZD7DrYyTLzubGPacjL1\naKf4DX8GqaHySQx17AA6\n=uU4z\n-----END PGP SIGNATURE-----\n"
 }

@@ -10,7 +10,7 @@ services:
     entrypoint: bash
     command:
       - "-c"
-      - "npm rebuild && lerna run compodoc --scope slf4ts-api && cp -r packages/slf4ts-api/docs ."
+      - "npm rebuild && npm run bootstrap && npm run build && npm run coverage && compodoc"
     restart: "no"
     volumes:
       - .:/opt/slf4ts/
