@@ -41,39 +41,12 @@
   "scripts": {
     "build": "npm run clean && npm run lint && npm run compile",
     "sign": "pkgsign sign .",
-    "clean": "rimraf build coverage",
+    "clean": "rimraf build",
     "compile": "tsc -p .",
-    "compodoc": "compodoc lib",
-    "coverage": "nyc npm run test",
     "deps": "npm-check --ignore @types/* --no-spinner --no-emoji --no-color",
     "lint": "eslint ./lib/**/*.ts ./test/**/*.ts",
-    "precompodoc": "npm run coverage",
     "prepublishOnly": "npm run build",
     "test": "mocha test/**/*Test.ts"
-  },
-  "precommit": "sign",
-  "compodoc": {
-    "tsconfig": "./tsconfig.json",
-    "output": "./docs",
-    "disableGraph": true,
-    "unitTestCoverage": "./coverage/coverage-summary.json"
-  },
-  "nyc": {
-    "include": [
-      "lib/*.ts",
-      "lib/**/*.ts"
-    ],
-    "exclude": [
-      "test/*"
-    ],
-    "extension": [
-      ".ts"
-    ],
-    "require": [],
-    "reporter": [
-      "json-summary"
-    ],
-    "all": true
   },
   "mocha": {
     "require": [

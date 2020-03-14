@@ -1,0 +1,16 @@
+[{
+    "title": "slf4ts-api",
+    "file": "packages/slf4ts-api/README.md"
+}, {
+    "title": "slf4ts-cassandra-log-adapter",
+    "file": "packages/slf4ts-cassandra-log-adapter/README.md"
+}, {
+    "title": "slf4ts-console",
+    "file": "packages/slf4ts-console/README.md"
+}, {
+    "title": "slf4ts-log4js",
+    "file": "packages/slf4ts-log4js/README.md"
+}, {
+    "title": "slf4ts-winston",
+    "file": "packages/slf4ts-winston/README.md"
+}]

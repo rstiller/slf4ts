@@ -9,44 +9,8 @@
             "sha512": "1489ff64267bcf357ff9734a52f0637b09486161c6b43d32d3c439372648e04e3281f2d9ef0449a54d8a68ffb0d046232ecee9a9818baa96a0087acac663f708"
           },
           {
-            "path": "build/packages/slf4ts-cassandra-log-adapter/lib/slf4ts/CassandraLogAdapter.js",
-            "sha512": "b7b7b2de1b98d3f1ccbe88bcd6beef7850dafa446a09b0bb2971786d609b1f38ed329dfe25f6a2c160f30b40ae6b34901bc13c959522dd0bfc4e4aa024a07e4c"
-          },
-          {
-            "path": "build/packages/slf4ts-cassandra-log-adapter/test/slf4ts/CassandraLogAdapterTest.js",
-            "sha512": "c81bda31d3e22720da0e4694952f6fb6f0a68eaaaa766e0dd299430888b895f20f63a77f2117e0bee909218d6abef18726db10261eda60bd47c5dd6cf28d5945"
-          },
-          {
-            "path": "build/packages/slf4ts-cassandra-log-adapter/lib/slf4ts/index.js",
-            "sha512": "1b5d43158b198933c993bd885b258d7e1c6fe00de6d5b28c18e18296bd133369cb66edf1ec9987fc6163440c1b3e52d404600a233a593014b5b90277963b5cd6"
-          },
-          {
-            "path": "build/packages/slf4ts-cassandra-log-adapter/lib/slf4ts/CassandraLogAdapter.js.map",
-            "sha512": "30627dd103fa10046ce30953428a463334dff01b306cb2518695c204e526c9979f0140ff7b7dc14d72118b64bdc3c3443eed8a9295add2f503d68b7b95f8106a"
-          },
-          {
-            "path": "build/packages/slf4ts-cassandra-log-adapter/test/slf4ts/CassandraLogAdapterTest.js.map",
-            "sha512": "776a87f58f15114d2308cdc18f285ec59b39c75cb93e7cda6bbb0038009d08f7547eda9dede9829b49a76e3aaab0b53e968be29abdbb7eeab899af2e3fdabfb3"
-          },
-          {
-            "path": "build/packages/slf4ts-cassandra-log-adapter/lib/slf4ts/index.js.map",
-            "sha512": "774e280694cad157e9eac6bec3e2c8e99cd144f4f7c039117981e53711a2c74b1bd6d3118ea7160535fd26afcaee5b90c9444f6e2401159cc35bdac3b9cdd17c"
-          },
-          {
             "path": "README.md",
             "sha512": "d24c7867c833b9965dd7b1c22fd66dcfdb9f6fe0983c352178d846393a8db3506ae9f2f040903fd64ba274185b5714f1f7edaddc64086c84f47c49bdbbf60de4"
-          },
-          {
-            "path": "build/packages/slf4ts-cassandra-log-adapter/lib/slf4ts/CassandraLogAdapter.d.ts",
-            "sha512": "14f2dc1f14c19e1b49d5ec77134d16164f258cd17cc404f7b51a11b4b217fc05fa3ff960248d5ec64e5fde944b8e6867c353927f22bf3231a012757ce7192a27"
-          },
-          {
-            "path": "build/packages/slf4ts-cassandra-log-adapter/test/slf4ts/CassandraLogAdapterTest.d.ts",
-            "sha512": "8efdcd9a31968e59bc0347a746648529b1a66fa31ed3efb9b1c7e76ca6fe1d2e99a3aa3b06aa40dc387099414b810c2584fb2616fc6d73a283da2eb674af9303"
-          },
-          {
-            "path": "build/packages/slf4ts-cassandra-log-adapter/lib/slf4ts/index.d.ts",
-            "sha512": "3c2ea63b9d2e47724e6ffe23ca463d1d2a2f85f4f9187fe3d404d68d6c8b134f699f968264359fbe908b3c78faa946ecbf1ec51441e38a31ed84db398d8ad675"
           }
         ]
       }
@@ -63,7 +27,6 @@
       "entry": "npmCompatiblePackageJson/v1alpha2",
       "value": {
         "packageJsonProperties": [
-          "compodoc",
           "dependencies",
           "description",
           "engines",
@@ -75,15 +38,13 @@
           "main",
           "mocha",
           "name",
-          "nyc",
           "peerDependencies",
-          "precommit",
           "repository",
           "scripts",
           "typings",
           "version"
         ],
-        "sha512": "fab029e15bb7ea88005f0aef93eb932762450446f0316ab3dfc843df9c47bf7749360a82b50d83c5961345175e12f84981059a407b400dc374227edf8efe67c9"
+        "sha512": "5778f007e4e1811e0d71b4d746331038dcb13ffa2792bd8bf479be63714ea6b5806a446197787c3245188f17d27579a0c44f9d363a9c8a066c068210f1844a27"
       }
     },
     {
@@ -131,39 +92,12 @@
           "scripts": {
             "build": "npm run clean && npm run lint && npm run compile",
             "sign": "pkgsign sign .",
-            "clean": "rimraf build coverage",
+            "clean": "rimraf build",
             "compile": "tsc -p .",
-            "compodoc": "compodoc lib",
-            "coverage": "nyc npm run test",
             "deps": "npm-check --ignore @types/* --no-spinner --no-emoji --no-color",
             "lint": "eslint ./lib/**/*.ts ./test/**/*.ts",
-            "precompodoc": "npm run coverage",
             "prepublishOnly": "npm run build",
             "test": "mocha test/**/*Test.ts"
-          },
-          "precommit": "sign",
-          "compodoc": {
-            "tsconfig": "./tsconfig.json",
-            "output": "./docs",
-            "disableGraph": true,
-            "unitTestCoverage": "./coverage/coverage-summary.json"
-          },
-          "nyc": {
-            "include": [
-              "lib/*.ts",
-              "lib/**/*.ts"
-            ],
-            "exclude": [
-              "test/*"
-            ],
-            "extension": [
-              ".ts"
-            ],
-            "require": [],
-            "reporter": [
-              "json-summary"
-            ],
-            "all": true
           },
           "mocha": {
             "require": [
@@ -179,5 +113,5 @@
       }
     }
   ],
-  "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJea/VgCRDCMfXrQKYV5wAAC8gQAFsM5CQhul9qT6wubVtYOTXp\n3mZxYRBHWPi1aJcgTk+yr8ZooWoo0MInWioa8i6ssji03WzNl1sxh5RhPLC1v1Pj\nJCCPg8jHzufZaAEhlJdLoCJgSC5KON5DgxaEHny8ocUfR7bW0per674OeR+f3AIG\nGd5FxjRaRZx/e9Sm3EGI1D0nDDqYl+mAeh3ddwqzcRFADvB1Tqx1GD6ioRBbJXRo\nc69K4K6RYWHFbVsSnKAj9RsUkxGec4jmZNP6SX9fX2u0E7ZBn7l4hajiV0KMOa9r\n2GoZMl9FsUlGUw/32TgU5xG8DJgxsFKgq8X8QwTK3ZmqBXDxaC2Jb/yRmqvP04YP\nkPrzCGblK03ME7W9ofvBtF6VOkilFYddKmYTem/nUGYaKiOmHGMRQXb8qX3D5Iub\nAm3R0IGANRhKPSg2ccVBZLynq3dwlqgLuZNqEepSPgETE5umG61VB63sbZbjcLL+\nSebkWq1/KjPWG1gbYX8zJpUo3yG2fKKv5UwHnF9VmlGCprTI6XADFrzDVDc6FyHs\nCJzLTvst3I7upw3fb3pXu2uXrRiCFVBZ3TulGZ4jg9h9pzokjBr8hiTtbCVjhRrV\n/JrhuNYl8XQB5P6nBBifV1SPxz1ZkPPWBr9oFHAkKeKY2mSOsRQ1XR/tjODn0Uws\nWKw3azPEM8avtyxT0bqn\n=KWfT\n-----END PGP SIGNATURE-----\n"
+  "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJebUHqCRDCMfXrQKYV5wAAMXkQADfRiiLSYN1IIlN5H3mWNmat\nEeHi1SaQkYXQ6kNdpnGor3jkallGwVICxlaiHvuJlodo6Lkck5+npNxUobTJE3aZ\nN6XEAXO7ax2/8hEiX8Q+tk1Tn4gTiWuy1XYW0780WhDzXqC68xXD2DyT3mEOlaaV\nNLxlPcZp+MHpvI7Qnyq9p5qUf5yPBYmER+F9Z140RNQTvJBDm1IeSXEcHG5H+U0/\nZeFY1Dtmcfsun65FS3f1UFEMk+XkoCmxibbNrFbq1wuDAAegOCB7mZA5ivYlKKgB\nzPGuYIQPBhrRJ60wD6OOVs6PomUcCgfVg44eAjY4QW6w55f/Jl31EMl9RfSHaDw3\nXiefqvGv12oi5Rs+LvdMeG9QmiAyAvaDyAztzZ2siBagUulm1oc0OIdU/RzeCU7/\n3EIhXktjTIc7TeQGyfJR5wMG49zG0vr9+7/RLWvyCbwU64Ostc3BidZzksN/dyf0\nw9CSusS+dgVhZbieLPTbwp/CFQnMdhiOSnKl42Y2Y9pdNCt4fkUEZ4Z6JhTK1iPi\nG36RIFEtUofDmH07qVI6ZBrMUlTH/lMf1bSQ1QQfJHZcxbl2bMea5iMXd54PS3pu\nOKzgPNaRCcYDKfBbqfsx8I4KzkEeQYZJswfIT8tBzOhiDhVzWuQbadJX9qxltowq\nGBJBjLzW7IJpTZs9kybT\n=iqDl\n-----END PGP SIGNATURE-----\n"
 }

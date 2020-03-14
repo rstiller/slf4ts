@@ -34,9 +34,9 @@
         "bootstrap-run": "lerna run --loglevel=silent --no-prefix --scope",
         "build": "lerna run build",
         "sign": "lerna run sign && git add packages/*/signature.json",
-        "clean": "lerna run clean",
+        "clean": "lerna run clean && rimraf coverage docs",
         "compile": "lerna run compile",
-        "coverage": "lerna run coverage",
+        "coverage": "nyc lerna run test",
         "deps": "lerna run deps",
         "lint": "lerna run lint",
         "publish": "lerna publish",
@@ -50,5 +50,30 @@
         "hooks": {
             "pre-commit": "npm run sign"
         }
+    },
+    "compodoc": {
+        "tsconfig": "./tsconfig.docs.json",
+        "output": "./docs",
+        "disableGraph": true,
+        "includes": "./",
+        "includeNames": "READMEs",
+        "unitTestCoverage": "./coverage/coverage-summary.json"
+    },
+    "nyc": {
+        "include": [
+            "packages/*/lib/*.ts",
+            "packages/*/lib/**/*.ts"
+        ],
+        "exclude": [
+            "packages/*/test/*"
+        ],
+        "extension": [
+            ".ts"
+        ],
+        "require": [],
+        "reporter": [
+            "json-summary"
+        ],
+        "all": true
     }
 }
