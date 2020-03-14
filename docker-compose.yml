@@ -10,7 +10,7 @@ services:
     entrypoint: bash
     command:
       - "-c"
-      - "npm rebuild && npm run bootstrap && npm run build && npm run coverage && compodoc"
+      - "pnpm i && npm run build && npm run coverage && compodoc"
     restart: "no"
     volumes:
       - .:/opt/slf4ts/
@@ -25,7 +25,7 @@ services:
     entrypoint: bash
     command:
       - "-c"
-      - "lerna run deps"
+      - "npm run deps"
     restart: "no"
     volumes:
       - .:/opt/slf4ts/

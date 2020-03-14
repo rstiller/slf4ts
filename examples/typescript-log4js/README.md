@@ -7,10 +7,9 @@ Have a look at the `index.ts` file.
 
 To execute the example do the following in the root folder of the project:
 
-    npm i
-    npm run bootstrap
-    npm run build
-    npm run bootstrap-run examples-typescript-log4js start
+    pnpm i
+    pnpm run build
+    pnpm run example examples-typescript-log4js start
 
 ## License
 

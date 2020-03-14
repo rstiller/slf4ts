@@ -26,20 +26,18 @@ This is the mono-repository for the `slf4ts` modules.
 
 init / update project (if a new dependency is introduced or an existing is updated):  
 
-    npm i
-    npm run bootstrap
+    pnpm i
 
 generate dependency report:  
 
-    # run 'npm run build' before checking dependencies
+    # run 'pnpm run build' before checking dependencies
     docker-compose run --rm deps
 
 release packages / publish docs:  
 
     # check functionality
-    npm i
-    npm run bootstrap
-    npm run build
+    pnpm i
+    pnpm run build
 
     # publish docs
     rm -fr docs/
@@ -47,10 +45,7 @@ release packages / publish docs:
     git worktree prune
     git worktree list
     git worktree add -b gh-pages docs origin/gh-pages
-    npm run publishDocs
-
-    # publish package (using lerna)
-    npm run publish
+    pnpm run publishDocs
 
 ## License
 

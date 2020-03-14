@@ -65,6 +65,7 @@
         "packageJsonProperties": [
           "dependencies",
           "description",
+          "devDependencies",
           "engines",
           "files",
           "homepage",
@@ -80,7 +81,7 @@
           "typings",
           "version"
         ],
-        "sha512": "5778f007e4e1811e0d71b4d746331038dcb13ffa2792bd8bf479be63714ea6b5806a446197787c3245188f17d27579a0c44f9d363a9c8a066c068210f1844a27"
+        "sha512": "62353fa193c0c7877e3546b007d61593d364b982de410b4bc3dfc9b00d792594b4cefa5aa99ba2a7b36dba2abe35718026e1acb3c5e07791b1d54e1d8dcd9fc0"
       }
     },
     {
@@ -118,6 +119,29 @@
             "slf4ts-api": "^1.2.4",
             "source-map-support": "^0.5.16"
           },
+          "devDependencies": {
+            "@types/chai": "^4.2.10",
+            "@types/chai-string": "^1.4.2",
+            "@types/mocha": "^7.0.2",
+            "@types/node": "^13.7.7",
+            "@typescript-eslint/parser": "2.23.0",
+            "@typescript-eslint/eslint-plugin": "2.23.0",
+            "chai": "^4.2.0",
+            "chai-string": "^1.5.0",
+            "eslint": "6.8.0",
+            "eslint-config-standard-with-typescript": "14.0.0",
+            "eslint-plugin-standard": "4.0.1",
+            "eslint-plugin-promise": "4.2.1",
+            "eslint-plugin-import": "2.20.1",
+            "eslint-plugin-node": "11.0.0",
+            "mocha": "^7.1.0",
+            "mocha-typescript": "^1.1.17",
+            "pkgsign": "^0.2.0",
+            "rimraf": "^3.0.2",
+            "testdouble": "^3.13.0",
+            "ts-node": "^8.6.2",
+            "typescript": "^3.8.3"
+          },
           "engines": {
             "node": ">= 8",
             "npm": ">= 5"
@@ -149,5 +173,5 @@
       }
     }
   ],
-  "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJebUqQCRDCMfXrQKYV5wAASoUQAJlo8nek2PGUQUT3LIQCgKMO\nB37VJOIDuVCGpBYVKiXW6oT9xU3dUEHUzsLNa8dX0lcw1YO5SBxwanyKe5M6/DTd\n96LTtxDYalbZ49CdKoSKZSk/3EbhLQb0nJmiarztL+tVfe7V4ZeiZjTvdxFl+xBA\nmAYcPd+E4gBQQY9DuOEf8Im/3an7uROg0Y17aCJETUwahZ/wy+W+fik7+C8TbSim\nUSidEPp1Zq7De517D/efSZk+Gu17JRiRjKtp0Lccs/OUJ3gHRAZfvPIJpL9HvW9f\nB8woKtc/Du9sQfXckPXHTR6O59BtOughqfLxcfdEZJ7fE582o6ri3Hy+3RvN76As\n6wbcQRszlJRtK4l8NwigI+3oDQYW5RMqi0E827DPA6y7gNlcQicAvsC7Bngf8PAs\nT+uxRsTk60lMO/J8LBMfNOqwcWKJEIs2ShtYaEWsILolLq1gO4h51gxPTIHxXGcO\n7r9HRDZVFXfUC9yubgabesalZlnkdsf8BhFgc4L7Q7UQ8KXeExRxR5r27oC+AS7x\nhEQMCwT0fWKLYC8E2Ly+laC8C28K/VoxHnDBZOXbPxz6HLsFbTbn7WghKedMFBK/\nt/PMHDViKgnMa9x0PERkHj2pKASa7h2LbUE2dnHWG0Y+CT5Zm9XkAgecaxLNfpmr\n4JqaoOLMYWYM43E4zI4i\n=adyE\n-----END PGP SIGNATURE-----\n"
+  "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJebjjSCRDCMfXrQKYV5wAAlD4QAI4EX1JkFBJnuSLPsTkFeIan\nAyzpjyMTMDh+i1gnew3f+aHSu2/k3hf8eflsGCnmjAwfu2Qo0jNYlSc6YgvV0HFZ\nzkhXF3Nt81GDexlWQEkBNY2t/W3elH7co5659xjEUMKicQuGtnamQ61HzDH3hRtk\n5sF9tBZ+qT8p7gXn/deDV27E0lxvuHYXpMwCqm2DsS/TL14lSBGbsAN1BUDoQq/w\npotEt5yRq/OG6azkgCjkm8QjYkDMpWVnGoiu7jpc8mUPq539TVImLNJrXEL+QRR0\nVQZdM0HP3htbC7FOetjRFaryBgnsC+Ag7jxNYNrCne+APpzIeSFI8hyAvkbirQ4m\nmtwC9XpB2bXWYSHmLUm5ieh6DyJuQ6wR3hKlfr7n0GqdE1mL8Qjvs+kV/x2CQI53\nnX2reB2pwL7TvoCdm/bM760lFOmmo+00G/to6g+1PIVzznCKHQqBOM9j3WtjIEu+\nEoKzAYCQpm2TQALcqhbM+nj/ZDlOpOM9vHn5WaLOOw6XpwZ3FIeu8qpheolagg+K\n/8eBKEitkBanhTN0W9VWm2MFWCjH0plqIpqi8TYE2sN8iWtmibT+sP00sweff5Q1\nyUTUgoSc6CVBOrzzJLdmcnr7VkFm4WJrDE0zPiEJcI+MUA8HLtOPtMXQSKn7UzCt\n+vCBQ4v5ciNQRvBcI2IB\n=LvJG\n-----END PGP SIGNATURE-----\n"
 }

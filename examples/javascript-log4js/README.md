@@ -7,9 +7,8 @@ Have a look at the `index.js` file.
 
 To execute the example do the following in the root folder of the project:
 
-    npm i
-    npm run bootstrap
-    npm run bootstrap-run examples-javascript-log4js start
+    pnpm i
+    pnpm run example examples-javascript-log4js start
 
 ## License
 

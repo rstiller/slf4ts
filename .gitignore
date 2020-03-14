@@ -61,6 +61,7 @@ typings/
 .next
 
 .nyc_output/
+.pnpm-store/
 build/
 coverage/
 docs/
