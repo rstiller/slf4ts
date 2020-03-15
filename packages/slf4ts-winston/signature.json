@@ -1,0 +1,207 @@
+{
+  "entries": [
+    {
+      "entry": "files/v1alpha2",
+      "value": {
+        "files": [
+          {
+            "path": ".slf4ts-binding",
+            "sha512": "cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e"
+          },
+          {
+            "path": "LICENSE",
+            "sha512": "1489ff64267bcf357ff9734a52f0637b09486161c6b43d32d3c439372648e04e3281f2d9ef0449a54d8a68ffb0d046232ecee9a9818baa96a0087acac663f708"
+          },
+          {
+            "path": "build/packages/slf4ts-winston/lib/slf4ts/index.js",
+            "sha512": "2ff751d07b290b9c843b8d8cf7fee1d401d2819f2d58066b5449be1f54303dcc5df91db4b23fb92a7b4172b34a5c960ab3d8c7f1328092aa35c05c436f26eda6"
+          },
+          {
+            "path": "build/packages/slf4ts-winston/lib/slf4ts/WinstonLoggerBinding.js",
+            "sha512": "bd3e0c9a5d77d95542cda1b7745eeadbca3b3e1512fc49cd09dcdfe381bb04da4694fcdcc1e1cc6840a674782fd431dcc7be81f0633854312f098e5c53a382b6"
+          },
+          {
+            "path": "build/packages/slf4ts-winston/test/slf4ts/WinstonLoggerBindingTest.js",
+            "sha512": "7b64c8b3a327b3d3250f1ed726677ab836322f4eaa12267e030053caf37c85a0a79b0c9faa78e434f7cd8394ce547670722a3d3d6b021c6eabe2ca56fc99fe62"
+          },
+          {
+            "path": "build/packages/slf4ts-winston/lib/slf4ts/WinstonLoggerImplementation.js",
+            "sha512": "8b216b19ca8b5581484659ae695648c54b32aaa913274e293638933a7fb54030fd914132a96096dcc8363516d24e8b97cfb98b61dd2f02d800612909c302dee2"
+          },
+          {
+            "path": "build/packages/slf4ts-winston/test/slf4ts/WinstonLoggerImplementationTest.js",
+            "sha512": "43d867c7effdc450a99e7a368d62f7ff3e96a2d5c60671daef15bd378b66d89cc3db7c541bf8dedf996a2e9718c6f2fe17f00df69dd0ef1b04da88ad6db29e0f"
+          },
+          {
+            "path": "build/packages/slf4ts-winston/lib/slf4ts/index.js.map",
+            "sha512": "2ef56b6aec3839c60223ef5d426eb30a31e0d5ee042af665e017f046d3ea5eaaa25e12950c86c041cb776f4c3340e9e9f619e9d6ff0c14cd3de7de408b3056c8"
+          },
+          {
+            "path": "build/packages/slf4ts-winston/lib/slf4ts/WinstonLoggerBinding.js.map",
+            "sha512": "9cb3b8e3b421f30434be2e6ee6cde0a3fb9b2ad72766b877f3cd57b9b818cc25298c65392f43ae03fa574e0d3589cbbc5a500229fd94bcacbc451250f9b10520"
+          },
+          {
+            "path": "build/packages/slf4ts-winston/test/slf4ts/WinstonLoggerBindingTest.js.map",
+            "sha512": "1d561bacbc432cae7181decf45311cc966502c8130273bb9de183bf1f02869e9e020c70f146ce64ac5d9f4f56367caf74eec285ebc2b164f831ec1b41b3611e7"
+          },
+          {
+            "path": "build/packages/slf4ts-winston/lib/slf4ts/WinstonLoggerImplementation.js.map",
+            "sha512": "02f50d8fdb664a4b7cf0dc6c0d524ded740524130ef39f4b3a50fe5757204d46fa6d18b0448cca0bfa69ac68f1d0b10b482f4111931dd97d2d77f063ae1bab49"
+          },
+          {
+            "path": "build/packages/slf4ts-winston/test/slf4ts/WinstonLoggerImplementationTest.js.map",
+            "sha512": "52d924934866ec126d93cfb7add4bdbd24db74a7404ca44bd897eeeb8c1e36ffeecf26a4b10534c44018e5b5b9fb7a832cda31026a65af2e5c0517ce91c6998c"
+          },
+          {
+            "path": "README.md",
+            "sha512": "af92b7c5aa13456d2436aced3270062274dd975493b00ccc65951b5b1f98bdaddaee91f60cbefd2d600e916e0a6cd90d4a1578f215e9050a1a83b2bbf97e9bfd"
+          },
+          {
+            "path": "build/packages/slf4ts-winston/lib/slf4ts/index.d.ts",
+            "sha512": "44c700b8cc1d409d50f20b2771f7171457775b194aecc78b39ce5cbf084d9aa328d6c8acdf552b37ca3a226034a10c673afcd46e463f1dcfa51047d0fc158576"
+          },
+          {
+            "path": "build/packages/slf4ts-winston/lib/slf4ts/WinstonLoggerBinding.d.ts",
+            "sha512": "e7cd6dc419e169cb74e71d323970e55d6c1c661c3341c88df948cd5e428726f95e7de7501172de12d881fae2186b12ff8b998ab08c96c251445cd3ebb9fc6caa"
+          },
+          {
+            "path": "build/packages/slf4ts-winston/test/slf4ts/WinstonLoggerBindingTest.d.ts",
+            "sha512": "d99b4e85c8f63991a7e8ab8105cda7bd8f2b95ffed886e09669392d14ff413d58eeb20ee9db61a753826730864b99adfc347f984f9b69a409c9e1e16c5b12fd9"
+          },
+          {
+            "path": "build/packages/slf4ts-winston/lib/slf4ts/WinstonLoggerImplementation.d.ts",
+            "sha512": "84d9e73ccfa230faa250cb22cc352ff3e3792c8e0281b0fef3ee983fb90ad3231d03f3d520d7efe9bf0924cfb978c9457254640960ee2ef16d9d9cf8741a4b84"
+          },
+          {
+            "path": "build/packages/slf4ts-winston/test/slf4ts/WinstonLoggerImplementationTest.d.ts",
+            "sha512": "105e16c3197219d73c419321965a18ab59664be8d159e81dea2c6f55e47e8a26208ee595d20d8108a29c10b72f3e8a3f31ec635df11c0a64cfce21efaa1e0223"
+          }
+        ]
+      }
+    },
+    {
+      "entry": "identity/v1alpha2",
+      "value": {
+        "identity": {
+          "keybaseUser": "rstiller"
+        }
+      }
+    },
+    {
+      "entry": "npmCompatiblePackageJson/v1alpha2",
+      "value": {
+        "packageJsonProperties": [
+          "dependencies",
+          "description",
+          "devDependencies",
+          "engines",
+          "files",
+          "homepage",
+          "keywords",
+          "license",
+          "licenses",
+          "main",
+          "mocha",
+          "name",
+          "peerDependencies",
+          "repository",
+          "scripts",
+          "typings",
+          "version"
+        ],
+        "sha512": "be0ec0b40a403ee2e662ee7a1ad6e55a5833944fe7c64dba537d3ce747b895a3377eb5d3e8a49fbb3045a8a844d16fa0e39d4ebfbed5f5b8f5c727989c622e62"
+      }
+    },
+    {
+      "entry": "packageJson/v1alpha2",
+      "value": {
+        "packageJson": {
+          "name": "slf4ts-winston",
+          "description": "Winston logging-binding for slf4ts-api",
+          "homepage": "https://github.com/rstiller/slf4ts",
+          "version": "1.2.0",
+          "main": "./build/packages/slf4ts-winston/lib/slf4ts/index.js",
+          "typings": "./build/packages/slf4ts-winston/lib/slf4ts/index.d.ts",
+          "license": "MIT",
+          "licenses": [
+            {
+              "type": "MIT",
+              "url": "https://www.opensource.org/licenses/mit-license.php"
+            }
+          ],
+          "repository": {
+            "type": "git",
+            "url": "https://github.com/rstiller/slf4ts"
+          },
+          "keywords": [
+            "typescript",
+            "logging",
+            "winston"
+          ],
+          "peerDependencies": {
+            "slf4ts-api": ">=1.1.3",
+            "winston": ">=3.0.0"
+          },
+          "dependencies": {
+            "slf4ts-api": "^1.3.0",
+            "source-map-support": "^0.5.16",
+            "winston": "^3.2.1"
+          },
+          "devDependencies": {
+            "@types/chai": "^4.2.10",
+            "@types/chai-string": "^1.4.2",
+            "@types/mocha": "^7.0.2",
+            "@types/node": "^13.7.7",
+            "@typescript-eslint/eslint-plugin": "2.23.0",
+            "@typescript-eslint/parser": "2.23.0",
+            "chai": "^4.2.0",
+            "chai-string": "^1.5.0",
+            "eslint": "6.8.0",
+            "eslint-config-standard-with-typescript": "14.0.0",
+            "eslint-plugin-import": "2.20.1",
+            "eslint-plugin-node": "11.0.0",
+            "eslint-plugin-promise": "4.2.1",
+            "eslint-plugin-standard": "4.0.1",
+            "mocha": "^7.1.0",
+            "mocha-typescript": "^1.1.17",
+            "nyc": "^15.0.0",
+            "pkgsign": "^0.2.0",
+            "rimraf": "^3.0.2",
+            "ts-node": "^8.6.2",
+            "typescript": "^3.8.3",
+            "winston-transport": "^4.3.0"
+          },
+          "engines": {
+            "node": ">= 8",
+            "npm": ">= 5"
+          },
+          "files": [
+            ".slf4ts-binding",
+            "build"
+          ],
+          "scripts": {
+            "build": "npm run clean && npm run lint && npm run compile",
+            "sign": "pkgsign sign .",
+            "clean": "rimraf build",
+            "compile": "tsc -p .",
+            "deps": "npm-check --ignore @types/* --no-spinner --no-emoji --no-color",
+            "lint": "eslint ./lib/**/*.ts ./test/**/*.ts",
+            "prepublishOnly": "npm run build",
+            "test": "mocha test/**/*Test.ts"
+          },
+          "mocha": {
+            "require": [
+              "source-map-support/register",
+              "ts-node/register"
+            ],
+            "reporter": "dot",
+            "extension": "ts",
+            "bail": true,
+            "full-trace": true
+          }
+        }
+      }
+    }
+  ],
+  "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJebkfZCRDCMfXrQKYV5wAAFaEQAAxWNB6Utal8v5Uh8Oe0Pp2l\ntkx6qZbP/2SgO1o50IPgpXlHukFmFhhcMzkKCHJ+qAzYL+fkxYBSSAOsRmAyM+J2\nwwJtey7y4J+E6TfqDNmRapCNzOzk7V5vPMGT+p5QyFQAfIhqJQxPgI9rbDqJV++5\n7KssVWrCGCK2vOZotKXxlhq3+adoqV3Utj7pMYQUUneAb3C90QQQXbSZ4fPeKAvx\nv5to2d6VyE2xuekGzQaK15+nVF5JdMBJckj/A4q4DjtPdE7gVCjzwvzHut/XAnpP\nL3vm6OzbSmRuDcuEKxyrOGaa48rtSNP5ga97g+CMHHzfLqJP/rutG9/ftSovI8Pj\nNZ5lukENbkbBTiiAVr1w2tdQMGpzNJ2dNR6i+2TAZg0H88bwFZF3g5EPXFUIDZfq\n1Dsr+Qa2r97oknMCcjnOu4GD+ohD2elJB7EdvfPV8He9N1Sl+c2K8vHrW5glrdgB\n03XEBkX8CetwZX1TjHsXVSWK1Zw22Lh24K7qhit353hpxJZDsSyFLIb+6PFrgPjL\nHCxa6tF/wAEe1QQl0yM8QpyM+d1S1H0P5jS9lrGl7u5BYbMt9yyoAorxR89G+5EP\nq0Y+hp1gGbPYHIb6+SmMEDoCyfy5N8cpXRWXZLpZyai0O8/UVYzix6LCG9/xZiF6\noFbhAwdbaxF7yvI1s0bv\n=4wrm\n-----END PGP SIGNATURE-----\n"
+}

@@ -1,0 +1,177 @@
+{
+  "entries": [
+    {
+      "entry": "files/v1alpha2",
+      "value": {
+        "files": [
+          {
+            "path": "LICENSE",
+            "sha512": "1489ff64267bcf357ff9734a52f0637b09486161c6b43d32d3c439372648e04e3281f2d9ef0449a54d8a68ffb0d046232ecee9a9818baa96a0087acac663f708"
+          },
+          {
+            "path": "build/packages/slf4ts-cassandra-log-adapter/lib/slf4ts/CassandraLogAdapter.js",
+            "sha512": "f06e89d64112c2f3aa7cfd7ceff2a36f2e83e674f5c554e96bc8231ce0f5381e6aa4c5b003d78ca13dbec6232e1b7383aeed67dddc0b11477bd85e3ec8c6b6eb"
+          },
+          {
+            "path": "build/packages/slf4ts-cassandra-log-adapter/test/slf4ts/CassandraLogAdapterTest.js",
+            "sha512": "3bfa705cd1448323ae02fc307e7f7c17666724e70463e47c44f5f1faf8bd5f48ead33fb44ed9a2af566de333db87eae0a0a4fde17f2683e341fa7164f6cdcd5e"
+          },
+          {
+            "path": "build/packages/slf4ts-cassandra-log-adapter/lib/slf4ts/index.js",
+            "sha512": "1b5d43158b198933c993bd885b258d7e1c6fe00de6d5b28c18e18296bd133369cb66edf1ec9987fc6163440c1b3e52d404600a233a593014b5b90277963b5cd6"
+          },
+          {
+            "path": "build/packages/slf4ts-cassandra-log-adapter/lib/slf4ts/CassandraLogAdapter.js.map",
+            "sha512": "7bfd44ccdd86002598c436c96ef61bbfebd8dfabd1dfbd3465b6af8b6dddb45addd6d56de76e5bf282a7d3e78ff052590f52ddaf1f06c946a2814bb107ce6472"
+          },
+          {
+            "path": "build/packages/slf4ts-cassandra-log-adapter/test/slf4ts/CassandraLogAdapterTest.js.map",
+            "sha512": "f74c708998c4d32a28209d9509650471abff9317d124c9147b260ddea416738c9a7331ac8fe305a153a9f91be83515f13cd4448ddd32924cc9b43263403f3841"
+          },
+          {
+            "path": "build/packages/slf4ts-cassandra-log-adapter/lib/slf4ts/index.js.map",
+            "sha512": "04030a2e134bf2eae5ddf52009710982c67d45cfb6b60b0bbc8603cbac92bca2c59724003ba08aeb1b498a202e2116af86c57631e2b9f356777eb1822af8a879"
+          },
+          {
+            "path": "README.md",
+            "sha512": "d24c7867c833b9965dd7b1c22fd66dcfdb9f6fe0983c352178d846393a8db3506ae9f2f040903fd64ba274185b5714f1f7edaddc64086c84f47c49bdbbf60de4"
+          },
+          {
+            "path": "build/packages/slf4ts-cassandra-log-adapter/lib/slf4ts/CassandraLogAdapter.d.ts",
+            "sha512": "1adfbc241384b9121b480dcb4b7ac64a91116f7b27797bf422c53df372be392ce56e37bc936719b2f6d71274c1b55d30c354981f98340ef3d0369e2734c91122"
+          },
+          {
+            "path": "build/packages/slf4ts-cassandra-log-adapter/test/slf4ts/CassandraLogAdapterTest.d.ts",
+            "sha512": "469d86b9fda5b77b408162a646ae0cc5a28f2f87bb0d3b8ed5cdf58c2923ac0a64224588fb6776f056fe19bc294b6ff9f0bb4feea949bbad2e0023542e224287"
+          },
+          {
+            "path": "build/packages/slf4ts-cassandra-log-adapter/lib/slf4ts/index.d.ts",
+            "sha512": "b3c093430433206c44448a1a00de7dc1380e7ed92d90e9661df79d7e3d3a73ae357733f4a74e7fd0de706df3b913a1804aa29edb57f421b642eed3e272366a03"
+          }
+        ]
+      }
+    },
+    {
+      "entry": "identity/v1alpha2",
+      "value": {
+        "identity": {
+          "keybaseUser": "rstiller"
+        }
+      }
+    },
+    {
+      "entry": "npmCompatiblePackageJson/v1alpha2",
+      "value": {
+        "packageJsonProperties": [
+          "dependencies",
+          "description",
+          "devDependencies",
+          "engines",
+          "files",
+          "homepage",
+          "keywords",
+          "license",
+          "licenses",
+          "main",
+          "mocha",
+          "name",
+          "peerDependencies",
+          "repository",
+          "scripts",
+          "typings",
+          "version"
+        ],
+        "sha512": "addd468f36ff14a622c4760524e34e7110759fc6b2040d06b132fe00bdc7c80656d0e38ec86d3105c83941447ee165c3eff9d347c5783261cde74b5812a2066c"
+      }
+    },
+    {
+      "entry": "packageJson/v1alpha2",
+      "value": {
+        "packageJson": {
+          "name": "slf4ts-cassandra-log-adapter",
+          "description": "Cassandra logging-adapter for slf4ts-api",
+          "homepage": "https://github.com/rstiller/slf4ts",
+          "version": "1.2.0",
+          "main": "./build/packages/slf4ts-cassandra-log-adapter/lib/slf4ts/index.js",
+          "typings": "./build/packages/slf4ts-cassandra-log-adapter/lib/slf4ts/index.d.ts",
+          "license": "MIT",
+          "licenses": [
+            {
+              "type": "MIT",
+              "url": "https://www.opensource.org/licenses/mit-license.php"
+            }
+          ],
+          "repository": {
+            "type": "git",
+            "url": "https://github.com/rstiller/slf4ts"
+          },
+          "keywords": [
+            "typescript",
+            "logging",
+            "cassandra"
+          ],
+          "peerDependencies": {
+            "cassandra-driver": ">=3.5.0",
+            "slf4ts-api": ">=1.1.3"
+          },
+          "dependencies": {
+            "cassandra-driver": "^4.4.0",
+            "slf4ts-api": "^1.3.0",
+            "source-map-support": "^0.5.16"
+          },
+          "devDependencies": {
+            "@types/chai": "^4.2.10",
+            "@types/chai-string": "^1.4.2",
+            "@types/mocha": "^7.0.2",
+            "@types/node": "^13.7.7",
+            "@typescript-eslint/eslint-plugin": "2.23.0",
+            "@typescript-eslint/parser": "2.23.0",
+            "chai": "^4.2.0",
+            "chai-string": "^1.5.0",
+            "eslint": "6.8.0",
+            "eslint-config-standard-with-typescript": "14.0.0",
+            "eslint-plugin-import": "2.20.1",
+            "eslint-plugin-node": "11.0.0",
+            "eslint-plugin-promise": "4.2.1",
+            "eslint-plugin-standard": "4.0.1",
+            "mocha": "^7.1.0",
+            "mocha-typescript": "^1.1.17",
+            "pkgsign": "^0.2.0",
+            "rimraf": "^3.0.2",
+            "testdouble": "^3.13.0",
+            "ts-node": "^8.6.2",
+            "typescript": "^3.8.3"
+          },
+          "engines": {
+            "node": ">= 8",
+            "npm": ">= 5"
+          },
+          "files": [
+            "build"
+          ],
+          "scripts": {
+            "build": "npm run clean && npm run lint && npm run compile",
+            "sign": "pkgsign sign .",
+            "clean": "rimraf build",
+            "compile": "tsc -p .",
+            "deps": "npm-check --ignore @types/* --no-spinner --no-emoji --no-color",
+            "lint": "eslint ./lib/**/*.ts ./test/**/*.ts",
+            "prepublishOnly": "npm run build",
+            "test": "mocha test/**/*Test.ts"
+          },
+          "mocha": {
+            "require": [
+              "source-map-support/register",
+              "ts-node/register"
+            ],
+            "reporter": "dot",
+            "extension": "ts",
+            "bail": true,
+            "full-trace": true
+          }
+        }
+      }
+    }
+  ],
+  "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJebkfZCRDCMfXrQKYV5wAAVfEQAKfYq18d5eMLYWBc5OagnvNu\nc293FvzLpI4ssU75xcehbESkbiHjppVIHZRhs0nywnJX0RG0pYXn8IhjPIHj12eQ\n0PiXpMWnpqXWm1tiu+OPNAuK9O2ngc06zcWNuOTp/6ADIMtZNjD7rLw7E4jfYDil\nMf7tITpw7EvLmwrojZExOEafPJo4XsfM/lA8JJhVYjC2bcFTJ2ZS7MIp2UQvw0De\n+XajKFHs4p0CFa8tDBTDmLb9/j/tqBJxrd065savoIZ5/QzYLkdqz8MpjriEUfSa\nO/vN2RjkAXLk3H/kKt8bTuIFUdKWOCrp4KAVyPkAeKskTLBgiqqXWquZDQudi52h\ndjRtieCCsaHaeFfdKj8avh0iwyhXimQw0Bp15hqxCNfXw6C5eqdCYodfidK13zM1\nkFu9G5m0eIBOArChM1JckrecOS04AS6othUtSUUrouck+6aWaWc5BYGKGdMJkwfP\nvro6pLFMPsZhSMxgt5I4IO8zxTjMOxLIrhY4IfCPopGkDIoJgPNjDMl+O7H6YAYP\nrHWSanc7pwdQNbPOB+OYC9gnooNtyQeQJg3DsbsyTuhfar89SENkRo17QypTZyrV\nI5lEVRGLFboPLW8LEX7MUzAaXBEmXczhovDz3is9oAuv97DiujTn3XxJ8FBCTeYN\nI0BTz0TtOM5JhySFGRXa\n=Vf8Q\n-----END PGP SIGNATURE-----\n"
+}
