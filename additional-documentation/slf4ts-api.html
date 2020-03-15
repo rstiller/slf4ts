@@ -1,0 +1,212 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>slf4ts documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">slf4ts documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content additional-page">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+<h1 id="slf4ts-api">slf4ts-api</h1>
+<p>Simple Logging Facade for NodeJS</p>
+<p align="center">
+    <a href="https://www.npmjs.org/package/slf4ts-api">
+        <img src="https://img.shields.io/npm/v/slf4ts-api.svg" alt="NPM Version">
+    </a>
+    <a href="https://www.npmjs.org/package/slf4ts-api">
+        <img src="https://img.shields.io/npm/l/slf4ts-api.svg" alt="License">
+    </a>
+    <a href="https://david-dm.org/rstiller/slf4ts-api">
+        <img src="https://img.shields.io/david/rstiller/slf4ts-api.svg" alt="Dependencies Status">
+    </a>
+</p>
+
+<p>Inspired by the popular Java lib <a href="https://www.slf4j.org">SLF4J</a></p>
+<p>This project is used to abstract logging<br>to develop reusable libraries and not force the usage<br>of a certain logging framework.</p>
+<p>It&#39;s meant to be used with <code>nodejs</code>.</p>
+<h2 id="loglevel">LogLevel</h2>
+<ul>
+<li>TRACE (numeric value: <code>4</code>)</li>
+<li>DEBUG (numeric value: <code>3</code>)</li>
+<li>INFO (numeric value: <code>2</code>)</li>
+<li>WARN (numeric value: <code>1</code>)</li>
+<li>ERROR (numeric value: <code>0</code>)</li>
+</ul>
+<h2 id="logger-implementations">Logger Implementations</h2>
+<p>slf4ts doesn&#39;t work without a logging-framework binding.<br>Bindings exist for a couple of logging-frameworks:</p>
+<ul>
+<li><a href="../slf4ts-console">console</a></li>
+<li><a href="../slf4ts-log4js">log4js</a></li>
+<li><a href="../slf4ts-winston">winston</a></li>
+</ul>
+<h3 id="write-a-binding">Write a binding</h3>
+<p>A binding for a logging-framework needs to implement the <code>LoggerBinding</code> interface and<br>the actual logger interface <code>LoggerImplementation</code>.   
+Also a file named <code>.slf4ts-binding</code> needs to be present in the package folder (can be empty).   </p>
+<p>A node package for a binding should export a single function that is used during binding discovery.</p>
+<p>Interfaces to implement:</p>
+<div><pre class="line-numbers"><code class="language-typescript">import { LogLevel } from &quot;slf4ts-api&quot;;
+
+interface LoggerImplementation {
+    log(...args: any[]): Promise&lt;any&gt;;
+    getImplementation&lt;T&gt;(): T;
+    setConfig&lt;T&gt;(config: T, group: string, name: string): void;
+    setLogLevel(logLevel: LogLevel, group: string, name: string): void;
+    setMetadata(metadata: any, group: string, name: string): void;
+}
+
+interface LoggerBinding {
+    getLoggerImplementation(): LoggerImplementation;
+    getVendor(): string;
+    getVersion(): string;
+}</code></pre></div><p>Sample implementation in typescript (index.ts):</p>
+<div><pre class="line-numbers"><code class="language-typescript">import { LoggerBindings } from &quot;slf4ts-api&quot;;
+
+export default function(bindings: LoggerBindings) {
+    bindings.registerBinding({
+        getLoggerImplementation: () =&gt; { ... },
+        getVendor: () =&gt; &quot;My Logger Binding Implementation&quot;,
+        getVersion: () =&gt; &quot;1.0.0&quot;
+    });
+}
+</code></pre></div><p>An example implementation can be found in the <code>example-node-modules</code> folder of this project.</p>
+<h2 id="usage">Usage</h2>
+<div><pre class="line-numbers"><code class="language-typescript">import { LoggerConfiguration, LogLevel, LoggerFactory } from &quot;slf4ts-api&quot;;
+
+// gets the root logger (group &quot;&quot; and name &quot;&quot;)
+const ROOT_LOGGER = LoggerFactory.getLogger();
+
+class X {
+
+    // gets a logger with group &quot;my-lib&quot; and name &quot;X&quot;
+    private static LOG = LoggerFactory.getLogger(&quot;my-lib&quot;, &quot;X&quot;);
+
+    public async something(value: any) {
+        // log with debug level and some metadata
+        X.LOG.debug(`a message with ${value}`, { additionalData: &quot;Testvalue&quot; });
+
+        try {
+            ...
+        } catch(error: Error) {
+            // logs an error without metadata
+            X.LOG.error(&#39;Error!&#39;, error);
+        }
+    }
+
+}
+
+// sets the log level of all loggers
+LoggerConfiguration.setLogLevel(LogLevel.INFO);
+
+// sets the log level of all loggers within group &quot;my-lib&quot;
+LoggerConfiguration.setLogLevel(LogLevel.WARN, &quot;my-lib&quot;);
+
+// sets the log level of the logger with group &quot;my-lib&quot; and name &quot;X&quot;
+LoggerConfiguration.setLogLevel(LogLevel.ERROR, &quot;my-lib&quot;, &quot;X&quot;);
+
+const config = {
+    transports: [...],
+    events: [...],
+    postProcessor: () =&gt; { ... }
+};
+
+// sets the config of all loggers
+LoggerConfiguration.setConfig(config);
+
+// sets the config of all loggers within group &quot;my-lib&quot;
+LoggerConfiguration.setConfig(config, &quot;my-lib&quot;);
+
+// sets the config of the logger with group &quot;my-lib&quot; and name &quot;X&quot;
+LoggerConfiguration.setConfig(config, &quot;my-lib&quot;, &quot;X&quot;);</code></pre></div><h2 id="license">License</h2>
+<p><a href="https://www.opensource.org/licenses/mit-license.php">MIT</a></p>
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'additional-page';
+            var COMPODOC_CURRENT_PAGE_URL = 'slf4ts-api.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

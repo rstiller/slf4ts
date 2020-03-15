@@ -1,0 +1,1770 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>slf4ts documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">slf4ts documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content class">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Classes</li>
+  <li>DefaultLoggerInstance</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>packages/slf4ts-api/lib/slf4ts/LoggerFactory.ts</code>
+        </p>
+
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>The standard logger instance implementation.</p>
+
+            </p>
+
+
+            <p class="comment">
+                <h3>Implements</h3>
+            </p>
+            <p class="comment">
+                            <code><a href="../interfaces/ILoggerInstance.html" target="_self" >ILoggerInstance</a></code>
+            </p>
+
+            <p class="comment">
+                <h3>Example</h3>
+            </p>
+            <div class="io-description">
+            </div>
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#commonMetadata">commonMetadata</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Readonly</span>
+                                <a href="#group">group</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Readonly</span>
+                                <a href="#impl">impl</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#logLevel">logLevel</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Readonly</span>
+                                <a href="#name">name</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#debug">debug</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#error">error</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#getGroup">getGroup</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#getImpl">getImpl</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#getImplementation">getImplementation</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#getLogLevel">getLogLevel</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#getMetadata">getMetadata</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#getName">getName</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#info">info</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#log">log</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#setLogLevel">setLogLevel</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#setMetadata">setMetadata</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#trace">trace</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#warn">warn</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                                <span class="modifier">Public</span>
+                        <code>constructor(name: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, group: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, logLevel: <a href="../undefineds/LogLevel.html">LogLevel</a>, commonMetadata: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, impl: <a href="../interfaces/LoggerImplementation.html">LoggerImplementation</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="87" class="link-to-prism">packages/slf4ts-api/lib/slf4ts/LoggerFactory.ts:87</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Creates an instance of DefaultLoggerInstance.</p>
+</div>
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>name</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <code><p>The name of the logger instance.</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>group</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <code><p>The group of the logger instance.</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>logLevel</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../miscellaneous/enumerations.html#LogLevel" target="_self" >LogLevel</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <code><p>The initial log-level of the logger instance.</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>commonMetadata</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <code><p>The metadata added automatically to every log operation.</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>impl</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../interfaces/LoggerImplementation.html" target="_self" >LoggerImplementation</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <code><p>The underlying logger implementation.</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="commonMetadata"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            commonMetadata</b>
+                            <a href="#commonMetadata"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="86" class="link-to-prism">packages/slf4ts-api/lib/slf4ts/LoggerFactory.ts:86</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="group"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                                <span class="modifier">Readonly</span>
+                            group</b>
+                            <a href="#group"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="85" class="link-to-prism">packages/slf4ts-api/lib/slf4ts/LoggerFactory.ts:85</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="impl"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                                <span class="modifier">Readonly</span>
+                            impl</b>
+                            <a href="#impl"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../interfaces/LoggerImplementation.html" target="_self" >LoggerImplementation</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="83" class="link-to-prism">packages/slf4ts-api/lib/slf4ts/LoggerFactory.ts:83</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="logLevel"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            logLevel</b>
+                            <a href="#logLevel"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../miscellaneous/enumerations.html#LogLevel" target="_self" >LogLevel</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="87" class="link-to-prism">packages/slf4ts-api/lib/slf4ts/LoggerFactory.ts:87</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="name"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                                <span class="modifier">Readonly</span>
+                            name</b>
+                            <a href="#name"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="84" class="link-to-prism">packages/slf4ts-api/lib/slf4ts/LoggerFactory.ts:84</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="debug"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            <span class="modifier">Async</span>
+                            debug
+                        </b>
+                        <a href="#debug"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>debug(...args: any[])</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="156"
+                            class="link-to-prism">packages/slf4ts-api/lib/slf4ts/LoggerFactory.ts:156</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>args</td>
+                                    <td>
+                                            <code>any[]</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;any&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="error"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            <span class="modifier">Async</span>
+                            error
+                        </b>
+                        <a href="#error"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>error(...args: any[])</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="171"
+                            class="link-to-prism">packages/slf4ts-api/lib/slf4ts/LoggerFactory.ts:171</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>args</td>
+                                    <td>
+                                            <code>any[]</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;any&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getGroup"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            getGroup
+                        </b>
+                        <a href="#getGroup"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getGroup()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="128"
+                            class="link-to-prism">packages/slf4ts-api/lib/slf4ts/LoggerFactory.ts:128</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getImpl"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            getImpl
+                        </b>
+                        <a href="#getImpl"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getImpl()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="132"
+                            class="link-to-prism">packages/slf4ts-api/lib/slf4ts/LoggerFactory.ts:132</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../interfaces/LoggerImplementation.html" target="_self" >LoggerImplementation</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getImplementation"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            getImplementation
+                        </b>
+                        <a href="#getImplementation"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getImplementation()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="176"
+                            class="link-to-prism">packages/slf4ts-api/lib/slf4ts/LoggerFactory.ts:176</a></div>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Type parameters :</b>
+                    <ul class="type-parameters">
+                        <li>T</li>
+                    </ul>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>T</code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getLogLevel"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            getLogLevel
+                        </b>
+                        <a href="#getLogLevel"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getLogLevel()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="115"
+                            class="link-to-prism">packages/slf4ts-api/lib/slf4ts/LoggerFactory.ts:115</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../miscellaneous/enumerations.html#LogLevel" target="_self" >LogLevel</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getMetadata"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            getMetadata
+                        </b>
+                        <a href="#getMetadata"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getMetadata()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="136"
+                            class="link-to-prism">packages/slf4ts-api/lib/slf4ts/LoggerFactory.ts:136</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getName"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            getName
+                        </b>
+                        <a href="#getName"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getName()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="124"
+                            class="link-to-prism">packages/slf4ts-api/lib/slf4ts/LoggerFactory.ts:124</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="info"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            <span class="modifier">Async</span>
+                            info
+                        </b>
+                        <a href="#info"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>info(...args: any[])</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="161"
+                            class="link-to-prism">packages/slf4ts-api/lib/slf4ts/LoggerFactory.ts:161</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>args</td>
+                                    <td>
+                                            <code>any[]</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;any&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="log"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            <span class="modifier">Async</span>
+                            log
+                        </b>
+                        <a href="#log"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>log(logLevel: <a href="../undefineds/LogLevel.html">LogLevel</a>, ...args: any[])</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="180"
+                            class="link-to-prism">packages/slf4ts-api/lib/slf4ts/LoggerFactory.ts:180</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>logLevel</td>
+                                    <td>
+                                                <code><a href="../miscellaneous/enumerations.html#LogLevel" target="_self" >LogLevel</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>args</td>
+                                    <td>
+                                            <code>any[]</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;any&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="setLogLevel"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            setLogLevel
+                        </b>
+                        <a href="#setLogLevel"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>setLogLevel(logLevel: <a href="../undefineds/LogLevel.html">LogLevel</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="119"
+                            class="link-to-prism">packages/slf4ts-api/lib/slf4ts/LoggerFactory.ts:119</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>logLevel</td>
+                                    <td>
+                                                <code><a href="../miscellaneous/enumerations.html#LogLevel" target="_self" >LogLevel</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="setMetadata"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            setMetadata
+                        </b>
+                        <a href="#setMetadata"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>setMetadata(commonMetadata: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="146"
+                            class="link-to-prism">packages/slf4ts-api/lib/slf4ts/LoggerFactory.ts:146</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Sets the metadata object that is gonna be assigned to every future invocation of any log method.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>commonMetadata</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>a metadata object - can be undefined or null.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="trace"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            <span class="modifier">Async</span>
+                            trace
+                        </b>
+                        <a href="#trace"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>trace(...args: any[])</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="151"
+                            class="link-to-prism">packages/slf4ts-api/lib/slf4ts/LoggerFactory.ts:151</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>args</td>
+                                    <td>
+                                            <code>any[]</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;any&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="warn"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            <span class="modifier">Async</span>
+                            warn
+                        </b>
+                        <a href="#warn"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>warn(...args: any[])</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="166"
+                            class="link-to-prism">packages/slf4ts-api/lib/slf4ts/LoggerFactory.ts:166</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>args</td>
+                                    <td>
+                                            <code>any[]</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;any&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+
+
+
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import &#x27;source-map-support/register&#x27;
+
+import { LoggerBindings, LoggerImplementation } from &#x27;./LoggerBindings&#x27;
+import { LoggerConfiguration, LogLevel } from &#x27;./LoggerConfiguration&#x27;
+
+/**
+ * Interface representing a logger instance.
+ *
+ * @export
+ * @interface ILoggerInstance
+ */
+export interface ILoggerInstance {
+  /**
+     * Logs the given message using TRACE log-level.
+     *
+     * @param {...args: any[]} [args] messages, metadata and errors to log.
+     * @returns {Promise&lt;any&gt;} A promise completing when the logging-implementation processed the log statement.
+     * @memberof ILoggerInstance
+     */
+  trace(...args: any[]): Promise&lt;any&gt;
+  /**
+     * Logs the given message using DEBUG log-level.
+     *
+     * @param {...args: any[]} [args] messages, metadata and errors to log.
+     * @returns {Promise&lt;any&gt;} A promise completing when the logging-implementation processed the log statement.
+     * @memberof ILoggerInstance
+     */
+  debug(...args: any[]): Promise&lt;any&gt;
+  /**
+     * Logs the given message using INFO log-level.
+     *
+     * @param {...args: any[]} [args] messages, metadata and errors to log.
+     * @returns {Promise&lt;any&gt;} A promise completing when the logging-implementation processed the log statement.
+     * @memberof ILoggerInstance
+     */
+  info(...args: any[]): Promise&lt;any&gt;
+  /**
+     * Logs the given message using WARN log-level.
+     *
+     * @param {...args: any[]} [args] messages, metadata and errors to log.
+     * @returns {Promise&lt;any&gt;} A promise completing when the logging-implementation processed the log statement.
+     * @memberof ILoggerInstance
+     */
+  warn(...args: any[]): Promise&lt;any&gt;
+  /**
+     * Logs the given message using ERROR log-level.
+     *
+     * @param {...args: any[]} [args] messages, metadata and errors to log.
+     * @returns {Promise&lt;any&gt;} A promise completing when the logging-implementation processed the log statement.
+     * @memberof ILoggerInstance
+     */
+  error(...args: any[]): Promise&lt;any&gt;
+  /**
+     * Gets the current log-level.
+     *
+     * @returns {LogLevel} The log-level.
+     * @memberof ILoggerInstance
+     */
+  getLogLevel(): LogLevel
+  /**
+     * Sets the metadata assigned to every future invocation of any of the log-methods.
+     *
+     * @param {*} metadata metadata object - can be undefined or null.
+     * @memberof ILoggerInstance
+     */
+  setMetadata(metadata: any): void
+  /**
+     * Gets the underlying implementation of the logger.
+     *
+     * @memberof ILoggerInstance
+     */
+  getImplementation&lt;T&gt;(): T
+}
+
+/**
+ * The standard logger instance implementation.
+ *
+ * @export
+ * @class DefaultLoggerInstance
+ * @implements {ILoggerInstance}
+ */
+export class DefaultLoggerInstance implements ILoggerInstance {
+  private readonly impl: LoggerImplementation;
+  private readonly name: string;
+  private readonly group: string;
+  private commonMetadata: any;
+  private logLevel: LogLevel;
+
+  /**
+     * Creates an instance of DefaultLoggerInstance.
+     *
+     * @param {string} name The name of the logger instance.
+     * @param {string} group The group of the logger instance.
+     * @param {LogLevel} logLevel The initial log-level of the logger instance.
+     * @param {commonMetadata} commonMetadata The metadata added automatically to every log operation.
+     * @param {LoggerImplementation} impl The underlying logger implementation.
+     * @memberof DefaultLoggerInstance
+     */
+  public constructor (
+    name: string,
+    group: string,
+    logLevel: LogLevel,
+    commonMetadata: any,
+    impl: LoggerImplementation) {
+    this.impl &#x3D; impl
+    this.name &#x3D; name
+    this.group &#x3D; group
+    this.logLevel &#x3D; logLevel
+    this.commonMetadata &#x3D; commonMetadata
+
+    const initialConfig &#x3D; LoggerConfiguration.getConfig(group, name)
+    this.impl.setConfig(initialConfig, group, name)
+  }
+
+  public getLogLevel (): LogLevel {
+    return this.logLevel
+  }
+
+  public setLogLevel (logLevel: LogLevel): void {
+    this.logLevel &#x3D; logLevel
+    this.impl.setLogLevel(logLevel, this.group, this.name)
+  }
+
+  public getName (): string {
+    return this.name
+  }
+
+  public getGroup (): string {
+    return this.group
+  }
+
+  public getImpl (): LoggerImplementation {
+    return this.impl
+  }
+
+  public getMetadata (): any {
+    return this.commonMetadata
+  }
+
+  /**
+     * Sets the metadata object that is gonna be assigned to every future invocation of any log method.
+     *
+     * @param {*} commonMetadata a metadata object - can be undefined or null.
+     * @memberof DefaultLoggerInstance
+     */
+  public setMetadata (commonMetadata: any): void {
+    this.commonMetadata &#x3D; commonMetadata
+    this.impl.setMetadata(commonMetadata, this.group, this.name)
+  }
+
+  public async trace (...args: any[]): Promise&lt;any&gt; {
+    const metadata &#x3D; [LogLevel.TRACE, this.group, this.name].concat(...arguments).concat(this.commonMetadata)
+    return this.log.apply(this, metadata)
+  }
+
+  public async debug (...args: any[]): Promise&lt;any&gt; {
+    const metadata &#x3D; [LogLevel.DEBUG, this.group, this.name].concat(...arguments).concat(this.commonMetadata)
+    return this.log.apply(this, metadata)
+  }
+
+  public async info (...args: any[]): Promise&lt;any&gt; {
+    const metadata &#x3D; [LogLevel.INFO, this.group, this.name].concat(...arguments).concat(this.commonMetadata)
+    return this.log.apply(this, metadata)
+  }
+
+  public async warn (...args: any[]): Promise&lt;any&gt; {
+    const metadata &#x3D; [LogLevel.WARN, this.group, this.name].concat(...arguments).concat(this.commonMetadata)
+    return this.log.apply(this, metadata)
+  }
+
+  public async error (...args: any[]): Promise&lt;any&gt; {
+    const metadata &#x3D; [LogLevel.ERROR, this.group, this.name].concat(...arguments).concat(this.commonMetadata)
+    return this.log.apply(this, metadata)
+  }
+
+  public getImplementation&lt;T&gt;(): T {
+    return this.impl.getImplementation&lt;T&gt;(this.group, this.name)
+  }
+
+  private async log (logLevel: LogLevel, ...args: any[]): Promise&lt;any&gt; {
+    if (logLevel &lt;&#x3D; this.logLevel) {
+      return this.impl.log.apply(this.impl, arguments)
+    }
+  }
+}
+
+/**
+ * Default/ Dummy logger implementation - does nothing.
+ *
+ * @class NullLoggerImplementation
+ * @implements {LoggerImplementation}
+ */
+class NullLoggerImplementation implements LoggerImplementation {
+  public async log (...args: any[]): Promise&lt;any&gt; {
+    return null
+  }
+
+  public getImplementation&lt;T&gt;(group: string, name: string): T {
+    return null
+  }
+
+  public setConfig&lt;T&gt;(config: T, group: string, name: string): void {
+    // nothing
+  }
+
+  public setLogLevel (logLevel: LogLevel, group: string, name: string): void {
+    // nothing
+  }
+
+  public setMetadata (metadata: any, group: string, name: string): void {
+    // nothing
+  }
+}
+
+/**
+ * Used to instance an cache logger instances.
+ *
+ * @export
+ * @class LoggerFactory
+ */
+export class LoggerFactory {
+  /**
+     * Gets a logger from cache or instances a new logger instance with the given group and name.
+     *
+     * @static
+     * @param {string} [group&#x3D;&quot;&quot;] The group of the logger instance
+     * @param {string} [name&#x3D;&quot;&quot;] The name of the logger instance.
+     * @returns {ILoggerInstance}
+     * @memberof LoggerFactory
+     */
+  public static getLogger (group &#x3D; &#x27;&#x27;, name &#x3D; &#x27;&#x27;): ILoggerInstance {
+    if (!LoggerFactory.INITIALIZED) {
+      LoggerFactory.INITIALIZED &#x3D; true
+      LoggerFactory.initialize()
+    }
+
+    const compoundKey &#x3D; &#x60;${group}:${name}&#x60;
+    if (LoggerFactory.LOGGER_INSTANCE_CACHE.has(compoundKey)) {
+      return LoggerFactory.LOGGER_INSTANCE_CACHE.get(compoundKey)
+    }
+
+    const instance &#x3D; new DefaultLoggerInstance(
+      name,
+      group,
+      LoggerConfiguration.getLogLevel(group, name),
+      LoggerFactory.COMMON_METADATA,
+      LoggerFactory.LOGGER)
+    LoggerFactory.LOGGER_INSTANCE_CACHE.set(compoundKey, instance)
+    return instance
+  }
+
+  /**
+     * Clears the logger cache and conditionally resets the logger implementation.
+     *
+     * @static
+     * @param [reinit] Causes the logger implementation to re-instantiate the logger binding if set to true.
+     * @memberof LoggerFactory
+     */
+  public static reset (reinit &#x3D; false): void {
+    LoggerFactory.LOGGER_INSTANCE_CACHE.clear()
+    if (reinit) {
+      LoggerFactory.INITIALIZED &#x3D; false
+    }
+  }
+
+  /**
+     * Gets the application-wide metadata object.
+     *
+     * @static
+     * @memberof LoggerFactory
+     */
+  public static getMetadata (): any {
+    return LoggerFactory.COMMON_METADATA
+  }
+
+  /**
+     * Sets the application-wide metadata object for logger instances.
+     *
+     * Every new logger will get the application-wide metadata object set.
+     *
+     * Every logger instance that sets it&#x27;s own metadata object will be excluded from
+     * future updates of the application-wide metadata object.
+     *
+     * Note that this object is shared. Any changes to it will affect all logger instances
+     * using it.
+     *
+     * @static
+     * @param {*} metadata a metadata object - can be undefined or null.
+     * @memberof LoggerFactory
+     */
+  public static setMetadata (metadata: any): void {
+    const formerData &#x3D; LoggerFactory.COMMON_METADATA
+    LoggerFactory.COMMON_METADATA &#x3D; metadata
+    LoggerFactory.LOGGER_INSTANCE_CACHE.forEach((logger, compoundKey) &#x3D;&gt; {
+      if (logger.getMetadata() &#x3D;&#x3D;&#x3D; formerData) {
+        logger.setMetadata(LoggerFactory.COMMON_METADATA)
+      }
+    })
+  }
+
+  private static COMMON_METADATA: any &#x3D; undefined;
+  private static LOGGER: LoggerImplementation &#x3D; new NullLoggerImplementation();
+  private static ROOT_LOGGER: DefaultLoggerInstance;
+  private static INITIALIZED: boolean &#x3D; false;
+  private static readonly LOGGER_INSTANCE_CACHE: Map&lt;string, DefaultLoggerInstance&gt; &#x3D; new Map();
+
+  private static initialize (): void {
+    const BINDINGS &#x3D; new LoggerBindings().getBindings()
+    const BINDING &#x3D; BINDINGS[0]
+    if (BINDINGS.length &#x3D;&#x3D;&#x3D; 0) {
+      console.log(&#x27;SLF4TS: No Logger Binding found&#x27;)
+      return
+    }
+    LoggerFactory.LOGGER &#x3D; BINDING.getLoggerImplementation()
+    LoggerFactory.ROOT_LOGGER &#x3D; LoggerFactory.getLogger() as DefaultLoggerInstance
+
+    if (BINDINGS.length &gt; 1) {
+      let message &#x3D; &#x27;multiple bindings found:&#x27;
+      BINDINGS.forEach((binding) &#x3D;&gt; {
+        message +&#x3D; &#x60;\n  ${binding.getVendor()} - ${binding.getVersion()}&#x60;
+      })
+      message +&#x3D; &#x60;\n  using ${BINDING.getVendor()} - ${BINDING.getVersion()}&#x60;
+      LoggerFactory.ROOT_LOGGER.info(message)
+        .catch(console.error)
+    }
+
+    LoggerConfiguration.onLogLevelChanged(LoggerFactory.logLevelChanged)
+    LoggerConfiguration.onConfigChanged(LoggerFactory.configChanged)
+  }
+
+  private static logLevelChanged (event: any): void {
+    const groupEmpty &#x3D; event.group &#x3D;&#x3D;&#x3D; &#x27;&#x27;
+    const nameEmpty &#x3D; event.name &#x3D;&#x3D;&#x3D; &#x27;&#x27;
+    LoggerFactory.LOGGER_INSTANCE_CACHE.forEach((logger, compoundKey) &#x3D;&gt; {
+      const groupMatches &#x3D; logger.getGroup() &#x3D;&#x3D;&#x3D; event.group
+      const nameMatches &#x3D; logger.getName() &#x3D;&#x3D;&#x3D; event.name
+      if ((groupEmpty &amp;&amp; nameEmpty) || (groupMatches &amp;&amp; nameEmpty) || (groupMatches &amp;&amp; nameMatches)) {
+        logger.setLogLevel(event.logLevel)
+      }
+    })
+  }
+
+  private static configChanged (event: any): void {
+    const groupEmpty &#x3D; event.group &#x3D;&#x3D;&#x3D; &#x27;&#x27;
+    const nameEmpty &#x3D; event.name &#x3D;&#x3D;&#x3D; &#x27;&#x27;
+
+    LoggerFactory.LOGGER_INSTANCE_CACHE.forEach((logger, compoundKey) &#x3D;&gt; {
+      const hasNameConfig &#x3D; LoggerConfiguration.hasConfig(logger.getGroup(), logger.getName())
+      const hasGroupConfig &#x3D; LoggerConfiguration.hasConfig(logger.getGroup())
+      const groupMatches &#x3D; logger.getGroup() &#x3D;&#x3D;&#x3D; event.group
+      const nameMatches &#x3D; logger.getName() &#x3D;&#x3D;&#x3D; event.name
+
+      if ((groupEmpty &amp;&amp; nameEmpty &amp;&amp; !hasGroupConfig &amp;&amp; !hasNameConfig) ||
+                (nameEmpty &amp;&amp; groupMatches &amp;&amp; !hasNameConfig) ||
+                (groupMatches &amp;&amp; nameMatches)) {
+        logger.getImpl().setConfig(event.config, logger.getGroup(), logger.getName())
+      }
+    })
+  }
+}
+</code></pre>
+    </div>
+</div>
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'class';
+            var COMPODOC_CURRENT_PAGE_URL = 'DefaultLoggerInstance.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
