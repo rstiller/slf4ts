@@ -26,6 +26,7 @@ This is the mono-repository for the `slf4ts` modules.
 
 init / update project (if a new dependency is introduced or an existing is updated):  
 
+    npm i -g pnpm
     pnpm i
 
 generate dependency report:  
@@ -38,6 +39,16 @@ release packages / publish docs:
     # check functionality
     pnpm i
     pnpm run build
+
+    # public packages
+    # change version in every dependent package
+    pnpm i
+    pnpm publish --filter slf4ts-api
+    git add .
+    git commit -m "publish version x.y.z of slf4ts-api"
+    git tag slf4ts-api@x.y.z
+    git push
+    git push origin slf4ts-api@x.y.z
 
     # publish docs
     rm -fr docs/
