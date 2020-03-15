@@ -117,7 +117,7 @@
           "typings",
           "version"
         ],
-        "sha512": "d7004be7817d8702a7507b4468fffcd3c90841f34017d4ea1b15baa9dc2f7f1e7c93aa664ec7db9398cc6f3bd5988b4ede7525c63b95f11c0ca3b9f321cb54fa"
+        "sha512": "ed0be25d168ad0a565edf16131945c1adfa868735704c79ed6cabb169c2924e258e34f692a4bcef04e4c0eb85424443aadf45a7a6804628fcb3654b8a5f4a3cc"
       }
     },
     {
@@ -127,7 +127,7 @@
           "name": "slf4ts-api",
           "description": "Simple logging facade for nodejs",
           "homepage": "https://github.com/rstiller/slf4ts",
-          "version": "1.2.4",
+          "version": "1.3.0",
           "main": "./build/packages/slf4ts-api/lib/slf4ts/index.js",
           "typings": "./build/packages/slf4ts-api/lib/slf4ts/index.d.ts",
           "license": "MIT",
@@ -155,15 +155,15 @@
             "@types/chai": "^4.2.10",
             "@types/mocha": "^7.0.2",
             "@types/node": "^13.7.7",
-            "@typescript-eslint/parser": "2.23.0",
             "@typescript-eslint/eslint-plugin": "2.23.0",
+            "@typescript-eslint/parser": "2.23.0",
             "chai": "^4.2.0",
             "eslint": "6.8.0",
             "eslint-config-standard-with-typescript": "14.0.0",
-            "eslint-plugin-standard": "4.0.1",
-            "eslint-plugin-promise": "4.2.1",
             "eslint-plugin-import": "2.20.1",
             "eslint-plugin-node": "11.0.0",
+            "eslint-plugin-promise": "4.2.1",
+            "eslint-plugin-standard": "4.0.1",
             "mocha": "^7.1.0",
             "mocha-typescript": "^1.1.17",
             "pkgsign": "^0.2.0",
@@ -202,5 +202,5 @@
       }
     }
   ],
-  "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJebjjRCRDCMfXrQKYV5wAAoXQQABizEk+Y56TzSO82GHmoz7zn\nySkiDHq89f37TeEvU3SqagttC1sIAg1sk9hCtO4AMCx1kik5M9Ccfe1E8Qr7J+yN\nl3KNN4E20XCnRpWy12RgtVQuiJnONARDUW7u72hGN5Bjeq5gRfaH+dTd/Mez5F+b\n+4MOWH/DRZtP96y81b2hwsb7WatquRCaX0ru8UHrizWzGn8zkQ/Bjz0Ued8+JG5e\nO3JVJa7B9ZIU5bwVWwN8byFEqwxyy/k6MxGWC7tR+ugQS+uRnvoGUVmB/m3wQuqN\nON/l7riF09pZ12shTLk9bK582574El+4PbRTIJsuvB6IzTzyI5DtLVWnuo4XWYxW\ny3RuI/gnB+0pl3zWS7931/p1oVcBgZqH2guBnjuQm+ATk/3cl4srTelbqLQdafLX\n8HeKWA4NLDXZ7Wo0kJKo2SRPEvGB1vY4q3KXLcQGsMiiWa0vwwLEKoolXvYYi85h\n/wQpUepWZEpdtMxBA4cqAVGJg59fU/ZW8WNk/C/GVWwzjQK7wipkj/pnTKZSFciK\nnmR0jQq2wHhwnQLK5co0pUt4qI/RIPqZiJMysMDlnhQ+JQdv+bt2pSsKysgWmven\nDkux8joPmfGNwlNNv6cHUjGYH/+CZuRmjOEur8Q6SkYooWkV9oC093LCty0ZABhl\ncLqh+dLwA+sjBIPFT85E\n=+v8w\n-----END PGP SIGNATURE-----\n"
+  "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJebkNVCRDCMfXrQKYV5wAAgJYQAExUezO442XwXtNu0+SR6WbP\nTsHMUawKAv9Y17YucJRTydyGwTTojpw3HpXG145epv3PiGAT4CEv1WW5loVhyX0V\nof5VB+If9eAm9IX/1rww1vB1OqZBs+bjex4WZqO1L8Odb9eh/Ha3kDoYxHtFiJef\nl3jJ/omgHRV5v5CiX1TGUoowh547aiFlVDLRNdiYjnfDJlmQWPMA9FEC46BNNV1A\n3y6vtiesvaJnnJtXWeV5R+YyGP8KVbO/vlIzQ/vRRV81FZF0OnKRVDkzlAozC0Nd\n2zFdStbum4qNyqTHqxgweaw6GKF+17cgGw4Qa9g5nQ9r370O86zuJ2BeZ/mBrefN\nsSEQmy3gZSjf4kMF+bRyZqbl1Krwd7sxlnqIPRX5Fxkfsl7p/3m4FZL6tM2uAWot\n+OcW8PuGwZ4RSy0WDwGC16x4s4J15ThlVCt3bvXSMgko0xqrJU4njrJ985GLLDg8\nFAA/si6YWwFQWPYMVOtiRw5lKP0Lpz1XrneyAP46I2NT1MiOYLFnxFmunbInn70D\n1DdvmdBB9xVwNci6rwiZgZrwCBslZBiXFVo2Qk+iZPMUVE4uiV/xUiBnbW4TlLiG\neNAqtgPFv8s22aZpPwn8IvzxCnPR9U6Qgn0a0drc1OTCFGvP4IttiIym4BOgbL/K\ntw28PLNCY+TFIrbkYdCY\n=j0/C\n-----END PGP SIGNATURE-----\n"
 }

@@ -26,7 +26,7 @@
     "winston": ">=3.0.0"
   },
   "dependencies": {
-    "slf4ts-api": "^1.2.4",
+    "slf4ts-api": "^1.3.0",
     "source-map-support": "^0.5.16",
     "winston": "^3.2.1"
   },
