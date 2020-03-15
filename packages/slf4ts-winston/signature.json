@@ -109,7 +109,7 @@
           "typings",
           "version"
         ],
-        "sha512": "2bc78d63c57fccee3e20b482b80fdc709b3ff395fa62889e5ce5cfdd6dd4766f957ae1b63bd5c7f9d39c07d17a2c61761d537c3f7d775d23c438fed0b91abe02"
+        "sha512": "be0ec0b40a403ee2e662ee7a1ad6e55a5833944fe7c64dba537d3ce747b895a3377eb5d3e8a49fbb3045a8a844d16fa0e39d4ebfbed5f5b8f5c727989c622e62"
       }
     },
     {
@@ -119,7 +119,7 @@
           "name": "slf4ts-winston",
           "description": "Winston logging-binding for slf4ts-api",
           "homepage": "https://github.com/rstiller/slf4ts",
-          "version": "1.1.5",
+          "version": "1.2.0",
           "main": "./build/packages/slf4ts-winston/lib/slf4ts/index.js",
           "typings": "./build/packages/slf4ts-winston/lib/slf4ts/index.d.ts",
           "license": "MIT",
@@ -152,16 +152,16 @@
             "@types/chai-string": "^1.4.2",
             "@types/mocha": "^7.0.2",
             "@types/node": "^13.7.7",
-            "@typescript-eslint/parser": "2.23.0",
             "@typescript-eslint/eslint-plugin": "2.23.0",
+            "@typescript-eslint/parser": "2.23.0",
             "chai": "^4.2.0",
             "chai-string": "^1.5.0",
             "eslint": "6.8.0",
             "eslint-config-standard-with-typescript": "14.0.0",
-            "eslint-plugin-standard": "4.0.1",
-            "eslint-plugin-promise": "4.2.1",
             "eslint-plugin-import": "2.20.1",
             "eslint-plugin-node": "11.0.0",
+            "eslint-plugin-promise": "4.2.1",
+            "eslint-plugin-standard": "4.0.1",
             "mocha": "^7.1.0",
             "mocha-typescript": "^1.1.17",
             "nyc": "^15.0.0",
@@ -203,5 +203,5 @@
       }
     }
   ],
-  "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJebkTWCRDCMfXrQKYV5wAArRwQAK6SqzSoIzewhRm2VJC7b1Ji\nOrZtAtnOKwb08/I4SBzkytE+fJKcfsam9INRPWO5Jx2V6sHpaKEM/jMA17vN0wE9\n4ziclqXvSR2G1OYbXvIBPQ20Hst/5embsERa/+kcZfX8/LLv+O+vdz74/v9MFEHr\nRwJC5VQMWLTzVOK+xHC2dtuHF2zK17+EuN00NNi+IT7ROg+M9LBY9OKjaRh3nfNm\nPkXarj64DYLAgXqnUzcj4TaKaoObyGvtmlj4M2+4MQxkcbMcNokJunmV+E/4RiQ8\nGRnXb+vyJtTlGGAGd4wnN4MTqFMsh12xBb1/40wdJGp/dHnCx9zWBcq/VEcoLWuM\nBICX81lLgiAoZZc0K8Z3GjYmvngMYAam/5UAWwbyyxV1MdRvDSNjQgEywbcjQy8H\n1L6takgJgFFLuCnC0akFWvPw4Ru58bMkn9MywZD1gwYfvJlvklbaq2LmF7cfBioF\nc3eUvvJ2EMhhEWzAM/m8bw1qkkxTQwQFoLTYnX/PlQYI4dH/1jdp2baC1pH74wP0\nbZopJHWQDKlYNfkZLMTyOVCP45qWHASkshBa6lzJ0YH7nmREauQ4wCz1D01U2yhD\nTFDKsS6HZ+sJupuaid39SGtr1hbO6UFc+3s0VadpQMkNsI+3jNmvIyql0toYRXU/\n6QYSTAdsoopl0BwS2STq\n=8J3k\n-----END PGP SIGNATURE-----\n"
+  "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJebkVICRDCMfXrQKYV5wAAgksQABUT4DgmP8OIl54vM1EiSple\nMcGNZiCvz42230geiOBSia40bvGCISyMRxzokDbxj3aNHkuDYzWhIUQFPPqh9Abg\nqPxxWuLTrYeLx7llNk1p25ApMMlqJ3wI97aIqe0E/S5kkQTxzLsDICS3SiXv+5jq\nPtKjb1d78vYaiwYyIiMXPZAqom1G602vQN8lvFTzBUbtP8+AV2xWHrp/rYIobwD2\nDWRlsaMVgeLHvF0Vl0QtsJLWibFxqpAX9kSF6du/aS1RrZ5GsXXTOvPLplgE5baI\nO0PEL/J5yP4jXHhltgsCzwEWuyJwyI5BkceIjzucDEXH3G8UmHIdkQG4limhBj10\nPVSGxWtOJIjHQju8DsaUZAni+4nCFubCZS6nPwmddrkWirT/jbgB7c8O/Wvllc0m\neuDEqJCrWjAngtaorSeh11nr7quqDBUECuZiG+UUq4v+0Y6YSO2nNeG5pFK0qFK9\nP+Ev7hRzcQaGHKcsJML9kdGEFJRcl7I6t8bsKRUcj8BCoRe6NBMil5EfDbEitwxO\nyMCUDg/92xu7tIsWpA7cLJFhsidSEUvCmWfgknT3rf6XQfJ5I22Cdnad1XQp0cGJ\npdjqByzhlGYXnmcsQ8dUZa3v6DrPFtfoPzFhiUtoUzow8oZNS+1nRXA4v8YR9131\nSiwXFGfrJhArfn/iwXqD\n=nL5b\n-----END PGP SIGNATURE-----\n"
 }
