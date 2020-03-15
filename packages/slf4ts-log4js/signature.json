@@ -139,29 +139,29 @@
             "log4js"
           ],
           "peerDependencies": {
-            "slf4ts-api": ">=1.1.3",
-            "log4js": ">=6.0.0"
+            "log4js": ">=6.0.0",
+            "slf4ts-api": ">=1.1.3"
           },
           "dependencies": {
+            "log4js": "^6.1.2",
             "slf4ts-api": "^1.3.0",
-            "source-map-support": "^0.5.16",
-            "log4js": "^6.1.2"
+            "source-map-support": "^0.5.16"
           },
           "devDependencies": {
             "@types/chai": "^4.2.10",
             "@types/chai-string": "^1.4.2",
             "@types/mocha": "^7.0.2",
             "@types/node": "^13.7.7",
-            "@typescript-eslint/parser": "2.23.0",
             "@typescript-eslint/eslint-plugin": "2.23.0",
+            "@typescript-eslint/parser": "2.23.0",
             "chai": "^4.2.0",
             "chai-string": "^1.5.0",
             "eslint": "6.8.0",
             "eslint-config-standard-with-typescript": "14.0.0",
-            "eslint-plugin-standard": "4.0.1",
-            "eslint-plugin-promise": "4.2.1",
             "eslint-plugin-import": "2.20.1",
             "eslint-plugin-node": "11.0.0",
+            "eslint-plugin-promise": "4.2.1",
+            "eslint-plugin-standard": "4.0.1",
             "mocha": "^7.1.0",
             "mocha-typescript": "^1.1.17",
             "nyc": "^15.0.0",
@@ -202,5 +202,5 @@
       }
     }
   ],
-  "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJebkRwCRDCMfXrQKYV5wAAzkkQAARbAZg/37QD+V8WBjoRUUln\ngnRJ6g9GZnFByTmVeIYhVXhdpC5ky2K0H7lkjuOUV/qOqAWdwh14nIo+gBrlJ8OO\nnYzgif/0BEOlAg7YMFfQg96UMK5/URaf7fVlGZt0fKH97XJUrNXT1x1EZYXy9+BD\npbNdPPF5Vkk8BEXjYGf1eN2O/1hsHtGV0efGRCw1wpApfLPTfWjL0Y+CIVWTY6Ij\nJmp/jCHiCDd+/20fc7KRwlzqmsPy30B7OQOxiqqsSaNQrEHxYlbybLWLeAr4AInu\n6Nry5URx7aH5Ucb/5roAZX4JKq9x/LyKrYhFp8muMFKDMvUyt1lTXN1w/EsIUHRw\ngg7AKcVYU71RsPOK/G87mU2fNinjJJASauFAe6UX//8LUlCaspe4hFepkcIcoDvR\nJzQK4zwrMVEHhILUV5dNay1iivlZsQWQZ3M6tFprIl7cCwo/x24FEOhsC9x0Y/pH\nHwM3wvdoo3WwekU9SL8K+9T2RZ7Qse/ewx1P3ZhAZJ8Y/vtUBun0swv1EqGEJWod\nK03Sr8pnuNK6JQ5HQ4y/IBQ8mjA6/mumnepsPd5jQYY8dWf7Fg9zcCY0gewLCRPS\ncmmdXza8nNIJgAqlTW4ktT0B/9dOd7nsaCmOr+1RPCK5RMAd5/ZF/en03BD8yWw/\nRkndmaP1bTSPwJq8kUUs\n=vsq5\n-----END PGP SIGNATURE-----\n"
+  "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJebkTWCRDCMfXrQKYV5wAAxScQAIXNOzE37WvNqD2YpRrWxKC8\n/HNMyHrqqLYr9y8yVMDnRJHmQ9lg2cgaIzD8K7ycSUf1RC57GKn0e8CFUNLSu0z9\naxJrZLelaVHaHjQT1op4oJaFdwRJzlBWwQbe8WkfeR5Y2ffSXxRfIfSwv/w7T0i0\nJ90htb4wW5n3zMwYUZKHsERSnZsbYN1AEIQ/EWVGPYl30Z7RiV5KUtv74+fhFYMd\n8/a2HM9WT4G8tABk6lVkIfOND3otxquuflodr3tRIHg4q9vhRGkdG1+fmEaeaQS0\nXeUD+22GO8qnyrBO1CLxgA85QOFGlCDFoyv4t3DQT2FHkANOf1qeNFOLknZv25az\nsoEiwNqVMF7xEEkGgIMwMnj8IoCmkYFEU52hiABZanhu3hX3/n6+TlevB9CLotI6\nbJZzy7TfEYEZx1rRdvCCnUuSN8VuJDnkNiQJELTg3YH/k/ePWH021pVooRp8x/Us\naXIsAD1sTMOr9fZNNj3uNLimnLj0a+Vz6cmfBux+TDCOTC+w+R1f7r17dc17AMhL\nvNK99SvVsnxatA8MIVahK4QQnYRrbq7HfyBOZcYRMpZhOwwpeoZmr5QuAaTRpuwB\nWusosBEL9iUcNOe01dCPiQ+fM3F0/0kVVlCaef8o3EI5cY1fqj263zlOv+R0k1n5\n/691+Ul/7g/WgnRGQtub\n=/cA5\n-----END PGP SIGNATURE-----\n"
 }
