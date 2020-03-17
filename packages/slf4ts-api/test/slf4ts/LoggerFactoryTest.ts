@@ -29,7 +29,7 @@ export class LoggerFactoryTest {
   @test
   public checkRootLogger (): void {
     const logger = LoggerFactory.getLogger()
-    const loggerImpl = (logger as DefaultLoggerInstance).getImpl() as any
+    const loggerImpl = (logger as DefaultLoggerInstance<any, any[]>).getImpl() as any
     logger.setMetadata({ mode: 'Test' })
 
     expect(loggerImpl).to.exist
@@ -90,7 +90,7 @@ export class LoggerFactoryTest {
     const name1 = 'name1'
     const name2 = 'name2'
     const rootLogger = LoggerFactory.getLogger()
-    const loggerImpl = (rootLogger as DefaultLoggerInstance).getImpl() as any
+    const loggerImpl = (rootLogger as DefaultLoggerInstance<any, any[]>).getImpl() as any
     const groupLogger = LoggerFactory.getLogger(group)
     const namedLogger1 = LoggerFactory.getLogger(group, name1)
     const namedLogger2 = LoggerFactory.getLogger(group, name2)
@@ -134,7 +134,7 @@ export class LoggerFactoryTest {
   @test
   public checkCorrectLogLevelInvocations (): void {
     const logger = LoggerFactory.getLogger('group1', 'name1')
-    const loggerImpl = (logger as DefaultLoggerInstance).getImpl() as any
+    const loggerImpl = (logger as DefaultLoggerInstance<any, any[]>).getImpl() as any
     logger.setMetadata({ mode: 'Test' })
 
     expect(loggerImpl).to.exist
@@ -174,7 +174,7 @@ export class LoggerFactoryTest {
   @test
   public checkMetadataArguments (): void {
     const logger = LoggerFactory.getLogger('group1', 'name1')
-    const loggerImpl = (logger as DefaultLoggerInstance).getImpl() as any
+    const loggerImpl = (logger as DefaultLoggerInstance<any, any[]>).getImpl() as any
 
     logger.info('Test Message 1')
       .catch(fail)
@@ -239,7 +239,7 @@ export class LoggerFactoryTest {
     const name1 = 'name1'
     const name2 = 'name2'
     const rootLogger = LoggerFactory.getLogger()
-    const loggerImpl = (rootLogger as DefaultLoggerInstance).getImpl() as any
+    const loggerImpl = (rootLogger as DefaultLoggerInstance<any, any[]>).getImpl() as any
 
     LoggerFactory.getLogger(group)
     LoggerFactory.getLogger(group, name1)
@@ -317,7 +317,7 @@ export class LoggerFactoryTest {
     const name1 = 'name1'
     const name2 = 'name2'
     const rootLogger = LoggerFactory.getLogger()
-    const loggerImpl = (rootLogger as DefaultLoggerInstance).getImpl() as any
+    const loggerImpl = (rootLogger as DefaultLoggerInstance<any, any[]>).getImpl() as any
 
     LoggerFactory.getLogger(group)
     LoggerFactory.getLogger(group, name1)
@@ -380,7 +380,7 @@ export class LoggerFactoryTest {
   @test
   public checkSetMetadataOnLoggerFactory (): void {
     const logger = LoggerFactory.getLogger()
-    const loggerImpl = (logger as DefaultLoggerInstance).getImpl() as any
+    const loggerImpl = (logger as DefaultLoggerInstance<any, any[]>).getImpl() as any
 
     logger.info('Test Message 1')
       .catch(fail)
@@ -433,11 +433,11 @@ export class LoggerFactoryTest {
     const groupLogger = LoggerFactory.getLogger(group)
     const namedLogger1 = LoggerFactory.getLogger(group, name1)
     const namedLogger2 = LoggerFactory.getLogger(group, name2)
-    const loggerImpl = (rootLogger as DefaultLoggerInstance).getImpl() as any
-    const defaultLogger = rootLogger as DefaultLoggerInstance
-    const defaultGroupLogger = groupLogger as DefaultLoggerInstance
-    const defaultNamedLogger1 = namedLogger1 as DefaultLoggerInstance
-    const defaultNamedLogger2 = namedLogger2 as DefaultLoggerInstance
+    const loggerImpl = (rootLogger as DefaultLoggerInstance<any, any[]>).getImpl() as any
+    const defaultLogger = rootLogger as DefaultLoggerInstance<any, any[]>
+    const defaultGroupLogger = groupLogger as DefaultLoggerInstance<any, any[]>
+    const defaultNamedLogger1 = namedLogger1 as DefaultLoggerInstance<any, any[]>
+    const defaultNamedLogger2 = namedLogger2 as DefaultLoggerInstance<any, any[]>
     const rootMetadata = {
       key1: 'value1'
     }

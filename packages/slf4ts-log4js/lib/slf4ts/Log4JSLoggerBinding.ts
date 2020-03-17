@@ -2,10 +2,8 @@ import 'source-map-support/register'
 
 import * as fs from 'fs'
 import * as path from 'path'
-import {
-  LoggerBinding,
-  LoggerImplementation
-} from 'slf4ts-api'
+import { Logger } from 'log4js'
+import { LoggerBinding } from 'slf4ts-api'
 
 import { Log4JSLoggerImplementation } from './Log4JSLoggerImplementation'
 
@@ -16,7 +14,7 @@ import { Log4JSLoggerImplementation } from './Log4JSLoggerImplementation'
  * @class Log4JSLoggerBinding
  * @implements {LoggerBinding}
  */
-export class Log4JSLoggerBinding implements LoggerBinding {
+export class Log4JSLoggerBinding implements LoggerBinding<Logger, [string]> {
   private readonly packageJson: any;
 
   public constructor () {
@@ -32,7 +30,7 @@ export class Log4JSLoggerBinding implements LoggerBinding {
     }
   }
 
-  public getLoggerImplementation (): LoggerImplementation {
+  public getLoggerImplementation (): Log4JSLoggerImplementation {
     return new Log4JSLoggerImplementation()
   }
 

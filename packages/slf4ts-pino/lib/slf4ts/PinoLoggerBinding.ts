@@ -2,19 +2,19 @@ import 'source-map-support/register'
 
 import * as fs from 'fs'
 import * as path from 'path'
-import * as winston from 'winston'
+import { Logger } from 'pino'
 import { LoggerBinding } from 'slf4ts-api'
 
-import { WinstonLoggerImplementation } from './WinstonLoggerImplementation'
+import { PinoLoggerImplementation } from './PinoLoggerImplementation'
 
 /**
- * LoggerBinding implementation for Winston.
+ * LoggerBinding implementation for Pino.
  *
  * @export
- * @class WinstonLoggerBinding
+ * @class PinoLoggerBinding
  * @implements {LoggerBinding}
  */
-export class WinstonLoggerBinding implements LoggerBinding<winston.Logger, []> {
+export class PinoLoggerBinding implements LoggerBinding<Logger> {
   private readonly packageJson: any;
 
   public constructor () {
@@ -30,12 +30,12 @@ export class WinstonLoggerBinding implements LoggerBinding<winston.Logger, []> {
     }
   }
 
-  public getLoggerImplementation (): WinstonLoggerImplementation {
-    return new WinstonLoggerImplementation()
+  public getLoggerImplementation (): PinoLoggerImplementation {
+    return new PinoLoggerImplementation()
   }
 
   public getVendor (): string {
-    return 'Winston'
+    return 'pino'
   }
 
   public getVersion (): string {

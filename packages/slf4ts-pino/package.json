@@ -1,0 +1,87 @@
+{
+  "name": "slf4ts-pino",
+  "description": "pino logging-binding for slf4ts-api",
+  "homepage": "https://github.com/rstiller/slf4ts",
+  "version": "1.0.0",
+  "main": "./build/packages/slf4ts-pino/lib/slf4ts/index.js",
+  "typings": "./build/packages/slf4ts-pino/lib/slf4ts/index.d.ts",
+  "license": "MIT",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://www.opensource.org/licenses/mit-license.php"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rstiller/slf4ts"
+  },
+  "keywords": [
+    "typescript",
+    "logging",
+    "pino"
+  ],
+  "peerDependencies": {
+    "pino": ">=5.0.0",
+    "slf4ts-api": ">=1.1.3"
+  },
+  "dependencies": {
+    "pino": "^5.17.0",
+    "slf4ts-api": "^1.3.0",
+    "source-map-support": "^0.5.16"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.2.10",
+    "@types/chai-string": "^1.4.2",
+    "@types/lodash": "^4.14.149",
+    "@types/mocha": "^7.0.2",
+    "@types/node": "^13.7.7",
+    "@types/pino": "^5.17.0",
+    "@typescript-eslint/eslint-plugin": "2.23.0",
+    "@typescript-eslint/parser": "2.23.0",
+    "chai": "^4.2.0",
+    "chai-string": "^1.5.0",
+    "eslint": "6.8.0",
+    "eslint-config-standard-with-typescript": "14.0.0",
+    "eslint-plugin-import": "2.20.1",
+    "eslint-plugin-node": "11.0.0",
+    "eslint-plugin-promise": "4.2.1",
+    "eslint-plugin-standard": "4.0.1",
+    "lodash": "^4.17.15",
+    "mocha": "^7.1.0",
+    "mocha-typescript": "^1.1.17",
+    "nyc": "^15.0.0",
+    "pkgsign": "^0.2.0",
+    "rimraf": "^3.0.2",
+    "ts-node": "^8.6.2",
+    "typescript": "^3.8.3"
+  },
+  "engines": {
+    "node": ">= 8",
+    "npm": ">= 5"
+  },
+  "files": [
+    ".slf4ts-binding",
+    "build"
+  ],
+  "scripts": {
+    "build": "npm run clean && npm run lint && npm run compile",
+    "sign": "pkgsign sign .",
+    "clean": "rimraf build",
+    "compile": "tsc -p .",
+    "deps": "npm-check --ignore @types/* --no-spinner --no-emoji --no-color",
+    "lint": "eslint ./lib/**/*.ts ./test/**/*.ts",
+    "prepublishOnly": "npm run build",
+    "test": "mocha test/**/*Test.ts"
+  },
+  "mocha": {
+    "require": [
+      "source-map-support/register",
+      "ts-node/register"
+    ],
+    "reporter": "dot",
+    "extension": "ts",
+    "bail": true,
+    "full-trace": true
+  }
+}

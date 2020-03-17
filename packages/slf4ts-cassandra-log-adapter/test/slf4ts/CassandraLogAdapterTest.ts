@@ -22,7 +22,7 @@ export class CassandraLogAdapterTest {
   @test
   public checkLogEventHandlingWithEventEmitter (): void {
     const emitter = new EventEmitter()
-    const logger = LoggerFactory.getLogger('cassandra') as DefaultLoggerInstance
+    const logger = LoggerFactory.getLogger('cassandra') as DefaultLoggerInstance<any, any[]>
     const impl: any = logger.getImpl()
     impl.log = td.function()
 
@@ -38,7 +38,7 @@ export class CassandraLogAdapterTest {
   @test
   public checkLogEventHandlingWithClientNoKeyspace (): void {
     const client = new Client({ contactPoints: ['127.0.0.1:65535'] })
-    const logger = LoggerFactory.getLogger('cassandra') as DefaultLoggerInstance
+    const logger = LoggerFactory.getLogger('cassandra') as DefaultLoggerInstance<any, any[]>
     const impl: any = logger.getImpl()
     impl.log = td.function()
 
@@ -54,7 +54,7 @@ export class CassandraLogAdapterTest {
   @test
   public checkLogEventHandlingWithClientAndKeyspace (): void {
     const client = new Client({ contactPoints: ['127.0.0.1:65535'], keyspace: 'test_space' })
-    const logger = LoggerFactory.getLogger('cassandra', 'test_space') as DefaultLoggerInstance
+    const logger = LoggerFactory.getLogger('cassandra', 'test_space') as DefaultLoggerInstance<any, any[]>
     const impl: any = logger.getImpl()
     impl.log = td.function()
 
@@ -70,7 +70,7 @@ export class CassandraLogAdapterTest {
   @test
   public checkLogLevelMapping (): void {
     const emitter = new EventEmitter()
-    const logger = LoggerFactory.getLogger('cassandra') as DefaultLoggerInstance
+    const logger = LoggerFactory.getLogger('cassandra') as DefaultLoggerInstance<any, any[]>
     const impl: any = logger.getImpl()
     impl.log = td.function()
 
@@ -94,7 +94,7 @@ export class CassandraLogAdapterTest {
   @test
   public checkClientConnect (done: (err?: any) => any): void {
     const client = new Client({ contactPoints: ['127.0.0.1:65535'] })
-    const logger = LoggerFactory.getLogger('cassandra') as DefaultLoggerInstance
+    const logger = LoggerFactory.getLogger('cassandra') as DefaultLoggerInstance<any, any[]>
     const impl: any = logger.getImpl()
     impl.log = td.function()
 

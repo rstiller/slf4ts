@@ -7,9 +7,9 @@ node_js:
   - 9
   - 8
 os:
-  #- windows
+  # - windows
   - linux
-  - osx
+  # - osx
 cache:
   npm: false
   directories:
