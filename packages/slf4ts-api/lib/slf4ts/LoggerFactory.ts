@@ -1,6 +1,6 @@
 import 'source-map-support/register'
 
-import { LoggerBindings, LoggerImplementation } from './LoggerBindings'
+import { LoggerBindings, LoggerImplementation, LoggerBuilder } from './LoggerBindings'
 import { LoggerConfiguration, LogLevel } from './LoggerConfiguration'
 
 /**
@@ -9,7 +9,7 @@ import { LoggerConfiguration, LogLevel } from './LoggerConfiguration'
  * @export
  * @interface ILoggerInstance
  */
-export interface ILoggerInstance {
+export interface ILoggerInstance<T> {
   /**
      * Logs the given message using TRACE log-level.
      *
@@ -69,7 +69,7 @@ export interface ILoggerInstance {
      *
      * @memberof ILoggerInstance
      */
-  getImplementation<T>(): T
+  getImplementation(): T
 }
 
 /**
@@ -79,8 +79,8 @@ export interface ILoggerInstance {
  * @class DefaultLoggerInstance
  * @implements {ILoggerInstance}
  */
-export class DefaultLoggerInstance implements ILoggerInstance {
-  private readonly impl: LoggerImplementation;
+export class DefaultLoggerInstance<T, P extends any[]> implements ILoggerInstance<T> {
+  private readonly impl: LoggerImplementation<T, P>;
   private readonly name: string;
   private readonly group: string;
   private commonMetadata: any;
@@ -101,7 +101,8 @@ export class DefaultLoggerInstance implements ILoggerInstance {
     group: string,
     logLevel: LogLevel,
     commonMetadata: any,
-    impl: LoggerImplementation) {
+    impl: LoggerImplementation<T, P>,
+    builder: LoggerBuilder<T, P>) {
     this.impl = impl
     this.name = name
     this.group = group
@@ -109,6 +110,7 @@ export class DefaultLoggerInstance implements ILoggerInstance {
     this.commonMetadata = commonMetadata
 
     const initialConfig = LoggerConfiguration.getConfig(group, name)
+    this.impl.setLoggerBuilder(builder)
     this.impl.setConfig(initialConfig, group, name)
   }
 
@@ -129,7 +131,7 @@ export class DefaultLoggerInstance implements ILoggerInstance {
     return this.group
   }
 
-  public getImpl (): LoggerImplementation {
+  public getImpl (): LoggerImplementation<T, P> {
     return this.impl
   }
 
@@ -173,8 +175,8 @@ export class DefaultLoggerInstance implements ILoggerInstance {
     return this.log.apply(this, metadata)
   }
 
-  public getImplementation<T>(): T {
-    return this.impl.getImplementation<T>(this.group, this.name)
+  public getImplementation (): T {
+    return this.impl.getImplementation(this.group, this.name)
   }
 
   private async log (logLevel: LogLevel, ...args: any[]): Promise<any> {
@@ -190,12 +192,12 @@ export class DefaultLoggerInstance implements ILoggerInstance {
  * @class NullLoggerImplementation
  * @implements {LoggerImplementation}
  */
-class NullLoggerImplementation implements LoggerImplementation {
+class NullLoggerImplementation implements LoggerImplementation<null, null> {
   public async log (...args: any[]): Promise<any> {
     return null
   }
 
-  public getImplementation<T>(group: string, name: string): T {
+  public getImplementation (group: string, name: string): null {
     return null
   }
 
@@ -208,6 +210,10 @@ class NullLoggerImplementation implements LoggerImplementation {
   }
 
   public setMetadata (metadata: any, group: string, name: string): void {
+    // nothing
+  }
+
+  public setLoggerBuilder (builder: LoggerBuilder<null, null>): void {
     // nothing
   }
 }
@@ -228,7 +234,11 @@ export class LoggerFactory {
      * @returns {ILoggerInstance}
      * @memberof LoggerFactory
      */
-  public static getLogger (group = '', name = ''): ILoggerInstance {
+  public static getLogger<T, P extends any[]>(
+    group = '',
+    name = '',
+    builder?: LoggerBuilder<T, P>
+  ): ILoggerInstance<T> {
     if (!LoggerFactory.INITIALIZED) {
       LoggerFactory.INITIALIZED = true
       LoggerFactory.initialize()
@@ -236,15 +246,16 @@ export class LoggerFactory {
 
     const compoundKey = `${group}:${name}`
     if (LoggerFactory.LOGGER_INSTANCE_CACHE.has(compoundKey)) {
-      return LoggerFactory.LOGGER_INSTANCE_CACHE.get(compoundKey)
+      return LoggerFactory.LOGGER_INSTANCE_CACHE.get(compoundKey) as ILoggerInstance<T>
     }
 
-    const instance = new DefaultLoggerInstance(
+    const instance = new DefaultLoggerInstance<T, P>(
       name,
       group,
       LoggerConfiguration.getLogLevel(group, name),
       LoggerFactory.COMMON_METADATA,
-      LoggerFactory.LOGGER)
+      LoggerFactory.LOGGER as LoggerImplementation<T, P>,
+      builder)
     LoggerFactory.LOGGER_INSTANCE_CACHE.set(compoundKey, instance)
     return instance
   }
@@ -299,12 +310,12 @@ export class LoggerFactory {
   }
 
   private static COMMON_METADATA: any = undefined;
-  private static LOGGER: LoggerImplementation = new NullLoggerImplementation();
-  private static ROOT_LOGGER: DefaultLoggerInstance;
+  private static LOGGER: LoggerImplementation<unknown, unknown[]> = new NullLoggerImplementation();
+  private static ROOT_LOGGER: DefaultLoggerInstance<unknown, unknown[]>;
   private static INITIALIZED: boolean = false;
-  private static readonly LOGGER_INSTANCE_CACHE: Map<string, DefaultLoggerInstance> = new Map();
+  private static readonly LOGGER_INSTANCE_CACHE: Map<string, DefaultLoggerInstance<unknown, unknown[]>> = new Map();
 
-  private static initialize (): void {
+  private static initialize<T, P extends any[]>(): void {
     const BINDINGS = new LoggerBindings().getBindings()
     const BINDING = BINDINGS[0]
     if (BINDINGS.length === 0) {
@@ -312,7 +323,7 @@ export class LoggerFactory {
       return
     }
     LoggerFactory.LOGGER = BINDING.getLoggerImplementation()
-    LoggerFactory.ROOT_LOGGER = LoggerFactory.getLogger() as DefaultLoggerInstance
+    LoggerFactory.ROOT_LOGGER = LoggerFactory.getLogger() as DefaultLoggerInstance<T, P>
 
     if (BINDINGS.length > 1) {
       let message = 'multiple bindings found:'

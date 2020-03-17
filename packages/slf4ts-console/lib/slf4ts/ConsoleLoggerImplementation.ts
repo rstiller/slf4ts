@@ -2,7 +2,8 @@ import 'source-map-support/register'
 
 import {
   LoggerImplementation,
-  LogLevel
+  LogLevel,
+  LoggerBuilder
 } from 'slf4ts-api'
 import * as util from 'util'
 
@@ -13,7 +14,7 @@ import * as util from 'util'
  * @class ConsoleLoggerImplementation
  * @implements {LoggerImplementation}
  */
-export class ConsoleLoggerImplementation implements LoggerImplementation {
+export class ConsoleLoggerImplementation implements LoggerImplementation<Console, never> {
   private readonly console: Console;
 
   /**
@@ -27,14 +28,13 @@ export class ConsoleLoggerImplementation implements LoggerImplementation {
   }
 
   /**
-     * Gets the console instance passed to the constructor.
-     *
-     * @template T
-     * @returns {T} the console implementation passed to the constructor.
-     * @memberof ConsoleLoggerImplementation
-     */
-  public getImplementation<T>(group: string, name: string): T {
-    return this.console as any
+   * Gets the console instance passed to the constructor.
+   *
+   * @returns {Console} the console implementation passed to the constructor.
+   * @memberof ConsoleLoggerImplementation
+   */
+  public getImplementation (group: string, name: string): Console {
+    return this.console
   }
 
   public setConfig<T>(config: T, group: string, name: string): void {
@@ -46,6 +46,10 @@ export class ConsoleLoggerImplementation implements LoggerImplementation {
   }
 
   public setMetadata (metadata: any, group: string, name: string): void {
+    // nothing to set here ...
+  }
+
+  public setLoggerBuilder (builder: LoggerBuilder<Console, never>): void {
     // nothing to set here ...
   }
 

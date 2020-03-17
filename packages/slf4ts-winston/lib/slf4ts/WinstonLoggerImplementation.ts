@@ -1,6 +1,6 @@
 import 'source-map-support/register'
 
-import { LoggerImplementation, LogLevel } from 'slf4ts-api'
+import { LoggerImplementation, LogLevel, LoggerBuilder } from 'slf4ts-api'
 import * as util from 'util'
 import * as winston from 'winston'
 
@@ -19,8 +19,9 @@ LogLevelMapping[LogLevel.ERROR] = 'error'
  * @class WinstonLoggerImplementation
  * @implements {LoggerImplementation}
  */
-export class WinstonLoggerImplementation implements LoggerImplementation {
+export class WinstonLoggerImplementation implements LoggerImplementation<winston.Logger, []> {
   private readonly loggers: Map<string, winston.Logger> = new Map();
+  private builder: LoggerBuilder<winston.Logger, []> = this.getDefaultLoggerBuilder()
 
   public async log (...args: any[]): Promise<any> {
     const level: number = arguments[0]
@@ -71,7 +72,7 @@ export class WinstonLoggerImplementation implements LoggerImplementation {
     })
   }
 
-  public getImplementation (group: string, name: string): any {
+  public getImplementation (group: string, name: string): winston.Logger {
     return this.getLoggerInstance(group, name)
   }
 
@@ -91,12 +92,20 @@ export class WinstonLoggerImplementation implements LoggerImplementation {
     // nothing to set here ...
   }
 
+  public setLoggerBuilder (builder?: LoggerBuilder<winston.Logger, []>): void {
+    this.builder = builder ?? this.getDefaultLoggerBuilder()
+  }
+
+  private getDefaultLoggerBuilder (): LoggerBuilder<winston.Logger, []> {
+    return () => winston.createLogger()
+  }
+
   private getLoggerInstance (group: string, name: string): winston.Logger {
     const compoundKey = `${group}:${name}`
     let instance: winston.Logger = this.loggers.get(compoundKey)
 
     if (!instance) {
-      instance = winston.createLogger()
+      instance = this.builder()
       this.loggers.set(compoundKey, instance)
     }
 

@@ -4,10 +4,10 @@ import { Client } from 'cassandra-driver'
 import { EventEmitter } from 'events'
 import { ILoggerInstance, LoggerFactory } from 'slf4ts-api'
 
-export class CassandraLogAdapter {
-  private readonly log: ILoggerInstance;
+export class CassandraLogAdapter<T> {
+  private readonly log: ILoggerInstance<T>;
 
-  public constructor (emitter: Client | EventEmitter, log: ILoggerInstance = null) {
+  public constructor (emitter: Client | EventEmitter, log: ILoggerInstance<T> = null) {
     if (log === null) {
       if (emitter instanceof Client) {
         this.log = LoggerFactory.getLogger('cassandra', emitter.keyspace)

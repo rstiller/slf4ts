@@ -6,12 +6,17 @@ import * as path from 'path'
 import { LogLevel } from './LoggerConfiguration'
 
 /**
- * The bridge to the underlying logging-framework.
+ * Builds the instance of the underlying logger framework.
+ */
+export type LoggerBuilder<T, P extends any[]> = (...args: P) => T
+
+/**
+ * The bridge to the underlying logging-framework.any[]
  *
  * @export
  * @interface LoggerImplementation
  */
-export interface LoggerImplementation {
+export interface LoggerImplementation<T, P extends any[]> {
 
   /**
      * Invoked for each call to a logging method of a logger instance.
@@ -30,7 +35,7 @@ export interface LoggerImplementation {
      * @param {string} name The name of the logger.
      * @memberof LoggerImplementation
      */
-  getImplementation<T>(group: string, name: string): T
+  getImplementation(group: string, name: string): T
 
   /**
      * Sets the configuration for the specified logger instance.
@@ -63,6 +68,14 @@ export interface LoggerImplementation {
      */
   setMetadata(metadata: any, group: string, name: string): void
 
+  /**
+   * Sets the logger builder instance
+   *
+   * @param {LoggerBuilder<T, P>} builder
+   * @memberof LoggerImplementation
+   */
+  setLoggerBuilder(builder: LoggerBuilder<T, P>): void
+
 }
 
 /**
@@ -71,14 +84,14 @@ export interface LoggerImplementation {
  * @export
  * @interface LoggerBinding
  */
-export interface LoggerBinding {
+export interface LoggerBinding<T = any, P extends any[] = any> {
   /**
      * Gets the logger implementation.
      *
      * @returns {LoggerImplementation} The logger implementation.
      * @memberof LoggerBinding
      */
-  getLoggerImplementation(): LoggerImplementation
+  getLoggerImplementation(): LoggerImplementation<T, P>
   /**
      * Gets the vendor string.
      *

@@ -1,0 +1,209 @@
+{
+  "entries": [
+    {
+      "entry": "files/v1alpha2",
+      "value": {
+        "files": [
+          {
+            "path": ".slf4ts-binding",
+            "sha512": "cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e"
+          },
+          {
+            "path": "LICENSE",
+            "sha512": "12fb61d0b2d5603211af7ef844e24b3ade2ff250bf4d1a8859048d8d2f69f4006dec2a4be6b31a41d3b2fa32075da74c628a740980a8dd6e41ab3b1f827d375a"
+          },
+          {
+            "path": "build/packages/slf4ts-pino/lib/slf4ts/index.js",
+            "sha512": "d8971828fcd6f6cdd84ac928e5d50bdfcd7917fc34295a5f515444f312dc8367fe60160ada6f7ba1f4552f4b5d934f42fe0aa78e714a563773a848fc095cb5cd"
+          },
+          {
+            "path": "build/packages/slf4ts-pino/lib/slf4ts/PinoLoggerBinding.js",
+            "sha512": "1135b3edde4dde1e1e95d300406978637e11ddd55f0e98ba612d36217b783fe19fe369a4a5055f2c457f862ece6bcdfd0a3cac5173d466c03fa74464d44e3ab7"
+          },
+          {
+            "path": "build/packages/slf4ts-pino/test/slf4ts/PinoLoggerBindingTest.js",
+            "sha512": "c52714c9d83822d166e4d052172517c97a77cdf76786b6c42db69da162e48954c2fd5db02a2b916eee88c96b36ffdf33c90c0dc1866502cfdd731c66dc801227"
+          },
+          {
+            "path": "build/packages/slf4ts-pino/lib/slf4ts/PinoLoggerImplementation.js",
+            "sha512": "43f0748348ba7704a6b5f54edb5bfa9e967c64796720dfb6cf8d70571e28633e73ba658ca2fc5ed6d0bd13403b3b54f6c2bccc109ac0c57e6014df7b832bfda1"
+          },
+          {
+            "path": "build/packages/slf4ts-pino/test/slf4ts/PinoLoggerImplementationTest.js",
+            "sha512": "66017b9b82b19e97f20bf73dd5ccb3f78312a1db427db9a879b0947bfd1d908387b7ec5e268d62d60ceb17d62d08d25273327a948fc6f7dbffaedb6423960e61"
+          },
+          {
+            "path": "build/packages/slf4ts-pino/lib/slf4ts/index.js.map",
+            "sha512": "0a70c1f1bd3d4622edce7aeac2321b9f1e9a54f419e7bc6ab0278a74bfd3e2244b64ce9c1ff1dd4774d1da8be357bc7ae0f6f2986dcde841fcbb10be24458783"
+          },
+          {
+            "path": "build/packages/slf4ts-pino/lib/slf4ts/PinoLoggerBinding.js.map",
+            "sha512": "6753ce19e659f94f37b53bf026e6b31a6824b8fa16c77249a7b76fa060053789811d4d6e52768c89fb4c134ee838df08a8d4ad45f0b5ef580d64e8c5c30844ed"
+          },
+          {
+            "path": "build/packages/slf4ts-pino/test/slf4ts/PinoLoggerBindingTest.js.map",
+            "sha512": "584584c44a6837123644d7ee4132cce3f91ab0c6ea1101ed11d7d4b63fdc77b1f602b9e864cda6ec7d6067def12bc3ce63a236d68c643d0b2b0f93162b172248"
+          },
+          {
+            "path": "build/packages/slf4ts-pino/lib/slf4ts/PinoLoggerImplementation.js.map",
+            "sha512": "74861733c84b53bc6227f20f28a6af1fa53021d5bdb1dc6b37cccf00e57c9a1b40b0f5e3ac1a20ca9fd8f891f1a964400ba760841bd82347e0afa17081f049fc"
+          },
+          {
+            "path": "build/packages/slf4ts-pino/test/slf4ts/PinoLoggerImplementationTest.js.map",
+            "sha512": "372ca5be6f5dc71502a9992456b7f99b37658a254fa52eb484c4e5fd76e9f61a29ed23c74194793d492084f720cfbe8b43c83c07d5ec39beb1a0afae2b280e81"
+          },
+          {
+            "path": "README.md",
+            "sha512": "e018589c2dff837562919126d08d5b6c30e75e72f281d22efde035aeafa2cb44597de5864719ebf60c601b10ec6b2fe021a81a91a2032f6f7dc9be36edc83ca2"
+          },
+          {
+            "path": "build/packages/slf4ts-pino/lib/slf4ts/index.d.ts",
+            "sha512": "44c700b8cc1d409d50f20b2771f7171457775b194aecc78b39ce5cbf084d9aa328d6c8acdf552b37ca3a226034a10c673afcd46e463f1dcfa51047d0fc158576"
+          },
+          {
+            "path": "build/packages/slf4ts-pino/lib/slf4ts/PinoLoggerBinding.d.ts",
+            "sha512": "7812719588f3675ee3c0b583f5a4bf454edfc466346a2960cce0e5ddd3f29865fda43b15912739b3f66b4323a94d40d1ec324afbc634ae48a00f5a97f10581dd"
+          },
+          {
+            "path": "build/packages/slf4ts-pino/test/slf4ts/PinoLoggerBindingTest.d.ts",
+            "sha512": "cc9d3b3b22d9fb005754e13cdc5b9383fd258918529366fb438d2e80df533036ef219edb9e8fdb500ce969e0363cf0b27cab9bf0caba1d48c329f14f8dd1cffb"
+          },
+          {
+            "path": "build/packages/slf4ts-pino/lib/slf4ts/PinoLoggerImplementation.d.ts",
+            "sha512": "c1fa51b0f01a127d5462f55bade19508f4dc9b6f5680af94df3ce986054b264f95c6e3daf5818669491c590f42c8f6c15b98102313aa05ca62b78d73fc07cc69"
+          },
+          {
+            "path": "build/packages/slf4ts-pino/test/slf4ts/PinoLoggerImplementationTest.d.ts",
+            "sha512": "785fbc9fbd94df919652ea29d470cd2b0639e624dc7d9fae70d5ef9c3353f1e423fe0db4cf515c02aa56a37ca71f32d9107abdb585916566f0e5e6407dfc00ed"
+          }
+        ]
+      }
+    },
+    {
+      "entry": "identity/v1alpha2",
+      "value": {
+        "identity": {
+          "keybaseUser": "rstiller"
+        }
+      }
+    },
+    {
+      "entry": "npmCompatiblePackageJson/v1alpha2",
+      "value": {
+        "packageJsonProperties": [
+          "dependencies",
+          "description",
+          "devDependencies",
+          "engines",
+          "files",
+          "homepage",
+          "keywords",
+          "license",
+          "licenses",
+          "main",
+          "mocha",
+          "name",
+          "peerDependencies",
+          "repository",
+          "scripts",
+          "typings",
+          "version"
+        ],
+        "sha512": "9cf5a79072c1c5d61253ad5b4f475fd44789bbfcdf99a21277bb8607237a958afbdf3ca19ed5cf66cc342e2470bd2c0e73a54afad79fe270f8bff61ee9eb1287"
+      }
+    },
+    {
+      "entry": "packageJson/v1alpha2",
+      "value": {
+        "packageJson": {
+          "name": "slf4ts-pino",
+          "description": "pino logging-binding for slf4ts-api",
+          "homepage": "https://github.com/rstiller/slf4ts",
+          "version": "1.0.0",
+          "main": "./build/packages/slf4ts-pino/lib/slf4ts/index.js",
+          "typings": "./build/packages/slf4ts-pino/lib/slf4ts/index.d.ts",
+          "license": "MIT",
+          "licenses": [
+            {
+              "type": "MIT",
+              "url": "https://www.opensource.org/licenses/mit-license.php"
+            }
+          ],
+          "repository": {
+            "type": "git",
+            "url": "https://github.com/rstiller/slf4ts"
+          },
+          "keywords": [
+            "typescript",
+            "logging",
+            "pino"
+          ],
+          "peerDependencies": {
+            "pino": ">=5.0.0",
+            "slf4ts-api": ">=1.1.3"
+          },
+          "dependencies": {
+            "pino": "^5.17.0",
+            "slf4ts-api": "^1.3.0",
+            "source-map-support": "^0.5.16"
+          },
+          "devDependencies": {
+            "@types/chai": "^4.2.10",
+            "@types/chai-string": "^1.4.2",
+            "@types/lodash": "^4.14.149",
+            "@types/mocha": "^7.0.2",
+            "@types/node": "^13.7.7",
+            "@types/pino": "^5.17.0",
+            "@typescript-eslint/eslint-plugin": "2.23.0",
+            "@typescript-eslint/parser": "2.23.0",
+            "chai": "^4.2.0",
+            "chai-string": "^1.5.0",
+            "eslint": "6.8.0",
+            "eslint-config-standard-with-typescript": "14.0.0",
+            "eslint-plugin-import": "2.20.1",
+            "eslint-plugin-node": "11.0.0",
+            "eslint-plugin-promise": "4.2.1",
+            "eslint-plugin-standard": "4.0.1",
+            "lodash": "^4.17.15",
+            "mocha": "^7.1.0",
+            "mocha-typescript": "^1.1.17",
+            "nyc": "^15.0.0",
+            "pkgsign": "^0.2.0",
+            "rimraf": "^3.0.2",
+            "ts-node": "^8.6.2",
+            "typescript": "^3.8.3"
+          },
+          "engines": {
+            "node": ">= 8",
+            "npm": ">= 5"
+          },
+          "files": [
+            ".slf4ts-binding",
+            "build"
+          ],
+          "scripts": {
+            "build": "npm run clean && npm run lint && npm run compile",
+            "sign": "pkgsign sign .",
+            "clean": "rimraf build",
+            "compile": "tsc -p .",
+            "deps": "npm-check --ignore @types/* --no-spinner --no-emoji --no-color",
+            "lint": "eslint ./lib/**/*.ts ./test/**/*.ts",
+            "prepublishOnly": "npm run build",
+            "test": "mocha test/**/*Test.ts"
+          },
+          "mocha": {
+            "require": [
+              "source-map-support/register",
+              "ts-node/register"
+            ],
+            "reporter": "dot",
+            "extension": "ts",
+            "bail": true,
+            "full-trace": true
+          }
+        }
+      }
+    }
+  ],
+  "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJednyuCRDCMfXrQKYV5wAA1csQAGcCyI1EuKGCLxglGcHRXRIv\nkeWgna2YeDqTDHYkcfK+fq2yYe5gLkKesH0xI29tbBBzTCp65W1pOhojhCdzwYcn\naejshkc47xa1NLeHzTiU9a/TOJlNbxEXEANKo99vCDdTEKuTLMlZwMOObDXw6VBg\nw3m0atx+cCk5uSi8djs3Sf38MupbCldeG8z8wss680Ksqmp1C0BsoSye4LfxvESi\n0mdhAZy2UMnsnCbP3BAcgQgL7X2RBgML4+Xlxojr7zFr4g57Zo541tGK9U1xjHeY\ni5+pgJJnVLadGju54FG+KKxundrCx0qZHbRxHlj9Pckla3voi/71tdhw9KJu7cgD\nXtWSmBO5ZhUTaziCNwr/h8NwK1RSnGPLUDqZGEEVT37GhB4QGA68CdJV6uSg7udh\ncnz1m3FQPYRjncsV/pNSWNq7GocTqMVMF0phaE6vcUAU8K6ZRzpRIDMdzoLxL6Hd\nu6XWzzFLlvidhnKr3x/3rugoI+qKbnFdcQNxuaTRkAL3qiIfwN4fjmy792LQrXAc\n/03L+P5jtza79di2VLQBUEAdfLzHTCZhlH8TXRkLC3OO2CHI3JlQs7fN3Gy7j8sE\nU9fUElUjcMlecopyMNvhY/Nzq/tjN5J4D/qeRi9fQ1abN/2tNIHr6jEfqmwkCFpR\nn48wfFCBBqRmRej2jdZj\n=/8Bw\n-----END PGP SIGNATURE-----\n"
+}
