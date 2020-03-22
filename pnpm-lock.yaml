@@ -68,6 +68,15 @@ importers:
       log4js: ^6.1.2
       slf4ts-api: ^1.3.0
       slf4ts-log4js: ^1.0.0
+  examples/javascript-loglevel:
+    dependencies:
+      loglevel: 1.6.7
+      slf4ts-api: 'link:../../packages/slf4ts-api'
+      slf4ts-loglevel: 'link:../../packages/slf4ts-loglevel'
+    specifiers:
+      loglevel: ^1.6.7
+      slf4ts-api: ^1.3.0
+      slf4ts-loglevel: ^1.0.0
   examples/javascript-pino:
     dependencies:
       pino: 5.17.0
@@ -114,6 +123,24 @@ importers:
       rimraf: ^3.0.2
       slf4ts-api: ^1.3.0
       slf4ts-log4js: ^1.0.0
+      typescript: ^3.8.3
+  examples/typescript-loglevel:
+    dependencies:
+      loglevel: 1.6.7
+      slf4ts-api: 'link:../../packages/slf4ts-api'
+      slf4ts-loglevel: 'link:../../packages/slf4ts-loglevel'
+    devDependencies:
+      '@types/node': 13.9.1
+      eslint: 6.8.0
+      rimraf: 3.0.2
+      typescript: 3.8.3
+    specifiers:
+      '@types/node': ^13.7.7
+      eslint: 6.8.0
+      loglevel: ^1.6.7
+      rimraf: ^3.0.2
+      slf4ts-api: ^1.3.0
+      slf4ts-loglevel: ^1.0.0
       typescript: ^3.8.3
   examples/typescript-pino:
     dependencies:
@@ -387,6 +414,70 @@ importers:
       source-map-support: ^0.5.16
       ts-node: ^8.6.2
       typescript: ^3.8.3
+  packages/slf4ts-loglevel:
+    dependencies:
+      loglevel: 1.6.7
+      slf4ts-api: 'link:../slf4ts-api'
+      source-map-support: 0.5.16
+    devDependencies:
+      '@types/chai': 4.2.11
+      '@types/chai-string': 1.4.2
+      '@types/lodash': 4.14.149
+      '@types/mocha': 7.0.2
+      '@types/node': 13.9.1
+      '@types/sinon': 7.5.2
+      '@types/sinon-chai': 3.2.3
+      '@typescript-eslint/eslint-plugin': 2.23.0_2510d86781fe783b47b58303c18a0d9b
+      '@typescript-eslint/parser': 2.23.0_eslint@6.8.0+typescript@3.8.3
+      chai: 4.2.0
+      chai-string: 1.5.0_chai@4.2.0
+      eslint: 6.8.0
+      eslint-config-standard-with-typescript: 14.0.0_56442c569f8f16708331cc69ea05c75f
+      eslint-plugin-import: 2.20.1_eslint@6.8.0
+      eslint-plugin-node: 11.0.0_eslint@6.8.0
+      eslint-plugin-promise: 4.2.1
+      eslint-plugin-standard: 4.0.1_eslint@6.8.0
+      lodash: 4.17.15
+      mocha: 7.1.0
+      mocha-typescript: 1.1.17
+      nyc: 15.0.0
+      pkgsign: 0.2.0
+      rimraf: 3.0.2
+      sinon: 9.0.1
+      sinon-chai: 3.5.0_chai@4.2.0+sinon@9.0.1
+      ts-node: 8.6.2_typescript@3.8.3
+      typescript: 3.8.3
+    specifiers:
+      '@types/chai': ^4.2.10
+      '@types/chai-string': ^1.4.2
+      '@types/lodash': ^4.14.149
+      '@types/mocha': ^7.0.2
+      '@types/node': ^13.7.7
+      '@types/sinon': ^7.5.2
+      '@types/sinon-chai': ^3.2.3
+      '@typescript-eslint/eslint-plugin': 2.23.0
+      '@typescript-eslint/parser': 2.23.0
+      chai: ^4.2.0
+      chai-string: ^1.5.0
+      eslint: 6.8.0
+      eslint-config-standard-with-typescript: 14.0.0
+      eslint-plugin-import: 2.20.1
+      eslint-plugin-node: 11.0.0
+      eslint-plugin-promise: 4.2.1
+      eslint-plugin-standard: 4.0.1
+      lodash: ^4.17.15
+      loglevel: ^1.6.7
+      mocha: ^7.1.0
+      mocha-typescript: ^1.1.17
+      nyc: ^15.0.0
+      pkgsign: ^0.2.0
+      rimraf: ^3.0.2
+      sinon: ^9.0.1
+      sinon-chai: ^3.5.0
+      slf4ts-api: ^1.3.0
+      source-map-support: ^0.5.16
+      ts-node: ^8.6.2
+      typescript: ^3.8.3
   packages/slf4ts-pino:
     dependencies:
       pino: 5.17.0
@@ -648,6 +739,37 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-tsAQNx32a8CoFhjhijUIhI4kccIAgmGhy8LZMZgGfmXcpMbPRUqn5LWmgRttILi6yeGmBJd2xsPkFMs0PzgPCw==
+  /@sinonjs/commons/1.7.1:
+    dependencies:
+      type-detect: 4.0.8
+    dev: true
+    resolution:
+      integrity: sha512-Debi3Baff1Qu1Unc3mjJ96MgpbwTn43S1+9yJ0llWygPwDNu2aaWBD6yc9y/Z8XDRNhx7U+u2UDg2OGQXkclUQ==
+  /@sinonjs/fake-timers/6.0.0:
+    dependencies:
+      '@sinonjs/commons': 1.7.1
+    dev: true
+    resolution:
+      integrity: sha512-atR1J/jRXvQAb47gfzSK8zavXy7BcpnYq21ALon0U99etu99vsir0trzIO3wpeLtW+LLVY6X7EkfVTbjGSH8Ww==
+  /@sinonjs/formatio/5.0.1:
+    dependencies:
+      '@sinonjs/commons': 1.7.1
+      '@sinonjs/samsam': 5.0.3
+    dev: true
+    resolution:
+      integrity: sha512-KaiQ5pBf1MpS09MuA0kp6KBQt2JUOQycqVG1NZXvzeaXe5LGFqAKueIS0bw4w0P9r7KuBSVdUk5QjXsUdu2CxQ==
+  /@sinonjs/samsam/5.0.3:
+    dependencies:
+      '@sinonjs/commons': 1.7.1
+      lodash.get: 4.4.2
+      type-detect: 4.0.8
+    dev: true
+    resolution:
+      integrity: sha512-QucHkc2uMJ0pFGjJUDP3F9dq5dx8QIaqISl9QgwLOh6P9yv877uONPGXh/OH/0zmM3tW1JjuJltAZV2l7zU+uQ==
+  /@sinonjs/text-encoding/0.7.1:
+    dev: true
+    resolution:
+      integrity: sha512-+iTbntw2IZPb/anVDbypzfQa+ay64MW0Zo8aJ8gZPWMMK6/OubMVb6lUPMagqjOPnmtauXnFCACVl3O7ogjeqQ==
   /@types/bunyan/1.8.6:
     dependencies:
       '@types/node': 13.9.1
@@ -711,6 +833,17 @@ packages:
     dev: true
     resolution:
       integrity: sha512-L5DBGFBRY4DKc7ufjZqV4J61ji9FSn4zKvQ5CUBbWi0gE0uOSNwDBpj1t7VwRwdmrpG3QlFxAeXgpViGUOS5Bg==
+  /@types/sinon-chai/3.2.3:
+    dependencies:
+      '@types/chai': 4.2.11
+      '@types/sinon': 7.5.2
+    dev: true
+    resolution:
+      integrity: sha512-TOUFS6vqS0PVL1I8NGVSNcFaNJtFoyZPXZ5zur+qlhDfOmQECZZM4H4kKgca6O8L+QceX/ymODZASfUfn+y4yQ==
+  /@types/sinon/7.5.2:
+    dev: true
+    resolution:
+      integrity: sha512-T+m89VdXj/eidZyejvmoP9jivXgBDdkOSBVQjU9kF349NEx10QdPNGxHeZUaj1IlJ32/ewdyXJjnJxyxJroYwg==
   /@types/sonic-boom/0.7.0:
     dependencies:
       '@types/node': 13.9.1
@@ -2504,6 +2637,10 @@ packages:
       graceful-fs: 4.2.3
     resolution:
       integrity: sha1-h3Gq4HmbZAdrdmQPygWPnBDjPss=
+  /just-extend/4.1.0:
+    dev: true
+    resolution:
+      integrity: sha512-ApcjaOdVTJ7y4r08xI5wIqpvwS48Q0PBG4DJROcEkH1f8MdAiNFyFxz3xoL0LWAVwjrwPYZdVHHxhRHcx/uGLA==
   /kuler/1.0.1:
     dependencies:
       colornames: 1.1.1
@@ -2572,6 +2709,10 @@ packages:
     dev: true
     resolution:
       integrity: sha1-+wMJF/hqMTTlvJvsDWngAT3f7bI=
+  /lodash.get/4.4.2:
+    dev: true
+    resolution:
+      integrity: sha1-LRd/ZS+jHpObRDjVNBSZ36OCXpk=
   /lodash/4.17.15:
     resolution:
       integrity: sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
@@ -2605,6 +2746,12 @@ packages:
     dev: false
     resolution:
       integrity: sha512-+lZh4OpERDBLqjiwDLpAWNQu6KMjnlXH2ByZwCuSqVPJletw0kTWJf5CgSNAUKn1KUkv3m2cUz/LK8zyEy7wzQ==
+  /loglevel/1.6.7:
+    dev: false
+    engines:
+      node: '>= 0.6.0'
+    resolution:
+      integrity: sha512-cY2eLFrQSAfVPhCgH1s7JI73tMbg9YC3v3+ZHVW67sBS7UxWzNEk/ZBbSfLykBWHp33dqqtOv82gjhKEi81T/A==
   /long/2.4.0:
     dev: false
     engines:
@@ -2775,6 +2922,16 @@ packages:
     dev: true
     resolution:
       integrity: sha512-1nh45deeb5olNY7eX82BkPO7SSxR5SSYJiPTrTdFUVYwAl8CKMA5N9PjTYkHiRjisVcxcQ1HXdLhx2qxxJzLNQ==
+  /nise/4.0.3:
+    dependencies:
+      '@sinonjs/commons': 1.7.1
+      '@sinonjs/fake-timers': 6.0.0
+      '@sinonjs/text-encoding': 0.7.1
+      just-extend: 4.1.0
+      path-to-regexp: 1.8.0
+    dev: true
+    resolution:
+      integrity: sha512-EGlhjm7/4KvmmE6B/UFsKh7eHykRl9VH+au8dduHLCyWUO/hr7+N+WtTvDUwc9zHuM1IaIJs/0lQ6Ag1jDkQSg==
   /node-cmd/3.0.0:
     dev: true
     resolution:
@@ -3180,6 +3337,12 @@ packages:
     dev: true
     resolution:
       integrity: sha512-GSmOT2EbHrINBf9SR7CDELwlJ8AENk3Qn7OikK4nFYAu3Ote2+JYNVvkpAEQm3/TLNEJFD/xZJjzyxg3KBWOzw==
+  /path-to-regexp/1.8.0:
+    dependencies:
+      isarray: 0.0.1
+    dev: true
+    resolution:
+      integrity: sha512-n43JRhlUKUAlibEJhPeir1ncUID16QnEjNpwzNdO3Lm4ywrBpBZ5oLD0I6br9evr1Y9JTqwRtAh7JLoOzAQdVA==
   /path-type/2.0.0:
     dependencies:
       pify: 2.3.0
@@ -3601,6 +3764,28 @@ packages:
     dev: false
     resolution:
       integrity: sha1-pNprY1/8zMoz9w0Xy5JZLeleVXo=
+  /sinon-chai/3.5.0_chai@4.2.0+sinon@9.0.1:
+    dependencies:
+      chai: 4.2.0
+      sinon: 9.0.1
+    dev: true
+    peerDependencies:
+      chai: ^4.0.0
+      sinon: '>=4.0.0 <10.0.0'
+    resolution:
+      integrity: sha512-IifbusYiQBpUxxFJkR3wTU68xzBN0+bxCScEaKMjBvAQERg6FnTTc1F17rseLb1tjmkJ23730AXpFI0c47FgAg==
+  /sinon/9.0.1:
+    dependencies:
+      '@sinonjs/commons': 1.7.1
+      '@sinonjs/fake-timers': 6.0.0
+      '@sinonjs/formatio': 5.0.1
+      '@sinonjs/samsam': 5.0.3
+      diff: 4.0.2
+      nise: 4.0.3
+      supports-color: 7.1.0
+    dev: true
+    resolution:
+      integrity: sha512-iTTyiQo5T94jrOx7X7QLBZyucUJ2WvL9J13+96HMfm2CGoJYbIPqRfl6wgNcqmzk0DI28jeGx5bUTXizkrqBmg==
   /slash/3.0.0:
     dev: true
     engines:

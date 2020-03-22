@@ -183,6 +183,7 @@ export class DefaultLoggerInstance<T, P extends any[]> implements ILoggerInstanc
     if (logLevel <= this.logLevel) {
       return this.impl.log.apply(this.impl, arguments)
     }
+    return Promise.resolve()
   }
 }
 
