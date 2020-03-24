@@ -33,7 +33,28 @@ Example package.json:
 Example code:
 
 ```typescript
-// TODO:
+import { LoggerFactory, LoggerConfiguration } from "slf4ts-api";
+
+const ROOT_LOGGER = LoggerFactory.getLogger();
+ROOT_LOGGER.setMetadata({ application: 'my-app' });
+
+/**
+ * prints something like:
+ * 
+ *  {
+ *      "hostname":"...",
+ *      "pid":...,
+ *      "application":"my-app",
+ *      "level":30,
+ *      "msg":"Test Message { version: '1.0.0' } Error: \n    at Object.<anonymous> ...",
+ *      "time":"...",
+ *      "v":0
+ *  }
+ * 
+ * Note that the metadata are extra fields while objects
+ * passed to the log-method call are part of the log-message
+ */
+ROOT_LOGGER.info("Test Message", { version: '1.0.0' }, new Error());
 ```
 
 ## License
