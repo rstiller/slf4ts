@@ -57,14 +57,14 @@ importers:
       slf4ts-bunyan: 'link:../../packages/slf4ts-bunyan'
     specifiers:
       bunyan: ^1.8.12
-      slf4ts-api: ^1.3.0
+      slf4ts-api: ^1.4.0
       slf4ts-bunyan: ^1.0.0
   examples/javascript-console:
     dependencies:
       slf4ts-api: 'link:../../packages/slf4ts-api'
       slf4ts-console: 'link:../../packages/slf4ts-console'
     specifiers:
-      slf4ts-api: ^1.3.0
+      slf4ts-api: ^1.4.0
       slf4ts-console: ^1.2.0
   examples/javascript-log4js:
     dependencies:
@@ -73,7 +73,7 @@ importers:
       slf4ts-log4js: 'link:../../packages/slf4ts-log4js'
     specifiers:
       log4js: ^6.1.2
-      slf4ts-api: ^1.3.0
+      slf4ts-api: ^1.4.0
       slf4ts-log4js: ^1.0.0
   examples/javascript-loglevel:
     dependencies:
@@ -82,7 +82,7 @@ importers:
       slf4ts-loglevel: 'link:../../packages/slf4ts-loglevel'
     specifiers:
       loglevel: ^1.6.7
-      slf4ts-api: ^1.3.0
+      slf4ts-api: ^1.4.0
       slf4ts-loglevel: ^1.0.0
   examples/javascript-pino:
     dependencies:
@@ -91,7 +91,7 @@ importers:
       slf4ts-pino: 'link:../../packages/slf4ts-pino'
     specifiers:
       pino: ^5.17.0
-      slf4ts-api: ^1.3.0
+      slf4ts-api: ^1.4.0
       slf4ts-pino: ^1.0.0
   examples/javascript-winston:
     dependencies:
@@ -99,7 +99,7 @@ importers:
       slf4ts-winston: 'link:../../packages/slf4ts-winston'
       winston: 3.2.1
     specifiers:
-      slf4ts-api: ^1.3.0
+      slf4ts-api: ^1.4.0
       slf4ts-winston: ^1.2.0
       winston: ^3.2.1
   examples/typescript-bunyan:
@@ -119,7 +119,7 @@ importers:
       bunyan: ^1.8.12
       eslint: 6.8.0
       rimraf: ^3.0.2
-      slf4ts-api: ^1.3.0
+      slf4ts-api: ^1.4.0
       slf4ts-bunyan: ^1.0.0
       typescript: ^3.8.3
   examples/typescript-console:
@@ -135,7 +135,7 @@ importers:
       '@types/node': ^13.7.7
       eslint: 6.8.0
       rimraf: ^3.0.2
-      slf4ts-api: ^1.3.0
+      slf4ts-api: ^1.4.0
       slf4ts-console: ^1.2.0
       typescript: ^3.8.3
   examples/typescript-log4js:
@@ -153,7 +153,7 @@ importers:
       eslint: 6.8.0
       log4js: ^6.1.2
       rimraf: ^3.0.2
-      slf4ts-api: ^1.3.0
+      slf4ts-api: ^1.4.0
       slf4ts-log4js: ^1.0.0
       typescript: ^3.8.3
   examples/typescript-loglevel:
@@ -171,7 +171,7 @@ importers:
       eslint: 6.8.0
       loglevel: ^1.6.7
       rimraf: ^3.0.2
-      slf4ts-api: ^1.3.0
+      slf4ts-api: ^1.4.0
       slf4ts-loglevel: ^1.0.0
       typescript: ^3.8.3
   examples/typescript-pino:
@@ -191,7 +191,7 @@ importers:
       eslint: 6.8.0
       pino: ^5.17.0
       rimraf: ^3.0.2
-      slf4ts-api: ^1.3.0
+      slf4ts-api: ^1.4.0
       slf4ts-pino: ^1.0.0
       typescript: ^3.8.3
   examples/typescript-winston:
@@ -208,7 +208,7 @@ importers:
       '@types/node': ^13.7.7
       eslint: 6.8.0
       rimraf: ^3.0.2
-      slf4ts-api: ^1.3.0
+      slf4ts-api: ^1.4.0
       slf4ts-winston: ^1.2.0
       typescript: ^3.8.3
       winston: ^3.2.1
@@ -310,7 +310,7 @@ importers:
       nyc: ^15.0.0
       pkgsign: ^0.2.0
       rimraf: ^3.0.2
-      slf4ts-api: ^1.3.0
+      slf4ts-api: ^1.4.0
       source-map-support: ^0.5.16
       ts-node: ^8.6.2
       typescript: ^3.8.3
@@ -361,7 +361,7 @@ importers:
       mocha-typescript: ^1.1.17
       pkgsign: ^0.2.0
       rimraf: ^3.0.2
-      slf4ts-api: ^1.3.0
+      slf4ts-api: ^1.4.0
       source-map-support: ^0.5.16
       testdouble: ^3.13.0
       ts-node: ^8.6.2
@@ -407,7 +407,7 @@ importers:
       mocha-typescript: ^1.1.17
       pkgsign: ^0.2.0
       rimraf: ^3.0.2
-      slf4ts-api: ^1.3.0
+      slf4ts-api: ^1.4.0
       source-map-support: ^0.5.16
       testdouble: ^3.13.0
       ts-node: ^8.6.2
@@ -460,7 +460,7 @@ importers:
       nyc: ^15.0.0
       pkgsign: ^0.2.0
       rimraf: ^3.0.2
-      slf4ts-api: ^1.3.0
+      slf4ts-api: ^1.4.0
       source-map-support: ^0.5.16
       ts-node: ^8.6.2
       typescript: ^3.8.3
@@ -524,7 +524,7 @@ importers:
       rimraf: ^3.0.2
       sinon: ^9.0.1
       sinon-chai: ^3.5.0
-      slf4ts-api: ^1.3.0
+      slf4ts-api: ^1.4.0
       source-map-support: ^0.5.16
       ts-node: ^8.6.2
       typescript: ^3.8.3
@@ -582,7 +582,7 @@ importers:
       pino: ^5.17.0
       pkgsign: ^0.2.0
       rimraf: ^3.0.2
-      slf4ts-api: ^1.3.0
+      slf4ts-api: ^1.4.0
       source-map-support: ^0.5.16
       ts-node: ^8.6.2
       typescript: ^3.8.3
@@ -634,7 +634,7 @@ importers:
       nyc: ^15.0.0
       pkgsign: ^0.2.0
       rimraf: ^3.0.2
-      slf4ts-api: ^1.3.0
+      slf4ts-api: ^1.4.0
       source-map-support: ^0.5.16
       ts-node: ^8.6.2
       typescript: ^3.8.3
