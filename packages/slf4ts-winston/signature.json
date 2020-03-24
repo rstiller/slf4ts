@@ -109,7 +109,7 @@
           "typings",
           "version"
         ],
-        "sha512": "4a341bca72cb0ffdaa4d6bf2dacc1d7c989383403b1308662143acf4cc7b533290082f6947b9158a5e57294f8843ceb7b568ce7c6c492b024ef30428a071e2be"
+        "sha512": "5d2b084fab7347cb12b2dc243ae143ebf99e3cdeffa32502c2b00795a3a068dcdadbbce9f523e4d63f832737d99013ea2839d788dd722fc72ffb8b4f61a5058b"
       }
     },
     {
@@ -119,7 +119,7 @@
           "name": "slf4ts-winston",
           "description": "Winston logging-binding for slf4ts-api",
           "homepage": "https://github.com/rstiller/slf4ts",
-          "version": "1.2.0",
+          "version": "1.3.0",
           "main": "./build/packages/slf4ts-winston/lib/slf4ts/index.js",
           "typings": "./build/packages/slf4ts-winston/lib/slf4ts/index.d.ts",
           "license": "MIT",
@@ -203,5 +203,5 @@
       }
     }
   ],
-  "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJeemV/CRDCMfXrQKYV5wAAhuIQAKugiBMHrsaTQhkHiebyLWmy\nzP6MdkB1FsaN8On1fZ49NVZRQayCEua7zLuAY+xAfRIFl3831vO8ZJCM4icyzsC+\nokcGs1f+d57FWa1l2NUHJUEu8AyyCO9DjKrs8SXOhOJCBtyfASUWH1AH5OcvfJo5\noGsrd5vXsASctUb5g5VlUCbc1W2Ih2UajMxiOozwdfma/du41dnLF1SesyJPSYue\nDwEssSjrrxuhkjJWeQImjiLQt1+L5DFbVW5pS4XaQ95GNcccTo51BKh/IKy+hqpb\n78skWwckseHzW/wdcXylW/7A3BeBPlXjB6MN/GDMiG1f5mYNfNaEP6PxxiqyBxOT\nXVAzarhT442/fPzuyU3RTMGCm2CDh1Cdyo2WwwRWdDTV3R/Tw96GNuB4JBWiulsb\nAQ0jHpDhOkM8WFelTccd6ol2TPzRwlYTQEbm5Wnt5K7rxUnpEz1GDvarebSQxDox\nN+y80w/pgE3nIYYcxdZ5gTFPSdQ3uHo1uDenGavGmlVL2VBtspIfJoN/vzArw2DL\nK2ONOdcyLey5xZj+nYQ2BCoW0xQCGom1zUdp1+OoTvrSUxW2Z6Sq5M2KQiLsGgY+\ndjo0dz3GokOTj6dZXxpTkVMjd9exlUHhHRFwxlB6fVheyL1eTyXpTy1NtaouwlUy\nfXk3wLPjjVqpONVBh1Rv\n=ibuL\n-----END PGP SIGNATURE-----\n"
+  "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJeemZmCRDCMfXrQKYV5wAAhSgQAJJEZBKcM9H2YQ0LMiCBx/E+\nOlWRaBSx6OQ5m8dOhDcjR5wcCZoCbRx60V5t0KZr4RM9rzHV9/IMvGfKk3sCTSec\n5/6lrxYjwIL6jznB/ULG6wyjUXyl28l4LXlUJpUmH92bcHgh0xBQz6ifSZmZynck\nFVbGpExGTEZy0jUjbZermEsVsVKmD/KpIvFqA5qjl2u0sWPJzCHzTd/Ylu6Y76fa\nOGFpZ4qbKdluWrEuHsvY+IJ+Ye4ApI2J1WpG5xWd36Bxgem9BPbGD932O5lSYG9p\nlQrIIhNaMUIr1V2ECSP0GVfKbGqqpAi/TVr2FWBZSM0QtrAlJzejmb1vmQbHw5ek\nIr33hfrwnjeNAWMOlJ8GRpU8fhf0dcVDEFZkkd/EMY4X6dh1cnCsGnIalRZjmNUo\n9KFBe6ZKBGSN8zhCaSqKRzRrLIcmRpWJW7UvRctx8w5OVt/dBRXoEQ9qLGd6RLD/\nyU+IyuyIauej5z+UJdBxifvXKK+DD5U5S2pvcpOHPH5WAjG6aw9/V5j+g0Yz8NYO\nCyTM2OdIvvNTcCIBMa8zh0kSk5IizWPm4IVEdMmdyWcUq7i2X/lhnidBQICWMuoX\nkBwNSyXFgvG/rla/R6+cPw/0Zf8VQodPJdHlBICHOpDmBiWHkpGIKmbFvWwH6cAs\ndqH86Kx5X8qzcD1KWX3O\n=uJVH\n-----END PGP SIGNATURE-----\n"
 }
