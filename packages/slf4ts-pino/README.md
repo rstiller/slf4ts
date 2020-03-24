@@ -1,6 +1,6 @@
 # slf4ts-pino
 
-[pino](http://getpino.io) Logging-Binding for [slf4ts](https://www.npmjs.org/package/slf4ts-api)
+[pino](https://getpino.io/#/) Logging-Binding for [slf4ts](https://www.npmjs.org/package/slf4ts-api)
 
 <p align="center">
     <a href="https://www.npmjs.org/package/slf4ts-pino">
