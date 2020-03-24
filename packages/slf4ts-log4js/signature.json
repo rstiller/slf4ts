@@ -109,7 +109,7 @@
           "typings",
           "version"
         ],
-        "sha512": "739d15e2c680efef2bf8ccf724047b6dc63c0e959fa3ee1df92e64d8e316fc709be0a7d7f255c2bc32bd33cd9aaf95be93ce3d19c91fde66aff5a8d18d5f0a37"
+        "sha512": "6883e81d95645993f1473f66f058009875466888c011b78d1d0abf4d5b591a85a70d596b3b56541bc560bac802539ff0cbbb3c7532a42ab07dd5cb822b92a737"
       }
     },
     {
@@ -119,7 +119,7 @@
           "name": "slf4ts-log4js",
           "description": "Log4js logging-binding for slf4ts-api",
           "homepage": "https://github.com/rstiller/slf4ts",
-          "version": "1.0.0",
+          "version": "1.1.0",
           "main": "./build/packages/slf4ts-log4js/lib/slf4ts/index.js",
           "typings": "./build/packages/slf4ts-log4js/lib/slf4ts/index.d.ts",
           "license": "MIT",
@@ -202,5 +202,5 @@
       }
     }
   ],
-  "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJeemTyCRDCMfXrQKYV5wAAHtwQAFgO5ubfqWJP1RT8zutUFXXM\nYKOiLw8MM4N8Y/T5EjPIlHI8UFU9xV1A5tv+c70DnscFaBRAnG+T4z+/abVFCwAM\nTzVJIPpSs9R6S2Il5wQX31sE7bov8tPDv7ztLOD6k1TwAdxBNOWAiCNdDjQUDMTF\n5fhtQnz53P0XewU6Eccm3ITK1rSUwucJ3M/Lezq5JGV7RXopYvoRjkx6Ot280yS9\nCPX5dASyLQzqRBb/VkWWBHGzyQwJz/kizx1XZL2sWLZmS1pnyM1SXYHtJLFItcoh\nWZ2f2LYsW/I7toR3yCm9lclCLrw2kEeqL9XR11ympaf7XrAlFUQZned31OoyorFX\nLTAWK0N3poLTr7iIxj8CVOFsXW4i1cPVrScV82ZyhXqhaB1IZPCflFNcuB8v92jd\nmkyKq5b//suouKen4usgoFIge5a6q9Fzf3XRtHXMO7USZMOCjvi3+JHDqxFw6U95\nMTv4A78qFgH7k0LpchUUBPMmyRjrosRKuMeGywHMZ+Tbd0PZUxkvT4OVxRP+rBpM\nRDzWcdZZf7nUtwfxIxUySu876DH0H4d3LckIdyahard72j4fesLm1eLoup7n+P4v\n51rZoeA4R8/Myfuni92Hn0RKHsAJQJvrw8fAZxva1MqaMpOrnXKl3iXS/Xcd5S3n\nzOOfhFqKbdonB7tCTe+Z\n=2YhG\n-----END PGP SIGNATURE-----\n"
+  "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJeemV/CRDCMfXrQKYV5wAAScoQABjGp+XQ5IkKdX4mDvXHp4Ni\nomqKu1mO5Q9HA5WNkxrWXog31xeQWsOemrurI5OtS3/SEpSCe1RwMe+itwqy6t9B\nWXfrywuxhweFLjXO0CGfmk7nAm0EBuABsw+Y9pD4y7bbZxE9cHanF4//2z/J7CvK\n/Zyg/0niKC87gnH/73VHlwZUU4gQfCRISOMBU+ctV2iZCNHkDwzSF7VLbsec8MBN\nGAb+JA084huCGXZF7je8n5+iQHC4PJcZ2gOuG23ApcPKE46gNELF3ecC9N9RJ1vF\nI91EMGUrni5P1wAxCPmBQ7jzGf3gseb7ZlzfksjGnS5R7WopBai+lDApxIAj4t7i\nX2Y1LvHu25xx6+S53Dd0lTEhCKEvHZ3+Yqks6l4H175S+TdrHRAobdDFnr1++JYV\nrkSVAFi4Rvzp4YoiH1q1P8qdi1+BghZbaDcfBOyvM+YpPmYqc8I95LE9GIuhPjPb\nnTr8Tjls5xbn4JMrVNzZ1kBrxb1Y4jjr61609jGOzo7pJZIelVEgDY4bwNGJgWQb\nLCwM5gtujrIQIPKXH6mf2jY5O660xwumdRn8PD2TxcV6RuGsZB4V3+DIHmdXyWGF\n86lvFx+UjxCRS2F1KfTRVR1DgmPdwCvYrKpZsCC4QQ5OY1S35W1istE3nTawTcv+\ngiC2lpQtevkYPsxcP+qV\n=pk5s\n-----END PGP SIGNATURE-----\n"
 }

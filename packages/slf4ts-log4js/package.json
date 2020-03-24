@@ -2,7 +2,7 @@
   "name": "slf4ts-log4js",
   "description": "Log4js logging-binding for slf4ts-api",
   "homepage": "https://github.com/rstiller/slf4ts",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "main": "./build/packages/slf4ts-log4js/lib/slf4ts/index.js",
   "typings": "./build/packages/slf4ts-log4js/lib/slf4ts/index.d.ts",
   "license": "MIT",
