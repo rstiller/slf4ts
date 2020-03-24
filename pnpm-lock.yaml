@@ -59,6 +59,13 @@ importers:
       bunyan: ^1.8.12
       slf4ts-api: ^1.3.0
       slf4ts-bunyan: ^1.0.0
+  examples/javascript-console:
+    dependencies:
+      slf4ts-api: 'link:../../packages/slf4ts-api'
+      slf4ts-console: 'link:../../packages/slf4ts-console'
+    specifiers:
+      slf4ts-api: ^1.3.0
+      slf4ts-console: ^1.2.0
   examples/javascript-log4js:
     dependencies:
       log4js: 6.1.2
@@ -86,6 +93,15 @@ importers:
       pino: ^5.17.0
       slf4ts-api: ^1.3.0
       slf4ts-pino: ^1.0.0
+  examples/javascript-winston:
+    dependencies:
+      slf4ts-api: 'link:../../packages/slf4ts-api'
+      slf4ts-winston: 'link:../../packages/slf4ts-winston'
+      winston: 3.2.1
+    specifiers:
+      slf4ts-api: ^1.3.0
+      slf4ts-winston: ^1.2.0
+      winston: ^3.2.1
   examples/typescript-bunyan:
     dependencies:
       bunyan: 1.8.12
@@ -105,6 +121,22 @@ importers:
       rimraf: ^3.0.2
       slf4ts-api: ^1.3.0
       slf4ts-bunyan: ^1.0.0
+      typescript: ^3.8.3
+  examples/typescript-console:
+    dependencies:
+      slf4ts-api: 'link:../../packages/slf4ts-api'
+      slf4ts-console: 'link:../../packages/slf4ts-console'
+    devDependencies:
+      '@types/node': 13.9.1
+      eslint: 6.8.0
+      rimraf: 3.0.2
+      typescript: 3.8.3
+    specifiers:
+      '@types/node': ^13.7.7
+      eslint: 6.8.0
+      rimraf: ^3.0.2
+      slf4ts-api: ^1.3.0
+      slf4ts-console: ^1.2.0
       typescript: ^3.8.3
   examples/typescript-log4js:
     dependencies:
@@ -162,6 +194,24 @@ importers:
       slf4ts-api: ^1.3.0
       slf4ts-pino: ^1.0.0
       typescript: ^3.8.3
+  examples/typescript-winston:
+    dependencies:
+      slf4ts-api: 'link:../../packages/slf4ts-api'
+      slf4ts-winston: 'link:../../packages/slf4ts-winston'
+      winston: 3.2.1
+    devDependencies:
+      '@types/node': 13.9.1
+      eslint: 6.8.0
+      rimraf: 3.0.2
+      typescript: 3.8.3
+    specifiers:
+      '@types/node': ^13.7.7
+      eslint: 6.8.0
+      rimraf: ^3.0.2
+      slf4ts-api: ^1.3.0
+      slf4ts-winston: ^1.2.0
+      typescript: ^3.8.3
+      winston: ^3.2.1
   packages/slf4ts-api:
     dependencies:
       source-map-support: 0.5.16

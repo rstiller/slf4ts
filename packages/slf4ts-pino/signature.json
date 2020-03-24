@@ -54,7 +54,7 @@
           },
           {
             "path": "README.md",
-            "sha512": "e018589c2dff837562919126d08d5b6c30e75e72f281d22efde035aeafa2cb44597de5864719ebf60c601b10ec6b2fe021a81a91a2032f6f7dc9be36edc83ca2"
+            "sha512": "c3bd2a2e7d410e7da6edb7fefaa11aef6a726507303c6c88d41b8bab31e6c449b87e79ebdac1344a7c71e5d6c359b94b86996c5073a79f6f1133a548a73dd375"
           },
           {
             "path": "build/packages/slf4ts-pino/lib/slf4ts/index.d.ts",
@@ -205,5 +205,5 @@
       }
     }
   ],
-  "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJeeSCECRDCMfXrQKYV5wAAJgUQAEDheRxSyb85hIZE3k0RvPSB\nSoqqmBiwLmx5mkFOYiUIxicRjwQ1StvMPqxKD6alP2sp5PElTQyxrxUi+oMobhSE\nG8zB5LTO1oO7ESLl3PNF6rGLAAR6nk55/PhmMpXA7RVDJImSnxHP+uovsAkXYMcn\ncz0ClzqNHfbcg9zua++a5mU8ToalV+G4CgBeuJjZWPEvWdvSBbCpzg+zPQGFV2aC\nMUTyOQr6UQirPH+l+NF74P9rLjpBDnqYisv8PZdguIwGxruGOlzqTcyG4ezqZvPY\nDe3HfjRwHGj40nJ613Zw77wA1LF7KsG/fwXB977AvCUn9HttwxeAMMJSptisj//S\n8YHfM3KZi2004cbetJrdL2kyhTSY94GkiRVNV3/xke7BwVvNKl9QUhFHJuoh7fdy\n5HyUlrix1fhC2wcuTbUHETRi5EXcHNER9ym1dAkA2LLa78tfU1+JT0E3aRB06wrT\nZY/zEcxAquwgz39/yQbOl5CJalY4id+TZFPLqgpYEZXFYUsNbKCiJP8Zf3tppI/Z\n0YYpmbKOZWnS29XbogJ8a3T6uxhGBHnXFYIMfGhMm1IYDku+gwMlHyDwZPdEAZ68\nEFxdX1Nr9IsksipUppx3fdZTkO7hdpYTdfZI6hfYKiu7j1debUVFFiYNs9VVZshC\nHZEEs5uvSuwSEu5lBEL2\n=DOPS\n-----END PGP SIGNATURE-----\n"
+  "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJeelSUCRDCMfXrQKYV5wAATsUQAIz5APMmYUlfJ3kBUDBDR0cZ\n4BfGZvoKaQ+Teu4+0yEHBVdUvkUxdMC5JEl7OM1H5gXH+6ThU0FWjkQ9NFXxIdJY\nPwBXt54bBGXC8N9pZ/ko3u9dnnuceLVpOXHpwpT3mFEpa3+zKN1ygG6lemRPSFHv\nxw79RoL7GFtVtSHnYHrQtiWGsloBfdrXvffNvigaxntt+FWjixngxK0nJ2yv/dP6\n/M2IvICFLVMUI7nR5TZCBxtJDIsTSQKHmkrsrcnipDVRSGh2b9w1SRRMCLrRxAtA\ninLURs61L5Ri8D27A5ukPP8okC/Q935JBACZOo0+MhrtexqI693/K5UDMlSM9jsj\nDkwqrY/tpLccVsZw4swd8hQjfDIZjXMRgSaEJXy46PGpV5kBL7f53kDN+CG8slt2\ngZvercl8C2c8+IJBNeSH4mUxqbfXKToeP0UusBD4+cy9lTqb85DkjMNAuzQ+yfar\nFzUxYkQEZcDIKrfNecm1xfIrOe2wMwbIwGVWOFdpOXJVUCp2tPkCFmV3wjLvaRON\nyuJ4wGfkVkJ8wtGVa6Lm/nJoi7bxbVrwAVtE9TR43B5j8TQjUiFWA03ipg+S8kB7\nB/LYJVdqL7izcmraeJTEk4g0Ei8Cf3oeUtVU7NVRbIVIPTXDKYwvn5ND8SvBGdQh\nhjXKOKWTyrdQ4NjcJdbo\n=dCKj\n-----END PGP SIGNATURE-----\n"
 }
