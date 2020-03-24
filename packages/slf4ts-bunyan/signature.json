@@ -109,7 +109,7 @@
           "typings",
           "version"
         ],
-        "sha512": "1931407b222039add85e9b9c150e8d9831c590a41baab2ad1b5d679d403d54c076824b82d0b4d77ef685dd3d79f91cb2a5f230c62fe8cc755f0a9fe541c005f3"
+        "sha512": "dbe028789a5976ecb158146b60ebd3987517f4a99b26369652aa3664efee09c5f249530e732bef719ce86e83516c44d04fa976248ba75e9ab148606616c8968d"
       }
     },
     {
@@ -144,7 +144,7 @@
           },
           "dependencies": {
             "bunyan": "^1.8.12",
-            "slf4ts-api": "^1.3.0",
+            "slf4ts-api": "^1.4.0",
             "source-map-support": "^0.5.16"
           },
           "devDependencies": {
@@ -205,5 +205,5 @@
       }
     }
   ],
-  "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJeemLMCRDCMfXrQKYV5wAADjQQACzBI0oZ3I1TezebrybWpoTY\nwd03Cp2lAFJf+4pOiqFraCM5qipOXeM0YudKFX5f5TQg5y3pts7Zq8mAdSqxTx0b\nd3Hf3uIJYeSvI4oYlh7jR0HR+cOaAl135ZTVAJVGgwqpm4cTpTRX5b6VXYLRZrHr\nZZYQE9qIQpiXYW6QFyvilYWLodS3yz7y12/ndieh7XA9jsd0WMqlZzwCJjAlD7uo\nP2FPBh9AIkzd7elXCpNvu3J3teasCtFyrhvfxsUyFG3BGnUJYfduYqMspSu57MbJ\nQgaXeqxuEDHQV/hUEJjmA2rNg4Hd3n83/CtsPNmhXGNuuvmQOu6e5udLDHuafOcK\nIuKK+irSH3o0guDClSBmQ8IcWq+vPcM4HizhK2cfSGgxdJNdf+Togiu+YdfaExiY\n15EH42jYt+QYjv9whThEK8+Meb6Pi8Buhuv6CfFmCABaNwrW0xQzJA2Ks2KUqSkd\n2+LZ7fhbtQ3QxQ0f6b1Mrgzqge49BMys+hDnjMWm9KT0YouzPnipFLzPTL6D/Eex\nB3LRhwGe7Y5u8S3hWtoB0ML5Y/x6FAIXFGP/5K1Fe3neTw0MiaaRJHyp6kVCHyHa\nAcydhYwHx/QzOuysr0si6etPkfq/uIpo8+hsWoJH6xs2RDHiUk8fCc/XFPmxeHzh\nqM/unHWDT5/R10OsT8S5\n=pxGV\n-----END PGP SIGNATURE-----\n"
+  "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJeemOiCRDCMfXrQKYV5wAAxKMQACa7n7JcF6dLQPMCrzf+VFkG\nmyUX6wAGEmYmBffZLOI2TWgpBpXEqOvgzeseNLab6AhJ0bhU3Gv0L+0UhF8LRmzT\nQI3cnsmIpSC16QSb/kfZ/+EhSxI1ngPPUwdYshd3oM4i+ZPpIxYI9ZwgNc56z2g+\nynjCkyUtMwrZYFn+e//0Geqi/HB/GcrEmi9T4aSB1Dvi3Um0XE2cb0m+xrK+L2Ho\nq4B3KAfoFYQ5rPFeuznZ43uY7RXrjk7rrJc3EvwSDpuYaxYoS6n1BGTrFz4lN/DF\n9Q0q3pmqKSTluDWg5haq7ZSNhXEE0QwmsGjM+4IDUu0nz1HihNppitTHWETyz1nz\nXlNcRLOWB9nVh3ybyGruRujevMpvXLpJhudrSwDUWN5AAQ6JMoGe02Eb/3Q5Qqku\nquWPq4ObFaLS3iDpzLnw7Jjclezt8+C5jAnsbbMJGNP5sgOw+yMloGUxDt3CSHt4\nOtOELShb6L4ORNjYim7ss6nrlQvXBlVSOEtW15Bd7VrBjzqdvX59IZeSU5tTmGiu\nfaoD17W0lbJpvjrUEowRoL/+epXFz3ktvgjHow3gUadJlni8gwKTsSIYEB/n309k\n833SruACiYVcNbiIzIMbQ/PpqXGtKqo0xKHOaMDrCTNnadQw5ozPWZZEgPWigigB\nuqZXQ94I8maSNbmXP0FL\n=bK1Y\n-----END PGP SIGNATURE-----\n"
 }

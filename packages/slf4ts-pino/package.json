@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "pino": "^5.17.0",
-    "slf4ts-api": "^1.3.0",
+    "slf4ts-api": "^1.4.0",
     "source-map-support": "^0.5.16"
   },
   "devDependencies": {
