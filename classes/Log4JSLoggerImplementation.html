@@ -99,6 +99,10 @@
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Private</span>
+                                <a href="#builder">builder</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
                                     <span class="modifier">Readonly</span>
                                 <a href="#loggers">loggers</a>
                             </li>
@@ -115,6 +119,10 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getDefaultLoggerBuilder">getDefaultLoggerBuilder</a>
+                            </li>
+                            <li>
                                     <span class="modifier">Public</span>
                                 <a href="#getImplementation">getImplementation</a>
                             </li>
@@ -130,6 +138,10 @@
                             <li>
                                     <span class="modifier">Public</span>
                                 <a href="#setConfig">setConfig</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#setLoggerBuilder">setLoggerBuilder</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
@@ -157,6 +169,39 @@
         <h3 id="inputs">
             Properties
         </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="builder"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            builder</b>
+                            <a href="#builder"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#LoggerBuilder" target="_self" >LoggerBuilder&lt;Logger | &gt;</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>this.getDefaultLoggerBuilder()</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">packages/slf4ts-log4js/lib/slf4ts/Log4JSLoggerImplementation.ts:23</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
         <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
@@ -202,6 +247,47 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
+                    <a name="getDefaultLoggerBuilder"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            getDefaultLoggerBuilder
+                        </b>
+                        <a href="#getDefaultLoggerBuilder"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getDefaultLoggerBuilder()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="70"
+                            class="link-to-prism">packages/slf4ts-log4js/lib/slf4ts/Log4JSLoggerImplementation.ts:70</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../miscellaneous/typealiases.html#LoggerBuilder" target="_self" >LoggerBuilder&lt;Logger, &gt;</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
                     <a name="getImplementation"></a>
                     <span class="name">
                         <b>
@@ -222,8 +308,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="42"
-                            class="link-to-prism">packages/slf4ts-log4js/lib/slf4ts/Log4JSLoggerImplementation.ts:42</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="43"
+                            class="link-to-prism">packages/slf4ts-log4js/lib/slf4ts/Log4JSLoggerImplementation.ts:43</a></div>
                 </td>
             </tr>
 
@@ -306,8 +392,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="65"
-                            class="link-to-prism">packages/slf4ts-log4js/lib/slf4ts/Log4JSLoggerImplementation.ts:65</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="74"
+                            class="link-to-prism">packages/slf4ts-log4js/lib/slf4ts/Log4JSLoggerImplementation.ts:74</a></div>
                 </td>
             </tr>
 
@@ -391,8 +477,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="24"
-                            class="link-to-prism">packages/slf4ts-log4js/lib/slf4ts/Log4JSLoggerImplementation.ts:24</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="25"
+                            class="link-to-prism">packages/slf4ts-log4js/lib/slf4ts/Log4JSLoggerImplementation.ts:25</a></div>
                 </td>
             </tr>
 
@@ -463,8 +549,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="46"
-                            class="link-to-prism">packages/slf4ts-log4js/lib/slf4ts/Log4JSLoggerImplementation.ts:46</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="47"
+                            class="link-to-prism">packages/slf4ts-log4js/lib/slf4ts/Log4JSLoggerImplementation.ts:47</a></div>
                 </td>
             </tr>
 
@@ -547,6 +633,78 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
+                    <a name="setLoggerBuilder"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            setLoggerBuilder
+                        </b>
+                        <a href="#setLoggerBuilder"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>setLoggerBuilder(builder?: <a href="../undefineds/LoggerBuilder.html">LoggerBuilder<Logger | ></a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="66"
+                            class="link-to-prism">packages/slf4ts-log4js/lib/slf4ts/Log4JSLoggerImplementation.ts:66</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>builder</td>
+                                    <td>
+                                                <code><a href="../miscellaneous/typealiases.html#LoggerBuilder" target="_self" >LoggerBuilder&lt;Logger | &gt;</a></code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
                     <a name="setLogLevel"></a>
                     <span class="name">
                         <b>
@@ -567,8 +725,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="50"
-                            class="link-to-prism">packages/slf4ts-log4js/lib/slf4ts/Log4JSLoggerImplementation.ts:50</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="51"
+                            class="link-to-prism">packages/slf4ts-log4js/lib/slf4ts/Log4JSLoggerImplementation.ts:51</a></div>
                 </td>
             </tr>
 
@@ -663,8 +821,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="55"
-                            class="link-to-prism">packages/slf4ts-log4js/lib/slf4ts/Log4JSLoggerImplementation.ts:55</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="56"
+                            class="link-to-prism">packages/slf4ts-log4js/lib/slf4ts/Log4JSLoggerImplementation.ts:56</a></div>
                 </td>
             </tr>
 
@@ -747,7 +905,7 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import &#x27;source-map-support/register&#x27;
 
-import { LoggerImplementation, LogLevel } from &#x27;slf4ts-api&#x27;
+import { LoggerImplementation, LogLevel, LoggerBuilder } from &#x27;slf4ts-api&#x27;
 import { getLogger, Logger } from &#x27;log4js&#x27;
 
 const LogLevelMapping: string[] &#x3D; []
@@ -765,8 +923,9 @@ LogLevelMapping[LogLevel.ERROR] &#x3D; &#x27;ERROR&#x27;
  * @class Log4JSLoggerImplementation
  * @implements {LoggerImplementation}
  */
-export class Log4JSLoggerImplementation implements LoggerImplementation {
+export class Log4JSLoggerImplementation implements LoggerImplementation&lt;Logger, [string]&gt; {
   private readonly loggers: Map&lt;string, Logger&gt; &#x3D; new Map();
+  private builder: LoggerBuilder&lt;Logger, [string]&gt; &#x3D; this.getDefaultLoggerBuilder()
 
   public async log (...args: any[]): Promise&lt;any&gt; {
     const additionalArguments &#x3D; [...arguments]
@@ -809,12 +968,20 @@ export class Log4JSLoggerImplementation implements LoggerImplementation {
     }
   }
 
+  public setLoggerBuilder (builder?: LoggerBuilder&lt;Logger, [string]&gt;): void {
+    this.builder &#x3D; builder ?? this.getDefaultLoggerBuilder()
+  }
+
+  private getDefaultLoggerBuilder (): LoggerBuilder&lt;Logger, [string]&gt; {
+    return (category: string) &#x3D;&gt; getLogger(category)
+  }
+
   private getLoggerInstance (group: string, name: string): Logger {
     const compoundKey &#x3D; &#x60;${group}:${name}&#x60;
     let instance: Logger &#x3D; this.loggers.get(compoundKey)
 
     if (!instance) {
-      instance &#x3D; getLogger(compoundKey)
+      instance &#x3D; this.builder(compoundKey)
       this.loggers.set(compoundKey, instance)
     }
 

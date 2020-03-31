@@ -150,7 +150,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">packages/slf4ts-winston/lib/slf4ts/WinstonLoggerBinding.ts:20</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">packages/slf4ts-winston/lib/slf4ts/WinstonLoggerBinding.ts:18</a></div>
                             </td>
                         </tr>
 
@@ -185,7 +185,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">packages/slf4ts-winston/lib/slf4ts/WinstonLoggerBinding.ts:20</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">packages/slf4ts-winston/lib/slf4ts/WinstonLoggerBinding.ts:18</a></div>
                             </td>
                         </tr>
 
@@ -223,8 +223,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="35"
-                            class="link-to-prism">packages/slf4ts-winston/lib/slf4ts/WinstonLoggerBinding.ts:35</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="33"
+                            class="link-to-prism">packages/slf4ts-winston/lib/slf4ts/WinstonLoggerBinding.ts:33</a></div>
                 </td>
             </tr>
 
@@ -233,7 +233,7 @@
                 <td class="col-md-4">
 
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="../interfaces/LoggerImplementation.html" target="_self" >LoggerImplementation</a></code>
+                        <b>Returns : </b>        <code><a href="../interfaces/LoggerImplementation.html" target="_self" >WinstonLoggerImplementation</a></code>
 
                     </div>
                 </td>
@@ -264,8 +264,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="39"
-                            class="link-to-prism">packages/slf4ts-winston/lib/slf4ts/WinstonLoggerBinding.ts:39</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="37"
+                            class="link-to-prism">packages/slf4ts-winston/lib/slf4ts/WinstonLoggerBinding.ts:37</a></div>
                 </td>
             </tr>
 
@@ -305,8 +305,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="43"
-                            class="link-to-prism">packages/slf4ts-winston/lib/slf4ts/WinstonLoggerBinding.ts:43</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="41"
+                            class="link-to-prism">packages/slf4ts-winston/lib/slf4ts/WinstonLoggerBinding.ts:41</a></div>
                 </td>
             </tr>
 
@@ -336,10 +336,8 @@
 
 import * as fs from &#x27;fs&#x27;
 import * as path from &#x27;path&#x27;
-import {
-  LoggerBinding,
-  LoggerImplementation
-} from &#x27;slf4ts-api&#x27;
+import * as winston from &#x27;winston&#x27;
+import { LoggerBinding } from &#x27;slf4ts-api&#x27;
 
 import { WinstonLoggerImplementation } from &#x27;./WinstonLoggerImplementation&#x27;
 
@@ -350,7 +348,7 @@ import { WinstonLoggerImplementation } from &#x27;./WinstonLoggerImplementation&
  * @class WinstonLoggerBinding
  * @implements {LoggerBinding}
  */
-export class WinstonLoggerBinding implements LoggerBinding {
+export class WinstonLoggerBinding implements LoggerBinding&lt;winston.Logger, []&gt; {
   private readonly packageJson: any;
 
   public constructor () {
@@ -366,7 +364,7 @@ export class WinstonLoggerBinding implements LoggerBinding {
     }
   }
 
-  public getLoggerImplementation (): LoggerImplementation {
+  public getLoggerImplementation (): WinstonLoggerImplementation {
     return new WinstonLoggerImplementation()
   }
 

@@ -39,6 +39,7 @@
 </p>
 
 <p>This is the mono-repository for the <code>slf4ts</code> modules.<br><code>slf4ts</code> modules are a collection of modules abstracting logging for nodejs libraries.  </p>
+<p>Compatible libraries use the <code>slf4ts-api</code> module to get a Logger instance and do the logging.<br>The application, that use these libraries, choose a concrete logging library alongside the<br>corresponding <code>slf4ts</code> logger binding module to make their dependencies use the chosen logging library.</p>
 <h2 id="modules">Modules</h2>
 <table class="table table-bordered compodoc-table">
 <thead>
@@ -59,6 +60,20 @@
 <td align="left"><img src="https://img.shields.io/npm/v/slf4ts-api.svg" alt="NPM Version" class="img-responsive"> <img src="https://img.shields.io/npm/l/slf4ts-api.svg" alt="License" class="img-responsive"> <img src="https://img.shields.io/david/rstiller/slf4ts-api.svg" alt="Dependencies Status" class="img-responsive"></td>
 </tr>
 <tr>
+<td align="left"><i>Bindings</i></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="packages/slf4ts-bunyan">slf4ts-bunyan</a></td>
+<td align="left">Bunyan Logger Binding</td>
+<td align="left"></td>
+<td align="left"><a href="https://github.com/trentm/node-bunyan#readme">bunyan</a></td>
+<td align="left"><img src="https://img.shields.io/npm/v/slf4ts-bunyan.svg" alt="NPM Version" class="img-responsive"> <img src="https://img.shields.io/npm/l/slf4ts-bunyan.svg" alt="License" class="img-responsive"> <img src="https://img.shields.io/david/rstiller/slf4ts-bunyan.svg" alt="Dependencies Status" class="img-responsive"></td>
+</tr>
+<tr>
 <td align="left"><a href="packages/slf4ts-console">slf4ts-console</a></td>
 <td align="left">Console Logger Binding</td>
 <td align="left"></td>
@@ -73,11 +88,32 @@
 <td align="left"><img src="https://img.shields.io/npm/v/slf4ts-log4js.svg" alt="NPM Version" class="img-responsive"> <img src="https://img.shields.io/npm/l/slf4ts-log4js.svg" alt="License" class="img-responsive"> <img src="https://img.shields.io/david/rstiller/slf4ts-log4js.svg" alt="Dependencies Status" class="img-responsive"></td>
 </tr>
 <tr>
+<td align="left"><a href="packages/slf4ts-loglevel">slf4ts-loglevel</a></td>
+<td align="left">loglevel Logger Binding</td>
+<td align="left"></td>
+<td align="left"><a href="https://github.com/pimterry/loglevel">loglevel</a></td>
+<td align="left"><img src="https://img.shields.io/npm/v/slf4ts-loglevel.svg" alt="NPM Version" class="img-responsive"> <img src="https://img.shields.io/npm/l/slf4ts-loglevel.svg" alt="License" class="img-responsive"> <img src="https://img.shields.io/david/rstiller/slf4ts-loglevel.svg" alt="Dependencies Status" class="img-responsive"></td>
+</tr>
+<tr>
+<td align="left"><a href="packages/slf4ts-pino">slf4ts-pino</a></td>
+<td align="left">pino Logger Binding</td>
+<td align="left"></td>
+<td align="left"><a href="https://getpino.io/#/">pino</a></td>
+<td align="left"><img src="https://img.shields.io/npm/v/slf4ts-pino.svg" alt="NPM Version" class="img-responsive"> <img src="https://img.shields.io/npm/l/slf4ts-pino.svg" alt="License" class="img-responsive"> <img src="https://img.shields.io/david/rstiller/slf4ts-pino.svg" alt="Dependencies Status" class="img-responsive"></td>
+</tr>
+<tr>
 <td align="left"><a href="packages/slf4ts-winston">slf4ts-winston</a></td>
 <td align="left">Winston Logger Binding</td>
 <td align="left"></td>
 <td align="left"><a href="https://github.com/winstonjs/winston">winston</a></td>
 <td align="left"><img src="https://img.shields.io/npm/v/slf4ts-winston.svg" alt="NPM Version" class="img-responsive"> <img src="https://img.shields.io/npm/l/slf4ts-winston.svg" alt="License" class="img-responsive"> <img src="https://img.shields.io/david/rstiller/slf4ts-winston.svg" alt="Dependencies Status" class="img-responsive"></td>
+</tr>
+<tr>
+<td align="left"><i>Adapter</i></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
 </tr>
 <tr>
 <td align="left"><a href="packages/slf4ts-cassandra-log-adapter">slf4ts-cassandra-log-adapter</a></td>
@@ -95,14 +131,27 @@
 </tr>
 </tbody>
 </table>
+<h2 id="examples">Examples</h2>
+<p>Code examples for <code>javascript</code> and <code>typescript</code> are in the <code>examples</code> folder.  </p>
 <h1 id="project-development">project development</h1>
 <p>init / update project (if a new dependency is introduced or an existing is updated):  </p>
-<div><pre class="line-numbers"><code class="language-none">pnpm i</code></pre></div><p>generate dependency report:  </p>
+<div><pre class="line-numbers"><code class="language-none">npm i -g pnpm
+pnpm i</code></pre></div><p>generate dependency report:  </p>
 <div><pre class="line-numbers"><code class="language-none"># run &#39;pnpm run build&#39; before checking dependencies
 docker-compose run --rm deps</code></pre></div><p>release packages / publish docs:  </p>
 <div><pre class="line-numbers"><code class="language-none"># check functionality
 pnpm i
 pnpm run build
+
+# public packages
+# change version in every dependent package
+pnpm i
+pnpm publish --filter slf4ts-api
+git add .
+git commit -m &quot;publish version x.y.z of slf4ts-api&quot;
+git tag slf4ts-api&#64;x.y.z
+git push
+git push origin slf4ts-api&#64;x.y.z
 
 # publish docs
 rm -fr docs/

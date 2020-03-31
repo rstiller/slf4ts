@@ -128,8 +128,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="81"
-                            class="link-to-prism">packages/slf4ts-api/lib/slf4ts/LoggerBindings.ts:81</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="94"
+                            class="link-to-prism">packages/slf4ts-api/lib/slf4ts/LoggerBindings.ts:94</a></div>
                 </td>
             </tr>
 
@@ -142,7 +142,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="../interfaces/LoggerImplementation.html" target="_self" >LoggerImplementation</a></code>
+                        <b>Returns : </b>        <code><a href="../interfaces/LoggerImplementation.html" target="_self" >LoggerImplementation&lt;T, P&gt;</a></code>
 
                     </div>
                     <div class="io-description">
@@ -175,8 +175,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="88"
-                            class="link-to-prism">packages/slf4ts-api/lib/slf4ts/LoggerBindings.ts:88</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="101"
+                            class="link-to-prism">packages/slf4ts-api/lib/slf4ts/LoggerBindings.ts:101</a></div>
                 </td>
             </tr>
 
@@ -222,8 +222,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="95"
-                            class="link-to-prism">packages/slf4ts-api/lib/slf4ts/LoggerBindings.ts:95</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="108"
+                            class="link-to-prism">packages/slf4ts-api/lib/slf4ts/LoggerBindings.ts:108</a></div>
                 </td>
             </tr>
 
@@ -261,12 +261,17 @@ import * as path from &#x27;path&#x27;
 import { LogLevel } from &#x27;./LoggerConfiguration&#x27;
 
 /**
- * The bridge to the underlying logging-framework.
+ * Builds the instance of the underlying logger framework.
+ */
+export type LoggerBuilder&lt;T, P extends any[]&gt; &#x3D; (...args: P) &#x3D;&gt; T
+
+/**
+ * The bridge to the underlying logging-framework.any[]
  *
  * @export
  * @interface LoggerImplementation
  */
-export interface LoggerImplementation {
+export interface LoggerImplementation&lt;T, P extends any[]&gt; {
 
   /**
      * Invoked for each call to a logging method of a logger instance.
@@ -285,7 +290,7 @@ export interface LoggerImplementation {
      * @param {string} name The name of the logger.
      * @memberof LoggerImplementation
      */
-  getImplementation&lt;T&gt;(group: string, name: string): T
+  getImplementation(group: string, name: string): T
 
   /**
      * Sets the configuration for the specified logger instance.
@@ -318,6 +323,14 @@ export interface LoggerImplementation {
      */
   setMetadata(metadata: any, group: string, name: string): void
 
+  /**
+   * Sets the logger builder instance
+   *
+   * @param {LoggerBuilder&lt;T, P&gt;} builder
+   * @memberof LoggerImplementation
+   */
+  setLoggerBuilder(builder: LoggerBuilder&lt;T, P&gt;): void
+
 }
 
 /**
@@ -326,14 +339,14 @@ export interface LoggerImplementation {
  * @export
  * @interface LoggerBinding
  */
-export interface LoggerBinding {
+export interface LoggerBinding&lt;T &#x3D; any, P extends any[] &#x3D; any&gt; {
   /**
      * Gets the logger implementation.
      *
      * @returns {LoggerImplementation} The logger implementation.
      * @memberof LoggerBinding
      */
-  getLoggerImplementation(): LoggerImplementation
+  getLoggerImplementation(): LoggerImplementation&lt;T, P&gt;
   /**
      * Gets the vendor string.
      *

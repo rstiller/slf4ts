@@ -129,6 +129,10 @@
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
+                                <a href="#setLoggerBuilder">setLoggerBuilder</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
                                 <a href="#setLogLevel">setLogLevel</a>
                             </li>
                             <li>
@@ -159,7 +163,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">packages/slf4ts-console/lib/slf4ts/ConsoleLoggerImplementation.ts:17</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">packages/slf4ts-console/lib/slf4ts/ConsoleLoggerImplementation.ts:18</a></div>
                             </td>
                         </tr>
 
@@ -231,7 +235,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">packages/slf4ts-console/lib/slf4ts/ConsoleLoggerImplementation.ts:17</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">packages/slf4ts-console/lib/slf4ts/ConsoleLoggerImplementation.ts:18</a></div>
                             </td>
                         </tr>
 
@@ -274,14 +278,6 @@
                 </td>
             </tr>
 
-            <tr>
-                <td class="col-md-4">
-                    <b>Type parameters :</b>
-                    <ul class="type-parameters">
-                        <li>T</li>
-                    </ul>
-                </td>
-            </tr>
 
             <tr>
                 <td class="col-md-4">
@@ -329,7 +325,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>    <code>T</code>
+                        <b>Returns : </b>    <code>Console</code>
 
                     </div>
                     <div class="io-description">
@@ -365,8 +361,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="61"
-                            class="link-to-prism">packages/slf4ts-console/lib/slf4ts/ConsoleLoggerImplementation.ts:61</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="65"
+                            class="link-to-prism">packages/slf4ts-console/lib/slf4ts/ConsoleLoggerImplementation.ts:65</a></div>
                 </td>
             </tr>
 
@@ -496,6 +492,78 @@
                                     <td>name</td>
                                     <td>
                                                 <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="setLoggerBuilder"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            setLoggerBuilder
+                        </b>
+                        <a href="#setLoggerBuilder"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>setLoggerBuilder(builder: <a href="../undefineds/LoggerBuilder.html">LoggerBuilder<Console | never></a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="52"
+                            class="link-to-prism">packages/slf4ts-console/lib/slf4ts/ConsoleLoggerImplementation.ts:52</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>builder</td>
+                                    <td>
+                                                <code><a href="../miscellaneous/typealiases.html#LoggerBuilder" target="_self" >LoggerBuilder&lt;Console | never&gt;</a></code>
                                     </td>
 
                                     <td>
@@ -726,7 +794,8 @@
 
 import {
   LoggerImplementation,
-  LogLevel
+  LogLevel,
+  LoggerBuilder
 } from &#x27;slf4ts-api&#x27;
 import * as util from &#x27;util&#x27;
 
@@ -737,7 +806,7 @@ import * as util from &#x27;util&#x27;
  * @class ConsoleLoggerImplementation
  * @implements {LoggerImplementation}
  */
-export class ConsoleLoggerImplementation implements LoggerImplementation {
+export class ConsoleLoggerImplementation implements LoggerImplementation&lt;Console, never&gt; {
   private readonly console: Console;
 
   /**
@@ -751,14 +820,13 @@ export class ConsoleLoggerImplementation implements LoggerImplementation {
   }
 
   /**
-     * Gets the console instance passed to the constructor.
-     *
-     * @template T
-     * @returns {T} the console implementation passed to the constructor.
-     * @memberof ConsoleLoggerImplementation
-     */
-  public getImplementation&lt;T&gt;(group: string, name: string): T {
-    return this.console as any
+   * Gets the console instance passed to the constructor.
+   *
+   * @returns {Console} the console implementation passed to the constructor.
+   * @memberof ConsoleLoggerImplementation
+   */
+  public getImplementation (group: string, name: string): Console {
+    return this.console
   }
 
   public setConfig&lt;T&gt;(config: T, group: string, name: string): void {
@@ -770,6 +838,10 @@ export class ConsoleLoggerImplementation implements LoggerImplementation {
   }
 
   public setMetadata (metadata: any, group: string, name: string): void {
+    // nothing to set here ...
+  }
+
+  public setLoggerBuilder (builder: LoggerBuilder&lt;Console, never&gt;): void {
     // nothing to set here ...
   }
 

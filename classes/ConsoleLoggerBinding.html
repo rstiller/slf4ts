@@ -150,7 +150,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">packages/slf4ts-console/lib/slf4ts/ConsoleLoggerBinding.ts:20</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">packages/slf4ts-console/lib/slf4ts/ConsoleLoggerBinding.ts:17</a></div>
                             </td>
                         </tr>
 
@@ -185,7 +185,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">packages/slf4ts-console/lib/slf4ts/ConsoleLoggerBinding.ts:20</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">packages/slf4ts-console/lib/slf4ts/ConsoleLoggerBinding.ts:17</a></div>
                             </td>
                         </tr>
 
@@ -223,8 +223,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="35"
-                            class="link-to-prism">packages/slf4ts-console/lib/slf4ts/ConsoleLoggerBinding.ts:35</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="32"
+                            class="link-to-prism">packages/slf4ts-console/lib/slf4ts/ConsoleLoggerBinding.ts:32</a></div>
                 </td>
             </tr>
 
@@ -233,7 +233,7 @@
                 <td class="col-md-4">
 
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="../interfaces/LoggerImplementation.html" target="_self" >LoggerImplementation</a></code>
+                        <b>Returns : </b>        <code><a href="../interfaces/LoggerImplementation.html" target="_self" >ConsoleLoggerImplementation</a></code>
 
                     </div>
                 </td>
@@ -264,8 +264,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="39"
-                            class="link-to-prism">packages/slf4ts-console/lib/slf4ts/ConsoleLoggerBinding.ts:39</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="36"
+                            class="link-to-prism">packages/slf4ts-console/lib/slf4ts/ConsoleLoggerBinding.ts:36</a></div>
                 </td>
             </tr>
 
@@ -305,8 +305,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="43"
-                            class="link-to-prism">packages/slf4ts-console/lib/slf4ts/ConsoleLoggerBinding.ts:43</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="40"
+                            class="link-to-prism">packages/slf4ts-console/lib/slf4ts/ConsoleLoggerBinding.ts:40</a></div>
                 </td>
             </tr>
 
@@ -336,10 +336,7 @@
 
 import * as fs from &#x27;fs&#x27;
 import * as path from &#x27;path&#x27;
-import {
-  LoggerBinding,
-  LoggerImplementation
-} from &#x27;slf4ts-api&#x27;
+import { LoggerBinding } from &#x27;slf4ts-api&#x27;
 
 import { ConsoleLoggerImplementation } from &#x27;./ConsoleLoggerImplementation&#x27;
 
@@ -350,7 +347,7 @@ import { ConsoleLoggerImplementation } from &#x27;./ConsoleLoggerImplementation&
  * @class ConsoleLoggerBinding
  * @implements {LoggerBinding}
  */
-export class ConsoleLoggerBinding implements LoggerBinding {
+export class ConsoleLoggerBinding implements LoggerBinding&lt;Console, never&gt; {
   private readonly packageJson: any;
 
   public constructor () {
@@ -366,7 +363,7 @@ export class ConsoleLoggerBinding implements LoggerBinding {
     }
   }
 
-  public getLoggerImplementation (): LoggerImplementation {
+  public getLoggerImplementation (): ConsoleLoggerImplementation {
     return new ConsoleLoggerImplementation()
   }
 

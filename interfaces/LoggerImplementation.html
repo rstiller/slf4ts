@@ -68,7 +68,7 @@
                 <h3>Description</h3>
             </p>
             <p class="comment">
-                <p>The bridge to the underlying logging-framework.</p>
+                <p>The bridge to the underlying logging-framework.any[]</p>
 
             </p>
 
@@ -93,6 +93,9 @@
                                 </li>
                                 <li>
                                     <a href="#setConfig">setConfig</a>
+                                </li>
+                                <li>
+                                    <a href="#setLoggerBuilder">setLoggerBuilder</a>
                                 </li>
                                 <li>
                                     <a href="#setLogLevel">setLogLevel</a>
@@ -134,19 +137,11 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="33"
-                            class="link-to-prism">packages/slf4ts-api/lib/slf4ts/LoggerBindings.ts:33</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="38"
+                            class="link-to-prism">packages/slf4ts-api/lib/slf4ts/LoggerBindings.ts:38</a></div>
                 </td>
             </tr>
 
-            <tr>
-                <td class="col-md-4">
-                    <b>Type parameters :</b>
-                    <ul class="type-parameters">
-                        <li>T</li>
-                    </ul>
-                </td>
-            </tr>
 
             <tr>
                 <td class="col-md-4">
@@ -235,8 +230,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="23"
-                            class="link-to-prism">packages/slf4ts-api/lib/slf4ts/LoggerBindings.ts:23</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="28"
+                            class="link-to-prism">packages/slf4ts-api/lib/slf4ts/LoggerBindings.ts:28</a></div>
                 </td>
             </tr>
 
@@ -313,8 +308,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="44"
-                            class="link-to-prism">packages/slf4ts-api/lib/slf4ts/LoggerBindings.ts:44</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="49"
+                            class="link-to-prism">packages/slf4ts-api/lib/slf4ts/LoggerBindings.ts:49</a></div>
                 </td>
             </tr>
 
@@ -412,6 +407,78 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
+                    <a name="setLoggerBuilder"></a>
+                    <span class="name">
+                        <b>
+                            setLoggerBuilder
+                        </b>
+                        <a href="#setLoggerBuilder"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>setLoggerBuilder(builder: <a href="../undefineds/LoggerBuilder.html">LoggerBuilder<T | P></a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="77"
+                            class="link-to-prism">packages/slf4ts-api/lib/slf4ts/LoggerBindings.ts:77</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Sets the logger builder instance</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>builder</td>
+                                    <td>
+                                                <code><a href="../miscellaneous/typealiases.html#LoggerBuilder" target="_self" >LoggerBuilder&lt;T | P&gt;</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
                     <a name="setLogLevel"></a>
                     <span class="name">
                         <b>
@@ -430,8 +497,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="54"
-                            class="link-to-prism">packages/slf4ts-api/lib/slf4ts/LoggerBindings.ts:54</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="59"
+                            class="link-to-prism">packages/slf4ts-api/lib/slf4ts/LoggerBindings.ts:59</a></div>
                 </td>
             </tr>
 
@@ -539,8 +606,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="64"
-                            class="link-to-prism">packages/slf4ts-api/lib/slf4ts/LoggerBindings.ts:64</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="69"
+                            class="link-to-prism">packages/slf4ts-api/lib/slf4ts/LoggerBindings.ts:69</a></div>
                 </td>
             </tr>
 
@@ -640,12 +707,17 @@ import * as path from &#x27;path&#x27;
 import { LogLevel } from &#x27;./LoggerConfiguration&#x27;
 
 /**
- * The bridge to the underlying logging-framework.
+ * Builds the instance of the underlying logger framework.
+ */
+export type LoggerBuilder&lt;T, P extends any[]&gt; &#x3D; (...args: P) &#x3D;&gt; T
+
+/**
+ * The bridge to the underlying logging-framework.any[]
  *
  * @export
  * @interface LoggerImplementation
  */
-export interface LoggerImplementation {
+export interface LoggerImplementation&lt;T, P extends any[]&gt; {
 
   /**
      * Invoked for each call to a logging method of a logger instance.
@@ -664,7 +736,7 @@ export interface LoggerImplementation {
      * @param {string} name The name of the logger.
      * @memberof LoggerImplementation
      */
-  getImplementation&lt;T&gt;(group: string, name: string): T
+  getImplementation(group: string, name: string): T
 
   /**
      * Sets the configuration for the specified logger instance.
@@ -697,6 +769,14 @@ export interface LoggerImplementation {
      */
   setMetadata(metadata: any, group: string, name: string): void
 
+  /**
+   * Sets the logger builder instance
+   *
+   * @param {LoggerBuilder&lt;T, P&gt;} builder
+   * @memberof LoggerImplementation
+   */
+  setLoggerBuilder(builder: LoggerBuilder&lt;T, P&gt;): void
+
 }
 
 /**
@@ -705,14 +785,14 @@ export interface LoggerImplementation {
  * @export
  * @interface LoggerBinding
  */
-export interface LoggerBinding {
+export interface LoggerBinding&lt;T &#x3D; any, P extends any[] &#x3D; any&gt; {
   /**
      * Gets the logger implementation.
      *
      * @returns {LoggerImplementation} The logger implementation.
      * @memberof LoggerBinding
      */
-  getLoggerImplementation(): LoggerImplementation
+  getLoggerImplementation(): LoggerImplementation&lt;T, P&gt;
   /**
      * Gets the vendor string.
      *

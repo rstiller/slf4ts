@@ -42,7 +42,7 @@
 
 <ol class="breadcrumb">
   <li>Classes</li>
-  <li>Log4JSLoggerBinding</li>
+  <li>LoglevelLoggerBinding</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -60,14 +60,14 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>packages/slf4ts-log4js/lib/slf4ts/Log4JSLoggerBinding.ts</code>
+            <code>packages/slf4ts-loglevel/lib/slf4ts/LoglevelLoggerBinding.ts</code>
         </p>
 
             <p class="comment">
                 <h3>Description</h3>
             </p>
             <p class="comment">
-                <p>LoggerBinding implementation for Log4JS.</p>
+                <p>LoggerBinding implementation for Loglevel.</p>
 
             </p>
 
@@ -150,7 +150,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">packages/slf4ts-log4js/lib/slf4ts/Log4JSLoggerBinding.ts:18</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">packages/slf4ts-loglevel/lib/slf4ts/LoglevelLoggerBinding.ts:18</a></div>
                             </td>
                         </tr>
 
@@ -185,7 +185,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">packages/slf4ts-log4js/lib/slf4ts/Log4JSLoggerBinding.ts:18</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">packages/slf4ts-loglevel/lib/slf4ts/LoglevelLoggerBinding.ts:18</a></div>
                             </td>
                         </tr>
 
@@ -224,7 +224,7 @@
             <tr>
                 <td class="col-md-4">
                     <div class="io-line">Defined in <a href="" data-line="33"
-                            class="link-to-prism">packages/slf4ts-log4js/lib/slf4ts/Log4JSLoggerBinding.ts:33</a></div>
+                            class="link-to-prism">packages/slf4ts-loglevel/lib/slf4ts/LoglevelLoggerBinding.ts:33</a></div>
                 </td>
             </tr>
 
@@ -233,7 +233,7 @@
                 <td class="col-md-4">
 
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="../interfaces/LoggerImplementation.html" target="_self" >Log4JSLoggerImplementation</a></code>
+                        <b>Returns : </b>        <code><a href="../interfaces/LoggerImplementation.html" target="_self" >LoglevelLoggerImplementation</a></code>
 
                     </div>
                 </td>
@@ -265,7 +265,7 @@
             <tr>
                 <td class="col-md-4">
                     <div class="io-line">Defined in <a href="" data-line="37"
-                            class="link-to-prism">packages/slf4ts-log4js/lib/slf4ts/Log4JSLoggerBinding.ts:37</a></div>
+                            class="link-to-prism">packages/slf4ts-loglevel/lib/slf4ts/LoglevelLoggerBinding.ts:37</a></div>
                 </td>
             </tr>
 
@@ -306,7 +306,7 @@
             <tr>
                 <td class="col-md-4">
                     <div class="io-line">Defined in <a href="" data-line="41"
-                            class="link-to-prism">packages/slf4ts-log4js/lib/slf4ts/Log4JSLoggerBinding.ts:41</a></div>
+                            class="link-to-prism">packages/slf4ts-loglevel/lib/slf4ts/LoglevelLoggerBinding.ts:41</a></div>
                 </td>
             </tr>
 
@@ -336,19 +336,19 @@
 
 import * as fs from &#x27;fs&#x27;
 import * as path from &#x27;path&#x27;
-import { Logger } from &#x27;log4js&#x27;
+import { Logger } from &#x27;loglevel&#x27;
 import { LoggerBinding } from &#x27;slf4ts-api&#x27;
 
-import { Log4JSLoggerImplementation } from &#x27;./Log4JSLoggerImplementation&#x27;
+import { LoglevelLoggerImplementation } from &#x27;./LoglevelLoggerImplementation&#x27;
 
 /**
- * LoggerBinding implementation for Log4JS.
+ * LoggerBinding implementation for Loglevel.
  *
  * @export
- * @class Log4JSLoggerBinding
+ * @class LoglevelLoggerBinding
  * @implements {LoggerBinding}
  */
-export class Log4JSLoggerBinding implements LoggerBinding&lt;Logger, [string]&gt; {
+export class LoglevelLoggerBinding implements LoggerBinding&lt;Logger&gt; {
   private readonly packageJson: any;
 
   public constructor () {
@@ -364,12 +364,12 @@ export class Log4JSLoggerBinding implements LoggerBinding&lt;Logger, [string]&gt
     }
   }
 
-  public getLoggerImplementation (): Log4JSLoggerImplementation {
-    return new Log4JSLoggerImplementation()
+  public getLoggerImplementation (): LoglevelLoggerImplementation {
+    return new LoglevelLoggerImplementation()
   }
 
   public getVendor (): string {
-    return &#x27;log4js&#x27;
+    return &#x27;loglevel&#x27;
   }
 
   public getVersion (): string {
@@ -404,7 +404,7 @@ export class Log4JSLoggerBinding implements LoggerBinding&lt;Logger, [string]&gt
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'class';
-            var COMPODOC_CURRENT_PAGE_URL = 'Log4JSLoggerBinding.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'LoglevelLoggerBinding.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 
