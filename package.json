@@ -2,7 +2,7 @@
     "name": "slf4ts",
     "private": true,
     "devDependencies": {
-        "rimraf": "^3.0.2"
+        "rimraf": "^4.1.1"
     },
     "scripts": {
         "example": "pnpm run --recursive --if-present --filter",
