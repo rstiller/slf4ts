@@ -13,11 +13,11 @@
   "dependencies": {
     "slf4ts-api": "^1.4.0",
     "slf4ts-bunyan": "^1.0.0",
-    "bunyan": "^1.8.12"
+    "bunyan": "^1.8.15"
   },
   "devDependencies": {
     "@types/node": "^13.7.7",
-    "@types/bunyan": "^1.8.6",
+    "@types/bunyan": "^1.8.8",
     "eslint": "6.8.0",
     "rimraf": "^3.0.2",
     "typescript": "^3.8.3"
