@@ -1,6 +1,6 @@
 import 'source-map-support/register'
 
-import { LoggerBindings, LoggerImplementation, LoggerBuilder } from './LoggerBindings'
+import { LoggerBindings, type LoggerImplementation, type LoggerBuilder } from './LoggerBindings'
 import { LoggerConfiguration, LogLevel } from './LoggerConfiguration'
 
 /**
@@ -17,7 +17,7 @@ export interface ILoggerInstance<T> {
      * @returns {Promise<any>} A promise completing when the logging-implementation processed the log statement.
      * @memberof ILoggerInstance
      */
-  trace(...args: any[]): Promise<any>
+  trace: (...args: any[]) => Promise<any>
   /**
      * Logs the given message using DEBUG log-level.
      *
@@ -25,7 +25,7 @@ export interface ILoggerInstance<T> {
      * @returns {Promise<any>} A promise completing when the logging-implementation processed the log statement.
      * @memberof ILoggerInstance
      */
-  debug(...args: any[]): Promise<any>
+  debug: (...args: any[]) => Promise<any>
   /**
      * Logs the given message using INFO log-level.
      *
@@ -33,7 +33,7 @@ export interface ILoggerInstance<T> {
      * @returns {Promise<any>} A promise completing when the logging-implementation processed the log statement.
      * @memberof ILoggerInstance
      */
-  info(...args: any[]): Promise<any>
+  info: (...args: any[]) => Promise<any>
   /**
      * Logs the given message using WARN log-level.
      *
@@ -41,7 +41,7 @@ export interface ILoggerInstance<T> {
      * @returns {Promise<any>} A promise completing when the logging-implementation processed the log statement.
      * @memberof ILoggerInstance
      */
-  warn(...args: any[]): Promise<any>
+  warn: (...args: any[]) => Promise<any>
   /**
      * Logs the given message using ERROR log-level.
      *
@@ -49,27 +49,27 @@ export interface ILoggerInstance<T> {
      * @returns {Promise<any>} A promise completing when the logging-implementation processed the log statement.
      * @memberof ILoggerInstance
      */
-  error(...args: any[]): Promise<any>
+  error: (...args: any[]) => Promise<any>
   /**
      * Gets the current log-level.
      *
      * @returns {LogLevel} The log-level.
      * @memberof ILoggerInstance
      */
-  getLogLevel(): LogLevel
+  getLogLevel: () => LogLevel
   /**
      * Sets the metadata assigned to every future invocation of any of the log-methods.
      *
      * @param {*} metadata metadata object - can be undefined or null.
      * @memberof ILoggerInstance
      */
-  setMetadata(metadata: any): void
+  setMetadata: (metadata: any) => void
   /**
      * Gets the underlying implementation of the logger.
      *
      * @memberof ILoggerInstance
      */
-  getImplementation(): T
+  getImplementation: () => T
 }
 
 /**
@@ -80,11 +80,11 @@ export interface ILoggerInstance<T> {
  * @implements {ILoggerInstance}
  */
 export class DefaultLoggerInstance<T, P extends any[]> implements ILoggerInstance<T> {
-  private readonly impl: LoggerImplementation<T, P>;
-  private readonly name: string;
-  private readonly group: string;
-  private commonMetadata: any;
-  private logLevel: LogLevel;
+  private readonly impl: LoggerImplementation<T, P>
+  private readonly name: string
+  private readonly group: string
+  private commonMetadata: any
+  private logLevel: LogLevel
 
   /**
      * Creates an instance of DefaultLoggerInstance.
@@ -183,7 +183,7 @@ export class DefaultLoggerInstance<T, P extends any[]> implements ILoggerInstanc
     if (logLevel <= this.logLevel) {
       return this.impl.log.apply(this.impl, arguments)
     }
-    return Promise.resolve()
+    await Promise.resolve()
   }
 }
 
@@ -193,7 +193,7 @@ export class DefaultLoggerInstance<T, P extends any[]> implements ILoggerInstanc
  * @class NullLoggerImplementation
  * @implements {LoggerImplementation}
  */
-class NullLoggerImplementation implements LoggerImplementation<null, null> {
+class NullLoggerImplementation implements LoggerImplementation<null, any[]> {
   public async log (...args: any[]): Promise<any> {
     return null
   }
@@ -214,7 +214,7 @@ class NullLoggerImplementation implements LoggerImplementation<null, null> {
     // nothing
   }
 
-  public setLoggerBuilder (builder: LoggerBuilder<null, null>): void {
+  public setLoggerBuilder (builder: LoggerBuilder<null, any[]>): void {
     // nothing
   }
 }
@@ -250,13 +250,14 @@ export class LoggerFactory {
       return LoggerFactory.LOGGER_INSTANCE_CACHE.get(compoundKey) as ILoggerInstance<T>
     }
 
+    const defaultLoggerBuilder: LoggerBuilder<T, P> = () => null as T
     const instance = new DefaultLoggerInstance<T, P>(
       name,
       group,
       LoggerConfiguration.getLogLevel(group, name),
       LoggerFactory.COMMON_METADATA,
       LoggerFactory.LOGGER as LoggerImplementation<T, P>,
-      builder)
+      builder ?? defaultLoggerBuilder)
     LoggerFactory.LOGGER_INSTANCE_CACHE.set(compoundKey, instance)
     return instance
   }
@@ -310,11 +311,11 @@ export class LoggerFactory {
     })
   }
 
-  private static COMMON_METADATA: any = undefined;
-  private static LOGGER: LoggerImplementation<unknown, unknown[]> = new NullLoggerImplementation();
-  private static ROOT_LOGGER: DefaultLoggerInstance<unknown, unknown[]>;
-  private static INITIALIZED: boolean = false;
-  private static readonly LOGGER_INSTANCE_CACHE: Map<string, DefaultLoggerInstance<unknown, unknown[]>> = new Map();
+  private static COMMON_METADATA: any = undefined
+  private static LOGGER: LoggerImplementation<unknown, unknown[]> = new NullLoggerImplementation()
+  private static ROOT_LOGGER: DefaultLoggerInstance<unknown, unknown[]>
+  private static INITIALIZED: boolean = false
+  private static readonly LOGGER_INSTANCE_CACHE = new Map<string, DefaultLoggerInstance<unknown, unknown[]>>()
 
   private static initialize<T, P extends any[]>(): void {
     const BINDINGS = new LoggerBindings().getBindings()

@@ -2,7 +2,7 @@ import 'source-map-support/register'
 
 import * as fs from 'fs'
 import * as path from 'path'
-import { LoggerBinding } from 'slf4ts-api'
+import { type LoggerBinding } from 'slf4ts-api'
 
 import { ConsoleLoggerImplementation } from './ConsoleLoggerImplementation'
 
@@ -14,7 +14,7 @@ import { ConsoleLoggerImplementation } from './ConsoleLoggerImplementation'
  * @implements {LoggerBinding}
  */
 export class ConsoleLoggerBinding implements LoggerBinding<Console, never> {
-  private readonly packageJson: any;
+  private readonly packageJson: any
 
   public constructor () {
     const modulePath = path.parse(module.filename)

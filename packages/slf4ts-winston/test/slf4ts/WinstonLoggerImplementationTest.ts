@@ -8,7 +8,7 @@ import 'chai-string'
 import { suite, test } from '@testdeck/mocha'
 import { LogLevel } from 'slf4ts-api'
 import * as TransportStream from 'winston-transport'
-import { TransportStreamOptions } from 'winston-transport'
+import { type TransportStreamOptions } from 'winston-transport'
 
 import { WinstonLoggerImplementation } from '../../lib/slf4ts/WinstonLoggerImplementation'
 

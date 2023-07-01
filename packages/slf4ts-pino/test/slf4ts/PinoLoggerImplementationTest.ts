@@ -4,8 +4,7 @@
 import 'source-map-support/register'
 
 import * as chai from 'chai'
-import { pino } from 'pino'
-import { LoggerOptions } from 'pino'
+import { pino, type LoggerOptions } from 'pino'
 import { merge } from 'lodash'
 import { hostname } from 'os'
 import { Writable } from 'stream'

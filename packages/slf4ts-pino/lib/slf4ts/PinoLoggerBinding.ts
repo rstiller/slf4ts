@@ -2,8 +2,8 @@ import 'source-map-support/register'
 
 import * as fs from 'fs'
 import * as path from 'path'
-import { Logger } from 'pino'
-import { LoggerBinding } from 'slf4ts-api'
+import { type Logger } from 'pino'
+import { type LoggerBinding } from 'slf4ts-api'
 
 import { PinoLoggerImplementation } from './PinoLoggerImplementation'
 
@@ -15,7 +15,7 @@ import { PinoLoggerImplementation } from './PinoLoggerImplementation'
  * @implements {LoggerBinding}
  */
 export class PinoLoggerBinding implements LoggerBinding<Logger> {
-  private readonly packageJson: any;
+  private readonly packageJson: any
 
   public constructor () {
     const modulePath = path.parse(module.filename)

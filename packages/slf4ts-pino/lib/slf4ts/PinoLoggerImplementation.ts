@@ -1,15 +1,15 @@
 import 'source-map-support/register'
 
-import { pino } from 'pino'
 import {
-  DestinationStream,
-  Logger,
-  LoggerOptions
+  pino,
+  type DestinationStream,
+  type Logger,
+  type LoggerOptions
 } from 'pino'
 import {
-  LoggerImplementation,
+  type LoggerImplementation,
   LogLevel,
-  LoggerBuilder,
+  type LoggerBuilder,
   LoggerConfiguration
 } from 'slf4ts-api'
 
@@ -29,8 +29,8 @@ LogLevelMapping[LogLevel.ERROR] = 'error'
  * @implements {LoggerImplementation}
  */
 export class PinoLoggerImplementation implements LoggerImplementation<Logger, [LoggerOptions | DestinationStream, DestinationStream?]> {
-  private readonly rootLoggers: Map<string, Logger> = new Map();
-  private readonly loggers: Map<string, Logger> = new Map();
+  private readonly rootLoggers = new Map<string, Logger>()
+  private readonly loggers = new Map<string, Logger>()
   private builder: LoggerBuilder<Logger, [LoggerOptions | DestinationStream, DestinationStream?]> = this.getDefaultLoggerBuilder()
 
   public async log (...args: any[]): Promise<void> {
@@ -42,10 +42,10 @@ export class PinoLoggerImplementation implements LoggerImplementation<Logger, [L
     const name: string = commonLoggerData[2]
     const instance = this.getLoggerInstance(group, name)
 
-    return new Promise((resolve, reject) => {
+    await new Promise<void>((resolve, reject) => {
       const callArguments: any[] = []
-      let error: Error = null
-      let message: string = null
+      let error: Error | null = null
+      let message: string | null = null
       additionalArguments.forEach((arg) => {
         if (arg instanceof Error) {
           error = arg
@@ -61,11 +61,7 @@ export class PinoLoggerImplementation implements LoggerImplementation<Logger, [L
         callArguments.unshift(error)
       }
 
-      switch(level) {
-        default:
-        case LogLevel.TRACE:
-          instance.trace.apply(instance, callArguments)
-          break
+      switch (level) {
         case LogLevel.DEBUG:
           instance.debug.apply(instance, callArguments)
           break
@@ -77,6 +73,10 @@ export class PinoLoggerImplementation implements LoggerImplementation<Logger, [L
           break
         case LogLevel.ERROR:
           instance.error.apply(instance, callArguments)
+          break
+        case LogLevel.TRACE:
+        default:
+          instance.trace.apply(instance, callArguments)
           break
       }
       resolve()
@@ -98,8 +98,10 @@ export class PinoLoggerImplementation implements LoggerImplementation<Logger, [L
 
   public setMetadata (metadata: any, group: string, name: string): void {
     const compoundKey = `${group}:${name}`
-    const rootLogger: Logger = this.rootLoggers.get(compoundKey)
-    this.loggers.set(compoundKey, rootLogger.child(metadata))
+    const rootLogger: Logger | undefined = this.rootLoggers.get(compoundKey)
+    if (rootLogger) {
+      this.loggers.set(compoundKey, rootLogger.child(metadata))
+    }
   }
 
   public setLoggerBuilder (builder?: LoggerBuilder<Logger, [LoggerOptions | DestinationStream, DestinationStream?]>): void {
@@ -110,7 +112,7 @@ export class PinoLoggerImplementation implements LoggerImplementation<Logger, [L
     return (
       config: LoggerOptions | DestinationStream,
       stream?: DestinationStream
-    ) => pino(config as LoggerOptions, stream)
+    ) => pino(config as LoggerOptions, stream as DestinationStream)
   }
 
   private getLoggerInstance (
@@ -118,7 +120,7 @@ export class PinoLoggerImplementation implements LoggerImplementation<Logger, [L
     name: string
   ): Logger {
     const compoundKey = `${group}:${name}`
-    let instance: Logger = this.loggers.get(compoundKey)
+    let instance: Logger | undefined = this.loggers.get(compoundKey)
 
     if (!instance) {
       const level = LoggerConfiguration.getLogLevel(group, name)

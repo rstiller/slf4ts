@@ -1,5 +1,5 @@
 /* eslint-env mocha */
-/* eslint-disable @typescript-eslint/no-unused-expressions */
+/* eslint-disable @typescript-eslint/no-unused-expressions,@typescript-eslint/no-confusing-void-expression */
 
 import 'source-map-support/register'
 
@@ -13,8 +13,8 @@ import { ConsoleLoggerImplementation } from '../../lib/slf4ts/ConsoleLoggerImple
 const expect = chai.expect
 
 class TestConsole implements Console {
-  public memory: any;
-  public Console: console.ConsoleConstructor;
+  public memory: any
+  public Console: console.ConsoleConstructor
 
   public markTimeline (label?: string): void {
     throw new Error('Method not implemented.')
@@ -24,9 +24,9 @@ class TestConsole implements Console {
     throw new Error('Method not implemented.')
   }
 
-  public timeStamp(label?: string): void;
+  public timeStamp (label?: string): void
 
-  public timeStamp(label?: string): void;
+  public timeStamp (label?: string): void
 
   public timeStamp (label?: any): void {
     throw new Error('Method not implemented.')
@@ -60,7 +60,7 @@ class TestConsole implements Console {
     throw new Error('Method not implemented.')
   }
 
-  public dir(value?: any, ...optionalParams: any[]): void;
+  public dir (value?: any, ...optionalParams: any[]): void
   public dir (obj?: any, options?: any, ...rest: any[]): void {
     throw new Error('Method not implemented.')
   }
@@ -69,8 +69,8 @@ class TestConsole implements Console {
     throw new Error('Method not implemented.')
   }
 
-  public error(message?: any, ...optionalParams: any[]): void;
-  public error(message?: any, ...optionalParams: any[]): void;
+  public error (message?: any, ...optionalParams: any[]): void
+  public error (message?: any, ...optionalParams: any[]): void
   public error (message?: any, ...optionalParams: any[]): void {
     throw new Error('Method not implemented.')
   }
@@ -91,14 +91,14 @@ class TestConsole implements Console {
     throw new Error('Method not implemented.')
   }
 
-  public info(message?: any, ...optionalParams: any[]): void;
-  public info(message?: any, ...optionalParams: any[]): void;
+  public info (message?: any, ...optionalParams: any[]): void
+  public info (message?: any, ...optionalParams: any[]): void
   public info (message?: any, ...optionalParams: any[]): void {
     throw new Error('Method not implemented.')
   }
 
-  public log(message?: any, ...optionalParams: any[]): void;
-  public log(message?: any, ...optionalParams: any[]): void;
+  public log (message?: any, ...optionalParams: any[]): void
+  public log (message?: any, ...optionalParams: any[]): void
   public log (message?: any, ...optionalParams: any[]): void {
     throw new Error('Method not implemented.')
   }
@@ -123,26 +123,26 @@ class TestConsole implements Console {
     throw new Error('Method not implemented.')
   }
 
-  public time(timerName?: string): void;
-  public time(label: string): void;
+  public time (timerName?: string): void
+  public time (label: string): void
   public time (label?: any): void {
     throw new Error('Method not implemented.')
   }
 
-  public timeEnd(timerName?: string): void;
-  public timeEnd(label: string): void;
+  public timeEnd (timerName?: string): void
+  public timeEnd (label: string): void
   public timeEnd (label?: any): void {
     throw new Error('Method not implemented.')
   }
 
-  public trace(message?: any, ...optionalParams: any[]): void;
-  public trace(message?: any, ...optionalParams: any[]): void;
+  public trace (message?: any, ...optionalParams: any[]): void
+  public trace (message?: any, ...optionalParams: any[]): void
   public trace (message?: any, ...optionalParams: any[]): void {
     throw new Error('Method not implemented.')
   }
 
-  public warn(message?: any, ...optionalParams: any[]): void;
-  public warn(message?: any, ...optionalParams: any[]): void;
+  public warn (message?: any, ...optionalParams: any[]): void
+  public warn (message?: any, ...optionalParams: any[]): void
   public warn (message?: any, ...optionalParams: any[]): void {
     throw new Error('Method not implemented.')
   }

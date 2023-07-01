@@ -1,7 +1,7 @@
 import 'source-map-support/register'
 
-import { LoggerImplementation, LogLevel, LoggerBuilder } from 'slf4ts-api'
-import { getLogger, Logger } from 'log4js'
+import { type LoggerImplementation, LogLevel, type LoggerBuilder } from 'slf4ts-api'
+import { getLogger, type Logger } from 'log4js'
 
 const LogLevelMapping: string[] = []
 
@@ -19,7 +19,7 @@ LogLevelMapping[LogLevel.ERROR] = 'ERROR'
  * @implements {LoggerImplementation}
  */
 export class Log4JSLoggerImplementation implements LoggerImplementation<Logger, [string]> {
-  private readonly loggers: Map<string, Logger> = new Map();
+  private readonly loggers = new Map<string, Logger>()
   private builder: LoggerBuilder<Logger, [string]> = this.getDefaultLoggerBuilder()
 
   public async log (...args: any[]): Promise<any> {
@@ -34,7 +34,7 @@ export class Log4JSLoggerImplementation implements LoggerImplementation<Logger, 
     const callArguments: any[] = [LogLevelMapping[level]]
       .concat(...additionalArguments)
 
-    return new Promise<void>((resolve, reject) => {
+    await new Promise<void>((resolve, reject) => {
       instance.log.apply(null, callArguments)
       resolve()
     })
@@ -73,7 +73,7 @@ export class Log4JSLoggerImplementation implements LoggerImplementation<Logger, 
 
   private getLoggerInstance (group: string, name: string): Logger {
     const compoundKey = `${group}:${name}`
-    let instance: Logger = this.loggers.get(compoundKey)
+    let instance: Logger | undefined = this.loggers.get(compoundKey)
 
     if (!instance) {
       instance = this.builder(compoundKey)

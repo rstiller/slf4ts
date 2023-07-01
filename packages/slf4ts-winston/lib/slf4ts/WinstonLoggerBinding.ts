@@ -2,8 +2,8 @@ import 'source-map-support/register'
 
 import * as fs from 'fs'
 import * as path from 'path'
-import * as winston from 'winston'
-import { LoggerBinding } from 'slf4ts-api'
+import type * as winston from 'winston'
+import { type LoggerBinding } from 'slf4ts-api'
 
 import { WinstonLoggerImplementation } from './WinstonLoggerImplementation'
 
@@ -15,7 +15,7 @@ import { WinstonLoggerImplementation } from './WinstonLoggerImplementation'
  * @implements {LoggerBinding}
  */
 export class WinstonLoggerBinding implements LoggerBinding<winston.Logger, []> {
-  private readonly packageJson: any;
+  private readonly packageJson: any
 
   public constructor () {
     const modulePath = path.parse(module.filename)

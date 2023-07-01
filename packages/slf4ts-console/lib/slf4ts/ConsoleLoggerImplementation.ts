@@ -1,9 +1,9 @@
 import 'source-map-support/register'
 
 import {
-  LoggerImplementation,
+  type LoggerImplementation,
   LogLevel,
-  LoggerBuilder
+  type LoggerBuilder
 } from 'slf4ts-api'
 import * as util from 'util'
 
@@ -15,7 +15,7 @@ import * as util from 'util'
  * @implements {LoggerImplementation}
  */
 export class ConsoleLoggerImplementation implements LoggerImplementation<Console, never> {
-  private readonly console: Console;
+  private readonly console: Console
 
   /**
      * Creates an instance of ConsoleLoggerImplementation.

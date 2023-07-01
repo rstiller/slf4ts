@@ -8,7 +8,7 @@ import { suite, test } from '@testdeck/mocha'
 import * as path from 'path'
 
 import { LoggerConfiguration, LogLevel } from '../../lib/slf4ts/LoggerConfiguration'
-import { DefaultLoggerInstance, LoggerFactory } from '../../lib/slf4ts/LoggerFactory'
+import { type DefaultLoggerInstance, LoggerFactory } from '../../lib/slf4ts/LoggerFactory'
 
 const expect = chai.expect
 const fail = chai.assert.fail
@@ -17,7 +17,7 @@ const fail = chai.assert.fail
 const nodeModuleExtraPath = path.join(__dirname, '..', '..', 'example-node-modules')
 process.env.NODE_PATH = nodeModuleExtraPath
 process.env.LOGGER_BINDING_ADDITIONAL_PATH = nodeModuleExtraPath
-require('module').Module._initPaths()
+require('module').Module._initPaths() // eslint-disable-line @typescript-eslint/no-var-requires
 
 @suite
 export class LoggerFactoryTest {

@@ -1,13 +1,13 @@
 import 'source-map-support/register'
 
 import { Client } from 'cassandra-driver'
-import { EventEmitter } from 'events'
-import { ILoggerInstance, LoggerFactory } from 'slf4ts-api'
+import { type EventEmitter } from 'events'
+import { type ILoggerInstance, LoggerFactory } from 'slf4ts-api'
 
 export class CassandraLogAdapter<T> {
-  private readonly log: ILoggerInstance<T>;
+  private readonly log: ILoggerInstance<T>
 
-  public constructor (emitter: Client | EventEmitter, log: ILoggerInstance<T> = null) {
+  public constructor (emitter: Client | EventEmitter, log: ILoggerInstance<T> | null = null) {
     if (log === null) {
       if (emitter instanceof Client) {
         this.log = LoggerFactory.getLogger('cassandra', emitter.keyspace)

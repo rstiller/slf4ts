@@ -1,5 +1,4 @@
 import {
-  LoggingEvent,
   configure,
   getLogger
 } from 'log4js'
@@ -51,7 +50,7 @@ slf4tsLogger.error('SLF4TS ERROR log message with error', new Error())
   .catch(console.log)
 
 slf4tsLogger.setMetadata({
-  user: (logEntry: LoggingEvent) => 'computed-value'
+  user: () => 'computed-value'
 })
 slf4tsLogger.trace('SLF4TS TRACE log message with number', 123)
   .catch(console.log)

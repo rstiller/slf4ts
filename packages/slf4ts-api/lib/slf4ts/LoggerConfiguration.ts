@@ -23,10 +23,10 @@ export enum LogLevel {
  * @class LoggerConfigurationImpl
  */
 export class LoggerConfigurationImpl {
-  private readonly events: EventEmitter = new EventEmitter();
-  private readonly logLevelMapping: Map<string, LogLevel> = new Map();
-  private readonly configMapping: Map<string, any> = new Map();
-  private defaultLogLevel: LogLevel = LogLevel.INFO;
+  private readonly events: EventEmitter = new EventEmitter()
+  private readonly logLevelMapping = new Map<string, LogLevel>()
+  private readonly configMapping = new Map<string, any>()
+  private defaultLogLevel: LogLevel = LogLevel.INFO
 
   /**
      * Gets the log-level for the given group and name.
@@ -42,7 +42,7 @@ export class LoggerConfigurationImpl {
     const compoundKey = `${group}:${name}`
 
     if (this.logLevelMapping.has(compoundKey)) {
-      return this.logLevelMapping.get(compoundKey)
+      return this.logLevelMapping.get(compoundKey) ?? this.defaultLogLevel
     }
 
     return this.defaultLogLevel

@@ -2,8 +2,8 @@ import 'source-map-support/register'
 
 import * as fs from 'fs'
 import * as path from 'path'
-import * as Logger from 'bunyan'
-import { LoggerBinding } from 'slf4ts-api'
+import type * as Logger from 'bunyan'
+import { type LoggerBinding } from 'slf4ts-api'
 
 import { BunyanLoggerImplementation } from './BunyanLoggerImplementation'
 
@@ -15,7 +15,7 @@ import { BunyanLoggerImplementation } from './BunyanLoggerImplementation'
  * @implements {LoggerBinding}
  */
 export class BunyanLoggerBinding implements LoggerBinding<Logger, [Logger.LoggerOptions]> {
-  private readonly packageJson: any;
+  private readonly packageJson: any
 
   public constructor () {
     const modulePath = path.parse(module.filename)

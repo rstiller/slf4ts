@@ -2,8 +2,8 @@ import 'source-map-support/register'
 
 import * as fs from 'fs'
 import * as path from 'path'
-import { Logger } from 'loglevel'
-import { LoggerBinding } from 'slf4ts-api'
+import { type Logger } from 'loglevel'
+import { type LoggerBinding } from 'slf4ts-api'
 
 import { LoglevelLoggerImplementation } from './LoglevelLoggerImplementation'
 
@@ -15,7 +15,7 @@ import { LoglevelLoggerImplementation } from './LoglevelLoggerImplementation'
  * @implements {LoggerBinding}
  */
 export class LoglevelLoggerBinding implements LoggerBinding<Logger> {
-  private readonly packageJson: any;
+  private readonly packageJson: any
 
   public constructor () {
     const modulePath = path.parse(module.filename)

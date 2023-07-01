@@ -1,6 +1,6 @@
 import 'source-map-support/register'
 
-import { LoggerBindings } from 'slf4ts-api'
+import { type LoggerBindings } from 'slf4ts-api'
 import { Log4JSLoggerBinding } from './Log4JSLoggerBinding'
 
 /**

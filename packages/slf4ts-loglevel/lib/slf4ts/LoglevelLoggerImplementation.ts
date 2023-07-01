@@ -2,13 +2,13 @@ import 'source-map-support/register'
 
 import * as log from 'loglevel'
 import {
-  Logger,
-  LogLevelDesc
+  type Logger,
+  type LogLevelDesc
 } from 'loglevel'
 import {
-  LoggerImplementation,
+  type LoggerImplementation,
   LogLevel,
-  LoggerBuilder,
+  type LoggerBuilder,
   LoggerConfiguration
 } from 'slf4ts-api'
 
@@ -38,7 +38,7 @@ LogMethodMapping[LogLevel.ERROR] = 'error'
  * @implements {LoggerImplementation}
  */
 export class LoglevelLoggerImplementation implements LoggerImplementation<Logger, [string]> {
-  private readonly loggers: Map<string, Logger> = new Map();
+  private readonly loggers = new Map<string, Logger>()
   private builder: LoggerBuilder<Logger, [string]> = this.getDefaultLoggerBuilder()
 
   public async log (...args: any[]): Promise<void> {
@@ -93,7 +93,7 @@ export class LoglevelLoggerImplementation implements LoggerImplementation<Logger
     name: string
   ): Logger {
     const compoundKey = `${group}:${name}`
-    let instance: Logger = this.loggers.get(compoundKey)
+    let instance: Logger | undefined = this.loggers.get(compoundKey)
 
     if (!instance) {
       const level = LoggerConfiguration.getLogLevel(group, name)

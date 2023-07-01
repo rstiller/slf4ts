@@ -27,7 +27,8 @@
         "removeComments": true,
         "sourceRoot": "./packages/*/lib/",
         "rootDir": "./",
-        "outDir": "build/"
+        "outDir": "build/",
+        "strictNullChecks": true
     },
     "exclude": [
         "node_modules",

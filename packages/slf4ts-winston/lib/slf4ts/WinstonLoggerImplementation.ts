@@ -1,6 +1,6 @@
 import 'source-map-support/register'
 
-import { LoggerImplementation, LogLevel, LoggerBuilder } from 'slf4ts-api'
+import { type LoggerImplementation, LogLevel, type LoggerBuilder } from 'slf4ts-api'
 import * as util from 'util'
 import * as winston from 'winston'
 
@@ -20,7 +20,7 @@ LogLevelMapping[LogLevel.ERROR] = 'error'
  * @implements {LoggerImplementation}
  */
 export class WinstonLoggerImplementation implements LoggerImplementation<winston.Logger, []> {
-  private readonly loggers: Map<string, winston.Logger> = new Map();
+  private readonly loggers = new Map<string, winston.Logger>()
   private builder: LoggerBuilder<winston.Logger, []> = this.getDefaultLoggerBuilder()
 
   public async log (...args: any[]): Promise<any> {
@@ -29,7 +29,7 @@ export class WinstonLoggerImplementation implements LoggerImplementation<winston
     const name: string = arguments[2]
     const instance = this.getLoggerInstance(group, name)
 
-    return new Promise<void>((resolve, reject) => {
+    await new Promise<void>((resolve, reject) => {
       const additionalArguments = [...arguments]
       additionalArguments.splice(0, 3)
 
@@ -76,11 +76,11 @@ export class WinstonLoggerImplementation implements LoggerImplementation<winston
     return this.getLoggerInstance(group, name)
   }
 
-  public setConfig<T>(config: T, group: string, name: string): void {
+  public setConfig<C>(config: C, group: string, name: string): void {
     const instance = this.getLoggerInstance(group, name)
 
     if (instance) {
-      instance.configure(config)
+      instance.configure(config as winston.LoggerOptions)
     }
   }
 
@@ -102,7 +102,7 @@ export class WinstonLoggerImplementation implements LoggerImplementation<winston
 
   private getLoggerInstance (group: string, name: string): winston.Logger {
     const compoundKey = `${group}:${name}`
-    let instance: winston.Logger = this.loggers.get(compoundKey)
+    let instance: winston.Logger | undefined = this.loggers.get(compoundKey)
 
     if (!instance) {
       instance = this.builder()

@@ -13,7 +13,7 @@ const expect = chai.expect
 // hack to re-initialize the path for module resolution
 const nodeModuleExtraPath = path.join(__dirname, '..', '..', 'example-node-modules')
 process.env.NODE_PATH = nodeModuleExtraPath
-require('module').Module._initPaths()
+require('module').Module._initPaths() // eslint-disable-line @typescript-eslint/no-var-requires
 
 @suite
 export class LoggerBindingsTest {

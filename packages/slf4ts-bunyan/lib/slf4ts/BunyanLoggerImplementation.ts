@@ -2,9 +2,9 @@ import 'source-map-support/register'
 
 import * as Logger from 'bunyan'
 import {
-  LoggerImplementation,
+  type LoggerImplementation,
   LogLevel,
-  LoggerBuilder,
+  type LoggerBuilder,
   LoggerConfiguration
 } from 'slf4ts-api'
 
@@ -34,8 +34,8 @@ LogMethodMapping[LogLevel.ERROR] = 'error'
  * @implements {LoggerImplementation}
  */
 export class BunyanLoggerImplementation implements LoggerImplementation<Logger, [Logger.LoggerOptions]> {
-  private readonly loggers: Map<string, Logger> = new Map();
-  private readonly rootLoggers: Map<string, Logger> = new Map();
+  private readonly loggers = new Map<string, Logger>()
+  private readonly rootLoggers = new Map<string, Logger>()
   private builder: LoggerBuilder<any, [Logger.LoggerOptions]> = this.getDefaultLoggerBuilder()
 
   public async log (...args: any[]): Promise<void> {
@@ -47,7 +47,7 @@ export class BunyanLoggerImplementation implements LoggerImplementation<Logger, 
     const name: string = commonLoggerData[2]
     const instance = this.getLoggerInstance(group, name)
 
-    return new Promise((resolve, reject) => {
+    await new Promise<void>((resolve, reject) => {
       const logMethodId: LogMethodId = LogMethodMapping[level]
       const logMethod = instance[logMethodId]
       logMethod.apply(instance, additionalArguments)
@@ -70,8 +70,10 @@ export class BunyanLoggerImplementation implements LoggerImplementation<Logger, 
 
   public setMetadata (metadata: any, group: string, name: string): void {
     const compoundKey = `${group}:${name}`
-    const rootLogger: Logger = this.rootLoggers.get(compoundKey)
-    this.loggers.set(compoundKey, rootLogger.child(metadata))
+    const rootLogger: Logger | undefined = this.rootLoggers.get(compoundKey)
+    if (rootLogger) {
+      this.loggers.set(compoundKey, rootLogger.child(metadata))
+    }
   }
 
   public setLoggerBuilder (builder?: LoggerBuilder<Logger, [Logger.LoggerOptions]>): void {
@@ -87,18 +89,19 @@ export class BunyanLoggerImplementation implements LoggerImplementation<Logger, 
     name: string
   ): Logger {
     const compoundKey = `${group}:${name}`
-    let instance: Logger = this.loggers.get(compoundKey)
+    let instance: Logger | undefined = this.loggers.get(compoundKey)
 
     if (!instance) {
       const level = LoggerConfiguration.getLogLevel(group, name)
-      instance = this.builder({
+      const newInstance = this.builder({
         name: compoundKey,
         level: LogLevelMapping[level]
       })
-      this.rootLoggers.set(compoundKey, instance)
-      this.loggers.set(compoundKey, instance)
+      this.rootLoggers.set(compoundKey, newInstance)
+      this.loggers.set(compoundKey, newInstance)
+      instance = newInstance
     }
 
-    return instance
+    return instance as Logger
   }
 }

@@ -9,7 +9,7 @@ import * as chai from 'chai'
 import * as chaiString from 'chai-string'
 import { EventEmitter } from 'events'
 import { suite, test } from '@testdeck/mocha'
-import { DefaultLoggerInstance, LoggerFactory, LogLevel } from 'slf4ts-api'
+import { type DefaultLoggerInstance, LoggerFactory, LogLevel } from 'slf4ts-api'
 import * as td from 'testdouble'
 
 import { CassandraLogAdapter } from '../../lib/slf4ts/CassandraLogAdapter'

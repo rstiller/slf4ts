@@ -1,6 +1,6 @@
 import 'source-map-support/register'
 
-import { LoggerBindings } from 'slf4ts-api'
+import { type LoggerBindings } from 'slf4ts-api'
 import { BunyanLoggerBinding } from './BunyanLoggerBinding'
 
 /**
