@@ -47,7 +47,7 @@
     "eslint-plugin-standard": "4.0.1",
     "mocha": "^7.1.0",
     "mocha-typescript": "^1.1.17",
-    "nyc": "^15.0.0",
+    "nyc": "^15.1.0",
     "pkgsign": "^0.2.0",
     "rimraf": "^3.0.2",
     "ts-node": "^8.6.2",
