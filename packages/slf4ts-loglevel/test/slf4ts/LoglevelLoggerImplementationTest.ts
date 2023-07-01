@@ -7,7 +7,7 @@ import * as chai from 'chai'
 import * as log from 'loglevel'
 import * as sinon from 'sinon'
 import * as sinonChai from 'sinon-chai'
-import { suite, test } from 'mocha-typescript'
+import { suite, test } from '@testdeck/mocha'
 import {
   LoggerConfiguration,
   LogLevel

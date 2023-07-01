@@ -29,7 +29,7 @@ export class WinstonLoggerImplementation implements LoggerImplementation<winston
     const name: string = arguments[2]
     const instance = this.getLoggerInstance(group, name)
 
-    return new Promise((resolve, reject) => {
+    return new Promise<void>((resolve, reject) => {
       const additionalArguments = [...arguments]
       additionalArguments.splice(0, 3)
 

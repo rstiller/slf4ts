@@ -5,7 +5,7 @@ import 'source-map-support/register'
 
 import * as chai from 'chai'
 import 'chai-string'
-import { suite, test } from 'mocha-typescript'
+import { suite, test } from '@testdeck/mocha'
 import { LogLevel } from 'slf4ts-api'
 import * as TransportStream from 'winston-transport'
 import { TransportStreamOptions } from 'winston-transport'

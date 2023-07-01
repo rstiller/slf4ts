@@ -4,13 +4,13 @@
 import 'source-map-support/register'
 
 import * as chai from 'chai'
-import * as pino from 'pino'
+import { pino } from 'pino'
 import { LoggerOptions } from 'pino'
 import { merge } from 'lodash'
 import { hostname } from 'os'
 import { Writable } from 'stream'
 import 'chai-string'
-import { suite, test } from 'mocha-typescript'
+import { suite, test } from '@testdeck/mocha'
 import {
   LoggerConfiguration,
   LogLevel

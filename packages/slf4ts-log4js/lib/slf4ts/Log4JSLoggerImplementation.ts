@@ -34,8 +34,8 @@ export class Log4JSLoggerImplementation implements LoggerImplementation<Logger, 
     const callArguments: any[] = [LogLevelMapping[level]]
       .concat(...additionalArguments)
 
-    return new Promise((resolve, reject) => {
-      instance.log(...callArguments)
+    return new Promise<void>((resolve, reject) => {
+      instance.log.apply(null, callArguments)
       resolve()
     })
   }

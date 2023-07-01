@@ -8,7 +8,7 @@ import { Client } from 'cassandra-driver'
 import * as chai from 'chai'
 import * as chaiString from 'chai-string'
 import { EventEmitter } from 'events'
-import { suite, test } from 'mocha-typescript'
+import { suite, test } from '@testdeck/mocha'
 import { DefaultLoggerInstance, LoggerFactory, LogLevel } from 'slf4ts-api'
 import * as td from 'testdouble'
 

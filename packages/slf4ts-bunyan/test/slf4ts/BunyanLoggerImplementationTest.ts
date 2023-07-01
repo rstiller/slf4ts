@@ -8,7 +8,7 @@ import * as Logger from 'bunyan'
 import { merge } from 'lodash'
 import { hostname } from 'os'
 import 'chai-string'
-import { suite, test } from 'mocha-typescript'
+import { suite, test } from '@testdeck/mocha'
 import {
   LoggerConfiguration,
   LogLevel

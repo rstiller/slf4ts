@@ -11,15 +11,9 @@
     "url": "https://github.com/rstiller/slf4ts"
   },
   "dependencies": {
-    "slf4ts-api": "^1.4.0",
-    "slf4ts-winston": "^1.2.0",
-    "winston": "^3.2.1"
-  },
-  "devDependencies": {
-    "@types/node": "^13.7.7",
-    "eslint": "6.8.0",
-    "rimraf": "^3.0.2",
-    "typescript": "^3.8.3"
+    "slf4ts-api": "workspace:^1.4.0",
+    "slf4ts-winston": "workspace:^1.3.0",
+    "winston": "^3.9.0"
   },
   "scripts": {
     "build": "npm run clean && npm run lint && npm run compile",

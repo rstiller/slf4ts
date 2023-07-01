@@ -27,7 +27,6 @@
         "removeComments": true,
         "sourceRoot": "./packages/*/lib/",
         "rootDir": "./",
-        "charset": "utf-8",
         "outDir": "build/"
     },
     "exclude": [

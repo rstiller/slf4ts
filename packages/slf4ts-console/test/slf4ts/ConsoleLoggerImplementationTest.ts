@@ -4,7 +4,7 @@
 import 'source-map-support/register'
 
 import * as chai from 'chai'
-import { suite, test } from 'mocha-typescript'
+import { suite, test } from '@testdeck/mocha'
 import { LogLevel } from 'slf4ts-api'
 import * as td from 'testdouble'
 
@@ -14,7 +14,7 @@ const expect = chai.expect
 
 class TestConsole implements Console {
   public memory: any;
-  public Console: NodeJS.ConsoleConstructor;
+  public Console: console.ConsoleConstructor;
 
   public markTimeline (label?: string): void {
     throw new Error('Method not implemented.')
@@ -61,7 +61,6 @@ class TestConsole implements Console {
   }
 
   public dir(value?: any, ...optionalParams: any[]): void;
-  public dir(obj: any, options?: NodeJS.InspectOptions): void;
   public dir (obj?: any, options?: any, ...rest: any[]): void {
     throw new Error('Method not implemented.')
   }

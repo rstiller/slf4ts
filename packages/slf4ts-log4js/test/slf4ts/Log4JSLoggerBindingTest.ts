@@ -4,7 +4,7 @@
 import 'source-map-support/register'
 
 import * as chai from 'chai'
-import { suite, test } from 'mocha-typescript'
+import { suite, test } from '@testdeck/mocha'
 import { Log4JSLoggerBinding } from '../../lib/slf4ts/Log4JSLoggerBinding'
 
 const expect = chai.expect

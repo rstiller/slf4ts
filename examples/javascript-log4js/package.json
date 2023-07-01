@@ -11,9 +11,9 @@
     "url": "https://github.com/rstiller/slf4ts"
   },
   "dependencies": {
-    "slf4ts-api": "^1.4.0",
-    "slf4ts-log4js": "^1.0.0",
-    "log4js": "^6.9.1"
+    "log4js": "^6.9.1",
+    "slf4ts-api": "workspace:^1.4.0",
+    "slf4ts-log4js": "workspace:^1.1.0"
   },
   "scripts": {
     "start": "node ."

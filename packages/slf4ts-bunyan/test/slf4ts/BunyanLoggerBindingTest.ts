@@ -4,7 +4,7 @@
 import 'source-map-support/register'
 
 import * as chai from 'chai'
-import { suite, test } from 'mocha-typescript'
+import { suite, test } from '@testdeck/mocha'
 import { BunyanLoggerBinding } from '../../lib/slf4ts/BunyanLoggerBinding'
 
 const expect = chai.expect

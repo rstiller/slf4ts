@@ -11,16 +11,9 @@
     "url": "https://github.com/rstiller/slf4ts"
   },
   "dependencies": {
-    "slf4ts-api": "^1.4.0",
-    "slf4ts-pino": "^1.0.0",
-    "pino": "^5.17.0"
-  },
-  "devDependencies": {
-    "@types/node": "^13.7.7",
-    "@types/pino": "^5.17.0",
-    "eslint": "6.8.0",
-    "rimraf": "^3.0.2",
-    "typescript": "^3.8.3"
+    "pino": "^8.14.1",
+    "slf4ts-api": "workspace:^1.4.0",
+    "slf4ts-pino": "workspace:^1.0.0"
   },
   "scripts": {
     "build": "npm run clean && npm run lint && npm run compile",

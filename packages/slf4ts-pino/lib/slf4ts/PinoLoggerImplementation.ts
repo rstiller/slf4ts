@@ -1,6 +1,6 @@
 import 'source-map-support/register'
 
-import * as pino from 'pino'
+import { pino } from 'pino'
 import {
   DestinationStream,
   Logger,
@@ -61,7 +61,24 @@ export class PinoLoggerImplementation implements LoggerImplementation<Logger, [L
         callArguments.unshift(error)
       }
 
-      instance[LogLevelMapping[level]].apply(instance, callArguments)
+      switch(level) {
+        default:
+        case LogLevel.TRACE:
+          instance.trace.apply(instance, callArguments)
+          break
+        case LogLevel.DEBUG:
+          instance.debug.apply(instance, callArguments)
+          break
+        case LogLevel.INFO:
+          instance.info.apply(instance, callArguments)
+          break
+        case LogLevel.WARN:
+          instance.warn.apply(instance, callArguments)
+          break
+        case LogLevel.ERROR:
+          instance.error.apply(instance, callArguments)
+          break
+      }
       resolve()
     })
   }

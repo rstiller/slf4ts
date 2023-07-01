@@ -4,7 +4,7 @@
 import 'source-map-support/register'
 
 import * as chai from 'chai'
-import { suite, test } from 'mocha-typescript'
+import { suite, test } from '@testdeck/mocha'
 import { PinoLoggerBinding } from '../../lib/slf4ts/PinoLoggerBinding'
 
 const expect = chai.expect

@@ -11,16 +11,12 @@
     "url": "https://github.com/rstiller/slf4ts"
   },
   "dependencies": {
-    "slf4ts-api": "^1.4.0",
-    "slf4ts-bunyan": "^1.0.0",
-    "bunyan": "^1.8.15"
+    "bunyan": "^1.8.15",
+    "slf4ts-api": "workspace:^1.4.0",
+    "slf4ts-bunyan": "workspace:^1.0.0"
   },
   "devDependencies": {
-    "@types/node": "^13.7.7",
-    "@types/bunyan": "^1.8.8",
-    "eslint": "6.8.0",
-    "rimraf": "^3.0.2",
-    "typescript": "^3.8.3"
+    "@types/bunyan": "^1.8.8"
   },
   "scripts": {
     "build": "npm run clean && npm run lint && npm run compile",

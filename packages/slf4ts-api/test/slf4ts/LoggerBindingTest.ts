@@ -3,7 +3,7 @@
 import 'source-map-support/register'
 
 import * as chai from 'chai'
-import { suite, test } from 'mocha-typescript'
+import { suite, test } from '@testdeck/mocha'
 import * as path from 'path'
 
 import { LoggerBindings } from '../../lib/slf4ts/LoggerBindings'
