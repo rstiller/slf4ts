@@ -2,9 +2,7 @@
 
 Simple Logging Facade for NodeJS
 
-<p align="center">
-    [![CI](https://github.com/rstiller/slf4ts/actions/workflows/ci.yml/badge.svg)](https://github.com/rstiller/slf4ts/actions/workflows/ci.yml)
-</p>
+[![CI](https://github.com/rstiller/slf4ts/actions/workflows/ci.yml/badge.svg)](https://github.com/rstiller/slf4ts/actions/workflows/ci.yml)
 
 This is the mono-repository for the `slf4ts` modules.  
 `slf4ts` modules are a collection of modules abstracting logging for nodejs libraries.  
