@@ -13,7 +13,7 @@
   "dependencies": {
     "slf4ts-api": "^1.4.0",
     "slf4ts-bunyan": "^1.0.0",
-    "bunyan": "^1.8.12"
+    "bunyan": "^1.8.15"
   },
   "scripts": {
     "start": "node ."
