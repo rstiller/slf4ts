@@ -3,9 +3,7 @@
 Simple Logging Facade for NodeJS
 
 <p align="center">
-    <a href="https://travis-ci.org/rstiller/slf4ts">
-        <img src="http://img.shields.io/travis/rstiller/slf4ts/master.svg" alt="Build Status">
-    </a>
+    [![CI](https://github.com/rstiller/slf4ts/actions/workflows/ci.yml/badge.svg)](https://github.com/rstiller/slf4ts/actions/workflows/ci.yml)
 </p>
 
 This is the mono-repository for the `slf4ts` modules.  
