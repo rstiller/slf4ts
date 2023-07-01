@@ -385,8 +385,8 @@ importers:
   packages/slf4ts-cassandra-log-adapter:
     dependencies:
       cassandra-driver:
-        specifier: ^4.4.0
-        version: 4.4.0
+        specifier: ^4.6.4
+        version: 4.6.4
       slf4ts-api:
         specifier: ^1.4.0
         version: link:../slf4ts-api
@@ -1230,9 +1230,9 @@ packages:
     hasBin: true
     dev: true
 
-  /adm-zip@0.4.14:
-    resolution: {integrity: sha512-/9aQCnQHF+0IiCl0qhXoK7qs//SwYE7zX8lsr/DNk1BRAHYxeLZPL4pguwK29gUEqasYQjqPtEpDRSWEkdHn9g==}
-    engines: {node: '>=0.3.0'}
+  /adm-zip@0.5.10:
+    resolution: {integrity: sha512-x0HvcHqVJNTPk/Bw8JbLWlWoo6Wwnsug0fnYYro1HBrjxZ3G7/AZk7Ahv8JwDe1uIcz8eBqvu86FuF1POiG7vQ==}
+    engines: {node: '>=6.0'}
     dev: false
 
   /aggregate-error@3.0.1:
@@ -1489,13 +1489,13 @@ packages:
     engines: {node: '>=6'}
     dev: true
 
-  /cassandra-driver@4.4.0:
-    resolution: {integrity: sha512-YJdGqNaT8VJi1jJKfxS0z6b4px5dHMsclQ3qmxwmVxrSChn/dqy2EVM4L77wQA7DNbdbt/MLtU8JD9N0r2tA0Q==}
+  /cassandra-driver@4.6.4:
+    resolution: {integrity: sha512-SksbIK0cZ2QZRx8ti7w+PnLqldyY+6kU2gRWFChwXFTtrD/ce8cQICDEHxyPwx+DeILwRnMrPf9cjUGizYw9Vg==}
     engines: {node: '>=8'}
     dependencies:
       '@types/long': 4.0.1
       '@types/node': 13.9.1
-      adm-zip: 0.4.14
+      adm-zip: 0.5.10
       long: 2.4.0
     dev: false
 
@@ -2986,7 +2986,7 @@ packages:
     dev: false
 
   /long@2.4.0:
-    resolution: {integrity: sha1-n6GAux2VAM3CnEFWdmoZleH0Uk8=}
+    resolution: {integrity: sha512-ijUtjmO/n2A5PaosNG9ZGDsQ3vxJg7ZW8vsY8Kp0f2yIZWhSJvjmegV7t+9RPQKxKrvj8yKGehhS+po14hPLGQ==}
     engines: {node: '>=0.6'}
     dev: false
 
@@ -3907,6 +3907,11 @@ packages:
 
   /signal-exit@3.0.2:
     resolution: {integrity: sha512-meQNNykwecVxdu1RlYMKpQx4+wefIYpmxi6gexo/KAbwquJrBUrBmKYJrE8KFkVQAAVWEnwNdu21PgrD77J3xA==}
+    dev: true
+
+  /signal-exit@4.0.2:
+    resolution: {integrity: sha512-MY2/qGx4enyjprQnFaZsHib3Yadh3IXyV2C321GY0pjGfVBu4un0uDJkwgdxqO+Rdx8JMT8IfJIRwbYVz3Ob3Q==}
+    engines: {node: '>=14'}
     dev: true
 
   /signal-exit@4.0.2:
