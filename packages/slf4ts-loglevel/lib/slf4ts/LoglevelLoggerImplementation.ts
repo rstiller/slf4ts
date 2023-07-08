@@ -39,7 +39,12 @@ LogMethodMapping[LogLevel.ERROR] = 'error'
  */
 export class LoglevelLoggerImplementation implements LoggerImplementation<Logger, [string]> {
   private readonly loggers = new Map<string, Logger>()
-  private builder: LoggerBuilder<Logger, [string]> = this.getDefaultLoggerBuilder()
+  private builder: LoggerBuilder<Logger, [string]> = (name: string) => {
+    if (name === ':') {
+      return log
+    }
+    return log.getLogger(name)
+  }
 
   public async log (...args: any[]): Promise<void> {
     const additionalArguments = [...args]
@@ -76,16 +81,7 @@ export class LoglevelLoggerImplementation implements LoggerImplementation<Logger
   }
 
   public setLoggerBuilder (builder?: LoggerBuilder<Logger, [string]>): void {
-    this.builder = builder ?? this.getDefaultLoggerBuilder()
-  }
-
-  private getDefaultLoggerBuilder (): LoggerBuilder<Logger, [string]> {
-    return (name: string) => {
-      if (name === ':') {
-        return log
-      }
-      return log.getLogger(name)
-    }
+    this.builder = builder ?? this.builder
   }
 
   private getLoggerInstance (

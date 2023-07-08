@@ -94,6 +94,7 @@ export class DefaultLoggerInstance<T, P extends any[]> implements ILoggerInstanc
      * @param {LogLevel} logLevel The initial log-level of the logger instance.
      * @param {commonMetadata} commonMetadata The metadata added automatically to every log operation.
      * @param {LoggerImplementation} impl The underlying logger implementation.
+     * @param {LoggerBuilder} builder Optional logger builder
      * @memberof DefaultLoggerInstance
      */
   public constructor (
@@ -102,7 +103,7 @@ export class DefaultLoggerInstance<T, P extends any[]> implements ILoggerInstanc
     logLevel: LogLevel,
     commonMetadata: any,
     impl: LoggerImplementation<T, P>,
-    builder: LoggerBuilder<T, P>) {
+    builder?: LoggerBuilder<T, P>) {
     this.impl = impl
     this.name = name
     this.group = group
@@ -250,14 +251,13 @@ export class LoggerFactory {
       return LoggerFactory.LOGGER_INSTANCE_CACHE.get(compoundKey) as ILoggerInstance<T>
     }
 
-    const defaultLoggerBuilder: LoggerBuilder<T, P> = () => null as T
     const instance = new DefaultLoggerInstance<T, P>(
       name,
       group,
       LoggerConfiguration.getLogLevel(group, name),
       LoggerFactory.COMMON_METADATA,
       LoggerFactory.LOGGER as LoggerImplementation<T, P>,
-      builder ?? defaultLoggerBuilder)
+      builder)
     LoggerFactory.LOGGER_INSTANCE_CACHE.set(compoundKey, instance)
     return instance
   }

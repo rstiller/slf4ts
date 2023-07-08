@@ -21,7 +21,7 @@ LogLevelMapping[LogLevel.ERROR] = 'error'
  */
 export class WinstonLoggerImplementation implements LoggerImplementation<winston.Logger, []> {
   private readonly loggers = new Map<string, winston.Logger>()
-  private builder: LoggerBuilder<winston.Logger, []> = this.getDefaultLoggerBuilder()
+  private builder: LoggerBuilder<winston.Logger, []> = () => winston.createLogger()
 
   public async log (...args: any[]): Promise<any> {
     const level: number = arguments[0]
@@ -93,11 +93,7 @@ export class WinstonLoggerImplementation implements LoggerImplementation<winston
   }
 
   public setLoggerBuilder (builder?: LoggerBuilder<winston.Logger, []>): void {
-    this.builder = builder ?? this.getDefaultLoggerBuilder()
-  }
-
-  private getDefaultLoggerBuilder (): LoggerBuilder<winston.Logger, []> {
-    return () => winston.createLogger()
+    this.builder = builder ?? this.builder
   }
 
   private getLoggerInstance (group: string, name: string): winston.Logger {
