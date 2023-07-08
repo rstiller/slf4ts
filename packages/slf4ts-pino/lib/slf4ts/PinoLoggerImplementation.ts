@@ -31,7 +31,10 @@ LogLevelMapping[LogLevel.ERROR] = 'error'
 export class PinoLoggerImplementation implements LoggerImplementation<Logger, [LoggerOptions | DestinationStream, DestinationStream?]> {
   private readonly rootLoggers = new Map<string, Logger>()
   private readonly loggers = new Map<string, Logger>()
-  private builder: LoggerBuilder<Logger, [LoggerOptions | DestinationStream, DestinationStream?]> = this.getDefaultLoggerBuilder()
+  private builder: LoggerBuilder<Logger, [LoggerOptions | DestinationStream, DestinationStream?]> = (
+    config: LoggerOptions | DestinationStream,
+    stream?: DestinationStream
+  ) => pino(config as LoggerOptions, stream as DestinationStream)
 
   public async log (...args: any[]): Promise<void> {
     const additionalArguments = [...arguments]
@@ -56,7 +59,7 @@ export class PinoLoggerImplementation implements LoggerImplementation<Logger, [L
         }
       })
 
-      callArguments.unshift(message)
+      callArguments.push(message)
       if (error) {
         callArguments.unshift(error)
       }
@@ -105,14 +108,7 @@ export class PinoLoggerImplementation implements LoggerImplementation<Logger, [L
   }
 
   public setLoggerBuilder (builder?: LoggerBuilder<Logger, [LoggerOptions | DestinationStream, DestinationStream?]>): void {
-    this.builder = builder ?? this.getDefaultLoggerBuilder()
-  }
-
-  private getDefaultLoggerBuilder (): LoggerBuilder<Logger, [LoggerOptions | DestinationStream, DestinationStream?]> {
-    return (
-      config: LoggerOptions | DestinationStream,
-      stream?: DestinationStream
-    ) => pino(config as LoggerOptions, stream as DestinationStream)
+    this.builder = builder ?? this.builder
   }
 
   private getLoggerInstance (

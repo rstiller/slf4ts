@@ -122,7 +122,7 @@ export class BunyanLoggerImplementationTest {
     expect(ringBuffer.records[2].level).to.equal(30)
     expect(ringBuffer.records[2].hostname).to.equal(host)
     expect(ringBuffer.records[2].v).to.equal(0)
-    expect(ringBuffer.records[2].msg).to.startsWith('Test Message Error: \n')
+    expect(ringBuffer.records[2].msg).to.startsWith('Test Message Error\n')
 
     await logger.log(LogLevel.INFO, '', '', 'Test Message', error, { key: 'value' }, {})
 
@@ -130,7 +130,7 @@ export class BunyanLoggerImplementationTest {
     expect(ringBuffer.records[3].level).to.equal(30)
     expect(ringBuffer.records[3].hostname).to.equal(host)
     expect(ringBuffer.records[3].v).to.equal(0)
-    expect(ringBuffer.records[3].msg).to.startsWith('Test Message Error: \n')
+    expect(ringBuffer.records[3].msg).to.startsWith('Test Message Error\n')
     expect(ringBuffer.records[3].msg).to.endsWith(' { key: \'value\' }')
 
     logger.setMetadata({
@@ -144,7 +144,7 @@ export class BunyanLoggerImplementationTest {
     expect(ringBuffer.records[4].hostname).to.equal(host)
     expect(ringBuffer.records[4].v).to.equal(0)
     expect(ringBuffer.records[4].user).to.equal('username')
-    expect(ringBuffer.records[4].msg).to.startsWith('Test Message Error: \n')
+    expect(ringBuffer.records[4].msg).to.startsWith('Test Message Error\n')
     expect(ringBuffer.records[4].msg).to.endsWith(' { key: \'value\' }')
   }
 
@@ -173,7 +173,7 @@ export class BunyanLoggerImplementationTest {
     expect(ringBuffer.records[0].hostname).to.equal(host)
     expect(ringBuffer.records[0].v).to.equal(0)
     expect(ringBuffer.records[0].name).to.equal('group:name')
-    expect(ringBuffer.records[0].msg).to.startsWith('Test Message Error: \n')
+    expect(ringBuffer.records[0].msg).to.startsWith('Test Message Error\n')
     expect(ringBuffer.records[0].msg).to.endsWith(' { key: \'value\' }')
 
     logger.setMetadata({
@@ -188,7 +188,7 @@ export class BunyanLoggerImplementationTest {
     expect(ringBuffer.records[1].v).to.equal(0)
     expect(ringBuffer.records[1].name).to.equal('group:name')
     expect(ringBuffer.records[1].user).to.equal('username')
-    expect(ringBuffer.records[1].msg).to.startsWith('Test Message Error: \n')
+    expect(ringBuffer.records[1].msg).to.startsWith('Test Message Error\n')
     expect(ringBuffer.records[1].msg).to.endsWith(' { key: \'value\' }')
   }
 }

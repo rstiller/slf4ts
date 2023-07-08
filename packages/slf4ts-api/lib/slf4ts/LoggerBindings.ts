@@ -74,7 +74,7 @@ export interface LoggerImplementation<T, P extends any[]> {
    * @param {LoggerBuilder<T, P>} builder
    * @memberof LoggerImplementation
    */
-  setLoggerBuilder: (builder: LoggerBuilder<T, P>) => void
+  setLoggerBuilder: (builder?: LoggerBuilder<T, P>) => void
 
 }
 

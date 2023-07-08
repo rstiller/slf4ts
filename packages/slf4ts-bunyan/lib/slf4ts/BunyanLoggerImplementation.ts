@@ -36,7 +36,7 @@ LogMethodMapping[LogLevel.ERROR] = 'error'
 export class BunyanLoggerImplementation implements LoggerImplementation<Logger, [Logger.LoggerOptions]> {
   private readonly loggers = new Map<string, Logger>()
   private readonly rootLoggers = new Map<string, Logger>()
-  private builder: LoggerBuilder<any, [Logger.LoggerOptions]> = this.getDefaultLoggerBuilder()
+  private builder: LoggerBuilder<any, [Logger.LoggerOptions]> = (options: Logger.LoggerOptions) => Logger.createLogger(options)
 
   public async log (...args: any[]): Promise<void> {
     const additionalArguments = [...args]
@@ -77,11 +77,7 @@ export class BunyanLoggerImplementation implements LoggerImplementation<Logger, 
   }
 
   public setLoggerBuilder (builder?: LoggerBuilder<Logger, [Logger.LoggerOptions]>): void {
-    this.builder = builder ?? this.getDefaultLoggerBuilder()
-  }
-
-  private getDefaultLoggerBuilder (): LoggerBuilder<Logger, [Logger.LoggerOptions]> {
-    return (options: Logger.LoggerOptions) => Logger.createLogger(options)
+    this.builder = builder ?? this.builder
   }
 
   private getLoggerInstance (

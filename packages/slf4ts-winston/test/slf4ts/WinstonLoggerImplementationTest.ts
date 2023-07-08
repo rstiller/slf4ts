@@ -108,7 +108,7 @@ export class WinstonLoggerImplementationTest {
     expect(calls).to.have.length(3)
     expect(calls[2][0].level).to.equal('info')
     expect(calls[2][0].message).to.startsWith('Test Message')
-    expect(calls[2][0].stack).to.startsWith('Error: \n')
+    expect(calls[2][0].stack).to.startsWith('Error\n')
 
     await logger.log(LogLevel.INFO, '', '', 'Test Message', error, { key: 'value' })
 
@@ -116,6 +116,6 @@ export class WinstonLoggerImplementationTest {
     expect(calls[3][0].level).to.equal('info')
     expect(calls[3][0].message).to.startsWith('Test Message')
     expect(calls[3][0].key).to.equal('value')
-    expect(calls[3][0].stack).to.startsWith('Error: \n')
+    expect(calls[3][0].stack).to.startsWith('Error\n')
   }
 }

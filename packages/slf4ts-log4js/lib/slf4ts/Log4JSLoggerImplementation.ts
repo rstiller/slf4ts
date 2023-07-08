@@ -20,7 +20,7 @@ LogLevelMapping[LogLevel.ERROR] = 'ERROR'
  */
 export class Log4JSLoggerImplementation implements LoggerImplementation<Logger, [string]> {
   private readonly loggers = new Map<string, Logger>()
-  private builder: LoggerBuilder<Logger, [string]> = this.getDefaultLoggerBuilder()
+  private builder: LoggerBuilder<Logger, [string]> = (category: string) => getLogger(category)
 
   public async log (...args: any[]): Promise<any> {
     const additionalArguments = [...arguments]
@@ -35,7 +35,7 @@ export class Log4JSLoggerImplementation implements LoggerImplementation<Logger, 
       .concat(...additionalArguments)
 
     await new Promise<void>((resolve, reject) => {
-      instance.log.apply(null, callArguments)
+      instance.log.apply(instance, callArguments)
       resolve()
     })
   }
@@ -64,11 +64,7 @@ export class Log4JSLoggerImplementation implements LoggerImplementation<Logger, 
   }
 
   public setLoggerBuilder (builder?: LoggerBuilder<Logger, [string]>): void {
-    this.builder = builder ?? this.getDefaultLoggerBuilder()
-  }
-
-  private getDefaultLoggerBuilder (): LoggerBuilder<Logger, [string]> {
-    return (category: string) => getLogger(category)
+    this.builder = builder ?? this.builder
   }
 
   private getLoggerInstance (group: string, name: string): Logger {

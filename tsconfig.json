@@ -8,7 +8,7 @@
         "target": "es2017",
         "sourceMap": true,
         "newLine": "LF",
-        "moduleResolution": "node",
+        "moduleResolution": "Node",
         "noLib": false,
         "noImplicitAny": true,
         "noImplicitReturns": true,
