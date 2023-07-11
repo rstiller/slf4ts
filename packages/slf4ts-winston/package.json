@@ -28,7 +28,7 @@
   "dependencies": {
     "slf4ts-api": "workspace:^1.4.0",
     "source-map-support": "^0.5.21",
-    "winston": "^3.9.0"
+    "winston": "^3.10.0"
   },
   "devDependencies": {
     "winston-transport": "^4.5.0"
