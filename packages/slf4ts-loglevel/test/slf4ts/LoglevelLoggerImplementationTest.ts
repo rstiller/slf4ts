@@ -1,29 +1,30 @@
 import "source-map-support/register";
 
 import { suite, test } from "@testdeck/mocha";
-import * as chai from "chai";
 import * as log from "loglevel";
 import * as sinon from "sinon";
-import * as sinonChai from "sinon-chai";
 import { LoggerConfiguration, LogLevel } from "slf4ts-api";
 
 import { LoglevelLoggerImplementation } from "../../lib/slf4ts/LoglevelLoggerImplementation";
 
-chai.use(sinonChai);
-const expect = chai.expect;
-
 @suite
 export class LoglevelLoggerImplementationTest {
   private static sandbox: sinon.SinonSandbox;
+  private static readonly spies: Record<string, sinon.SinonSpy> = {};
+
   public static async before(): Promise<void> {
     this.sandbox = sinon.createSandbox();
 
-    this.sandbox.spy(console, "trace");
-    this.sandbox.spy(console, "debug");
-    this.sandbox.spy(console, "info");
-    this.sandbox.spy(console, "warn");
-    this.sandbox.spy(console, "error");
-    this.sandbox.spy(console, "log");
+    for (const method of [
+      "trace",
+      "debug",
+      "info",
+      "warn",
+      "error",
+      "log",
+    ] as const) {
+      this.spies[method] = this.sandbox.spy(console, method);
+    }
   }
 
   public static async after(): Promise<void> {
@@ -34,6 +35,10 @@ export class LoglevelLoggerImplementationTest {
     LoglevelLoggerImplementationTest.sandbox.resetHistory();
   }
 
+  private get spies(): Record<string, sinon.SinonSpy> {
+    return LoglevelLoggerImplementationTest.spies;
+  }
+
   @test
   public async checkLogLevel(): Promise<void> {
     const logger = new LoglevelLoggerImplementation();
@@ -42,28 +47,28 @@ export class LoglevelLoggerImplementationTest {
       return log.getLogger(name);
     });
 
-    expect(console.trace).to.not.have.been.called;
-    expect(console.debug).to.not.have.been.called;
-    expect(console.info).to.not.have.been.called;
-    expect(console.warn).to.not.have.been.called;
-    expect(console.error).to.not.have.been.called;
-    expect(console.log).to.not.have.been.called;
+    sinon.assert.notCalled(this.spies.trace);
+    sinon.assert.notCalled(this.spies.debug);
+    sinon.assert.notCalled(this.spies.info);
+    sinon.assert.notCalled(this.spies.warn);
+    sinon.assert.notCalled(this.spies.error);
+    sinon.assert.notCalled(this.spies.log);
 
     LoggerConfiguration.setLogLevel(LogLevel.TRACE, "group", "name");
     await logger.log(LogLevel.TRACE, "group", "name", "Test Message", {});
-    expect(console.trace).to.have.been.calledWith("Test Message");
+    sinon.assert.calledWith(this.spies.trace, "Test Message");
 
     await logger.log(LogLevel.DEBUG, "group", "name", "Test Message", {});
-    expect(console.log).to.have.been.calledWith("Test Message");
+    sinon.assert.calledWith(this.spies.log, "Test Message");
 
     await logger.log(LogLevel.INFO, "group", "name", "Test Message", {});
-    expect(console.info).to.have.been.calledWith("Test Message");
+    sinon.assert.calledWith(this.spies.info, "Test Message");
 
     await logger.log(LogLevel.WARN, "group", "name", "Test Message", {});
-    expect(console.warn).to.have.been.calledWith("Test Message");
+    sinon.assert.calledWith(this.spies.warn, "Test Message");
 
     await logger.log(LogLevel.ERROR, "group", "name", "Test Message", {});
-    expect(console.error).to.have.been.calledWith("Test Message");
+    sinon.assert.calledWith(this.spies.error, "Test Message");
   }
 
   @test
@@ -74,16 +79,16 @@ export class LoglevelLoggerImplementationTest {
       return log.getLogger(name);
     });
 
-    expect(console.trace).to.not.have.been.called;
-    expect(console.debug).to.not.have.been.called;
-    expect(console.info).to.not.have.been.called;
-    expect(console.warn).to.not.have.been.called;
-    expect(console.error).to.not.have.been.called;
-    expect(console.log).to.not.have.been.called;
+    sinon.assert.notCalled(this.spies.trace);
+    sinon.assert.notCalled(this.spies.debug);
+    sinon.assert.notCalled(this.spies.info);
+    sinon.assert.notCalled(this.spies.warn);
+    sinon.assert.notCalled(this.spies.error);
+    sinon.assert.notCalled(this.spies.log);
 
     LoggerConfiguration.setLogLevel(LogLevel.INFO, "group", "name");
     await logger.log(LogLevel.INFO, "group", "name", "Test Message", {});
-    expect(console.info).to.have.been.calledWith("Test Message");
+    sinon.assert.calledWith(this.spies.info, "Test Message");
     LoglevelLoggerImplementationTest.sandbox.resetHistory();
 
     await logger.log(
@@ -94,14 +99,14 @@ export class LoglevelLoggerImplementationTest {
       { key: "value" },
       {},
     );
-    expect(console.info).to.have.been.calledWith("Test Message", {
+    sinon.assert.calledWith(this.spies.info, "Test Message", {
       key: "value",
     });
     LoglevelLoggerImplementationTest.sandbox.resetHistory();
 
     const error = new Error();
     await logger.log(LogLevel.INFO, "group", "name", "Test Message", error, {});
-    expect(console.info).to.have.been.calledWith("Test Message", error);
+    sinon.assert.calledWith(this.spies.info, "Test Message", error);
     LoglevelLoggerImplementationTest.sandbox.resetHistory();
 
     await logger.log(
@@ -113,7 +118,7 @@ export class LoglevelLoggerImplementationTest {
       { key: "value" },
       {},
     );
-    expect(console.info).to.have.been.calledWith("Test Message", error, {
+    sinon.assert.calledWith(this.spies.info, "Test Message", error, {
       key: "value",
     });
     LoglevelLoggerImplementationTest.sandbox.resetHistory();
@@ -135,7 +140,8 @@ export class LoglevelLoggerImplementationTest {
       { key: "value" },
       {},
     );
-    expect(console.info).to.have.been.calledWith(
+    sinon.assert.calledWith(
+      this.spies.info,
       "Test Message",
       error,
       { key: "value" },

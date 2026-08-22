@@ -37,7 +37,6 @@
     "build": "npm run clean && npm run lint && npm run compile",
     "clean": "rimraf build",
     "compile": "tsc -p .",
-    "deps": "npm-check --ignore @types/* --no-spinner --no-emoji --no-color",
     "lint": "biome check .",
     "prepublishOnly": "npm run build",
     "test": "mocha test/**/*Test.ts"

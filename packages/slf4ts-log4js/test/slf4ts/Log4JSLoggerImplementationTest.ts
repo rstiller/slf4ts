@@ -1,14 +1,12 @@
 import "source-map-support/register";
 
-import * as chai from "chai";
-import "chai-string";
 import { suite, test } from "@testdeck/mocha";
+import * as chai from "chai";
 import { configure } from "log4js";
 import { LogLevel } from "slf4ts-api";
 
 import { Log4JSLoggerImplementation } from "../../lib/slf4ts/Log4JSLoggerImplementation";
 
-chai.use(require("chai-string"));
 const expect = chai.expect;
 
 @suite
@@ -114,7 +112,7 @@ export class Log4JSLoggerImplementationTest {
     expect(calls).to.have.length(3);
     expect(calls[2].level.levelStr).to.equal("INFO");
     expect(calls[2].data[0]).to.equal("Test Message");
-    expect(calls[2].data[1].stack).to.startsWith("Error\n");
+    expect(calls[2].data[1].stack).to.match(/^Error\n/);
 
     await logger.log(
       LogLevel.INFO,
@@ -129,7 +127,7 @@ export class Log4JSLoggerImplementationTest {
     expect(calls).to.have.length(4);
     expect(calls[3].level.levelStr).to.equal("INFO");
     expect(calls[3].data[0]).to.equal("Test Message");
-    expect(calls[3].data[1].stack).to.startsWith("Error\n");
+    expect(calls[3].data[1].stack).to.match(/^Error\n/);
     expect(calls[3].data[2].key).to.equal("value");
   }
 }

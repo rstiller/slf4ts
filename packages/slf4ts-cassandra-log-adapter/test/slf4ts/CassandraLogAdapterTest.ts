@@ -3,7 +3,6 @@ import "source-map-support/register";
 import { suite, test } from "@testdeck/mocha";
 import { Client } from "cassandra-driver";
 import * as chai from "chai";
-import * as chaiString from "chai-string";
 import { EventEmitter } from "events";
 import {
   type DefaultLoggerInstance,
@@ -14,7 +13,6 @@ import * as td from "testdouble";
 
 import { CassandraLogAdapter } from "../../lib/slf4ts/CassandraLogAdapter";
 
-chai.use(chaiString);
 const expect = chai.expect;
 
 @suite

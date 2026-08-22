@@ -48,16 +48,7 @@ Notes:
 Dependency updates are managed by Dependabot (see `.github/dependabot.yml`);
 please do not bundle unrelated dependency upgrades into feature PRs.
 
-## Known deprecated tooling
-
-The following dev dependencies are deprecated upstream but still functional at
-their pinned versions. They are kept until a replacement is worth the
-refactoring effort:
-
-- `sinon-chai` - deprecated; candidate replacement: sinon's built-in assertions
-- `chai-string` - deprecated; candidate replacement: plain chai assertions
-- `npm-check` - used by the `deps` script and the docs container;
-  candidate replacement: `pnpm outdated` / `ncu`
+## Known blocked dependency upgrades
 
 Do not upgrade `chai` to >= 5 or `typescript` to >= 6 (also encoded as
 Dependabot ignores): chai 5+ is ESM-only and incompatible with the current

@@ -1,17 +1,15 @@
 import "source-map-support/register";
 
+import { suite, test } from "@testdeck/mocha";
 import * as chai from "chai";
 import { merge } from "lodash";
 import { hostname } from "os";
 import { type LoggerOptions, pino } from "pino";
-import { Writable } from "stream";
-import "chai-string";
-import { suite, test } from "@testdeck/mocha";
 import { LoggerConfiguration, LogLevel } from "slf4ts-api";
+import { Writable } from "stream";
 
 import { PinoLoggerImplementation } from "../../lib/slf4ts/PinoLoggerImplementation";
 
-chai.use(require("chai-string"));
 const expect = chai.expect;
 const host = hostname();
 
@@ -127,7 +125,7 @@ export class PinoLoggerImplementationTest {
     expect(calls[2][0].msg).to.equal("Test Message");
     expect(calls[2][0].err.type).to.equal("Error");
     expect(calls[2][0].err.message).to.equal("");
-    expect(calls[2][0].err.stack).to.startsWith("Error\n");
+    expect(calls[2][0].err.stack).to.match(/^Error\n/);
 
     logger.setMetadata(
       {
@@ -146,7 +144,7 @@ export class PinoLoggerImplementationTest {
     expect(calls[3][0].msg).to.equal("Test Message");
     expect(calls[3][0].err.type).to.equal("Error");
     expect(calls[3][0].err.message).to.equal("");
-    expect(calls[3][0].err.stack).to.startsWith("Error\n");
+    expect(calls[3][0].err.stack).to.match(/^Error\n/);
   }
 
   @test
@@ -180,7 +178,7 @@ export class PinoLoggerImplementationTest {
     expect(calls[0][0].msg).to.equal("Test Message");
     expect(calls[0][0].err.type).to.equal("Error");
     expect(calls[0][0].err.message).to.equal("");
-    expect(calls[0][0].err.stack).to.startsWith("Error\n");
+    expect(calls[0][0].err.stack).to.match(/^Error\n/);
 
     await logger.log(
       LogLevel.INFO,
@@ -216,7 +214,7 @@ export class PinoLoggerImplementationTest {
     expect(calls[2][0].msg).to.equal("Test Message");
     expect(calls[2][0].err.type).to.equal("Error");
     expect(calls[2][0].err.message).to.equal("");
-    expect(calls[2][0].err.stack).to.startsWith("Error\n");
+    expect(calls[2][0].err.stack).to.match(/^Error\n/);
 
     await logger.log(
       LogLevel.INFO,
