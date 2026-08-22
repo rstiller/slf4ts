@@ -4,7 +4,12 @@ import { suite, test } from "@testdeck/mocha";
 import * as chai from "chai";
 import { merge } from "lodash";
 import { hostname } from "os";
-import { type LoggerOptions, pino } from "pino";
+import {
+  type DestinationStream,
+  type Logger,
+  type LoggerOptions,
+  pino,
+} from "pino";
 import { LoggerConfiguration, LogLevel } from "slf4ts-api";
 import { Writable } from "stream";
 
@@ -20,18 +25,18 @@ export class PinoLoggerImplementationTest {
     const logger = new PinoLoggerImplementation();
     const calls: any[] = [];
 
-    logger.setLoggerBuilder((options: LoggerOptions) => {
+    logger.setLoggerBuilder((options: LoggerOptions | DestinationStream) => {
       const stream = new Writable();
       stream._write = (chunk, encoding, next) => {
         calls.push([JSON.parse(chunk.toString("utf8")), encoding]);
         next();
       };
       return pino(
-        merge({}, options, {
+        merge({}, options as LoggerOptions, {
           level: "trace",
         }),
         stream,
-      );
+      ) as Logger;
     });
 
     expect(calls).to.have.length(0);
@@ -78,18 +83,18 @@ export class PinoLoggerImplementationTest {
     const logger = new PinoLoggerImplementation();
     const calls: any[] = [];
 
-    logger.setLoggerBuilder((options: LoggerOptions) => {
+    logger.setLoggerBuilder((options: LoggerOptions | DestinationStream) => {
       const stream = new Writable();
       stream._write = (chunk, encoding, next) => {
         calls.push([JSON.parse(chunk.toString("utf8")), encoding]);
         next();
       };
       return pino(
-        merge({}, options, {
+        merge({}, options as LoggerOptions, {
           level: "trace",
         }),
         stream,
-      );
+      ) as Logger;
     });
 
     expect(calls).to.have.length(0);
@@ -125,7 +130,7 @@ export class PinoLoggerImplementationTest {
     expect(calls[2][0].msg).to.equal("Test Message");
     expect(calls[2][0].err.type).to.equal("Error");
     expect(calls[2][0].err.message).to.equal("");
-    expect(calls[2][0].err.stack).to.match(/^Error\n/);
+    expect(calls[2][0].err.stack).to.match(/^Error(:\s*)?\n/);
 
     logger.setMetadata(
       {
@@ -144,7 +149,7 @@ export class PinoLoggerImplementationTest {
     expect(calls[3][0].msg).to.equal("Test Message");
     expect(calls[3][0].err.type).to.equal("Error");
     expect(calls[3][0].err.message).to.equal("");
-    expect(calls[3][0].err.stack).to.match(/^Error\n/);
+    expect(calls[3][0].err.stack).to.match(/^Error(:\s*)?\n/);
   }
 
   @test
@@ -152,18 +157,18 @@ export class PinoLoggerImplementationTest {
     const logger = new PinoLoggerImplementation();
     const calls: any[] = [];
 
-    logger.setLoggerBuilder((options: LoggerOptions) => {
+    logger.setLoggerBuilder((options: LoggerOptions | DestinationStream) => {
       const stream = new Writable();
       stream._write = (chunk, encoding, next) => {
         calls.push([JSON.parse(chunk.toString("utf8")), encoding]);
         next();
       };
       return pino(
-        merge({}, options, {
+        merge({}, options as LoggerOptions, {
           level: "trace",
         }),
         stream,
-      );
+      ) as Logger;
     });
 
     expect(calls).to.have.length(0);
@@ -178,7 +183,7 @@ export class PinoLoggerImplementationTest {
     expect(calls[0][0].msg).to.equal("Test Message");
     expect(calls[0][0].err.type).to.equal("Error");
     expect(calls[0][0].err.message).to.equal("");
-    expect(calls[0][0].err.stack).to.match(/^Error\n/);
+    expect(calls[0][0].err.stack).to.match(/^Error(:\s*)?\n/);
 
     await logger.log(
       LogLevel.INFO,
@@ -214,7 +219,7 @@ export class PinoLoggerImplementationTest {
     expect(calls[2][0].msg).to.equal("Test Message");
     expect(calls[2][0].err.type).to.equal("Error");
     expect(calls[2][0].err.message).to.equal("");
-    expect(calls[2][0].err.stack).to.match(/^Error\n/);
+    expect(calls[2][0].err.stack).to.match(/^Error(:\s*)?\n/);
 
     await logger.log(
       LogLevel.INFO,

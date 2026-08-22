@@ -13,7 +13,7 @@ import { ConsoleLoggerImplementation } from "./ConsoleLoggerImplementation";
  * @class ConsoleLoggerBinding
  * @implements {LoggerBinding}
  */
-export class ConsoleLoggerBinding implements LoggerBinding<Console, never> {
+export class ConsoleLoggerBinding implements LoggerBinding<Console, any[]> {
   private readonly packageJson: any;
 
   public constructor() {

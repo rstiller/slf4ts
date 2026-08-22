@@ -11,7 +11,7 @@ const expect = chai.expect;
 
 class TestConsole implements Console {
   public memory: any;
-  public Console: console.ConsoleConstructor;
+  public Console!: typeof import("node:console").Console;
 
   public markTimeline(label?: string): void {
     throw new Error("Method not implemented.");

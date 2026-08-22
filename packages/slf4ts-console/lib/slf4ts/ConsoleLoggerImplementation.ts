@@ -15,7 +15,7 @@ import * as util from "util";
  * @implements {LoggerImplementation}
  */
 export class ConsoleLoggerImplementation
-  implements LoggerImplementation<Console, never>
+  implements LoggerImplementation<Console, any[]>
 {
   private readonly console: Console;
 
@@ -51,7 +51,7 @@ export class ConsoleLoggerImplementation
     // nothing to set here ...
   }
 
-  public setLoggerBuilder(builder: LoggerBuilder<Console, never>): void {
+  public setLoggerBuilder(builder?: LoggerBuilder<Console, any[]>): void {
     // nothing to set here ...
   }
 

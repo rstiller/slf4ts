@@ -1,6 +1,6 @@
 import "source-map-support/register";
 
-import { getLogger, type Logger } from "log4js";
+import { getLogger, type Level, type Logger } from "log4js";
 import {
   type LoggerBuilder,
   type LoggerImplementation,
@@ -43,7 +43,7 @@ export class Log4JSLoggerImplementation
     );
 
     await new Promise<void>((resolve, reject) => {
-      instance.log.apply(instance, callArguments);
+      instance.log.apply(instance, callArguments as [string | Level, ...any[]]);
       resolve();
     });
   }

@@ -112,7 +112,7 @@ export class Log4JSLoggerImplementationTest {
     expect(calls).to.have.length(3);
     expect(calls[2].level.levelStr).to.equal("INFO");
     expect(calls[2].data[0]).to.equal("Test Message");
-    expect(calls[2].data[1].stack).to.match(/^Error\n/);
+    expect(calls[2].data[1].stack).to.match(/^Error(:\s*)?\n/);
 
     await logger.log(
       LogLevel.INFO,
@@ -127,7 +127,7 @@ export class Log4JSLoggerImplementationTest {
     expect(calls).to.have.length(4);
     expect(calls[3].level.levelStr).to.equal("INFO");
     expect(calls[3].data[0]).to.equal("Test Message");
-    expect(calls[3].data[1].stack).to.match(/^Error\n/);
+    expect(calls[3].data[1].stack).to.match(/^Error(:\s*)?\n/);
     expect(calls[3].data[2].key).to.equal("value");
   }
 }

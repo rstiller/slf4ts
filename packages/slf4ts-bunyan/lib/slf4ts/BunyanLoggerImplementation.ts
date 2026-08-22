@@ -54,7 +54,7 @@ export class BunyanLoggerImplementation
     await new Promise<void>((resolve, reject) => {
       const logMethodId: LogMethodId = LogMethodMapping[level];
       const logMethod = instance[logMethodId];
-      logMethod.apply(instance, additionalArguments);
+      logMethod.apply(instance, additionalArguments as [any, ...any[]]);
       resolve();
     });
   }

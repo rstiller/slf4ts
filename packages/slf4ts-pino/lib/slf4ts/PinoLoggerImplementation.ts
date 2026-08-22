@@ -73,19 +73,34 @@ export class PinoLoggerImplementation
 
       switch (level) {
         case LogLevel.DEBUG:
-          instance.debug.apply(instance, callArguments);
+          instance.debug.apply(
+            instance,
+            callArguments as Parameters<Logger["debug"]>,
+          );
           break;
         case LogLevel.INFO:
-          instance.info.apply(instance, callArguments);
+          instance.info.apply(
+            instance,
+            callArguments as Parameters<Logger["debug"]>,
+          );
           break;
         case LogLevel.WARN:
-          instance.warn.apply(instance, callArguments);
+          instance.warn.apply(
+            instance,
+            callArguments as Parameters<Logger["debug"]>,
+          );
           break;
         case LogLevel.ERROR:
-          instance.error.apply(instance, callArguments);
+          instance.error.apply(
+            instance,
+            callArguments as Parameters<Logger["debug"]>,
+          );
           break;
         default:
-          instance.trace.apply(instance, callArguments);
+          instance.trace.apply(
+            instance,
+            callArguments as Parameters<Logger["debug"]>,
+          );
           break;
       }
       resolve();

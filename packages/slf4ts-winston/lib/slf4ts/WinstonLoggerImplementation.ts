@@ -70,9 +70,9 @@ export class WinstonLoggerImplementation
             }); */
 
       if (instance) {
-        instance.log.apply(instance, callArguments);
+        instance.log.apply(instance, callArguments as [string, any]);
       } else {
-        winston.log.apply(winston, callArguments);
+        winston.log.apply(winston, callArguments as [string, any]);
       }
 
       resolve();

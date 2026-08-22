@@ -32,7 +32,7 @@ Notes:
 - Linting and formatting are enforced by [Biome](https://biomejs.dev) via the
   root `biome.json`; every package's `build` runs `biome check .`.
 - Tests use mocha with @testdeck and chai and run directly on the TypeScript
-  sources via ts-node. CI sets `TZ=Europe/Berlin` for reproducible results.
+  sources via tsx. CI sets `TZ=Europe/Berlin` for reproducible results.
 - The workspace is a pnpm monorepo (`pnpm-workspace.yaml`); packages link each
   other via `workspace:` ranges which are rewritten on publish.
 
@@ -50,10 +50,8 @@ please do not bundle unrelated dependency upgrades into feature PRs.
 
 ## Known blocked dependency upgrades
 
-Do not upgrade `chai` to >= 5 or `typescript` to >= 6 (also encoded as
-Dependabot ignores): chai 5+ is ESM-only and incompatible with the current
-CJS/ts-node test setup, and TypeScript 6+ is unsupported by ts-node and
-typescript-eslint.
+Do not upgrade `chai` to >= 5 (also encoded as a Dependabot ignore): chai 5+
+is ESM-only and incompatible with the current CJS test setup.
 
 ## Releases
 

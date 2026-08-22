@@ -48,8 +48,7 @@
   },
   "mocha": {
     "require": [
-      "source-map-support/register",
-      "ts-node/register"
+      "tsx/cjs"
     ],
     "reporter": "dot",
     "extension": "ts",

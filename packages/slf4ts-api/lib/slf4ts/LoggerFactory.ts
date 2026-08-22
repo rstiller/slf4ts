@@ -162,35 +162,35 @@ export class DefaultLoggerInstance<T, P extends any[]>
     const metadata = [LogLevel.TRACE, this.group, this.name]
       .concat(...arguments)
       .concat(this.commonMetadata);
-    return this.log.apply(this, metadata);
+    return this.log.apply(this, metadata as [LogLevel, ...any[]]);
   }
 
   public async debug(...args: any[]): Promise<any> {
     const metadata = [LogLevel.DEBUG, this.group, this.name]
       .concat(...arguments)
       .concat(this.commonMetadata);
-    return this.log.apply(this, metadata);
+    return this.log.apply(this, metadata as [LogLevel, ...any[]]);
   }
 
   public async info(...args: any[]): Promise<any> {
     const metadata = [LogLevel.INFO, this.group, this.name]
       .concat(...arguments)
       .concat(this.commonMetadata);
-    return this.log.apply(this, metadata);
+    return this.log.apply(this, metadata as [LogLevel, ...any[]]);
   }
 
   public async warn(...args: any[]): Promise<any> {
     const metadata = [LogLevel.WARN, this.group, this.name]
       .concat(...arguments)
       .concat(this.commonMetadata);
-    return this.log.apply(this, metadata);
+    return this.log.apply(this, metadata as [LogLevel, ...any[]]);
   }
 
   public async error(...args: any[]): Promise<any> {
     const metadata = [LogLevel.ERROR, this.group, this.name]
       .concat(...arguments)
       .concat(this.commonMetadata);
-    return this.log.apply(this, metadata);
+    return this.log.apply(this, metadata as [LogLevel, ...any[]]);
   }
 
   public getImplementation(): T {
@@ -199,7 +199,7 @@ export class DefaultLoggerInstance<T, P extends any[]>
 
   private async log(logLevel: LogLevel, ...args: any[]): Promise<any> {
     if (logLevel <= this.logLevel) {
-      return this.impl.log.apply(this.impl, arguments);
+      return this.impl.log.apply(this.impl, arguments as unknown as any[]);
     }
     await Promise.resolve();
   }
@@ -232,7 +232,7 @@ class NullLoggerImplementation implements LoggerImplementation<null, any[]> {
     // nothing
   }
 
-  public setLoggerBuilder(builder: LoggerBuilder<null, any[]>): void {
+  public setLoggerBuilder(builder?: LoggerBuilder<null, any[]>): void {
     // nothing
   }
 }
@@ -278,7 +278,10 @@ export class LoggerFactory {
       LoggerFactory.LOGGER as LoggerImplementation<T, P>,
       builder,
     );
-    LoggerFactory.LOGGER_INSTANCE_CACHE.set(compoundKey, instance);
+    LoggerFactory.LOGGER_INSTANCE_CACHE.set(
+      compoundKey,
+      instance as unknown as DefaultLoggerInstance<unknown, unknown[]>,
+    );
     return instance;
   }
 
@@ -333,7 +336,10 @@ export class LoggerFactory {
 
   private static COMMON_METADATA: any = undefined;
   private static LOGGER: LoggerImplementation<unknown, unknown[]> =
-    new NullLoggerImplementation();
+    new NullLoggerImplementation() as unknown as LoggerImplementation<
+      unknown,
+      unknown[]
+    >;
   private static ROOT_LOGGER: DefaultLoggerInstance<unknown, unknown[]>;
   private static INITIALIZED: boolean = false;
   private static readonly LOGGER_INSTANCE_CACHE = new Map<
@@ -341,7 +347,7 @@ export class LoggerFactory {
     DefaultLoggerInstance<unknown, unknown[]>
   >();
 
-  private static initialize<T, P extends any[]>(): void {
+  private static initialize(): void {
     const BINDINGS = new LoggerBindings().getBindings();
     const BINDING = BINDINGS[0];
     if (BINDINGS.length === 0) {
@@ -350,7 +356,10 @@ export class LoggerFactory {
     }
     LoggerFactory.LOGGER = BINDING.getLoggerImplementation();
     LoggerFactory.ROOT_LOGGER =
-      LoggerFactory.getLogger() as DefaultLoggerInstance<T, P>;
+      LoggerFactory.getLogger() as unknown as DefaultLoggerInstance<
+        unknown,
+        unknown[]
+      >;
 
     if (BINDINGS.length > 1) {
       let message = "multiple bindings found:";

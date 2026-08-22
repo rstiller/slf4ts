@@ -3,7 +3,7 @@ import "source-map-support/register";
 import { suite, test } from "@testdeck/mocha";
 import * as chai from "chai";
 import { LogLevel } from "slf4ts-api";
-import * as TransportStream from "winston-transport";
+import TransportStream from "winston-transport";
 
 import { WinstonLoggerImplementation } from "../../lib/slf4ts/WinstonLoggerImplementation";
 
@@ -101,7 +101,7 @@ export class WinstonLoggerImplementationTest {
     expect(calls).to.have.length(3);
     expect(calls[2][0].level).to.equal("info");
     expect(calls[2][0].message).to.match(/^Test Message/);
-    expect(calls[2][0].stack).to.match(/^Error\n/);
+    expect(calls[2][0].stack).to.match(/^Error(:\s*)?\n/);
 
     await logger.log(LogLevel.INFO, "", "", "Test Message", error, {
       key: "value",
@@ -111,6 +111,6 @@ export class WinstonLoggerImplementationTest {
     expect(calls[3][0].level).to.equal("info");
     expect(calls[3][0].message).to.match(/^Test Message/);
     expect(calls[3][0].key).to.equal("value");
-    expect(calls[3][0].stack).to.match(/^Error\n/);
+    expect(calls[3][0].stack).to.match(/^Error(:\s*)?\n/);
   }
 }
