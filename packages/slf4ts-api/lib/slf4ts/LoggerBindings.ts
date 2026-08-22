@@ -192,7 +192,9 @@ export class LoggerBindings {
     const rootPaths: string[] = (module as any).paths
     const moduleFolders: string[] = []
 
-    rootPaths.concat(additionalPaths).forEach((rootPath) => { this.visitNodeModules(rootPath).forEach((folder) => moduleFolders.push(folder)) })
+    rootPaths.concat(additionalPaths)
+      .filter((rootPath) => !rootPath.split(path.sep).includes('.pnpm'))
+      .forEach((rootPath) => { this.visitNodeModules(rootPath).forEach((folder) => moduleFolders.push(folder)) })
 
     return moduleFolders
   }
@@ -203,6 +205,9 @@ export class LoggerBindings {
     if (fs.existsSync(rootPath)) {
       const files = fs.readdirSync(rootPath)
       files.forEach((folder) => {
+        if (folder === '.pnpm') {
+          return
+        }
         const absolutePath = path.join(rootPath, folder)
         moduleFolders.push(absolutePath)
         this.visitNodeModules(path.join(absolutePath, 'node_modules'))

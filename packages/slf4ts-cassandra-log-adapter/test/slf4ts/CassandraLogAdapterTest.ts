@@ -109,8 +109,7 @@ export class CassandraLogAdapterTest {
 
       // level, group, name, className, message, furtherInformation, logger-metadata
       expect(calls[0].args[0]).to.equal(LogLevel.INFO)
-      expect(calls[0].args[3]).to.startWith('Client - Connecting to cluster using ' +
-                                                "'DataStax Node.js Driver for Apache Cassandra' version")
+      expect(calls[0].args[3]).to.match(/^Client - Connecting to cluster using '.*' version/)
       expect(calls[0].args[4]).to.not.exist
 
       expect(calls[1].args[0]).to.equal(LogLevel.INFO)

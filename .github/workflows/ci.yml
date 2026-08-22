@@ -14,27 +14,26 @@ jobs:
   build:
     strategy:
       matrix:
-        node-version: [16.x, 17.x, 18.x, 19.x]
+        node-version: [20.x, 22.x, 24.x]
         os:
           #- windows-2022
           #- windows-2019
           #- macos-12
           #- macos-11
-          - ubuntu-22.04
-          - ubuntu-20.04
+          - ubuntu-latest
 
     runs-on: ${{ matrix.os }}
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
 
       - name: Cache node modules
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         env:
           cache-name: cache-node-modules
         with:
@@ -43,10 +42,8 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-${{ runner.node-version }}-build-${{ env.cache-name }}-
 
-      - uses: pnpm/action-setup@v2
+      - uses: pnpm/action-setup@v4
         with:
-          version: 6
-          dest: ~/.pnpm-store
           run_install: |
             - args: [--global, rimraf, node-gyp]
             - recursive: true

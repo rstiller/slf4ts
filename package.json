@@ -1,6 +1,7 @@
 {
     "name": "slf4ts",
     "private": true,
+    "packageManager": "pnpm@11.22.0",
     "devDependencies": {
         "@testdeck/mocha": "0.3.3",
         "@types/chai": "^4.3.5",
@@ -21,7 +22,7 @@
         "eslint-plugin-node": "11.1.0",
         "eslint-plugin-promise": "6.1.1",
         "lodash": "^4.17.21",
-        "mocha": "^10.2.0",
+        "mocha": "^11.8.0",
         "nyc": "^15.1.0",
         "rimraf": "^5.0.1",
         "sinon": "^15.2.0",
