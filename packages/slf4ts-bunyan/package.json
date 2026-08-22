@@ -34,8 +34,8 @@
     "@types/bunyan": "^1.8.8"
   },
   "engines": {
-    "node": ">= 8",
-    "npm": ">= 5"
+    "node": ">= 20",
+    "npm": ">= 10"
   },
   "files": [
     ".slf4ts-binding",
