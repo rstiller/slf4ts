@@ -13,9 +13,6 @@ updates:
         update-types:
           - "minor"
           - "patch"
-    ignore:
-      - dependency-name: chai
-        versions: [">=5"]
   - package-ecosystem: github-actions
     directory: "/"
     schedule:

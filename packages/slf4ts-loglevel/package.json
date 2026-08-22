@@ -43,16 +43,16 @@
     "compile": "tsc -p .",
     "lint": "biome check .",
     "prepublishOnly": "npm run build",
-    "test": "mocha test/**/*Test.ts"
+    "test": "mocha test/**/*Test.mts"
   },
   "mocha": {
-    "require": [
-      "tsx/cjs"
-    ],
     "reporter": "dot",
-    "extension": "ts",
+    "extension": "mts",
     "bail": true,
-    "full-trace": true
+    "full-trace": true,
+    "node-option": [
+      "import=tsx"
+    ]
   },
   "devDependencies": {
     "loglevel": "^1.9.2"
