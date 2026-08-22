@@ -1,4 +1,3 @@
-/* eslint-env mocha */
 /* eslint-disable @typescript-eslint/no-unused-expressions */
 
 import 'source-map-support/register'
@@ -17,7 +16,7 @@ const fail = chai.assert.fail
 const nodeModuleExtraPath = path.join(__dirname, '..', '..', 'example-node-modules')
 process.env.NODE_PATH = nodeModuleExtraPath
 process.env.LOGGER_BINDING_ADDITIONAL_PATH = nodeModuleExtraPath
-require('module').Module._initPaths() // eslint-disable-line @typescript-eslint/no-var-requires
+require('module').Module._initPaths()  
 
 @suite
 export class LoggerFactoryTest {
@@ -74,14 +73,14 @@ export class LoggerFactoryTest {
     const group = 'group1'
     const name = 'name1'
 
-    /* eslint-disable no-self-compare */
+     
     expect(LoggerFactory.getLogger() === LoggerFactory.getLogger()).to.be.true
     expect(LoggerFactory.getLogger(group) === LoggerFactory.getLogger(group)).to.be.true
     expect(LoggerFactory.getLogger(group, name) === LoggerFactory.getLogger(group, name)).to.be.true
     expect(LoggerFactory.getLogger(group) !== LoggerFactory.getLogger(group, name)).to.be.true
     expect(LoggerFactory.getLogger() !== LoggerFactory.getLogger(group)).to.be.true
     expect(LoggerFactory.getLogger() !== LoggerFactory.getLogger(group, name)).to.be.true
-    /* eslint-disable no-self-compare */
+     
   }
 
   @test

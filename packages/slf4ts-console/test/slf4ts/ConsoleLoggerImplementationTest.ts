@@ -1,5 +1,4 @@
-/* eslint-env mocha */
-/* eslint-disable @typescript-eslint/no-unused-expressions,@typescript-eslint/no-confusing-void-expression */
+ 
 
 import 'source-map-support/register'
 

@@ -1,6 +1,5 @@
-/* eslint-env mocha */
 /* eslint-disable @typescript-eslint/no-unused-expressions */
-/* eslint-disable no-new */
+ 
 
 import 'source-map-support/register'
 

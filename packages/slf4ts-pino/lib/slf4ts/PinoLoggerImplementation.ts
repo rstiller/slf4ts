@@ -40,7 +40,7 @@ export class PinoLoggerImplementation implements LoggerImplementation<Logger, [L
     const additionalArguments = [...arguments]
     const commonLoggerData = additionalArguments.splice(0, 3)
     additionalArguments.splice(additionalArguments.length - 1, 1)
-    const level: number = commonLoggerData[0]
+    const level: LogLevel = commonLoggerData[0]
     const group: string = commonLoggerData[1]
     const name: string = commonLoggerData[2]
     const instance = this.getLoggerInstance(group, name)

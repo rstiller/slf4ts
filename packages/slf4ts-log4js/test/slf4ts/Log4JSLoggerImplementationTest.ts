@@ -1,5 +1,4 @@
-/* eslint-env mocha */
-/* eslint-disable @typescript-eslint/no-unused-expressions */
+ 
 
 import 'source-map-support/register'
 
@@ -11,7 +10,7 @@ import { configure } from 'log4js'
 
 import { Log4JSLoggerImplementation } from '../../lib/slf4ts/Log4JSLoggerImplementation'
 
-// eslint-disable-next-line @typescript-eslint/no-var-requires
+ 
 chai.use(require('chai-string'))
 const expect = chai.expect
 

@@ -64,7 +64,7 @@ export class ConsoleLoggerImplementation implements LoggerImplementation<Console
      */
   public async log (...args: any[]): Promise<any> {
     let loggerName = ''
-    const level: number = arguments[0]
+    const level: LogLevel = arguments[0]
     const group: string = arguments[1]
     const name: string = arguments[2]
 

@@ -106,11 +106,11 @@ export class LoggerConfigurationImpl {
      * @memberof LoggerConfigurationImpl
      */
   public getConfig<T>(group = '', name = ''): T {
-    /* eslint-disable @typescript-eslint/strict-boolean-expressions */
+     
     return this.configMapping.get(`${group}:${name}`) ||
            this.configMapping.get(`${group}:`) ||
            this.configMapping.get(':')
-    /* eslint-disable @typescript-eslint/strict-boolean-expressions */
+     
   }
 
   /**

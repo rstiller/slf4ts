@@ -1,5 +1,4 @@
-/* eslint-env mocha */
-/* eslint-disable @typescript-eslint/no-unused-expressions */
+ 
 
 import 'source-map-support/register'
 
@@ -17,7 +16,7 @@ import {
 
 import { PinoLoggerImplementation } from '../../lib/slf4ts/PinoLoggerImplementation'
 
-// eslint-disable-next-line @typescript-eslint/no-var-requires
+ 
 chai.use(require('chai-string'))
 const expect = chai.expect
 const host = hostname()

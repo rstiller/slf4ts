@@ -1,5 +1,4 @@
-/* eslint-env mocha */
-/* eslint-disable @typescript-eslint/no-unused-expressions */
+ 
 
 import 'source-map-support/register'
 
@@ -12,7 +11,7 @@ import { type TransportStreamOptions } from 'winston-transport'
 
 import { WinstonLoggerImplementation } from '../../lib/slf4ts/WinstonLoggerImplementation'
 
-// eslint-disable-next-line @typescript-eslint/no-var-requires
+ 
 chai.use(require('chai-string'))
 const expect = chai.expect
 

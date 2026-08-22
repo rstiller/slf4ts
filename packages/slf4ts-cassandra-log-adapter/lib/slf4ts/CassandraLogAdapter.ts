@@ -30,7 +30,7 @@ export class CassandraLogAdapter<T> {
     level: string,
     className: string | undefined,
     message: string,
-    furtherInfo: any | undefined): Promise<void> {
+    furtherInfo: any): Promise<void> {
     const args: any[] = []
     if (className) {
       args.push(`${className} - ${message}`)
@@ -53,6 +53,6 @@ export class CassandraLogAdapter<T> {
     } else {
       this.log.info(...args)
     }
-    /* eslint-disable @typescript-eslint/no-floating-promises */
+     
   }
 }
