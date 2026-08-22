@@ -1,6 +1,7 @@
 packages:
   - examples/**
   - packages/**
+  - '!**/example-node-modules/**'
 
 allowBuilds:
   dtrace-provider: false

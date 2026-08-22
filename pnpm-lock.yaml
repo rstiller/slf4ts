@@ -223,8 +223,6 @@ importers:
         specifier: ^0.5.21
         version: 0.5.21
 
-  packages/slf4ts-api/example-node-modules/example-slf4ts-binding: {}
-
   packages/slf4ts-bunyan:
     dependencies:
       bunyan:
