@@ -1,11 +1,11 @@
-import 'source-map-support/register'
+import "source-map-support/register";
 
-import * as fs from 'fs'
-import * as path from 'path'
-import type * as Logger from 'bunyan'
-import { type LoggerBinding } from 'slf4ts-api'
+import type * as Logger from "bunyan";
+import * as fs from "fs";
+import * as path from "path";
+import type { LoggerBinding } from "slf4ts-api";
 
-import { BunyanLoggerImplementation } from './BunyanLoggerImplementation'
+import { BunyanLoggerImplementation } from "./BunyanLoggerImplementation";
 
 /**
  * LoggerBinding implementation for Bunyan.
@@ -14,31 +14,35 @@ import { BunyanLoggerImplementation } from './BunyanLoggerImplementation'
  * @class BunyanLoggerBinding
  * @implements {LoggerBinding}
  */
-export class BunyanLoggerBinding implements LoggerBinding<Logger, [Logger.LoggerOptions]> {
-  private readonly packageJson: any
+export class BunyanLoggerBinding
+  implements LoggerBinding<Logger, [Logger.LoggerOptions]>
+{
+  private readonly packageJson: any;
 
-  public constructor () {
-    const modulePath = path.parse(module.filename)
-    let currentDir = path.resolve(modulePath.dir)
+  public constructor() {
+    const modulePath = path.parse(module.filename);
+    let currentDir = path.resolve(modulePath.dir);
     while (true) {
-      currentDir = path.resolve(path.join(currentDir, '..'))
-      const packageJsonPath = path.resolve(path.join(currentDir, 'package.json'))
+      currentDir = path.resolve(path.join(currentDir, ".."));
+      const packageJsonPath = path.resolve(
+        path.join(currentDir, "package.json"),
+      );
       if (fs.existsSync(packageJsonPath)) {
-        this.packageJson = require(packageJsonPath)
-        break
+        this.packageJson = require(packageJsonPath);
+        break;
       }
     }
   }
 
-  public getLoggerImplementation (): BunyanLoggerImplementation {
-    return new BunyanLoggerImplementation()
+  public getLoggerImplementation(): BunyanLoggerImplementation {
+    return new BunyanLoggerImplementation();
   }
 
-  public getVendor (): string {
-    return 'bunyan'
+  public getVendor(): string {
+    return "bunyan";
   }
 
-  public getVersion (): string {
-    return this.packageJson.version
+  public getVersion(): string {
+    return this.packageJson.version;
   }
 }

@@ -1,11 +1,11 @@
-import 'source-map-support/register'
+import "source-map-support/register";
 
-import * as fs from 'fs'
-import * as path from 'path'
-import { type Logger } from 'pino'
-import { type LoggerBinding } from 'slf4ts-api'
+import * as fs from "fs";
+import * as path from "path";
+import type { Logger } from "pino";
+import type { LoggerBinding } from "slf4ts-api";
 
-import { PinoLoggerImplementation } from './PinoLoggerImplementation'
+import { PinoLoggerImplementation } from "./PinoLoggerImplementation";
 
 /**
  * LoggerBinding implementation for Pino.
@@ -15,30 +15,32 @@ import { PinoLoggerImplementation } from './PinoLoggerImplementation'
  * @implements {LoggerBinding}
  */
 export class PinoLoggerBinding implements LoggerBinding<Logger> {
-  private readonly packageJson: any
+  private readonly packageJson: any;
 
-  public constructor () {
-    const modulePath = path.parse(module.filename)
-    let currentDir = path.resolve(modulePath.dir)
+  public constructor() {
+    const modulePath = path.parse(module.filename);
+    let currentDir = path.resolve(modulePath.dir);
     while (true) {
-      currentDir = path.resolve(path.join(currentDir, '..'))
-      const packageJsonPath = path.resolve(path.join(currentDir, 'package.json'))
+      currentDir = path.resolve(path.join(currentDir, ".."));
+      const packageJsonPath = path.resolve(
+        path.join(currentDir, "package.json"),
+      );
       if (fs.existsSync(packageJsonPath)) {
-        this.packageJson = require(packageJsonPath)
-        break
+        this.packageJson = require(packageJsonPath);
+        break;
       }
     }
   }
 
-  public getLoggerImplementation (): PinoLoggerImplementation {
-    return new PinoLoggerImplementation()
+  public getLoggerImplementation(): PinoLoggerImplementation {
+    return new PinoLoggerImplementation();
   }
 
-  public getVendor (): string {
-    return 'pino'
+  public getVendor(): string {
+    return "pino";
   }
 
-  public getVersion (): string {
-    return this.packageJson.version
+  public getVersion(): string {
+    return this.packageJson.version;
   }
 }

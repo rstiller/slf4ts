@@ -1,7 +1,7 @@
-import 'source-map-support/register'
+import "source-map-support/register";
 
-import { type LoggerBindings } from 'slf4ts-api'
-import { ConsoleLoggerBinding } from './ConsoleLoggerBinding'
+import type { LoggerBindings } from "slf4ts-api";
+import { ConsoleLoggerBinding } from "./ConsoleLoggerBinding";
 
 /**
  * Instances a new {@link ConsoleLoggerBinding}
@@ -10,5 +10,5 @@ import { ConsoleLoggerBinding } from './ConsoleLoggerBinding'
  * @param {LoggerBindings} registry The bindings collection to register with.
  */
 module.exports = function (registry: LoggerBindings) {
-  registry.registerBinding(new ConsoleLoggerBinding())
-}
+  registry.registerBinding(new ConsoleLoggerBinding());
+};

@@ -1,16 +1,20 @@
-import 'source-map-support/register'
+import "source-map-support/register";
 
-import { type LoggerImplementation, LogLevel, type LoggerBuilder } from 'slf4ts-api'
-import * as util from 'util'
-import * as winston from 'winston'
+import {
+  type LoggerBuilder,
+  type LoggerImplementation,
+  LogLevel,
+} from "slf4ts-api";
+import * as util from "util";
+import * as winston from "winston";
 
-const LogLevelMapping: string[] = []
+const LogLevelMapping: string[] = [];
 
-LogLevelMapping[LogLevel.TRACE] = 'silly'
-LogLevelMapping[LogLevel.DEBUG] = 'debug'
-LogLevelMapping[LogLevel.INFO] = 'info'
-LogLevelMapping[LogLevel.WARN] = 'warn'
-LogLevelMapping[LogLevel.ERROR] = 'error'
+LogLevelMapping[LogLevel.TRACE] = "silly";
+LogLevelMapping[LogLevel.DEBUG] = "debug";
+LogLevelMapping[LogLevel.INFO] = "info";
+LogLevelMapping[LogLevel.WARN] = "warn";
+LogLevelMapping[LogLevel.ERROR] = "error";
 
 /**
  * The actual winston logger implementation.
@@ -19,40 +23,43 @@ LogLevelMapping[LogLevel.ERROR] = 'error'
  * @class WinstonLoggerImplementation
  * @implements {LoggerImplementation}
  */
-export class WinstonLoggerImplementation implements LoggerImplementation<winston.Logger, []> {
-  private readonly loggers = new Map<string, winston.Logger>()
-  private builder: LoggerBuilder<winston.Logger, []> = () => winston.createLogger()
+export class WinstonLoggerImplementation
+  implements LoggerImplementation<winston.Logger, []>
+{
+  private readonly loggers = new Map<string, winston.Logger>();
+  private builder: LoggerBuilder<winston.Logger, []> = () =>
+    winston.createLogger();
 
-  public async log (...args: any[]): Promise<any> {
-    const level: number = arguments[0]
-    const group: string = arguments[1]
-    const name: string = arguments[2]
-    const instance = this.getLoggerInstance(group, name)
+  public async log(...args: any[]): Promise<any> {
+    const level: number = arguments[0];
+    const group: string = arguments[1];
+    const name: string = arguments[2];
+    const instance = this.getLoggerInstance(group, name);
 
     await new Promise<void>((resolve, reject) => {
-      const additionalArguments = [...arguments]
-      additionalArguments.splice(0, 3)
+      const additionalArguments = [...arguments];
+      additionalArguments.splice(0, 3);
 
-      let callArguments: any[] = [LogLevelMapping[level]]
-      callArguments = callArguments.concat(...additionalArguments)
-      const metaArgs = callArguments.splice(2, callArguments.length - 2)
-      let metaArg: any
+      let callArguments: any[] = [LogLevelMapping[level]];
+      callArguments = callArguments.concat(...additionalArguments);
+      const metaArgs = callArguments.splice(2, callArguments.length - 2);
+      let metaArg: any;
       if (metaArgs && metaArgs.length > 0) {
-        metaArg = {}
+        metaArg = {};
         metaArgs.forEach((meta) => {
           if (meta) {
             if (meta instanceof Error) {
-              metaArg = { ...metaArg, stack: util.inspect(meta) }
-            } else if (typeof meta === 'string') {
-              callArguments = callArguments.concat(meta)
+              metaArg = { ...metaArg, stack: util.inspect(meta) };
+            } else if (typeof meta === "string") {
+              callArguments = callArguments.concat(meta);
             } else {
-              metaArg = { ...metaArg, ...meta }
+              metaArg = { ...metaArg, ...meta };
             }
           }
-        })
+        });
       }
       if (metaArg) {
-        callArguments = callArguments.concat(metaArg)
+        callArguments = callArguments.concat(metaArg);
       }
       /* callArguments = callArguments.concat((err?: any, lvl?: string, msg?: string, meta?: any) => {
                 if (err) {
@@ -63,48 +70,48 @@ export class WinstonLoggerImplementation implements LoggerImplementation<winston
             }); */
 
       if (instance) {
-        instance.log.apply(instance, callArguments)
+        instance.log.apply(instance, callArguments);
       } else {
-        winston.log.apply(winston, callArguments)
+        winston.log.apply(winston, callArguments);
       }
 
-      resolve()
-    })
+      resolve();
+    });
   }
 
-  public getImplementation (group: string, name: string): winston.Logger {
-    return this.getLoggerInstance(group, name)
+  public getImplementation(group: string, name: string): winston.Logger {
+    return this.getLoggerInstance(group, name);
   }
 
   public setConfig<C>(config: C, group: string, name: string): void {
-    const instance = this.getLoggerInstance(group, name)
+    const instance = this.getLoggerInstance(group, name);
 
     if (instance) {
-      instance.configure(config as winston.LoggerOptions)
+      instance.configure(config as winston.LoggerOptions);
     }
   }
 
-  public setLogLevel (logLevel: LogLevel, group: string, name: string): void {
+  public setLogLevel(logLevel: LogLevel, group: string, name: string): void {
     // nothing to set here ...
   }
 
-  public setMetadata (metadata: any, group: string, name: string): void {
+  public setMetadata(metadata: any, group: string, name: string): void {
     // nothing to set here ...
   }
 
-  public setLoggerBuilder (builder?: LoggerBuilder<winston.Logger, []>): void {
-    this.builder = builder ?? this.builder
+  public setLoggerBuilder(builder?: LoggerBuilder<winston.Logger, []>): void {
+    this.builder = builder ?? this.builder;
   }
 
-  private getLoggerInstance (group: string, name: string): winston.Logger {
-    const compoundKey = `${group}:${name}`
-    let instance: winston.Logger | undefined = this.loggers.get(compoundKey)
+  private getLoggerInstance(group: string, name: string): winston.Logger {
+    const compoundKey = `${group}:${name}`;
+    let instance: winston.Logger | undefined = this.loggers.get(compoundKey);
 
     if (!instance) {
-      instance = this.builder()
-      this.loggers.set(compoundKey, instance)
+      instance = this.builder();
+      this.loggers.set(compoundKey, instance);
     }
 
-    return instance
+    return instance;
   }
 }

@@ -1,7 +1,7 @@
-import 'source-map-support/register'
+import "source-map-support/register";
 
-import { type LoggerBindings } from 'slf4ts-api'
-import { PinoLoggerBinding } from './PinoLoggerBinding'
+import type { LoggerBindings } from "slf4ts-api";
+import { PinoLoggerBinding } from "./PinoLoggerBinding";
 
 /**
  * Instances a new {@link PinoLoggerBinding}
@@ -10,5 +10,5 @@ import { PinoLoggerBinding } from './PinoLoggerBinding'
  * @param {LoggerBindings} registry The bindings collection to register with.
  */
 module.exports = function (registry: LoggerBindings) {
-  registry.registerBinding(new PinoLoggerBinding())
-}
+  registry.registerBinding(new PinoLoggerBinding());
+};

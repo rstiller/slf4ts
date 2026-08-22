@@ -1,7 +1,7 @@
-import 'source-map-support/register'
+import "source-map-support/register";
 
-import { type LoggerBindings } from 'slf4ts-api'
-import { BunyanLoggerBinding } from './BunyanLoggerBinding'
+import type { LoggerBindings } from "slf4ts-api";
+import { BunyanLoggerBinding } from "./BunyanLoggerBinding";
 
 /**
  * Instances a new {@link BunyanLoggerBinding}
@@ -10,5 +10,5 @@ import { BunyanLoggerBinding } from './BunyanLoggerBinding'
  * @param {LoggerBindings} registry The bindings collection to register with.
  */
 module.exports = function (registry: LoggerBindings) {
-  registry.registerBinding(new BunyanLoggerBinding())
-}
+  registry.registerBinding(new BunyanLoggerBinding());
+};

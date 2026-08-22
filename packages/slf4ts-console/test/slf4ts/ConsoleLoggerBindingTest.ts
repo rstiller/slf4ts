@@ -1,21 +1,19 @@
-/* eslint-disable @typescript-eslint/no-unused-expressions */
+import "source-map-support/register";
 
-import 'source-map-support/register'
+import { suite, test } from "@testdeck/mocha";
+import * as chai from "chai";
+import { ConsoleLoggerBinding } from "../../lib/slf4ts/ConsoleLoggerBinding";
 
-import * as chai from 'chai'
-import { suite, test } from '@testdeck/mocha'
-import { ConsoleLoggerBinding } from '../../lib/slf4ts/ConsoleLoggerBinding'
-
-const expect = chai.expect
+const expect = chai.expect;
 
 @suite
 export class ConsoleLoggerBindingTest {
   @test
-  public async checkConsoleLoggerBinding (): Promise<void> {
-    const binding = new ConsoleLoggerBinding()
+  public async checkConsoleLoggerBinding(): Promise<void> {
+    const binding = new ConsoleLoggerBinding();
 
-    expect(binding.getVendor()).to.equal('Node.Console')
-    expect(binding.getVersion()).to.exist
-    expect(binding.getLoggerImplementation()).to.exist
+    expect(binding.getVendor()).to.equal("Node.Console");
+    expect(binding.getVersion()).to.exist;
+    expect(binding.getLoggerImplementation()).to.exist;
   }
 }
