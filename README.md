@@ -39,6 +39,8 @@ requirements: node >= 22.13 (pnpm 11 requirement)
 init / update project (if a new dependency is introduced or an existing is updated):  
 
     npm i -g pnpm@11.22.0
+    # alternatively, if your node installation ships corepack:
+    #   corepack enable
     pnpm i
 
 generate dependency report:  
