@@ -25,5 +25,5 @@
     "outDir": "build/",
     "strictNullChecks": true
   },
-  "exclude": ["node_modules", "**/*.d.ts"]
+  "exclude": ["node_modules", "**/*.d.ts", "**/*.d.mts"]
 }

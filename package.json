@@ -21,7 +21,7 @@
     "typescript": "^7.0.2"
   },
   "scripts": {
-    "example": "pnpm run --recursive --if-present --filter",
+        "example": "pnpm run --recursive --if-present start",
     "build": "pnpm run --recursive build",
     "clean": "pnpm run --recursive clean && rimraf coverage docs",
     "compile": "pnpm run --recursive compile",

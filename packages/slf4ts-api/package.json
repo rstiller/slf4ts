@@ -47,7 +47,6 @@
     ],
     "reporter": "dot",
     "extension": "mts",
-    "bail": true,
     "full-trace": true
   }
 }

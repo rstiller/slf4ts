@@ -52,7 +52,6 @@
   "mocha": {
     "reporter": "dot",
     "extension": "mts",
-    "bail": true,
     "full-trace": true,
     "node-option": [
       "import=tsx"
