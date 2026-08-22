@@ -26,7 +26,6 @@
     "slf4ts-api": ">=1.1.3"
   },
   "dependencies": {
-    "pino": "^8.14.1",
     "slf4ts-api": "workspace:^1.4.0",
     "source-map-support": "^0.5.21"
   },
@@ -56,5 +55,8 @@
     "extension": "ts",
     "bail": true,
     "full-trace": true
+  },
+  "devDependencies": {
+    "pino": "^10.3.1"
   }
 }

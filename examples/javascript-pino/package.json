@@ -11,11 +11,13 @@
     "url": "https://github.com/rstiller/slf4ts"
   },
   "dependencies": {
-    "pino": "^8.14.1",
     "slf4ts-api": "workspace:^1.4.0",
     "slf4ts-pino": "workspace:^1.0.0"
   },
   "scripts": {
     "start": "node ."
+  },
+  "devDependencies": {
+    "pino": "^10.3.1"
   }
 }
