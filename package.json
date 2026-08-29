@@ -59,6 +59,7 @@
     "all": true
   },
   "dependencies": {
+    "adm-zip": "^0.6.0",
     "cassandra-driver": "^4.9.0"
   },
   "overrides": {
