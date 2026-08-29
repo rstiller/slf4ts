@@ -9,7 +9,7 @@ importers:
   .:
     dependencies:
       cassandra-driver:
-        specifier: ^4.6.4
+        specifier: ^4.9.0
         version: 4.9.0
     devDependencies:
       '@biomejs/biome':

@@ -59,7 +59,7 @@
     "all": true
   },
   "dependencies": {
-    "cassandra-driver": "^4.6.4"
+    "cassandra-driver": "^4.9.0"
   },
   "overrides": {
     "cassandra-driver": {
