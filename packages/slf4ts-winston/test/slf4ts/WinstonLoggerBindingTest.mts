@@ -1,5 +1,3 @@
-import "source-map-support/register";
-
 import { suite, test } from "@testdeck/mocha";
 import * as chai from "chai";
 import { WinstonLoggerBinding } from "../../lib/slf4ts/WinstonLoggerBinding";

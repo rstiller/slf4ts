@@ -1,5 +1,3 @@
-import "source-map-support/register";
-
 import { suite, test } from "@testdeck/mocha";
 import * as chai from "chai";
 import { ConsoleLoggerBinding } from "../../lib/slf4ts/ConsoleLoggerBinding";

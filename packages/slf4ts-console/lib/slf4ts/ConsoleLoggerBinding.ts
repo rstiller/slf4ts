@@ -1,5 +1,3 @@
-import "source-map-support/register";
-
 import * as fs from "fs";
 import * as path from "path";
 import type { LoggerBinding } from "slf4ts-api";

@@ -1,5 +1,3 @@
-import "source-map-support/register";
-
 import { suite, test } from "@testdeck/mocha";
 import { Client } from "cassandra-driver";
 import * as chai from "chai";

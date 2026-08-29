@@ -1,5 +1,3 @@
-import "source-map-support/register";
-
 import { getLogger, type Level, type Logger } from "log4js";
 import {
   type LoggerBuilder,

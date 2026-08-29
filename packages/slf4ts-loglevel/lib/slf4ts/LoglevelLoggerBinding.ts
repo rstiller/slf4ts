@@ -1,5 +1,3 @@
-import "source-map-support/register";
-
 import * as fs from "fs";
 import type { Logger } from "loglevel";
 import * as path from "path";

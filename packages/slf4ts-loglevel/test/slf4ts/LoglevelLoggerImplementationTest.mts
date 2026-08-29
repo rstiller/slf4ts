@@ -1,5 +1,3 @@
-import "source-map-support/register";
-
 import { suite, test } from "@testdeck/mocha";
 import * as log from "loglevel";
 import * as sinon from "sinon";

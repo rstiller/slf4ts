@@ -1,5 +1,3 @@
-import "source-map-support/register";
-
 import type { LoggerBindings } from "slf4ts-api";
 import { WinstonLoggerBinding } from "./WinstonLoggerBinding";
 

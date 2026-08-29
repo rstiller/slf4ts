@@ -26,8 +26,7 @@
     "slf4ts-api": ">=1.1.3"
   },
   "dependencies": {
-    "slf4ts-api": "workspace:^1.4.0",
-    "source-map-support": "^0.5.21"
+    "slf4ts-api": "workspace:^1.4.0"
   },
   "engines": {
     "node": ">= 20",

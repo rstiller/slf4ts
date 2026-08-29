@@ -1,5 +1,3 @@
-import "source-map-support/register";
-
 import type * as Logger from "bunyan";
 import * as fs from "fs";
 import * as path from "path";

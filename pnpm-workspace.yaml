@@ -6,3 +6,7 @@ packages:
 allowBuilds:
   dtrace-provider: false
   esbuild: true
+
+overrides:
+  cassandra-driver>adm-zip: '>=0.6.0'
+  mocha>serialize-javascript: '>=7.0.5'

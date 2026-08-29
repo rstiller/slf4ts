@@ -1,5 +1,3 @@
-import "source-map-support/register";
-
 import type { Logger, LogLevelDesc } from "loglevel";
 import * as log from "loglevel";
 import {

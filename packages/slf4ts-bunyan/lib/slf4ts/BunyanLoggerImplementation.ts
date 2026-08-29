@@ -1,5 +1,3 @@
-import "source-map-support/register";
-
 import * as Logger from "bunyan";
 import {
   type LoggerBuilder,

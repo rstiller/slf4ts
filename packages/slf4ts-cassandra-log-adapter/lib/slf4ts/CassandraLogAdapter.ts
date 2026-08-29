@@ -1,5 +1,3 @@
-import "source-map-support/register";
-
 import { Client } from "cassandra-driver";
 import type { EventEmitter } from "events";
 import { type ILoggerInstance, LoggerFactory } from "slf4ts-api";
