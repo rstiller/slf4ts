@@ -28,8 +28,8 @@ importers:
         specifier: ^10.0.1
         version: 10.0.10
       '@types/node':
-        specifier: ^26.6.2
-        version: 26.6.2
+        specifier: ^26.6.3
+        version: 26.6.3
       '@types/sinon':
         specifier: ^22.0.0
         version: 22.0.0
@@ -49,14 +49,14 @@ importers:
         specifier: ^6.1.3
         version: 6.1.3
       serialize-javascript:
-        specifier: ^7.1.1
-        version: 7.1.1
+        specifier: ^7.1.2
+        version: 7.1.2
       sinon:
         specifier: ^22.1.0
         version: 22.1.0
       testdouble:
-        specifier: ^3.21.0
-        version: 3.21.0
+        specifier: ^3.21.1
+        version: 3.21.1
       tsx:
         specifier: ^4.23.15
         version: 4.23.15
@@ -234,8 +234,8 @@ importers:
         version: link:../slf4ts-api
     devDependencies:
       cassandra-driver:
-        specifier: ^4.9.0
-        version: 4.9.0
+        specifier: ^4.10.0
+        version: 4.10.0
 
   packages/slf4ts-console:
     dependencies:
@@ -644,14 +644,11 @@ packages:
   '@types/mocha@10.0.10':
     resolution: {integrity: sha512-xPyYSz1cMPnJQhl0CLMH68j3gprKZaTjG3s5Vi+fDgx+uhG9NOXwbVt52eFS8ECyXhyKcjDLCBEqBExKuiZb7Q==}
 
-  '@types/node@20.19.43':
-    resolution: {integrity: sha512-6oYBAi5ikg4Pl+kGsoYtawUMBT2zZMCvPNF7pVLnHZfd1zf38DRiWn/gT01RYCdUqkv7Fhr+C9ot4/tb+2sVvA==}
-
-  '@types/node@26.6.1':
-    resolution: {integrity: sha512-VqGJBMCtdhqkBUCcBLvywI0NJ+KLuVzgNnlBUNFOQjqVxzo2lxLUNg1DSey8+u2u6ktswSAxg+s68QLzWHNOuA==}
-
   '@types/node@26.6.2':
     resolution: {integrity: sha512-X1P21scMv4zGKLYqjdGjaKa7COa0RKVYYZZN/NfvLQ1JegxFhdhpZG/Lyn8AXx6CDUavKAd11v6BvfpkDByK8g==}
+
+  '@types/node@26.6.3':
+    resolution: {integrity: sha512-dsqMQQoeTLqu9wynDD00q573mNzso3IdQOAfHRJqLCcmCFPoGo9A1bDpUcv/9tnKpErQWv9uKeGfl37EIS02Yg==}
 
   '@types/sinon@22.0.0':
     resolution: {integrity: sha512-TDbVpbccc2HfiqHR09Argj3mHV1KMW7sCCKj52fsl8lbRLkEn7fB1966EWhOKWUBcqfBueZuPoA7/OK1CKiy3g==}
@@ -782,8 +779,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  adm-zip@0.6.0:
-    resolution: {integrity: sha512-XleryMhbuksdKtofnWZ9Sk+4CUTbms4Mb/EU32SZwToAyZ5RgVos/ki8n+yr0LWHOGKuakbXTuuYNHLQjhddgg==}
+  adm-zip@0.6.1:
+    resolution: {integrity: sha512-Xwrja8nx9e5o2N1my4DsKCeKpdrnACyr1wtbPxBDgGzKzKyE9kRtBFA8mWldI+RVlD7CBZNWY/wQ2+ydwOR6kQ==}
     engines: {node: '>=14.0'}
 
   aggregate-error@3.1.0:
@@ -880,8 +877,8 @@ packages:
   caniuse-lite@1.0.30001810:
     resolution: {integrity: sha512-TITQPUkaz+aVk5GL6NhOdwk1aEaNTSDPsGFWrTuhKGtjTF70jL/Oht2W4c6rXUe5fu7Ie19VIahAXHIIiWWNeg==}
 
-  cassandra-driver@4.9.0:
-    resolution: {integrity: sha512-svYpdkLIGjD0WmuuwkkeYbfBdPX1zksK2cDyT1mWjX53OVTzuWBOVy54K6PPij8GgYpIG+K82OryrBv/xNeuWg==}
+  cassandra-driver@4.10.0:
+    resolution: {integrity: sha512-DHyFC6RMK28nvndZfecbGUozoYbb5NjFmlniczao8zA1IplurcshR2i6rvxpEu3Q9G45tjin4yU+iKwA10ZUtA==}
     engines: {node: '>=20'}
 
   chai@6.2.2:
@@ -1429,8 +1426,8 @@ packages:
   process-warning@5.1.0:
     resolution: {integrity: sha512-jQSaVHsPgtyw60e1rQ/A+/ArPEj/S8pS/vFnyGa/gYFXrKk/6RuDkoqVDQ5NI5MmS01698ltlAk0NoDBNLujRw==}
 
-  quibble@0.10.0:
-    resolution: {integrity: sha512-Sa8fuTvuPKGnq1o+ddSyUBtyDY8jvH/8WhS7huLq5baDETd/tDop5GgWCMDno8tFdf0GzO5uANrSYF7okdfz6Q==}
+  quibble@0.10.1:
+    resolution: {integrity: sha512-U6EUYQLj0EnKAq2qJAVGF9USj8qnMR7QOEkelbilpzi+/Y5NhUn/+CgBFbGDfMuiljUctS0S0ezpA6fRYyaj9Q==}
     engines: {node: '>= 0.14.0'}
 
   quick-format-unescaped@4.0.4:
@@ -1503,8 +1500,8 @@ packages:
     engines: {node: '>=10'}
     hasBin: true
 
-  serialize-javascript@7.1.1:
-    resolution: {integrity: sha512-k3CMsaIvvdSwm8oLB4MXSl0wH2/cwlH7xGcnRd2DaeRmBkbzYmyT8j0tsX60DwD1eRwHTpNpH8ljKu9oUT1MeQ==}
+  serialize-javascript@7.1.2:
+    resolution: {integrity: sha512-GL2BWwVa6JydKO6l/ljVgjAZF4QJ3S7dWDWi53s5GZT8PJzD2fNxi67HANQGKAqPrwEpL5ba7gUBGi0Ls/sEoQ==}
     engines: {node: '>=20.0.0'}
 
   set-blocking@2.0.0:
@@ -1600,8 +1597,8 @@ packages:
     resolution: {integrity: sha512-ZOffsNrXYggvU1mDGHk54I96r26P8SyMjO5slMKSc7+IWmtB/MQKnEC2fP51imB3/pT6YK5cT5E8f+Dd9KdyOQ==}
     engines: {node: 20 || >=22}
 
-  testdouble@3.21.0:
-    resolution: {integrity: sha512-ZBZt64MLxI8P30IGuTE4vwbYu7alhzTAxEvU12Th+QKtclDrPU0ZseZzjFBhv8X/b4Zo6b7Cptdw6qHjySe0nA==}
+  testdouble@3.21.1:
+    resolution: {integrity: sha512-MaLFY3B+C7T8mAllp/tyrXWTg7L0XnWf/8CzEBxea6llSpy4GaixEPwv4CYzMsG7rvEc4TJ8NGoR1M2kOizjfg==}
     engines: {node: '>= 16'}
 
   text-hex@1.0.0:
@@ -1642,9 +1639,6 @@ packages:
     resolution: {integrity: sha512-8FYau96o3NKOhbjKi/qNvG/W5jhzxkbdm5sj9AbZ/5T5sWqn3hJgLfGx27sRKZWTvyzCP8dLRBTf5tBTSRVUNA==}
     engines: {node: '>=16.20.0'}
     hasBin: true
-
-  undici-types@6.21.0:
-    resolution: {integrity: sha512-iwDZqg0QAGrg9Rav5H4n0M64c3mkR59cJ6wQp+7C4nI0gsmExaedaYLNO44eT4AtBBwjbTiGPMlt2Md0T9H9JQ==}
 
   undici-types@8.9.0:
     resolution: {integrity: sha512-KTDyRTYX8sWmKXAikPHHSyc63CRPETMctyjKFupcC6OBLXT3xsN0e9aF7m+mIXutFWpUXuedtowG7iLOzp0kQg==}
@@ -2025,7 +2019,7 @@ snapshots:
 
   '@types/bunyan@1.8.11':
     dependencies:
-      '@types/node': 26.6.1
+      '@types/node': 26.6.2
 
   '@types/chai@5.2.3':
     dependencies:
@@ -2038,15 +2032,11 @@ snapshots:
 
   '@types/mocha@10.0.10': {}
 
-  '@types/node@20.19.43':
-    dependencies:
-      undici-types: 6.21.0
-
-  '@types/node@26.6.1':
+  '@types/node@26.6.2':
     dependencies:
       undici-types: 8.9.0
 
-  '@types/node@26.6.2':
+  '@types/node@26.6.3':
     dependencies:
       undici-types: 8.9.0
 
@@ -2118,7 +2108,7 @@ snapshots:
   '@typescript/typescript-win32-x64@7.0.2':
     optional: true
 
-  adm-zip@0.6.0: {}
+  adm-zip@0.6.1: {}
 
   aggregate-error@3.1.0:
     dependencies:
@@ -2203,10 +2193,9 @@ snapshots:
 
   caniuse-lite@1.0.30001810: {}
 
-  cassandra-driver@4.9.0:
+  cassandra-driver@4.10.0:
     dependencies:
-      '@types/node': 20.19.43
-      adm-zip: 0.6.0
+      adm-zip: 0.6.1
       long: 5.2.5
 
   chai@6.2.2: {}
@@ -2639,7 +2628,7 @@ snapshots:
       minimatch: 9.0.9
       ms: 2.1.3
       picocolors: 1.1.1
-      serialize-javascript: 7.1.1
+      serialize-javascript: 7.1.2
       strip-json-comments: 3.1.1
       supports-color: 8.1.1
       workerpool: 9.3.4
@@ -2796,7 +2785,7 @@ snapshots:
 
   process-warning@5.1.0: {}
 
-  quibble@0.10.0:
+  quibble@0.10.1:
     dependencies:
       lodash: 4.18.1
       resolve: 1.22.12
@@ -2855,7 +2844,7 @@ snapshots:
 
   semver@7.8.5: {}
 
-  serialize-javascript@7.1.1: {}
+  serialize-javascript@7.1.2: {}
 
   set-blocking@2.0.0: {}
 
@@ -2955,10 +2944,10 @@ snapshots:
       glob: 13.0.6
       minimatch: 10.2.6
 
-  testdouble@3.21.0:
+  testdouble@3.21.1:
     dependencies:
       lodash: 4.18.1
-      quibble: 0.10.0
+      quibble: 0.10.1
       stringify-object-es5: 2.5.0
       theredoc: 1.0.0
 
@@ -3010,8 +2999,6 @@ snapshots:
       '@typescript/typescript-sunos-x64': 7.0.2
       '@typescript/typescript-win32-arm64': 7.0.2
       '@typescript/typescript-win32-x64': 7.0.2
-
-  undici-types@6.21.0: {}
 
   undici-types@8.9.0: {}
 
