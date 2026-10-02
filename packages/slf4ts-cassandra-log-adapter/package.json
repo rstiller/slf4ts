@@ -29,7 +29,7 @@
     "slf4ts-api": "workspace:^1.4.0"
   },
   "devDependencies": {
-    "cassandra-driver": "^4.9.0"
+    "cassandra-driver": "^4.10.0"
   },
   "engines": {
     "node": ">= 20",
