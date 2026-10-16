@@ -55,8 +55,8 @@ importers:
         specifier: ^22.1.0
         version: 22.1.0
       testdouble:
-        specifier: ^3.23.0
-        version: 3.23.0
+        specifier: ^4.0.0
+        version: 4.0.0
       tsx:
         specifier: ^4.23.15
         version: 4.23.15
@@ -1426,8 +1426,8 @@ packages:
   process-warning@5.1.0:
     resolution: {integrity: sha512-jQSaVHsPgtyw60e1rQ/A+/ArPEj/S8pS/vFnyGa/gYFXrKk/6RuDkoqVDQ5NI5MmS01698ltlAk0NoDBNLujRw==}
 
-  quibble@0.12.1:
-    resolution: {integrity: sha512-XyqltQYTTG+U5zLuvQusmc/F3Yes9DoqvgkrcY0pB1YmMaScqW0mdW00GYderJ+u8+geUv88Xapx+8FMp2Ro3Q==}
+  quibble@0.13.0:
+    resolution: {integrity: sha512-yc0KR/27kP6WXvG+SOibTC5zCvfUt5/jdu1T63xBVuCAYX/jOvGy0JI0bH1cS9gm0j/SGam6oo5hyRf+G8XGCA==}
     engines: {node: '>= 0.14.0'}
 
   quick-format-unescaped@4.0.4:
@@ -1593,9 +1593,9 @@ packages:
     resolution: {integrity: sha512-ZOffsNrXYggvU1mDGHk54I96r26P8SyMjO5slMKSc7+IWmtB/MQKnEC2fP51imB3/pT6YK5cT5E8f+Dd9KdyOQ==}
     engines: {node: 20 || >=22}
 
-  testdouble@3.23.0:
-    resolution: {integrity: sha512-G2EnptkwqXYCZdBA2jT4UTTdsu3rfc3faXD/cE9VByaoRNJbfRRd8hBQAe5W+adR/dg+GC389QjYBzf7UZrrQg==}
-    engines: {node: '>= 16'}
+  testdouble@4.0.0:
+    resolution: {integrity: sha512-UkMDn3G8+kaPBFhw64r0zImPiECiAoY9J85NWMNBmduUXncbyKhO6rf0w6+ZBmG8F5HGS+1yrNTK+6y28aeKvQ==}
+    engines: {node: '>= 22'}
 
   text-hex@1.0.0:
     resolution: {integrity: sha512-uuVGNWzgJ4yhRaNSiubPY7OjISw4sw4E5Uv0wbjp+OzcbmVU/rsT8ujgcXJhn9ypzsgr5vlzpPqP+MBBKcGvbg==}
@@ -2781,7 +2781,7 @@ snapshots:
 
   process-warning@5.1.0: {}
 
-  quibble@0.12.1:
+  quibble@0.13.0:
     dependencies:
       lodash: 4.18.1
       resolve: 1.22.13
@@ -2938,10 +2938,10 @@ snapshots:
       glob: 13.0.6
       minimatch: 10.2.6
 
-  testdouble@3.23.0:
+  testdouble@4.0.0:
     dependencies:
       lodash: 4.18.1
-      quibble: 0.12.1
+      quibble: 0.13.0
       stringify-object-es5: 2.5.0
       theredoc: 1.0.0
 
