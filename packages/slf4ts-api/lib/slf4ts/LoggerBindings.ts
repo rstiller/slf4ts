@@ -138,18 +138,20 @@ export class LoggerBindings {
     if ("LOGGER_BINDING_ADDITIONAL_PATH" in process.env) {
       additionalPaths.push(process.env.LOGGER_BINDING_ADDITIONAL_PATH ?? "");
     }
-    const mainModule = require.main ?? { paths: [], require: () => {} };
-    if ("mainModule" in process && "paths" in mainModule) {
+    const mainModule = require.main;
+    if (mainModule && "mainModule" in process && "paths" in mainModule) {
       mainModule.paths.forEach((mainPath) => {
         additionalPaths.push(mainPath);
       });
     }
+    const requireBinding = (id: string): any =>
+      mainModule ? mainModule.require(id) : require(id);
 
     const moduleFolders: string[] = this.getAllModuleFolders(additionalPaths);
     const loggerBindings: string[] = this.getAllLoggerBindings(moduleFolders);
 
     loggerBindings.forEach((binding) => {
-      const registerFunc = mainModule.require(binding);
+      const registerFunc = requireBinding(binding);
       registerFunc(this);
     });
   }
